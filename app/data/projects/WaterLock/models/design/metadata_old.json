@@ -1,0 +1,1666 @@
+{
+  "id": "採購案號：1080502-1",
+  "projectId": "3ifT$Moun0fArr$ObqSlxR",
+  "author": "",
+  "createdAt": "2021-04-09T13:45:14",
+  "schema": "IFC2X3",
+  "creatingApplication": "20170223_1515(x64) - Exporter 18.0.0.420 - Alternate UI 18.0.0.420",
+  "metaObjects": [
+    {
+      "id": "3ifT$Moun0fArr$ObqSlxR",
+      "name": "採購案號：1080502-1",
+      "type": "IfcProject",
+      "parent": null
+    },
+    {
+      "id": "3ifT$Moun0fArr$ObqSlxP",
+      "name": "Default",
+      "type": "IfcSite",
+      "parent": "3ifT$Moun0fArr$ObqSlxR"
+    },
+    {
+      "id": "3ifT$Moun0fArr$ObqSlxQ",
+      "name": "中和安邦段青年社會住宅新建工程",
+      "type": "IfcBuilding",
+      "parent": "3ifT$Moun0fArr$ObqSlxP"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK7y",
+      "name": "B3F",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "0JOjPcZnT9wxa23KJRoFZI",
+      "name": "B3F停車位空間:B3F停車位空間:2089869",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7y"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK7z",
+      "name": "B2F",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "0JOjPcZnT9wxa23KJRoCql",
+      "name": "B2F 停車位空間:B2F 停車位空間:2086512",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7z"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK7_",
+      "name": "B1F",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "116IOAR8PB3RGsYZV6AcK4",
+      "name": "複合天花板:高2.5公尺:2070494",
+      "type": "IfcCovering",
+      "parent": "3ifT$Moun0fArr$OcBcK7_"
+    },
+    {
+      "id": "116IOAR8PB3RGsYZV6Aces",
+      "name": "複合天花板:高2.7公尺:2070764",
+      "type": "IfcCovering",
+      "parent": "3ifT$Moun0fArr$OcBcK7_"
+    },
+    {
+      "id": "0JOjPcZnT9wxa23KJRoADS",
+      "name": "一般停車位:一般停車位:2078723",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7_"
+    },
+    {
+      "id": "0JOjPcZnT9wxa23KJRoDSZ",
+      "name": "卸貨車位:卸貨車位:2083964",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7_"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK7u",
+      "name": "FL3",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "1UCjb_0u98uhk$8BAZufIA",
+      "name": "洗衣機:洗衣機:3441268",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwii2",
+      "name": "洗衣機:洗衣機:3634827",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwiLA",
+      "name": "洗衣機:洗衣機:3635395",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwiGV",
+      "name": "洗衣機:洗衣機:3635606",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwiGy",
+      "name": "洗衣機:洗衣機:3635637",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwiVZ",
+      "name": "洗衣機:洗衣機:3635818",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwiRX",
+      "name": "洗衣機:洗衣機:3636072",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwi64",
+      "name": "洗衣機:洗衣機:3636237",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwi2z",
+      "name": "洗衣機:洗衣機:3636532",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwiEE",
+      "name": "洗衣機:洗衣機:3636743",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwiEM",
+      "name": "洗衣機:洗衣機:3636767",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwiEq",
+      "name": "洗衣機:洗衣機:3636797",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwiA2",
+      "name": "洗衣機:洗衣機:3637003",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwi8J",
+      "name": "洗衣機:洗衣機:3637146",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZq8",
+      "name": "洗衣機:洗衣機:3637377",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZri",
+      "name": "洗衣機:洗衣機:3637477",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZpT",
+      "name": "洗衣機:洗衣機:3637588",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZ_w",
+      "name": "洗衣機:洗衣機:3637811",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZ$N",
+      "name": "洗衣機:洗衣機:3637854",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZ$M",
+      "name": "洗衣機:洗衣機:3637855",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZy9",
+      "name": "洗衣機:洗衣機:3637888",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZy8",
+      "name": "洗衣機:洗衣機:3637889",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZyp",
+      "name": "洗衣機:洗衣機:3637946",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZyo",
+      "name": "洗衣機:洗衣機:3637947",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZz0",
+      "name": "洗衣機:洗衣機:3637961",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZuB",
+      "name": "洗衣機:洗衣機:3638146",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZcP",
+      "name": "洗衣機:洗衣機:3638288",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "2plt8EJM1Dw9153VADwZfW",
+      "name": "洗衣機:洗衣機:3639273",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7u"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK7$",
+      "name": "FL4",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yC",
+      "name": "洗衣機:洗衣機:3643819",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yB",
+      "name": "洗衣機:洗衣機:3643820",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yA",
+      "name": "洗衣機:洗衣機:3643821",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0y9",
+      "name": "洗衣機:洗衣機:3643822",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0y8",
+      "name": "洗衣機:洗衣機:3643823",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yN",
+      "name": "洗衣機:洗衣機:3643824",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yM",
+      "name": "洗衣機:洗衣機:3643825",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yL",
+      "name": "洗衣機:洗衣機:3643826",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yK",
+      "name": "洗衣機:洗衣機:3643827",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yJ",
+      "name": "洗衣機:洗衣機:3643828",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yI",
+      "name": "洗衣機:洗衣機:3643829",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yH",
+      "name": "洗衣機:洗衣機:3643830",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yG",
+      "name": "洗衣機:洗衣機:3643831",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yV",
+      "name": "洗衣機:洗衣機:3643832",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yU",
+      "name": "洗衣機:洗衣機:3643833",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yT",
+      "name": "洗衣機:洗衣機:3643834",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yS",
+      "name": "洗衣機:洗衣機:3643835",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yR",
+      "name": "洗衣機:洗衣機:3643836",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yQ",
+      "name": "洗衣機:洗衣機:3643837",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yP",
+      "name": "洗衣機:洗衣機:3643838",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0yO",
+      "name": "洗衣機:洗衣機:3643839",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0zd",
+      "name": "洗衣機:洗衣機:3643840",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0zc",
+      "name": "洗衣機:洗衣機:3643841",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0zb",
+      "name": "洗衣機:洗衣機:3643842",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0za",
+      "name": "洗衣機:洗衣機:3643843",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0zZ",
+      "name": "洗衣機:洗衣機:3643844",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0zY",
+      "name": "洗衣機:洗衣機:3643845",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0zX",
+      "name": "洗衣機:洗衣機:3643846",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0oZ",
+      "name": "洗衣機:洗衣機:3643908",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "1XAW0AXXr9kgsBpYqTh0sS",
+      "name": "洗衣機:洗衣機:3644219",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7$"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK7o",
+      "name": "FL5",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUG",
+      "name": "洗衣機:洗衣機:3644691",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUN",
+      "name": "洗衣機:洗衣機:3644692",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUM",
+      "name": "洗衣機:洗衣機:3644693",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUL",
+      "name": "洗衣機:洗衣機:3644694",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUK",
+      "name": "洗衣機:洗衣機:3644695",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUR",
+      "name": "洗衣機:洗衣機:3644696",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUQ",
+      "name": "洗衣機:洗衣機:3644697",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUP",
+      "name": "洗衣機:洗衣機:3644698",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUO",
+      "name": "洗衣機:洗衣機:3644699",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUV",
+      "name": "洗衣機:洗衣機:3644700",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUU",
+      "name": "洗衣機:洗衣機:3644701",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUT",
+      "name": "洗衣機:洗衣機:3644702",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUS",
+      "name": "洗衣機:洗衣機:3644703",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUZ",
+      "name": "洗衣機:洗衣機:3644704",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUY",
+      "name": "洗衣機:洗衣機:3644705",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUX",
+      "name": "洗衣機:洗衣機:3644706",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUW",
+      "name": "洗衣機:洗衣機:3644707",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUd",
+      "name": "洗衣機:洗衣機:3644708",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUc",
+      "name": "洗衣機:洗衣機:3644709",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUb",
+      "name": "洗衣機:洗衣機:3644710",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUa",
+      "name": "洗衣機:洗衣機:3644711",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUh",
+      "name": "洗衣機:洗衣機:3644712",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUg",
+      "name": "洗衣機:洗衣機:3644713",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUf",
+      "name": "洗衣機:洗衣機:3644714",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUe",
+      "name": "洗衣機:洗衣機:3644715",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUl",
+      "name": "洗衣機:洗衣機:3644716",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUk",
+      "name": "洗衣機:洗衣機:3644717",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUj",
+      "name": "洗衣機:洗衣機:3644718",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUi",
+      "name": "洗衣機:洗衣機:3644719",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipUp",
+      "name": "洗衣機:洗衣機:3644720",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7o"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK74",
+      "name": "FL6",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVN",
+      "name": "洗衣機:洗衣機:3644756",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVM",
+      "name": "洗衣機:洗衣機:3644757",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVL",
+      "name": "洗衣機:洗衣機:3644758",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVK",
+      "name": "洗衣機:洗衣機:3644759",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVR",
+      "name": "洗衣機:洗衣機:3644760",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVQ",
+      "name": "洗衣機:洗衣機:3644761",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVP",
+      "name": "洗衣機:洗衣機:3644762",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVO",
+      "name": "洗衣機:洗衣機:3644763",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVV",
+      "name": "洗衣機:洗衣機:3644764",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVU",
+      "name": "洗衣機:洗衣機:3644765",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVT",
+      "name": "洗衣機:洗衣機:3644766",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVS",
+      "name": "洗衣機:洗衣機:3644767",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVZ",
+      "name": "洗衣機:洗衣機:3644768",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVY",
+      "name": "洗衣機:洗衣機:3644769",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVX",
+      "name": "洗衣機:洗衣機:3644770",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVW",
+      "name": "洗衣機:洗衣機:3644771",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVd",
+      "name": "洗衣機:洗衣機:3644772",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVc",
+      "name": "洗衣機:洗衣機:3644773",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVb",
+      "name": "洗衣機:洗衣機:3644774",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVa",
+      "name": "洗衣機:洗衣機:3644775",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVh",
+      "name": "洗衣機:洗衣機:3644776",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVg",
+      "name": "洗衣機:洗衣機:3644777",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVf",
+      "name": "洗衣機:洗衣機:3644778",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVe",
+      "name": "洗衣機:洗衣機:3644779",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVl",
+      "name": "洗衣機:洗衣機:3644780",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVk",
+      "name": "洗衣機:洗衣機:3644781",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVj",
+      "name": "洗衣機:洗衣機:3644782",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVi",
+      "name": "洗衣機:洗衣機:3644783",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVp",
+      "name": "洗衣機:洗衣機:3644784",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "36I4Vea8P64he4Xz6wipVo",
+      "name": "洗衣機:洗衣機:3644785",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK74"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK75",
+      "name": "FL7",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVk",
+      "name": "洗衣機:洗衣機:3644879",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVn",
+      "name": "洗衣機:洗衣機:3644880",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVm",
+      "name": "洗衣機:洗衣機:3644881",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVo",
+      "name": "洗衣機:洗衣機:3644883",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVr",
+      "name": "洗衣機:洗衣機:3644884",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVq",
+      "name": "洗衣機:洗衣機:3644885",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVv",
+      "name": "洗衣機:洗衣機:3644888",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVu",
+      "name": "洗衣機:洗衣機:3644889",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVx",
+      "name": "洗衣機:洗衣機:3644890",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVw",
+      "name": "洗衣機:洗衣機:3644891",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVz",
+      "name": "洗衣機:洗衣機:3644892",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVy",
+      "name": "洗衣機:洗衣機:3644893",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFV$",
+      "name": "洗衣機:洗衣機:3644894",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFV_",
+      "name": "洗衣機:洗衣機:3644895",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFV0",
+      "name": "洗衣機:洗衣機:3644897",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFV2",
+      "name": "洗衣機:洗衣機:3644899",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFV4",
+      "name": "洗衣機:洗衣機:3644901",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFV6",
+      "name": "洗衣機:洗衣機:3644903",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFV9",
+      "name": "洗衣機:洗衣機:3644904",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFV8",
+      "name": "洗衣機:洗衣機:3644905",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVA",
+      "name": "洗衣機:洗衣機:3644907",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFVD",
+      "name": "洗衣機:洗衣機:3644908",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "0hV$2Gytf7Fh5WkILUKFMw",
+      "name": "洗衣機:洗衣機:3645339",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "2SpznkipL3TvOptiYa$zm8",
+      "name": "洗衣機:洗衣機:3645825",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "2SpznkipL3TvOptiYa$znQ",
+      "name": "洗衣機:洗衣機:3645907",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "2SpznkipL3TvOptiYa$z_Q",
+      "name": "洗衣機:洗衣機:3645971",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "2SpznkipL3TvOptiYa$z$e",
+      "name": "洗衣機:洗衣機:3646049",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "2SpznkipL3TvOptiYa$zyT",
+      "name": "洗衣機:洗衣機:3646100",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "2SpznkipL3TvOptiYa$zzE",
+      "name": "洗衣機:洗衣機:3646151",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK75"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK76",
+      "name": "FL8",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZq",
+      "name": "洗衣機:洗衣機:3646212",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZr",
+      "name": "洗衣機:洗衣機:3646213",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZs",
+      "name": "洗衣機:洗衣機:3646214",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZt",
+      "name": "洗衣機:洗衣機:3646215",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZu",
+      "name": "洗衣機:洗衣機:3646216",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZv",
+      "name": "洗衣機:洗衣機:3646217",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZw",
+      "name": "洗衣機:洗衣機:3646218",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZx",
+      "name": "洗衣機:洗衣機:3646219",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZy",
+      "name": "洗衣機:洗衣機:3646220",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZz",
+      "name": "洗衣機:洗衣機:3646221",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZ_",
+      "name": "洗衣機:洗衣機:3646222",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZ$",
+      "name": "洗衣機:洗衣機:3646223",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZW",
+      "name": "洗衣機:洗衣機:3646224",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZX",
+      "name": "洗衣機:洗衣機:3646225",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZY",
+      "name": "洗衣機:洗衣機:3646226",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZZ",
+      "name": "洗衣機:洗衣機:3646227",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZa",
+      "name": "洗衣機:洗衣機:3646228",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZb",
+      "name": "洗衣機:洗衣機:3646229",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZc",
+      "name": "洗衣機:洗衣機:3646230",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZd",
+      "name": "洗衣機:洗衣機:3646231",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZe",
+      "name": "洗衣機:洗衣機:3646232",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZf",
+      "name": "洗衣機:洗衣機:3646233",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZg",
+      "name": "洗衣機:洗衣機:3646234",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZh",
+      "name": "洗衣機:洗衣機:3646235",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZi",
+      "name": "洗衣機:洗衣機:3646236",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZj",
+      "name": "洗衣機:洗衣機:3646237",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZk",
+      "name": "洗衣機:洗衣機:3646238",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZl",
+      "name": "洗衣機:洗衣機:3646239",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "0T_uHtEMz7ABeWMqN2vHZG",
+      "name": "洗衣機:洗衣機:3646240",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK76"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK77",
+      "name": "FL9",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vte",
+      "name": "洗衣機:洗衣機:3646391",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vtd",
+      "name": "洗衣機:洗衣機:3646392",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vtc",
+      "name": "洗衣機:洗衣機:3646393",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vtb",
+      "name": "洗衣機:洗衣機:3646394",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vta",
+      "name": "洗衣機:洗衣機:3646395",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vtZ",
+      "name": "洗衣機:洗衣機:3646396",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vtY",
+      "name": "洗衣機:洗衣機:3646397",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vtX",
+      "name": "洗衣機:洗衣機:3646398",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vtW",
+      "name": "洗衣機:洗衣機:3646399",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsV",
+      "name": "洗衣機:洗衣機:3646400",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsU",
+      "name": "洗衣機:洗衣機:3646401",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsT",
+      "name": "洗衣機:洗衣機:3646402",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsS",
+      "name": "洗衣機:洗衣機:3646403",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsR",
+      "name": "洗衣機:洗衣機:3646404",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsQ",
+      "name": "洗衣機:洗衣機:3646405",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsP",
+      "name": "洗衣機:洗衣機:3646406",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsO",
+      "name": "洗衣機:洗衣機:3646407",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsN",
+      "name": "洗衣機:洗衣機:3646408",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsM",
+      "name": "洗衣機:洗衣機:3646409",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsL",
+      "name": "洗衣機:洗衣機:3646410",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsK",
+      "name": "洗衣機:洗衣機:3646411",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsJ",
+      "name": "洗衣機:洗衣機:3646412",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsI",
+      "name": "洗衣機:洗衣機:3646413",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsH",
+      "name": "洗衣機:洗衣機:3646414",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsG",
+      "name": "洗衣機:洗衣機:3646415",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsF",
+      "name": "洗衣機:洗衣機:3646416",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsE",
+      "name": "洗衣機:洗衣機:3646417",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsD",
+      "name": "洗衣機:洗衣機:3646418",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vsC",
+      "name": "洗衣機:洗衣機:3646419",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK77"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcK7r",
+      "name": "FL23",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWL",
+      "name": "洗衣機:洗衣機:3647050",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWK",
+      "name": "洗衣機:洗衣機:3647051",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWJ",
+      "name": "洗衣機:洗衣機:3647052",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWI",
+      "name": "洗衣機:洗衣機:3647053",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWH",
+      "name": "洗衣機:洗衣機:3647054",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWG",
+      "name": "洗衣機:洗衣機:3647055",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWF",
+      "name": "洗衣機:洗衣機:3647056",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWE",
+      "name": "洗衣機:洗衣機:3647057",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWD",
+      "name": "洗衣機:洗衣機:3647058",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWC",
+      "name": "洗衣機:洗衣機:3647059",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWB",
+      "name": "洗衣機:洗衣機:3647060",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWA",
+      "name": "洗衣機:洗衣機:3647061",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW9",
+      "name": "洗衣機:洗衣機:3647062",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW8",
+      "name": "洗衣機:洗衣機:3647063",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW7",
+      "name": "洗衣機:洗衣機:3647064",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW6",
+      "name": "洗衣機:洗衣機:3647065",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW4",
+      "name": "洗衣機:洗衣機:3647067",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW3",
+      "name": "洗衣機:洗衣機:3647068",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW2",
+      "name": "洗衣機:洗衣機:3647069",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW1",
+      "name": "洗衣機:洗衣機:3647070",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW0",
+      "name": "洗衣機:洗衣機:3647071",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW$",
+      "name": "洗衣機:洗衣機:3647072",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vW_",
+      "name": "洗衣機:洗衣機:3647073",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWz",
+      "name": "洗衣機:洗衣機:3647074",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWy",
+      "name": "洗衣機:洗衣機:3647075",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWx",
+      "name": "洗衣機:洗衣機:3647076",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3Qg1U3Fcz2k92jmxj73vWv",
+      "name": "洗衣機:洗衣機:3647078",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcK7r"
+    },
+    {
+      "id": "3ifT$Moun0fArr$OcBcwNb",
+      "name": "FL24",
+      "type": "IfcBuildingStorey",
+      "parent": "3ifT$Moun0fArr$ObqSlxQ"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGyI",
+      "name": "洗衣機:洗衣機:3647161",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGyH",
+      "name": "洗衣機:洗衣機:3647162",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGyG",
+      "name": "洗衣機:洗衣機:3647163",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGyN",
+      "name": "洗衣機:洗衣機:3647164",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGyM",
+      "name": "洗衣機:洗衣機:3647165",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGyL",
+      "name": "洗衣機:洗衣機:3647166",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGyK",
+      "name": "洗衣機:洗衣機:3647167",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzh",
+      "name": "洗衣機:洗衣機:3647168",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzg",
+      "name": "洗衣機:洗衣機:3647169",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGze",
+      "name": "洗衣機:洗衣機:3647171",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzl",
+      "name": "洗衣機:洗衣機:3647172",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzk",
+      "name": "洗衣機:洗衣機:3647173",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzi",
+      "name": "洗衣機:洗衣機:3647175",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzZ",
+      "name": "洗衣機:洗衣機:3647176",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzY",
+      "name": "洗衣機:洗衣機:3647177",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzX",
+      "name": "洗衣機:洗衣機:3647178",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzW",
+      "name": "洗衣機:洗衣機:3647179",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzd",
+      "name": "洗衣機:洗衣機:3647180",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGza",
+      "name": "洗衣機:洗衣機:3647183",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzx",
+      "name": "洗衣機:洗衣機:3647184",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzw",
+      "name": "洗衣機:洗衣機:3647185",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzv",
+      "name": "洗衣機:洗衣機:3647186",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    },
+    {
+      "id": "249NInZLrFxw9hPRNBBGzu",
+      "name": "洗衣機:洗衣機:3647187",
+      "type": "IfcBuildingElementProxy",
+      "parent": "3ifT$Moun0fArr$OcBcwNb"
+    }
+  ]
+}
