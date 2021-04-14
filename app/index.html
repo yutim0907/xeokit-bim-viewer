@@ -258,7 +258,7 @@
         const aabb = entity.aabb;
         const entityCenter = math.getAABB3Center(aabb);
 
-        const metaObject = viewer.metaScene.metaObjects[entity.id];
+        const metaObject = bimViewer.viewer.metaScene.metaObjects[entity.id];
 
         annotations.createAnnotation({
             id: "myAnnotation1",
