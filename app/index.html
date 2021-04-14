@@ -251,30 +251,30 @@
         }
 //let numAnnotations = 0;
 
-    <!-- BIMViewer.viewer.cameraControl.on("picked", (pickResult) => { -->
+     /*BIMViewer.viewer.cameraControl.on("picked", (pickResult) => {
 
-        <!-- const entity = pickResult.entity; -->
-        <!-- const aabb = entity.aabb; -->
-        <!-- const entityCenter = math.getAABB3Center(aabb); -->
+        const entity = pickResult.entity;
+        const aabb = entity.aabb;
+        const entityCenter = math.getAABB3Center(aabb);
 
-        <!-- const metaObject = viewer.metaScene.metaObjects[entity.id]; -->
+        const metaObject = viewer.metaScene.metaObjects[entity.id];
 
-        <!-- annotations.createAnnotation({ -->
-            <!-- id: "myAnnotation1", -->
-            <!-- entity: entity, -->
-            <!-- worldPos: entityCenter, -->
-            <!-- occludable: false, -->
-            <!-- markerShown: true, -->
-            <!-- labelShown: true, -->
+        annotations.createAnnotation({
+            id: "myAnnotation1",
+            entity: entity,
+            worldPos: entityCenter,
+            occludable: false,
+            markerShown: true,
+            labelShown: true,
 
-            <!-- values: { -->
-                <!-- glyph: "" + numAnnotations++, -->
-                <!-- title: entity.id, -->
-                <!-- description: metaObject ? ("This object is a: " + metaObject.type) : "No description available", -->
-                <!-- markerBGColor: "green" -->
-            <!-- } -->
-        <!-- }); -->
-    <!-- }); -->
+            values: {
+                glyph: "" + numAnnotations++,
+                title: entity.id,
+                description: metaObject ? ("This object is a: " + metaObject.type) : "No description available",
+                markerBGColor: "green"
+            }
+        });
+    }); */
         window.bimViewer = bimViewer; // For debugging
     };
 
