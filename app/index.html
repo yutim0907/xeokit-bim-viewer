@@ -41,7 +41,8 @@
     // Set up application
 
     import {Server, BIMViewer} from "../dist/main.js";
-
+	import {AnnotationsPlugin} from "../src/plugins/AnnotationsPlugin/AnnotationsPlugin.js";
+	
     window.onload = function () {
 
         const requestParams = getRequestParams();
@@ -149,6 +150,21 @@
             (errorMsg) => {
                 console.error(errorMsg);
             });
+			const annotations = new AnnotationsPlugin(bimViewer, {
+			markerHTML: "<div class='annotation-marker' style='background-color: {{markerBGColor}};'>{{glyph}}</div>",
+			labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};'>\
+			<div class='annotation-title'>{{title}}</div>\
+			<div class='annotation-desc'>{{description}}</div>\
+			</div>",
+			
+			values: {
+			markerBGColor: "red",
+			labelBGColor: "white",
+			glyph: "X",
+			title: "Untitled",
+			description: "No description"
+			}
+			});
 
         function getRequestParams() {
             var vars = {};
