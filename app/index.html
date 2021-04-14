@@ -150,7 +150,7 @@
             (errorMsg) => {
                 console.error(errorMsg);
             });
-			const annotations = new AnnotationsPlugin(bimViewer, {
+			const annotations = new AnnotationsPlugin(bimViewer.viewer, {
 			markerHTML: "<div class='annotation-marker' style='background-color: {{markerBGColor}};'>{{glyph}}</div>",
 			labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};'>\
 			<div class='annotation-title'>{{title}}</div>\
