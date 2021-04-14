@@ -42,7 +42,8 @@
 
     import {Server, BIMViewer} from "../dist/main.js";
 	import {AnnotationsPlugin} from "../src/plugins/AnnotationsPlugin/AnnotationsPlugin.js";
-	
+	import {math} from "../src/viewer/scene/math/math.js";
+
     window.onload = function () {
 
         const requestParams = getRequestParams();
@@ -251,7 +252,7 @@
         }
 //let numAnnotations = 0;
 
-     /*BIMViewer.viewer.cameraControl.on("picked", (pickResult) => {
+     bimViewer.viewer.cameraControl.on("picked", (pickResult) => {
 
         const entity = pickResult.entity;
         const aabb = entity.aabb;
@@ -274,7 +275,7 @@
                 markerBGColor: "green"
             }
         });
-    }); */
+    }); 
         window.bimViewer = bimViewer; // For debugging
     };
 
