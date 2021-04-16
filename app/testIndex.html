@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>xeokit BIM Viewer</title>
+
+    <!-- BIMViewer styles -->
+    <link rel="stylesheet" href="./lib/fontawesome-free-5.11.2-web/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/BIMViewer.css" type="text/css"/>
+
+    <!-- App style -->
+    <link rel="stylesheet" href="./css/style.css"/>
+
+    <!-- App tooltips style -->
+    <link rel="stylesheet" href="./lib/backdrop.css"/>
+<style>
+
+        .annotation-marker {
+            color: #ffffff;
+            line-height: 1.8;
+            text-align: center;
+            font-family: "monospace";
+            font-weight: bold;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 15px;
+            border: 2px solid #ffffff;
+            background: black;
+            visibility: hidden;
+            box-shadow: 5px 5px 15px 1px #000000;
+            z-index: 0;
+        }
+
+        .annotation-label {
+            position: absolute;
+            max-width: 250px;
+            min-height: 50px;
+            padding: 8px;
+            padding-left: 12px;
+            padding-right: 12px;
+            background: #ffffff;
+            color: #000000;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 8px;
+            border: #ffffff solid 2px;
+            box-shadow: 5px 5px 15px 1px #000000;
+            z-index: 90000;
+        }
+
+        .annotation-label:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 8px 12px 8px 0;
+            border-color: transparent white;
+            display: block;
+            width: 0;
+            z-index: 1;
+            margin-top: -11px;
+            left: -12px;
+            top: 20px;
+        }
+
+        .annotation-label:before {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 9px 13px 9px 0;
+            border-color: transparent #ffffff;
+            display: block;
+            width: 0;
+            z-index: 0;
+            margin-top: -12px;
+            left: -15px;
+            top: 20px;
+        }
+
+        .annotation-title {
+            font: normal 20px arial, serif;
+            margin-bottom: 8px;
+        }
+
+        .annotation-desc {
+            font: normal 14px arial, serif;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="myViewer" class="xeokit-busy-modal-backdrop">
+    <div id="myExplorer" class="active"></div>
+    <div id="myContent">
+        <div id="myToolbar"></div>
+        <canvas id="myCanvas"></canvas>
+    </div>
+</div>
+<canvas id="myNavCubeCanvas"></canvas>
+</body>
+
+<!-- App tooltips libraries-->
+<script src="./lib/popper.js"></script>
+<script src="./lib/tippy.js"></script>
+
+<script type="module">
+
+    // Set up application
+	import {Viewer} from "../src/viewer/Viewer.js";
+    import {XKTLoaderPlugin} from "../src/plugins/XKTLoaderPlugin/XKTLoaderPlugin.js";
+    import {AnnotationsPlugin} from "../src/plugins/AnnotationsPlugin/AnnotationsPlugin.js";
+	import {math} from "../src/viewer/scene/math/math.js";
+    //------------------------------------------------------------------------------------------------------------------
+    // Create a Viewer and arrange the camera
+    //------------------------------------------------------------------------------------------------------------------
+
+    const viewer = new Viewer({
+        canvasId: "myCanvas"
+    });
+
+    viewer.camera.eye = [-3.93, 2.85, 27.01];
+    viewer.camera.look = [4.40, 3.72, 8.89];
+    viewer.camera.up = [-0.01, 0.99, 0.039];
+
+    //------------------------------------------------------------------------------------------------------------------
+    // Load a model
+    //------------------------------------------------------------------------------------------------------------------
+
+    const xktLoader = new XKTLoaderPlugin(viewer);
+
+
+    const model = xktLoader.load({
+        id: "myModel",
+        src: "../app/data/projects/WaterLock/models/design/geometry.xkt",
+        metaModelSrc: "./../app/data/projects/WaterLock/models/design/metadata.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
+        edges: true
+    });
+
+    //------------------------------------------------------------------------------------------------------------------
+    // Create an AnnotationsPlugin, with which we'll create annotations
+    //------------------------------------------------------------------------------------------------------------------
+
+    const annotations = new AnnotationsPlugin(viewer, {
+
+        markerHTML: "<div class='annotation-marker' style='background-color: {{markerBGColor}};'>{{glyph}}</div>",
+        labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};'>\
+            <div class='annotation-title'>{{title}}</div>\
+            <div class='annotation-desc'>{{description}}</div>\
+            </div>",
+
+        values: {
+            markerBGColor: "red",
+            labelBGColor: "white",
+            glyph: "X",
+            title: "Untitled",
+            description: "Test description"
+        }
+    });
+
+    var prevAnnotationClicked = null;
+
+    annotations.on("markerClicked", (annotation) => {
+        if (prevAnnotationClicked) {
+            prevAnnotationClicked.setLabelShown(false);
+        }
+        annotation.setLabelShown(true);
+        viewer.cameraFlight.flyTo(annotation);
+        prevAnnotationClicked = annotation;
+    });
+
+    model.on("loaded", () => {
+
+        //------------------------------------------------------------------------------------------------------------------
+        // Create some Annotations
+        //------------------------------------------------------------------------------------------------------------------
+const entity1 = viewer.scene.objects["3cjVNV_IX7p8MdJsz74DxJ"];
+const aabb1 = entity1.aabb;
+const entity1Center = math.getAABB3Center(aabb1);
+
+        annotations.createAnnotation({
+
+            id: "myAnnotation1",
+
+            entity: viewer.scene.objects["3cjVNV_IX7p8MdJsz74DxJ"],
+
+            worldPos: entity1Center,
+
+
+            //eye: [5.800, 3.922, 16.919],
+            //look: [8.374, 3.293, 9.799],
+            //up: [0.0358, 0.987, -0.078],
+			
+            occludable: true,
+            markerShown: true,
+            labelShown: true,
+
+            values: {
+                glyph: "設備01",
+                title: "自來水箱_R3F",
+                description: "自來水箱_R3F",
+                markerBGColor: "green"
+            }
+        });
+});
+
+    window.viewer = viewer;
+
+
+
+</script>
+
+</html>
