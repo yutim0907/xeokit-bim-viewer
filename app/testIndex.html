@@ -161,7 +161,14 @@
             description: "Test description"
         }
     });
-
+	
+	function getEntityWorldPosByObjectId(objectId){
+		var entity = viewer.scene.objects[objectId];
+		var aabb = entity.aabb;
+		var entityCenter = math.getAABB3Center(aabb);
+		return entityCenter;
+	}
+	
     var prevAnnotationClicked = null;
 
     annotations.on("markerClicked", (annotation) => {
@@ -178,9 +185,14 @@
         //------------------------------------------------------------------------------------------------------------------
         // Create some Annotations
         //------------------------------------------------------------------------------------------------------------------
-const entity1 = viewer.scene.objects["3cjVNV_IX7p8MdJsz74DxJ"];
-const aabb1 = entity1.aabb;
-const entity1Center = math.getAABB3Center(aabb1);
+		
+		const entity1 = viewer.scene.objects["3cjVNV_IX7p8MdJsz74DxJ"];
+		const aabb1 = entity1.aabb;
+		const entity1Center = math.getAABB3Center(aabb1);
+		
+		const entity2 = viewer.scene.objects["33gAHALIL7YP57yMvgcRee"];
+		const aabb2 = entity2.aabb;
+		const entity2Center = math.getAABB3Center(aabb2);
 
         annotations.createAnnotation({
 
@@ -201,13 +213,38 @@ const entity1Center = math.getAABB3Center(aabb1);
 
             values: {
                 glyph: "設備01",
-                title: "自來水箱_R3F",
-                description: "自來水箱_R3F",
+                title: "自來水箱_R3F_C棟",
+                description: "自來水箱_R3F_C棟",
                 markerBGColor: "red"
             }
         });
-});
+		
+		annotations.createAnnotation({
 
+            id: "myAnnotation2",
+
+            entity: viewer.scene.objects["33gAHALIL7YP57yMvgcRee"],
+
+            worldPos: entity2Center,
+
+
+            eye: [59.15625335551127, 100.67655645689116, 31.904384957338436],
+            look: [58.51164099993461, 94.4493317010133, 24.87251256698793],
+            up:  [-0.06037922135105747, 0.750016135769919, -0.6586578365993976],
+			
+            occludable: false,
+            markerShown: true,
+            labelShown: false,
+
+            values: {
+                glyph: "設備02",
+                title: "自來水箱_R3F B棟",
+                description: "自來水箱_R3F B棟",
+                markerBGColor: "green"
+            }
+        });
+});
+    var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
     window.viewer = viewer;
 
 
