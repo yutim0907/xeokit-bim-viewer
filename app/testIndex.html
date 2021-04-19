@@ -162,12 +162,7 @@
         }
     });
 	
-	function getEntityWorldPosByObjectId(objectId){
-		var entity = viewer.scene.objects[objectId];
-		var aabb = entity.aabb;
-		var entityCenter = math.getAABB3Center(aabb);
-		return entityCenter;
-	}
+	
 	
     var prevAnnotationClicked = null;
 
@@ -244,6 +239,12 @@
             }
         });
 });
+	function getEntityWorldPosByObjectId(objectId){
+		var entity = viewer.scene.objects[objectId];
+		var aabb = entity.aabb;
+		var entityCenter = math.getAABB3Center(aabb);
+		return entityCenter;
+	}
     var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
     window.viewer = viewer;
 
