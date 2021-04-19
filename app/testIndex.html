@@ -238,6 +238,7 @@
                 markerBGColor: "green"
             }
         });
+		var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
 });
 	function getEntityWorldPosByObjectId(objectId){
 		var entity = viewer.scene.objects[objectId];
@@ -245,7 +246,7 @@
 		var entityCenter = math.getAABB3Center(aabb);
 		return entityCenter;
 	}
-    var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
+    
     window.viewer = viewer;
 
 
