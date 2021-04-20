@@ -117,7 +117,7 @@
     </div>
 </div>
 <canvas id="myNavCubeCanvas"></canvas>
-<audio loop="loop" autoplay="autoplay" muted="muted" id="alarmSound">
+<audio loop="loop" id="alarmSound">
     <source id="mp3Source" type="audio/mp3">
 </audio>
 </body>
@@ -129,19 +129,6 @@
 	// Show loading animation.
 	var audioElement = document.getElementById("alarmSound");
 	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
-	const audioPromise = audioElement.play();
-	if (audioPromise !== undefined) {
-		audioPromise.then(() => {
-		// Automatic playback started!
-		// Show playing UI.
-		console.log('autoplay succeed.');
-	}).catch(error => {
-		// Auto-play was prevented
-		// Show paused UI.
-		console.log('autoplay failed.');
-	});
-	}
-	
 	function playAudio(){
 		document.getElementById("alarmSound").play();
 	}
