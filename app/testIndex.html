@@ -195,7 +195,6 @@
 	var audioElement = $("#alarmSound");
 	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
 	audioElement.trigger('load');
-	audioElement.trigger('pause');
 	
     model.on("loaded", () => {
 
@@ -262,7 +261,7 @@
         });
 		var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
 		
-		audioElement.trigger('play');
+		$('alarmSound').trigger('play');
 		
 });
 	function getEntityWorldPosByObjectId(objectId){
