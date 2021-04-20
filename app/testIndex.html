@@ -132,7 +132,7 @@
 	  audioElement.trigger('load');
 	const audioPromise = audioElement.trigger('play');
 	if (audioPromise !== undefined) {
-		playPromise.then(() => {
+		audioPromise.then(() => {
 		// Automatic playback started!
 		// Show playing UI.
 		console.log('autoplay succeed.');
