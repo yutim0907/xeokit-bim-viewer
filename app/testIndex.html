@@ -87,15 +87,25 @@
         .annotation-desc {
             font: normal 14px arial, serif;
         }
+		
+		.alarm-bar{
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    width: 40%;
+    z-index: 1100000000000000000;
+    color: red;
+		}
 
     </style>
 
 </head>
 
 <body>
-
+<div id="alarmBar" class="alarm-bar" >
+    警報發生 - 自來水箱_R3F C棟
+</div>
 <div id="myViewer" class="xeokit-busy-modal-backdrop">
-    <div id="myExplorer" class="active"></div>
     <div id="myContent">
         <div id="myToolbar"></div>
         <canvas id="myCanvas"></canvas>
@@ -241,10 +251,12 @@
 		var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
 });
 	function getEntityWorldPosByObjectId(objectId){
+	if(viewer.scene.numObjects > 0){
 		var entity = viewer.scene.objects[objectId];
 		var aabb = entity.aabb;
 		var entityCenter = math.getAABB3Center(aabb);
 		return entityCenter;
+		}
 	}
     
     window.viewer = viewer;
