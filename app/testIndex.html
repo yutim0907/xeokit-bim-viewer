@@ -117,7 +117,7 @@
     </div>
 </div>
 <canvas id="myNavCubeCanvas"></canvas>
-<audio loop id="alarmSound">
+<audio loop="loop" autoplay="autoplay" muted="muted" id="alarmSound">
     <source id="mp3Source" type="audio/mp3">
 </audio>
 </body>
@@ -125,7 +125,16 @@
 <!-- App tooltips libraries-->
 <script src="./lib/popper.js"></script>
 <script src="./lib/tippy.js"></script>
-
+<script type="text/javascript">
+    window.onload=function(){
+      var audioElement = $("#alarmSound");
+	  $('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
+	  audioElement.trigger('load');
+	  setTimeout(function(){
+	  $('#alarmSound').trigger('play');
+	  }, 5000);
+    }
+  </script>
 <script type="module">
 
     // Set up application
@@ -192,9 +201,7 @@
         viewer.cameraFlight.flyTo(annotation);
         prevAnnotationClicked = annotation;
     });
-	var audioElement = $("#alarmSound");
-	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
-	audioElement.trigger('load');
+	
 	
     model.on("loaded", () => {
 
@@ -262,9 +269,7 @@
 		var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
 		
 		});
-	setTimeout(function(){
-		$('#alarmSound').trigger('play');
-		}, 5000);
+
 	function getEntityWorldPosByObjectId(objectId){
 	if(viewer.scene.numObjects > 0){
 		var entity = viewer.scene.objects[objectId];
