@@ -108,6 +108,7 @@
 
 <body>
 <div id="alarmBar" class="alarm-bar" onclick="playAudio();">
+<button onclick="jumpToHref()"> jump </button>
     警報發生 - 自來水箱_R3F C棟
 </div>
 <div id="myViewer" class="xeokit-busy-modal-backdrop">
@@ -132,7 +133,10 @@
 	function playAudio(){
 	viewer.cameraFlight.flyTo(viewer.scene.objects["3cjVNV_IX7p8MdJsz74DxJ"]);
 	console.log('play audio');
-		document.getElementById("alarmSound").play();
+		//document.getElementById("alarmSound").play();
+	}
+	function jumpToHref(){
+	window.location.href = "https://yutim0907.github.io/app/testIndex.html?projectId=WaterLock"
 	}
   </script>
 <script type="module">
