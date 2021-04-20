@@ -107,7 +107,7 @@
 </head>
 
 <body>
-<div id="alarmBar" class="alarm-bar" >
+<div id="alarmBar" class="alarm-bar" onclick="playAudio();">
     警報發生 - 自來水箱_R3F C棟
 </div>
 <div id="myViewer" class="xeokit-busy-modal-backdrop">
@@ -140,6 +140,10 @@
 		// Show paused UI.
 		console.log('autoplay failed.');
 	});
+	}
+	
+	function playAudio(){
+		audioPromise.play();
 	}
   </script>
 <script type="module">
