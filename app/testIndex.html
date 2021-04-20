@@ -127,10 +127,9 @@
 <script src="./lib/tippy.js"></script>
 <script type="text/javascript">
 	// Show loading animation.
-	var audioElement = $("#alarmSound");
+	var audioElement = document.getElementById("alarmSound");
 	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
-	  audioElement.trigger('load');
-	const audioPromise = audioElement.trigger('play');
+	const audioPromise = audioElement.play();
 	if (audioPromise !== undefined) {
 		audioPromise.then(() => {
 		// Automatic playback started!
