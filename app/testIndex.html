@@ -115,6 +115,9 @@
     </div>
 </div>
 <canvas id="myNavCubeCanvas"></canvas>
+<audio loop id="alarmSound">
+    <source id="mp3Source" type="audio/mp3">
+</audio>
 </body>
 
 <!-- App tooltips libraries-->
@@ -252,6 +255,11 @@
             }
         });
 		var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
+		var audioElement = $("#alarmSound");
+		$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
+		audioElement.trigger('load');
+		audioElement.trigger('play');
+		
 });
 	function getEntityWorldPosByObjectId(objectId){
 	if(viewer.scene.numObjects > 0){
