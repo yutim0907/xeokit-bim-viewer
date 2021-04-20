@@ -261,9 +261,10 @@
         });
 		var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
 		
+		});
+	setTimeout(function(){
 		$('#alarmSound').trigger('play');
-		
-});
+		}, 5000);
 	function getEntityWorldPosByObjectId(objectId){
 	if(viewer.scene.numObjects > 0){
 		var entity = viewer.scene.objects[objectId];
