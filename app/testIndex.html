@@ -126,14 +126,22 @@
 <script src="./lib/popper.js"></script>
 <script src="./lib/tippy.js"></script>
 <script type="text/javascript">
-    window.onload=function(){
-      var audioElement = $("#alarmSound");
-	  $('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
+	// Show loading animation.
+	var audioElement = $("#alarmSound");
+	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
 	  audioElement.trigger('load');
-	  setTimeout(function(){
-	  $('#alarmSound').trigger('play');
-	  }, 5000);
-    }
+	const audioPromise = audioElement.trigger('play');
+	if (audioPromise !== undefined) {
+		playPromise.then(() => {
+		// Automatic playback started!
+		// Show playing UI.
+		console.log('autoplay succeed.');
+	}).catch(error => {
+		// Auto-play was prevented
+		// Show paused UI.
+		console.log('autoplay failed.');
+	});
+	}
   </script>
 <script type="module">
 
