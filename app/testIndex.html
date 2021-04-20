@@ -107,7 +107,7 @@
 </head>
 
 <body>
-<div id="alarmBar" class="alarm-bar" onclick="playAudio();">
+<div id="alarmBar" class="alarm-bar" onclick="flyToObj();">
 <button onclick="jumpToHref()"> jump </button>
     警報發生 - 自來水箱_R3F C棟
 </div>
@@ -121,6 +121,7 @@
 <audio loop="loop" id="alarmSound" autoplay="autoplay" controls="controls">
     <source id="mp3Source" type="audio/mp3">
 </audio>
+<button id="testButton" style="display:none;" onclick="playAudio();">
 </body>
 
 <!-- App tooltips libraries-->
@@ -130,10 +131,12 @@
 	// Show loading animation.
 	var audioElement = document.getElementById("alarmSound");
 	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
-	function playAudio(){
+	function flyToObj(){
 	viewer.cameraFlight.flyTo(viewer.scene.objects["3cjVNV_IX7p8MdJsz74DxJ"]);
-	console.log('play audio');
-		//document.getElementById("alarmSound").play();
+	}
+	function playAudio(){
+		console.log('play audio');
+		document.getElementById("alarmSound").play();
 	}
 	function jumpToHref(){
 	window.location.href = "https://yutim0907.github.io/app/testIndex.html?projectId=WaterLock"
@@ -271,7 +274,7 @@
             }
         });
 		var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
-		
+		$('#testButton').trigger('click');
 		});
 
 	function getEntityWorldPosByObjectId(objectId){
