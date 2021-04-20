@@ -192,7 +192,10 @@
         viewer.cameraFlight.flyTo(annotation);
         prevAnnotationClicked = annotation;
     });
-
+	var audioElement = $("#alarmSound");
+	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
+	audioElement.trigger('load');
+	
     model.on("loaded", () => {
 
         //------------------------------------------------------------------------------------------------------------------
@@ -257,9 +260,7 @@
             }
         });
 		var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
-		var audioElement = $("#alarmSound");
-		$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
-		audioElement.trigger('load');
+		
 		audioElement.trigger('play');
 		
 });
