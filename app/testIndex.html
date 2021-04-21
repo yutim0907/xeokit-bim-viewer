@@ -20,7 +20,17 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
-
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
         .annotation-marker {
             color: #ffffff;
             line-height: 1.8;
@@ -36,6 +46,7 @@
             visibility: hidden;
             box-shadow: 5px 5px 15px 1px #000000;
             z-index: 0;
+			animation: fade 600ms infinite;
         }
 
         .annotation-label {
