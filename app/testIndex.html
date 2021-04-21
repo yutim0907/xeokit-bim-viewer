@@ -120,7 +120,7 @@
 </head>
 
 <body>
-<div id="alarmBar" class="alarm-bar" onclick="flyToObj();">
+<div id="alarmBar" class="alarm-bar" onclick="flyToObj('3cjVNV_IX7p8MdJsz74DxJ');">
 <button onclick="jumpToHref()"> jump </button>
     警報發生 - 自來水箱_R3F C棟
 </div>
@@ -144,8 +144,11 @@
 	// Show loading animation.
 	var audioElement = document.getElementById("alarmSound");
 	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
-	function flyToObj(){
-	viewer.cameraFlight.flyTo(viewer.scene.objects["3cjVNV_IX7p8MdJsz74DxJ"]);
+	function flyToObj(id){
+	viewer.camera.eye = [4.75, 142.92, 142.59];
+    viewer.camera.look = [65.15512450688989, 17.961058485574604, 23.83699282999406];
+    viewer.camera.up =  [0.3101479526430177, 0.7293835736884187, -0.6097604856866797];
+	viewer.cameraFlight.flyTo(viewer.scene.objects[id]);
 	}
 	function playAudio(){
 		console.log('play audio');
