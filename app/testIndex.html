@@ -194,7 +194,7 @@
 
     const annotations = new AnnotationsPlugin(viewer, {
 
-        markerHTML: "<div class='annotation-marker {{alarm-marker}}' style='background-color: {{markerBGColor}};'>{{glyph}}</div>",
+        markerHTML: "<div class='annotation-marker {{alarmMarkerClass}}' style='background-color: {{markerBGColor}};'>{{glyph}}</div>",
         labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};'>\
             <div class='annotation-title'>{{title}}</div>\
             <div class='annotation-desc'>{{description}}</div>\
@@ -206,7 +206,7 @@
             glyph: "X",
             title: "Untitled",
             description: "Test description",
-			alarm: "non-alarm-marker"
+			alarmMarkerClass: "non-alarm-marker"
         }
     });
 	
@@ -260,7 +260,7 @@
                 title: "自來水箱_R3F_C棟",
                 description: "自來水箱_R3F_C棟",
                 markerBGColor: "red",
-				alarm-marker: "alarm-marker"
+				alarmMarkerClass: "alarm-marker"
             }
         });
 		
@@ -285,7 +285,8 @@
                 glyph: "設備02",
                 title: "自來水箱_R3F B棟",
                 description: "自來水箱_R3F B棟",
-                markerBGColor: "green"
+                markerBGColor: "green",
+				alarmMarkerClass: "non-alarm-marker"
             }
         });
 		var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
