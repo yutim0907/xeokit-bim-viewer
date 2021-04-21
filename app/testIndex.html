@@ -145,10 +145,15 @@
 	var audioElement = document.getElementById("alarmSound");
 	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
 	function flyToObj(id){
-	viewer.camera.eye = [4.75, 142.92, 142.59];
-    viewer.camera.look = [65.15512450688989, 17.961058485574604, 23.83699282999406];
-    viewer.camera.up =  [0.3101479526430177, 0.7293835736884187, -0.6097604856866797];
-	viewer.cameraFlight.flyTo(viewer.scene.objects[id]);
+	viewer.cameraFlight.flyTo({
+   eye: [4.75, 142.92, 142.59],
+   look: [65.15512450688989, 17.961058485574604, 23.83699282999406],
+   up: [0.3101479526430177, 0.7293835736884187, -0.6097604856866797],
+   duration: 1 // Default, seconds
+},() => {
+     viewer.cameraFlight.flyTo(viewer.scene.objects[id]);
+});
+	
 	}
 	function playAudio(){
 		console.log('play audio');
@@ -292,6 +297,8 @@
 				alarmMarkerClass: "non-alarm-marker"
             }
         });
+		
+		
 		var testGetWorldPos = getEntityWorldPosByObjectId("33gAHALIL7YP57yMvgcTq2");
 		$('#testButton').trigger('click');
 		});
