@@ -114,7 +114,14 @@
 		.alarm-marker{
 			animation: fade 600ms infinite;
 		}
-
+        #myNavCubeCanvas {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            bottom: 50px;
+            right: 10px;
+            z-index: 200000;
+        }
     </style>
 
 </head>
@@ -128,7 +135,6 @@
     <div id="myContent">
         <div id="myToolbar"></div>
         <canvas id="myCanvas"></canvas>
-		<canvas id="myNavCubeCanvas"></canvas>
     </div>
 </div>
 <canvas id="myNavCubeCanvas"></canvas>
