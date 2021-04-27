@@ -260,15 +260,51 @@
         //------------------------------------------------------------------------------------------------------------------
         // Create some Annotations
         //------------------------------------------------------------------------------------------------------------------
-		
-		const entity1 = viewer.scene.objects["電錶箱:A-M1:742696"];
-		const aabb1 = entity1.aabb;
-		const entity1Center = math.getAABB3Center(aabb1);
-		
-		const entity2 = viewer.scene.objects["電錶箱:A-M2:744436"];
-		const aabb2 = entity2.aabb;
-		const entity2Center = math.getAABB3Center(aabb2);
+		for(i=0; i<= viewer.scene._numObjects; i++){
+            if(viewer.scene.visibleObjectIds[i].indexOf('電錶箱') > 0){
+                var objectName = viewer.scene.visibleObjectIds[i];
+                var entity = viewer.scene.objects[objectName];
+                var aabb = entity.aabb;
+                var entityCenter = math.getAABB3Center(aabb);
+                //do something
+                annotations.createAnnotation({
 
+                    id: "Anno_" + objectName,
+
+                    entity: entity,
+
+                    worldPos: entity1Center,
+
+
+                    eye: [56.667458498170404, 100.58910225943117, 97.40153241646453],
+                    look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
+                    up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
+                    
+                    occludable: false,
+                    markerShown: true,
+                    labelShown: false,
+
+                    values: {
+                        glyph: "",
+                        title: objectName,
+                        description: objectName,
+                        markerBGColor: "green",
+                        alarmMarkerClass: "non-alarm-marker"
+                    }
+                });
+            }
+        }
+
+
+		//const entity1 = viewer.scene.objects["電錶箱:A-M1:742696"];
+		//const aabb1 = entity1.aabb;
+		//const entity1Center = math.getAABB3Center(aabb1);
+		
+	   //const entity2 = viewer.scene.objects["電錶箱:A-M2:744436"];
+		//const aabb2 = entity2.aabb;
+		//const entity2Center = math.getAABB3Center(aabb2);
+
+        /*
         annotations.createAnnotation({
 
             id: "744436",
@@ -321,21 +357,24 @@
             }
         });
 		
-		
+		*/
+
+
 		var testGetWorldPos = getEntityWorldPosByObjectId("電錶箱:A-M2:744436");
 		$('#testButton').trigger('click');
 		});
 
-	function getEntityWorldPosByObjectId(objectId){
-	if(viewer.scene.numObjects > 0){
-		var entity = viewer.scene.objects[objectId];
-		var aabb = entity.aabb;
-		var entityCenter = math.getAABB3Center(aabb);
-		return entityCenter;
-		}
-	}
+    	function getEntityWorldPosByObjectId(objectId){
+    	if(viewer.scene.numObjects > 0){
+    		var entity = viewer.scene.objects[objectId];
+    		var aabb = entity.aabb;
+    		var entityCenter = math.getAABB3Center(aabb);
+    		return entityCenter;
+    		}
+    	}
     
     window.viewer = viewer;
+    window.oldViewer = viewer;
     window.annotations = annotations;
 
 
