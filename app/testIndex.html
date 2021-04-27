@@ -38,8 +38,8 @@
             font-family: "monospace";
             font-weight: bold;
             position: absolute;
-            width: 50px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             border-radius: 15px;
             border: 2px solid #ffffff;
             background: black;
@@ -223,7 +223,7 @@
 
     const annotations = new AnnotationsPlugin(viewer, {
 
-        markerHTML: "<div class='annotation-marker {{alarmMarkerClass}}' style='background-color: {{markerBGColor}};'>{{glyph}}</div>",
+        markerHTML: "<div class='annotation-marker {{alarmMarkerClass}}' style='background-color: {{markerBGColor}};'></div>",
         labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};'>\
             <div class='annotation-title'>{{title}}</div>\
             <div class='annotation-desc'>{{description}}</div>\
@@ -244,12 +244,14 @@
     var prevAnnotationClicked = null;
 
     annotations.on("markerClicked", (annotation) => {
+        annotation._occludable = true;
         if (prevAnnotationClicked) {
             prevAnnotationClicked.setLabelShown(false);
         }
         annotation.setLabelShown(true);
-        viewer.cameraFlight.flyTo(annotation);
+        //viewer.cameraFlight.flyTo(annotation);
         prevAnnotationClicked = annotation;
+
     });
 	
 	
@@ -269,7 +271,7 @@
 
         annotations.createAnnotation({
 
-            id: "myAnnotation1",
+            id: "744436",
 
             entity: viewer.scene.objects["電錶箱:A-M1:742696"],
 
@@ -285,7 +287,7 @@
             labelShown: false,
 
             values: {
-                glyph: "電A-M1",
+                glyph: "",
                 title: "電錶箱:A-M1",
                 description: "電錶箱:A-M1",
                 markerBGColor: "red",
@@ -295,7 +297,7 @@
 		
 		annotations.createAnnotation({
 
-            id: "myAnnotation2",
+            id: "Tag01",
 
             entity: viewer.scene.objects["電錶箱:A-M2:744436"],
 
@@ -311,7 +313,7 @@
             labelShown: false,
 
             values: {
-                glyph: "電A-M2",
+                glyph: "",
                 title: "電錶箱:A-M2",
                 description: "電錶箱:A-M2",
                 markerBGColor: "green",
@@ -334,6 +336,7 @@
 	}
     
     window.viewer = viewer;
+    window.annotaions = annotaions;
 
 
 
