@@ -127,9 +127,9 @@
 </head>
 
 <body>
-<div id="alarmBar" class="alarm-bar" onclick="flyToObj('3$VWQ1ajnBYwYwThoM823k');">
+<div id="alarmBar" class="alarm-bar" onclick="flyToObj('電錶箱:A-M1:742696');">
 <button onclick="jumpToHref()"> jump </button>
-    警報發生 - 自來水箱_R3F C棟
+    警報發生 - 電錶箱:A-M1
 </div>
 <div id="myViewer" class="xeokit-busy-modal-backdrop">
     <div id="myContent">
@@ -259,11 +259,11 @@
         // Create some Annotations
         //------------------------------------------------------------------------------------------------------------------
 		
-		const entity1 = viewer.scene.objects["3$VWQ1ajnBYwYwThoM823k"];
+		const entity1 = viewer.scene.objects["電錶箱:A-M1:742696"];
 		const aabb1 = entity1.aabb;
 		const entity1Center = math.getAABB3Center(aabb1);
 		
-		const entity2 = viewer.scene.objects["3f6SKLfXDA7R1yPzIe5HaN"];
+		const entity2 = viewer.scene.objects["電錶箱:A-M2:744436"];
 		const aabb2 = entity2.aabb;
 		const entity2Center = math.getAABB3Center(aabb2);
 
@@ -271,7 +271,7 @@
 
             id: "myAnnotation1",
 
-            entity: viewer.scene.objects["3$VWQ1ajnBYwYwThoM823k"],
+            entity: viewer.scene.objects["電錶箱:A-M1:742696"],
 
             worldPos: entity1Center,
 
@@ -285,9 +285,9 @@
             labelShown: false,
 
             values: {
-                glyph: "設備01",
-                title: "自來水箱_R3F_C棟",
-                description: "自來水箱_R3F_C棟",
+                glyph: "電A-M1",
+                title: "電錶箱:A-M1",
+                description: "電錶箱:A-M1",
                 markerBGColor: "red",
 				alarmMarkerClass: "alarm-marker"
             }
@@ -297,7 +297,7 @@
 
             id: "myAnnotation2",
 
-            entity: viewer.scene.objects["3f6SKLfXDA7R1yPzIe5HaN"],
+            entity: viewer.scene.objects["電錶箱:A-M2:744436"],
 
             worldPos: entity2Center,
 
@@ -311,16 +311,16 @@
             labelShown: false,
 
             values: {
-                glyph: "設備02",
-                title: "自來水箱_R3F B棟",
-                description: "自來水箱_R3F B棟",
+                glyph: "電A-M2",
+                title: "電錶箱:A-M2",
+                description: "電錶箱:A-M2",
                 markerBGColor: "green",
 				alarmMarkerClass: "non-alarm-marker"
             }
         });
 		
 		
-		var testGetWorldPos = getEntityWorldPosByObjectId("3$VWQ1ajnBYwYwThoM823k");
+		var testGetWorldPos = getEntityWorldPosByObjectId("電錶箱:A-M2:744436");
 		$('#testButton').trigger('click');
 		});
 
