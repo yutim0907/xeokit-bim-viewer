@@ -127,7 +127,7 @@
 </head>
 
 <body>
-<div id="alarmBar" class="alarm-bar" onclick="flyToObj('3f6SKLfXDA7R1yPzIe5HaB');">
+<div id="alarmBar" class="alarm-bar" onclick="">
 <button onclick="jumpToHref()"> jump </button>
     警報發生 - 自來水箱_R3F C棟
 </div>
@@ -253,85 +253,7 @@
     });
 	
 	
-    model.on("loaded", () => {
-
-        //------------------------------------------------------------------------------------------------------------------
-        // Create some Annotations
-        //------------------------------------------------------------------------------------------------------------------
-		
-		const entity1 = viewer.scene.objects["3f6SKLfXDA7R1yPzIe5HaB"];
-		const aabb1 = entity1.aabb;
-		const entity1Center = math.getAABB3Center(aabb1);
-		
-		const entity2 = viewer.scene.objects["3f6SKLfXDA7R1yPzIe5HaN"];
-		const aabb2 = entity2.aabb;
-		const entity2Center = math.getAABB3Center(aabb2);
-
-        annotations.createAnnotation({
-
-            id: "myAnnotation1",
-
-            entity: viewer.scene.objects["3f6SKLfXDA7R1yPzIe5HaB"],
-
-            worldPos: entity1Center,
-
-
-            eye: [56.667458498170404, 100.58910225943117, 97.40153241646453],
-            look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
-            up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
-			
-            occludable: false,
-            markerShown: true,
-            labelShown: false,
-
-            values: {
-                glyph: "設備01",
-                title: "自來水箱_R3F_C棟",
-                description: "自來水箱_R3F_C棟",
-                markerBGColor: "red",
-				alarmMarkerClass: "alarm-marker"
-            }
-        });
-		
-		annotations.createAnnotation({
-
-            id: "myAnnotation2",
-
-            entity: viewer.scene.objects["3f6SKLfXDA7R1yPzIe5HaN"],
-
-            worldPos: entity2Center,
-
-
-            eye: [59.15625335551127, 100.67655645689116, 31.904384957338436],
-            look: [58.51164099993461, 94.4493317010133, 24.87251256698793],
-            up:  [-0.06037922135105747, 0.750016135769919, -0.6586578365993976],
-			
-            occludable: false,
-            markerShown: true,
-            labelShown: false,
-
-            values: {
-                glyph: "設備02",
-                title: "自來水箱_R3F B棟",
-                description: "自來水箱_R3F B棟",
-                markerBGColor: "green",
-				alarmMarkerClass: "non-alarm-marker"
-            }
-        });
-		
-		
-		var testGetWorldPos = getEntityWorldPosByObjectId("3f6SKLfXDA7R1yPzIe5HaB");
-		$('#testButton').trigger('click');
-		});
-
-	function getEntityWorldPosByObjectId(objectId){
-	if(viewer.scene.numObjects > 0){
-		var entity = viewer.scene.objects[objectId];
-		var aabb = entity.aabb;
-		var entityCenter = math.getAABB3Center(aabb);
-		return entityCenter;
-		}
-	}
+    
     
     window.viewer = viewer;
 
