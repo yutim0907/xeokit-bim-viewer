@@ -292,6 +292,7 @@
     });
 	
     var lastHoverEntity = null;
+    var lastOpacity = null;
 
     viewer.scene.input.on("mousemove", function (coords) {
 
@@ -304,11 +305,13 @@
             if (!lastHoverEntity || hit.entity.id !== lastHoverEntity.id) {
 
                 if (lastHoverEntity) {
-                    lastHoverEntity.xrayed = false;
+                    lastEntity.opacity = lastOpacity;
                 }
 
-                lastHoverEntity = hit.entity;
-                hit.entity.xrayed = true;
+                lastEntity = hit.entity;
+                lastOpacity = hit.entity.opacity;
+
+                hit.entity.opacity = 0.6;
             }
         } else {
 
