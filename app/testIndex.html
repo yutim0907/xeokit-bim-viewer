@@ -267,7 +267,7 @@
         // Create some Annotations
         //------------------------------------------------------------------------------------------------------------------
 		for(var i=0; i< viewer.scene._numObjects; i++){
-            if(viewer.scene.visibleObjectIds[i].indexOf('電錶') === 0){
+            if(viewer.scene.visibleObjectIds[i].indexOf('電錶') === 0 || viewer.scene.visibleObjectIds[i].indexOf('受電箱') === 0){
                 var objectName = viewer.scene.visibleObjectIds[i];
                 var entity = viewer.scene.objects[objectName];
                 var aabb = entity.aabb;
