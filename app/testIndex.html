@@ -153,13 +153,13 @@
 	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
 	function flyToObj(id){
 	viewer.cameraFlight.flyTo({
-   eye: [4.75, 142.92, 142.59],
-   look: [65.15512450688989, 17.961058485574604, 23.83699282999406],
-   up: [0.3101479526430177, 0.7293835736884187, -0.6097604856866797],
-   duration: 3 
-},() => {
-     viewer.cameraFlight.flyTo(viewer.scene.objects[id]);
-});
+       eye: [-23.623174550735826, 30.944804246700556, 85.91446829682862],
+       look: [-30.855800701939312, 4.042073024598583, 47.957217030407456],
+       up: [-0.10695175545643744, 0.8206800845300033, -0.5612891597569053],
+       duration: 3 
+    },() => {
+         viewer.cameraFlight.flyTo(viewer.scene.objects[id]);
+    });
 	
 	}
 	function playAudio(){
@@ -244,13 +244,13 @@
     var prevAnnotationClicked = null;
 
     annotations.on("markerClicked", (annotation) => {
-        if (prevAnnotationClicked) {
-            prevAnnotationClicked.setLabelShown(false);
-        }
-        annotation.setLabelShown(true);
+        //if (prevAnnotationClicked) {
+        //    prevAnnotationClicked.setLabelShown(false);
+        //}
+        //annotation.setLabelShown(true);
         //viewer.cameraFlight.flyTo(annotation);
-        prevAnnotationClicked = annotation;
-
+        //prevAnnotationClicked = annotation;
+        flyToObj(annotation.entity.id);
     });
     annotations.on("markerMouseEnter", (annotation) => {
         annotation.setLabelShown(true);
