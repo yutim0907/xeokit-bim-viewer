@@ -156,7 +156,7 @@
        eye: [-23.623174550735826, 30.944804246700556, 85.91446829682862],
        look: [-30.855800701939312, 4.042073024598583, 47.957217030407456],
        up: [-0.10695175545643744, 0.8206800845300033, -0.5612891597569053],
-       duration: 3 
+       duration: 2 
     },() => {
          viewer.cameraFlight.flyTo(viewer.scene.objects[id]);
     });
@@ -291,6 +291,34 @@
         }
     });
 	
+    var lastHoverEntity = null;
+
+    viewer.scene.input.on("mousemove", function (coords) {
+
+        var hit = viewer.scene.pick({
+            canvasPos: coords
+        });
+
+        if (hit) {
+
+            if (!lastHoverEntity || hit.entity.id !== lastHoverEntity.id) {
+
+                if (lastHoverEntity) {
+                    lastHoverEntity.xrayed = false;
+                }
+
+                lastHoverEntity = hit.entity;
+                hit.entity.xrayed = true;
+            }
+        } else {
+
+            if (lastHoverEntity) {
+                lastHoverEntity.xrayed = false;
+                lastHoverEntity = null;
+            }
+        }
+    });
+
     model.on("loaded", () => {
 
         //------------------------------------------------------------------------------------------------------------------
@@ -316,7 +344,7 @@
                     look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
                     up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
                     
-                    occludable: false,
+                    occludable: true,
                     markerShown: true,
                     labelShown: false,
 
