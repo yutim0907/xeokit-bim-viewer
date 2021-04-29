@@ -244,7 +244,6 @@
     var prevAnnotationClicked = null;
 
     annotations.on("markerClicked", (annotation) => {
-        annotation._occludable = true;
         if (prevAnnotationClicked) {
             prevAnnotationClicked.setLabelShown(false);
         }
@@ -252,6 +251,13 @@
         //viewer.cameraFlight.flyTo(annotation);
         prevAnnotationClicked = annotation;
 
+    });
+    annotations.on("markerMouseEnter", (annotation) => {
+        annotation.setLabelShown(true);
+    });
+
+    annotations.on("markerMouseLeave", (annotation) => {
+        annotation.setLabelShown(false);
     });
 	
 	
