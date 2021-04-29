@@ -305,10 +305,10 @@
             if (!lastHoverEntity || hit.entity.id !== lastHoverEntity.id) {
 
                 if (lastHoverEntity) {
-                    lastEntity.opacity = lastOpacity;
+                    lastHoverEntity.opacity = lastOpacity;
                 }
 
-                lastEntity = hit.entity;
+                lastHoverEntity = hit.entity;
                 lastOpacity = hit.entity.opacity;
 
                 hit.entity.opacity = 0.6;
