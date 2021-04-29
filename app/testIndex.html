@@ -260,6 +260,36 @@
         annotation.setLabelShown(false);
     });
 	
+    var lastEntity = null;
+    var lastColorize = null;
+
+    viewer.cameraControl.on("picked", (pickResult) => {
+
+        if (!pickResult.entity) {
+            return;
+        }
+
+        console.log(pickResult.entity.id);
+
+        if (!lastEntity || pickResult.entity.id !== lastEntity.id) {
+
+            if (lastEntity) {
+                lastEntity.colorize = lastColorize;
+            }
+
+            lastEntity = pickResult.entity;
+            lastColorize = pickResult.entity.colorize ? pickResult.entity.colorize.slice() : null;
+
+            pickResult.entity.colorize = [8/255, 247/255, 254/255];
+        }
+    });
+
+    viewer.cameraControl.on("pickedNothing", () => {
+        if (lastEntity) {
+            lastEntity.colorize = lastColorize;
+            lastEntity = null;
+        }
+    });
 	
     model.on("loaded", () => {
 
