@@ -122,12 +122,26 @@
             right: 10px;
             z-index: 200000;
         }
+        .section-description{
+            position: absolute;
+            top: 5%;
+            right: : 5%;
+            width: 40%;
+            z-index: 110000;
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            opacity: 0.5;
+        }
     </style>
 
 </head>
 
+
 <body>
 <div id="alarmBar" class="alarm-bar" onclick="flyToObj('電錶箱:A-M1:742696');">
+<div id="pickedDescription" class="section-description"> </div>
 <button onclick="jumpToHref()"> jump </button>
     警報發生 - 電錶箱:A-M1
 </div>
@@ -143,6 +157,8 @@
 </audio>
 <button id="testButton" style="display:none;" onclick="playAudio();">
 </body>
+
+
 
 <!-- App tooltips libraries-->
 <script src="./lib/popper.js"></script>
