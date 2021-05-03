@@ -294,7 +294,7 @@
             return;
         }
 
-        console.log(pickResult.entity.id);
+        $('#pickedDescription').html('您點選的為 : ' + pickResult.entity.id);
 
         if (!lastEntity || pickResult.entity.id !== lastEntity.id) {
 
