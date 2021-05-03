@@ -110,7 +110,7 @@
 	    background-color: white;
 		border: 1px solid black;
 		border-radius: 5px;
-        opacity: 0.85;
+        opacity: 0.75;
         height: 25%
 		}
 		.alarm-marker{
@@ -126,7 +126,7 @@
         }
         .section-description{
             position: absolute;
-            top: 5%;
+            bottom: : 5%;
             right: 1%;
             width: 25%;
             height: 25%;
@@ -135,7 +135,7 @@
             background-color: white;
             border: 1px solid black;
             border-radius: 5px;
-            opacity: 0.85;
+            opacity: 0.75;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.5s;
 
@@ -161,10 +161,10 @@
     警報發生 - 電錶箱:A-M1
 </div>
 <canvas id="myNavCubeCanvas"></canvas>
-<audio loop="loop" id="alarmSound" autoplay="autoplay" controls="controls">
+<audio loop="loop" id="alarmSound" autoplay="autoplay" controls="controls" style="display: none;">
     <source id="mp3Source" type="audio/mp3">
 </audio>
-<button id="testButton" style="display:none;" onclick="playAudio();">
+<button id="testButton" style="display:none;" onclick="playAudio();"></button>
 </body>
 
 
