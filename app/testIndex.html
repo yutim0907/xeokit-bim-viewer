@@ -198,20 +198,20 @@
     var isAlarm = false;
     var oriColor = viewer.scene.objects["電錶箱:A-M1:742696"].colorize;
     while(isAlarm){
-        var alarmInterval = window.setInterval((() => 
-            if(alarmTick){
-                alarmTick = false;
-            }else{
-                alarmTick = true;
-            }
-        ),1000);
+        var alarmInterval = window.setInterval(switchAlarmType,1000);
         if(alarmTick){
             viewer.scene.objects["電錶箱:A-M1:742696"].colorize = [1,0,0];
         }else{
             viewer.scene.objects["電錶箱:A-M1:742696"].colorize = oriColor;
         }
     }
-    
+    function switchAlarmType(){
+        if(alarmTick){
+                alarmTick = false;
+            }else{
+                alarmTick = true;
+            }
+    }
     
   </script>
 <script type="module">
