@@ -196,7 +196,7 @@
 	}
     var alarmTick = false;
     var isAlarm = false;
-    var oriColor = viewer.scene.objects["電錶箱:A-M1:742696"].colorize;
+    var oriColor = undefined;
     while(isAlarm){
         var alarmInterval = window.setInterval(switchAlarmType,1000);
         if(alarmTick){
@@ -398,6 +398,7 @@
     });
 
     model.on("loaded", () => {
+        oriColor = viewer.scene.objects["電錶箱:A-M1:742696"].colorize;
 /*
         //------------------------------------------------------------------------------------------------------------------
         // Create some Annotations
@@ -518,6 +519,7 @@
     window.viewer = viewer;
     window.oldViewer = viewer;
     window.annotations = annotations;
+    isAlarm = true;
 
 
 
