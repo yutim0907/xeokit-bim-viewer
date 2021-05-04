@@ -289,6 +289,11 @@
     var lastColorize = null;
 
     viewer.cameraControl.on("picked", (pickResult) => {
+        const entity = pickResult.entity;
+        const aabb = entity.aabb;
+        const entityCenter = math.getAABB3Center(aabb);
+
+        const metaObject = viewer.metaScene.metaObjects[entity.id];
 
         if (!pickResult.entity) {
             return;
@@ -306,6 +311,32 @@
             lastColorize = pickResult.entity.colorize ? pickResult.entity.colorize.slice() : null;
 
             pickResult.entity.colorize = [8/255, 247/255, 254/255];
+            annotations.clear();
+            annotations.createAnnotation({
+
+                    id: "Anno_" + entity.id,
+
+                    entity: entity,
+
+                    worldPos: entityCenter,
+
+
+                    //eye: [56.667458498170404, 100.58910225943117, 97.40153241646453],
+                    //look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
+                    //up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
+                    
+                    occludable: false,
+                    markerShown: true,
+                    labelShown: true,
+
+                    values: {
+                        glyph: "",
+                        title: entity.id,
+                        description: entity.id,
+                        markerBGColor: "green",
+                        alarmMarkerClass: "non-alarm-marker"
+                    }
+                });
         }
     });
 
@@ -348,7 +379,7 @@
     });
 
     model.on("loaded", () => {
-
+/*
         //------------------------------------------------------------------------------------------------------------------
         // Create some Annotations
         //------------------------------------------------------------------------------------------------------------------
@@ -387,7 +418,7 @@
             }
         }
 
-
+*/
 		//const entity1 = viewer.scene.objects["電錶箱:A-M1:742696"];
 		//const aabb1 = entity1.aabb;
 		//const entity1Center = math.getAABB3Center(aabb1);
