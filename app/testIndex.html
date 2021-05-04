@@ -188,12 +188,31 @@
 	
 	}
 	function playAudio(){
-		console.log('play audio');
-		document.getElementById("alarmSound").play();
+    	console.log('play audio');
+    	document.getElementById("alarmSound").play();
 	}
 	function jumpToHref(){
-	window.location.href = "https://yutim0907.github.io/app/testIndex.html?projectId=WaterLock"
+        window.location.href = "https://yutim0907.github.io/app/testIndex.html?projectId=WaterLock"
 	}
+    var alarmTick = false;
+    var isAlarm = false;
+    var oriColor = viewer.scene.objects["電錶箱:A-M1:742696"].colorize;
+    while(isAlarm){
+        var alarmInterval = window.setInterval((() => 
+            if(alarmTick){
+                alarmTick = false;
+            }else{
+                alarmTick = true;
+            }
+        ),1000);
+        if(alarmTick){
+            viewer.scene.objects["電錶箱:A-M1:742696"].colorize = [1,0,0];
+        }else{
+            viewer.scene.objects["電錶箱:A-M1:742696"].colorize = oriColor;
+        }
+    }
+    
+    
   </script>
 <script type="module">
 
