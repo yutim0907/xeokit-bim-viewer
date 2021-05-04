@@ -197,14 +197,7 @@
     var alarmTick = false;
     var isAlarm = false;
     var oriColor = undefined;
-    while(isAlarm){
-        var alarmInterval = window.setInterval(switchAlarmType,1000);
-        if(alarmTick){
-            viewer.scene.objects["電錶箱:A-M1:742696"].colorize = [1,0,0];
-        }else{
-            viewer.scene.objects["電錶箱:A-M1:742696"].colorize = oriColor;
-        }
-    }
+    
     function switchAlarmType(){
         if(alarmTick){
                 alarmTick = false;
@@ -504,7 +497,19 @@
 
 
 		var testGetWorldPos = getEntityWorldPosByObjectId("電錶箱:A-M2:744436");
-		$('#testButton').trigger('click');
+
+        isAlarm = true;
+        while(isAlarm){
+            var alarmInterval = window.setInterval(switchAlarmType,1000);
+            if(alarmTick){
+                viewer.scene.objects["電錶箱:A-M1:742696"].colorize = [1,0,0];
+            }else{
+                viewer.scene.objects["電錶箱:A-M1:742696"].colorize = oriColor;
+            }
+        }
+
+
+
 		});
 
     	function getEntityWorldPosByObjectId(objectId){
@@ -519,7 +524,7 @@
     window.viewer = viewer;
     window.oldViewer = viewer;
     window.annotations = annotations;
-    isAlarm = true;
+
 
 
 
