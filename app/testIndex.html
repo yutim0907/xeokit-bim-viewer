@@ -513,7 +513,7 @@
 
         isAlarm = true;
         //var alarmInterval = window.setInterval(switchAlarmType, 1000);
-        var timeoutAlarm = window.setInterval(callAlarmFunc("電錶箱:A-M1:742696"), 1000);
+        var timeoutAlarm = window.setInterval(function(){callAlarmFunc("電錶箱:A-M1:742696");}, 1000);
 
 		});
 
