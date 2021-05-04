@@ -207,7 +207,6 @@
     }
     function callAlarmFunc(id){
         while(isAlarm){
-            var alarmInterval = window.setInterval(switchAlarmType, 1000);
             if(alarmTick){
                 viewer.scene.objects[id].colorize = [1,0,0];
                 //viewer.scene.objects["電錶箱:A-M1:742696"].colorize = [1,0,0];
@@ -511,6 +510,7 @@
 		var testGetWorldPos = getEntityWorldPosByObjectId("電錶箱:A-M2:744436");
 
         isAlarm = true;
+        var alarmInterval = window.setInterval(switchAlarmType, 1000);
         //var timeoutAlarm = window.setTimeout(callAlarmFunc("電錶箱:A-M1:742696"), 5000);
 
 		});
