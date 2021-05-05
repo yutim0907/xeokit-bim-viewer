@@ -359,7 +359,7 @@
             return;
         }
 
-        $('#pickedDescription').html('您點選的為 : ' + pickResult.entity.id);
+        //$('#pickedDescription').html('您點選的為 : ' + pickResult.entity.id);
 
         if (!lastEntity || pickResult.entity.id !== lastEntity.id) {
 
@@ -391,6 +391,7 @@
                 tmpHtml = tmpHtml.replace('Tag_Value', 2.517523*i);
                 tagInfoHtml += tmpHtml;
             }
+            $('#pickedDescription').html(tagInfoHtml);
             annotations.createAnnotation({
 
                     id: "Anno_" + entity.id,
@@ -411,7 +412,7 @@
                     values: {
                         glyph: "",
                         title: entity.id,
-                        tagInfoHtml: tagInfoHtml,
+                        tagInfoHtml: '',
                         markerBGColor: "green",
                         alarmMarkerClass: "non-alarm-marker"
                     }
