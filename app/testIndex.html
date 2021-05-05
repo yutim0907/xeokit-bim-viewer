@@ -373,14 +373,17 @@
             pickResult.entity.colorize = [8/255, 247/255, 254/255];
             annotations.clear();
             var tagInfoHtml = '';
-            var tagInfoModule = '<div class="tag-info-card">\
+            var tagInfoModule = '\
+            <div class="tag-info-card">\
             <div class="title">\
             <div class="cat">Tag_TitleCat</div>\
             </div>\
             <div class="body">\
             <h2 class="chapter">Name : Tag_Title</h2>\
             <p class="content">Value : Tag_Value</p>\
-            </div>';
+            </div>\
+            </div>\
+            ';
             for(var i=1; i<=6; i++){
                 var tmpHtml = tagInfoModule;
                 tmpHtml = tmpHtml.replace('Tag_TitleCat', 'Tag0'+i);
