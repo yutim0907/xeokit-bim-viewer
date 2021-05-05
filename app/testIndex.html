@@ -383,8 +383,8 @@
             </div>';
             for(var i=1; i<=6; i++){
                 var tmpHtml = tagInfoModule;
-                tmpHtml.replace('$Tag_Title', 'Tag0'+i);
-                tmpHtml.replace('$Tag_Value', 2.517523*i);
+                tmpHtml.replace('Tag_Title', 'Tag0'+i);
+                tmpHtml.replace('Tag_Value', 2.517523*i);
                 tagInfoHtml += tmpHtml;
             }
             annotations.createAnnotation({
