@@ -143,6 +143,41 @@
         .section-description:hover{
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
+        .tag-info-card{
+            width: 33%;
+            height: 20%;
+            border-radius: 5px;
+            border-right: 1.5px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+        }
+        .tag-info-card .title {
+            position: relative;
+            width: 100%;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+        .tag-info-card .cat {
+            position: absolute;
+            top: 5%;
+            left: 0;
+            padding: 2% 12% 2% 2%;
+            background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+            font-size: 14px;
+        }
+        .tag-info-card .body{
+            padding: 8px;
+            background: #fff;
+        }
+        .tag-info-card .body .chapter {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 24px;
+        }
+        .tag-info-card .body .content {
+            margin: 0 0 4px;
+            line-height: 1.25;
+            font-size: 16px;
+        }
     </style>
 
 </head>
@@ -276,7 +311,7 @@
         markerHTML: "<div class='annotation-marker {{alarmMarkerClass}}' style='background-color: {{markerBGColor}};'></div>",
         labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};'>\
             <div class='annotation-title'>{{title}}</div>\
-            <div class='annotation-desc'>{{description}}</div>\
+            {{tagInfoHtml}}\
             </div>",
 
         values: {
@@ -284,7 +319,7 @@
             labelBGColor: "white",
             glyph: "X",
             title: "Untitled",
-            description: "Test description",
+            tagInfoHtml: "",
 			alarmMarkerClass: "non-alarm-marker"
         }
     });
@@ -337,6 +372,21 @@
 
             pickResult.entity.colorize = [8/255, 247/255, 254/255];
             annotations.clear();
+            var tagInfoHtml = undefined;
+            var tagInfoModule = '<div class="tag-info-card">\
+            <div class="title">\
+            <div class="cat">$Tag_Title</div>\
+            </div>\
+            <div class="body">\
+            <h2 class="chapter">Name : $Tag_Title</h2>\
+            <p class="content">Value : $Tag_Value</p>\
+            </div>';
+            for(var i=1; i<=6; i++){
+                var tmpHtml = tagInfoModule;
+                tmpHtml.replace('$Tag_Title', 'Tag0'+i);
+                tmpHtml.replace('$Tag_Value', 2.517523*i);
+                tagInfoHtml += tmpHtml;
+            }
             annotations.createAnnotation({
 
                     id: "Anno_" + entity.id,
@@ -357,7 +407,7 @@
                     values: {
                         glyph: "",
                         title: entity.id,
-                        description: entity.id,
+                        tagInfoHtml: tagInfoHtml,
                         markerBGColor: "green",
                         alarmMarkerClass: "non-alarm-marker"
                     }
