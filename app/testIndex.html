@@ -142,13 +142,15 @@
         }
         .section-description:hover{
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            text-align: center;
         }
         .tag-info-card{
-            width: 100%;
-            height: 20%;
+            width: 32%;
+            height: auto;
             border-radius: 5px;
             border-right: 1.5px solid rgba(0, 0, 0, 0.1);
             border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+            display: inline-block;
         }
         .tag-info-card .title {
             position: relative;
@@ -162,21 +164,24 @@
             left: 0;
             padding: 2% 12% 2% 2%;
             background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-            font-size: 14px;
+            font-size: 10px;
         }
         .tag-info-card .body{
             padding: 8px;
             background: #fff;
+            text-align: right;
         }
         .tag-info-card .body .chapter {
             margin-top: 0;
             margin-bottom: 8px;
-            font-size: 24px;
+            font-size: 14px;
+            text-overflow: ellipsis; 
         }
         .tag-info-card .body .content {
             margin: 0 0 4px;
             line-height: 1.25;
-            font-size: 16px;
+            font-size: 14px;
+            text-overflow: ellipsis; 
         }
     </style>
 
