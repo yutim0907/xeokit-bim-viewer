@@ -375,16 +375,17 @@
             var tagInfoHtml = undefined;
             var tagInfoModule = '<div class="tag-info-card">\
             <div class="title">\
-            <div class="cat">$Tag_Title</div>\
+            <div class="cat">Tag_TitleCat</div>\
             </div>\
             <div class="body">\
-            <h2 class="chapter">Name : $Tag_Title</h2>\
-            <p class="content">Value : $Tag_Value</p>\
+            <h2 class="chapter">Name : Tag_Title</h2>\
+            <p class="content">Value : Tag_Value</p>\
             </div>';
             for(var i=1; i<=6; i++){
                 var tmpHtml = tagInfoModule;
-                tmpHtml.replace('Tag_Title', 'Tag0'+i);
-                tmpHtml.replace('Tag_Value', 2.517523*i);
+                tmpHtml = tmpHtml.replace('Tag_TitleCat', 'Tag0'+i);
+                tmpHtml = tmpHtml.replace('Tag_Title', 'Tag0'+i);
+                tmpHtml = tmpHtml.replace('Tag_Value', 2.517523*i);
                 tagInfoHtml += tmpHtml;
             }
             annotations.createAnnotation({
