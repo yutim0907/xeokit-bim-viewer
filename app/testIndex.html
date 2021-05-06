@@ -20,17 +20,23 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
-@keyframes fade {
-    from {
-        opacity: 1.0;
-    }
-    50% {
-        opacity: 0.0;
-    }
-    to {
-        opacity: 1.0;
-    }
-}
+        @keyframes fade {
+            from {
+                opacity: 1.0;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            to {
+                opacity: 1.0;
+            }
+        }
+        #myContent {
+            width: 100%;
+            height: 100%;
+            background: #f2f2f2;
+        }
+
         .annotation-marker {
             color: #ffffff;
             line-height: 1.8;
@@ -197,8 +203,7 @@
 
 
 <body>
-<!--<div id="myViewer" class="xeokit-busy-modal-backdrop">-->
-<div>
+<div id="myViewer" class="xeokit-busy-modal-backdrop">
     <div id="myContent">
         <div id="myToolbar"></div>
         <canvas id="myCanvas"></canvas>
