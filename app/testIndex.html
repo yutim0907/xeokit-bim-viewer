@@ -350,7 +350,7 @@
     const annotations = new AnnotationsPlugin(viewer, {
 
         markerHTML: "<div class='annotation-marker {{alarmMarkerClass}}' style='background-color: {{markerBGColor}};'></div>",
-        labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};'>\
+        labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};border-color: {{labelBGColor}};box-shadow:5px 5px 15px 1px {{labelBGColor}};'>\
             <div class='annotation-title'>{{title}}</div>\
             {{tagInfoHtml}}\
             </div>",
