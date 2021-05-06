@@ -163,8 +163,8 @@
             height: 75px;
             margin: 1.5px;
             border-radius: 5px;
-            border-right: 1.5px solid rgba(0, 0, 0, 0.1);
-            border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+            border-right: 1.5px solid rgba(0, 0, 0, 0.2);
+            border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
             display: inline-block;
         }
         .tag-info-card:hover{
@@ -285,6 +285,14 @@
     }
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
+    }
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
     }
   </script>
 <script type="module">
@@ -444,6 +452,7 @@
 
                     values: {
                         glyph: "",
+                        labelBGColor: getRandomColor(),
                         title: entity.id,
                         markerBGColor: "green",
                         alarmMarkerClass: "non-alarm-marker"
