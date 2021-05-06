@@ -262,7 +262,9 @@
             }
         }
     }
-    
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
   </script>
 <script type="module">
 
@@ -397,7 +399,7 @@
                 var tmpHtml = tagInfoModule;
                 tmpHtml = tmpHtml.replace('Tag_TitleCat', 'Tag0'+i);
                 tmpHtml = tmpHtml.replace('Tag_Title', 'Tag0'+i);
-                tmpHtml = tmpHtml.replace('Tag_Value', 2.517523*i);
+                tmpHtml = tmpHtml.replace('Tag_Value', getRandomInt(65535)/i);
                 tagInfoHtml += tmpHtml;
             }
             $('#pickedDescription').html(tagInfoHtml);
