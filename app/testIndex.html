@@ -286,6 +286,11 @@
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
+    function getRandomColorByCustom(){
+        var colorArray = ['#327263', '#4A18DD', '#143A7D', '#0A4C63', '#4237BD'];
+        var num = Math.floor(Math.random() * colorArray.length);
+        return colorArray[num];
+    }
     function getRandomColor() {
         var letters = '0123456789ABCDEF'.split('');
         var color = '#';
@@ -293,6 +298,7 @@
             color += letters[Math.floor(Math.random() * 16)];
         }
         return color;
+        // #327263, #4A18DD, #143A7D, #0A4C63, #4237BD
     }
   </script>
 <script type="module">
