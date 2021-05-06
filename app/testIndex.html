@@ -287,7 +287,7 @@
         return Math.floor(Math.random() * max);
     }
     function getRandomColorByCustom(){
-        var colorArray = ['#327263', '#4A18DD', '#143A7D', '#0A4C63', '#4237BD'];
+        var colorArray = ['#327263', '#4A18DD', '#143A7D', '#0A4C63', '#4237BD', '#1104D0', '#3B3A73', '#742063', '#1F1762', '#311418'];
         var num = Math.floor(Math.random() * colorArray.length);
         return colorArray[num];
     }
@@ -458,7 +458,7 @@
 
                     values: {
                         glyph: "",
-                        labelBGColor: getRandomColor(),
+                        labelBGColor: getRandomColorByCustom(),
                         title: entity.id,
                         markerBGColor: "green",
                         alarmMarkerClass: "non-alarm-marker"
