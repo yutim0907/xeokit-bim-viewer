@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>xeokit BIM Viewer</title>
+    <title>3D BIM測試網頁 by TimChung</title>
 
     <!-- BIMViewer styles -->
     <link rel="stylesheet" href="./lib/fontawesome-free-5.11.2-web/css/all.min.css" type="text/css"/>
@@ -101,17 +101,17 @@
         }
 		
 		.alarm-bar{
-		position: absolute;
-		top: 5%;
-		left: 1%;
-		width: 25%;
-		z-index: 110000;
-		color: red;
-	    background-color: white;
-		border: 1px solid black;
-		border-radius: 5px;
-        opacity: 0.75;
-        height: 25%
+    		position: absolute;
+    		top: 5%;
+    		left: 1%;
+    		width: 25%;
+    		z-index: 110000;
+    		color: red;
+    	    background-color: white;
+    		border: 1px solid black;
+    		border-radius: 5px;
+            opacity: 0.75;
+            height: 25%
 		}
 		.alarm-marker{
 			animation: fade 600ms infinite;
@@ -129,7 +129,7 @@
             bottom: 5%;
             left: 1%;
             width: 25%;
-            height: 25%;
+            height: auto;
             z-index: 110000;
             color: black;
             background-color: white;
@@ -145,12 +145,16 @@
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
         .tag-info-card{
-            width: 32%;
-            height: auto;
+            width: 150px;
+            height: 75px;
+            margin: 1.5px;
             border-radius: 5px;
             border-right: 1.5px solid rgba(0, 0, 0, 0.1);
             border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
             display: inline-block;
+        }
+        .tag-info-card:hover{
+            border-color: #ff0000;
         }
         .tag-info-card .title {
             position: relative;
@@ -172,7 +176,7 @@
             text-align: right;
         }
         .tag-info-card .body .chapter {
-            margin-top: 0;
+            margin-top: 8px;
             margin-bottom: 8px;
             font-size: 14px;
             overflow: hidden;
@@ -197,6 +201,7 @@
     <div id="myContent">
         <div id="myToolbar"></div>
         <canvas id="myCanvas"></canvas>
+        <canvas id="myNavCubeCanvas"></canvas>
     </div>
 </div>
 <div id="pickedDescription" class="section-description"> Test Description</div>
@@ -204,7 +209,7 @@
 <button onclick="jumpToHref()"> jump </button>
     警報發生 - 電錶箱:A-M1
 </div>
-<canvas id="myNavCubeCanvas"></canvas>
+
 <audio loop="loop" id="alarmSound" autoplay="autoplay" controls="controls" style="display: none;">
     <source id="mp3Source" type="audio/mp3">
 </audio>
@@ -289,6 +294,7 @@
 	
 	new NavCubePlugin(viewer, {
         canvasId: "myNavCubeCanvas",
+        color: "lightblue",
         visible: true,           // Initially visible (default)
         size: 250,               // NavCube size in pixels (default is 200)
         alignment: "topRight",   // Align NavCube to top-left of Viewer canvas
