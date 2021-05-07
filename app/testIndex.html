@@ -168,7 +168,7 @@
         }
         .tag-info-card{
             width: 150px;
-            height: 75px;
+            height: auto;
             margin: 1.5px;
             border-radius: 5px;
             border-right: 1.5px solid rgba(0, 0, 0, 0.2);
@@ -437,7 +437,7 @@
             </div>\
             <div class="body">\
             <h2 class="chapter">Name : Tag_Title</h2>\
-            <p class="content">Value : Tag_Value</p>\
+            <p class="content" id="TagId_Value" >Value : Tag_Value</p>\
             <p class="content">HH : Tag_HH</p>\
             <p class="content">H  : Tag_H</p>\
             <p class="content">L  : Tag_L</p>\
@@ -446,14 +446,27 @@
             </div>\
             ';
             for(var i=1; i<=6; i++){
+                var tagIdArray = ['KA_BT_A', 'KA_DA_A', 'KA_DP_TEMP', 'KA_N2_FLOW', 'KA_N2_PRESS', 'KA_RUN_HR'];
                 var tmpHtml = tagInfoModule;
-                tmpHtml = tmpHtml.replace('Tag_TitleCat', 'Tag0'+i);
-                tmpHtml = tmpHtml.replace('Tag_Title', 'Tag0'+i);
-                tmpHtml = tmpHtml.replace('Tag_Value', getRandomInt(10000)/i);
-                tmpHtml = tmpHtml.replace('Tag_HH', getRandomInt(900)*i);
-                tmpHtml = tmpHtml.replace('Tag_H', getRandomInt(700)*i);
-                tmpHtml = tmpHtml.replace('Tag_L', getRandomInt(300)*i);
-                tmpHtml = tmpHtml.replace('Tag_LL', getRandomInt(150)*i);
+                tmpHtml = tmpHtml.replace('Tag_TitleCat', tagIdArray[i]);
+                tmpHtml = tmpHtml.replace('Tag_Title', tagIdArray[i]);
+                tmpHtml = tmpHtml.replace('TagId', tagIdArray[i]);
+                var tagValue = getRandomInt(10000)/i;
+                var tagHH = getRandomInt(900)*i;
+                var tagH = getRandomInt(700)*i;
+                var tagL = getRandomInt(300)*i;
+                var tagLL = getRandomInt(150)*i;
+                tmpHtml = tmpHtml.replace('Tag_Value', tagValue);
+                tmpHtml = tmpHtml.replace('Tag_HH', tagHH);
+                tmpHtml = tmpHtml.replace('Tag_H', tagH);
+                tmpHtml = tmpHtml.replace('Tag_L', tagL);
+                tmpHtml = tmpHtml.replace('Tag_LL', tagLL);
+
+                if(tagValue >= tagHH || tagValue <= tagLL){
+                    $('#'+tagIdArray[i]+'_Value').css('color','red');
+                }else if(tagValue >= tagH || tagValue <= tagL){
+                    $('#'+tagIdArray[i]+'_Value').css('color','yellow');
+                }
 
                 tagInfoHtml += tmpHtml;
             }
