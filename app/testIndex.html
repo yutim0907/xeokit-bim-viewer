@@ -436,8 +436,7 @@
             <div class="cat">Tag_TitleCat</div>\
             </div>\
             <div class="body">\
-            <h2 class="chapter">Name : Tag_Title</h2>\
-            <p class="content" id="TagId_Value" >Value : Tag_Value</p>\
+            <h2 class="chapter" id="TagId_Value" >Value : Tag_Value</h2>\
             <p class="content">HH : Tag_HH</p>\
             <p class="content">H  : Tag_H</p>\
             <p class="content">L  : Tag_L</p>\
@@ -448,9 +447,8 @@
             for(var i=1; i<=6; i++){
                 var tagIdArray = ['KA_BT_A', 'KA_DA_A', 'KA_DP_TEMP', 'KA_N2_FLOW', 'KA_N2_PRESS', 'KA_RUN_HR'];
                 var tmpHtml = tagInfoModule;
-                tmpHtml = tmpHtml.replace('Tag_TitleCat', tagIdArray[i]);
-                tmpHtml = tmpHtml.replace('Tag_Title', tagIdArray[i]);
-                tmpHtml = tmpHtml.replace('TagId', tagIdArray[i]);
+                tmpHtml = tmpHtml.replace('Tag_TitleCat', tagIdArray[i-1]);
+                tmpHtml = tmpHtml.replace('TagId', tagIdArray[i-1]);
                 var tagValue = getRandomInt(10000)/i;
                 var tagHH = getRandomInt(900)*i;
                 var tagH = getRandomInt(700)*i;
@@ -462,13 +460,14 @@
                 tmpHtml = tmpHtml.replace('Tag_L', tagL);
                 tmpHtml = tmpHtml.replace('Tag_LL', tagLL);
 
+                tagInfoHtml += tmpHtml;
+                //文字變色效果
                 if(tagValue >= tagHH || tagValue <= tagLL){
-                    $('#'+tagIdArray[i]+'_Value').css('color','red');
+                    $('#'+tagIdArray[i-1]+'_Value').css('color','red');
                 }else if(tagValue >= tagH || tagValue <= tagL){
-                    $('#'+tagIdArray[i]+'_Value').css('color','yellow');
+                    $('#'+tagIdArray[i-1]+'_Value').css('color','yellow');
                 }
 
-                tagInfoHtml += tmpHtml;
             }
             $('#pickedDescription').html(tagInfoHtml);
             annotations.createAnnotation({
