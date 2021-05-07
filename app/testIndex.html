@@ -438,6 +438,10 @@
             <div class="body">\
             <h2 class="chapter">Name : Tag_Title</h2>\
             <p class="content">Value : Tag_Value</p>\
+            <p class="content">HH : Tag_HH</p>\
+            <p class="content">H  : Tag_H</p>\
+            <p class="content">L  : Tag_L</p>\
+            <p class="content">LL : Tag_LL</p>\
             </div>\
             </div>\
             ';
@@ -445,7 +449,12 @@
                 var tmpHtml = tagInfoModule;
                 tmpHtml = tmpHtml.replace('Tag_TitleCat', 'Tag0'+i);
                 tmpHtml = tmpHtml.replace('Tag_Title', 'Tag0'+i);
-                tmpHtml = tmpHtml.replace('Tag_Value', getRandomInt(65535)/i);
+                tmpHtml = tmpHtml.replace('Tag_Value', getRandomInt(10000)/i);
+                tmpHtml = tmpHtml.replace('Tag_HH', getRandomInt(900)*i);
+                tmpHtml = tmpHtml.replace('Tag_H', getRandomInt(700)*i);
+                tmpHtml = tmpHtml.replace('Tag_L', getRandomInt(300)*i);
+                tmpHtml = tmpHtml.replace('Tag_LL', getRandomInt(150)*i);
+
                 tagInfoHtml += tmpHtml;
             }
             $('#pickedDescription').html(tagInfoHtml);
