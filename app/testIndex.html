@@ -196,10 +196,10 @@
         .tag-info-card .body{
             padding: 8px;
             background: #1D6A96;
-            text-align: right;
             color: white;
         }
         .tag-info-card .body .chapter {
+            text-align: right;
             margin-top: 16px;
             margin-bottom: 6px;
             font-size: 14px;
@@ -208,12 +208,24 @@
             text-overflow: ellipsis;
         }
         .tag-info-card .body .content {
-            margin: 0 0 4px;
+            margin: 0 0 4px 50%;
             line-height: 1.25;
             font-size: 14px;
+            text-align: left;
+
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+        }
+        span.left{
+            width: 50%;
+            float: left;
+            text-align: left;
+        }
+        span.right{
+            width: 50%;
+            float: right;
+            text-align: right;
         }
     </style>
 
@@ -437,10 +449,10 @@
             </div>\
             <div class="body">\
             <h2 class="chapter" id="TagId_Value" style="color: white;">Value : Tag_Value</h2>\
-            <p class="content">HH : Tag_HH</p>\
-            <p class="content">H  : Tag_H</p>\
-            <p class="content">L  : Tag_L</p>\
-            <p class="content">LL : Tag_LL</p>\
+            <p class="content"> <span class="left">HH : </span>  <span class="right">Tag_HH</span> </p>\
+            <p class="content"> <span class="left">H  : </span>  <span class="right">Tag_H</span> </p>\
+            <p class="content"> <span class="left">L  : </span>  <span class="right">Tag_L</span> </p>\
+            <p class="content"> <span class="left">LL : </span>  <span class="right">Tag_LL</span> </p>\
             </div>\
             </div>\
             ';
@@ -454,11 +466,11 @@
                 var tagH = getRandomInt(700)*i;
                 var tagL = getRandomInt(300)*i;
                 var tagLL = getRandomInt(150)*i;
-                tmpHtml = tmpHtml.replace('Tag_Value', tagValue);
-                tmpHtml = tmpHtml.replace('Tag_HH', tagHH);
-                tmpHtml = tmpHtml.replace('Tag_H', tagH);
-                tmpHtml = tmpHtml.replace('Tag_L', tagL);
-                tmpHtml = tmpHtml.replace('Tag_LL', tagLL);
+                tmpHtml = tmpHtml.replace('Tag_Value', tagValue.toFixed(2));
+                tmpHtml = tmpHtml.replace('Tag_HH', tagHH.toFixed(2));
+                tmpHtml = tmpHtml.replace('Tag_H', tagH.toFixed(2));
+                tmpHtml = tmpHtml.replace('Tag_L', tagL.toFixed(2));
+                tmpHtml = tmpHtml.replace('Tag_LL', tagLL.toFixed(2));
 
                 //文字變色效果
                 if(tagValue >= tagHH || tagValue <= tagLL){
