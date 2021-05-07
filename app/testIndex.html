@@ -208,7 +208,7 @@
             text-overflow: ellipsis;
         }
         .tag-info-card .body .content {
-            margin: 0 0 4px 50%;
+            margin: 0 0 4px 25%;
             line-height: 1.25;
             font-size: 14px;
             text-align: left;
@@ -512,6 +512,7 @@
     });
 
     viewer.cameraControl.on("pickedNothing", () => {
+        annotations.clear();
         if (lastEntity) {
             lastEntity.colorize = lastColorize;
             lastEntity = null;
