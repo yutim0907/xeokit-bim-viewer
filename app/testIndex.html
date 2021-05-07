@@ -228,7 +228,7 @@
         <canvas id="myNavCubeCanvas"></canvas>
     </div>
 </div>
-<div id="pickedDescription" class="section-description"> Test Description</div>
+<div id="pickedDescription" class="section-description" style="display: none;"> </div>
 <div id="alarmBar" class="alarm-bar" onclick="flyToObj('電錶箱:A-M1:742696');">
 <button onclick="jumpToHref()"> jump </button>
     警報發生 - 電錶箱:A-M1
@@ -436,7 +436,7 @@
             <div class="cat">Tag_TitleCat</div>\
             </div>\
             <div class="body">\
-            <h2 class="chapter" id="TagId_Value" >Value : Tag_Value</h2>\
+            <h2 class="chapter" id="TagId_Value" style="color: white;">Value : Tag_Value</h2>\
             <p class="content">HH : Tag_HH</p>\
             <p class="content">H  : Tag_H</p>\
             <p class="content">L  : Tag_L</p>\
@@ -460,16 +460,17 @@
                 tmpHtml = tmpHtml.replace('Tag_L', tagL);
                 tmpHtml = tmpHtml.replace('Tag_LL', tagLL);
 
-                tagInfoHtml += tmpHtml;
                 //文字變色效果
                 if(tagValue >= tagHH || tagValue <= tagLL){
-                    $('#'+tagIdArray[i-1]+'_Value').css('color','red');
+                    tmpHtml = tmpHtml.replace('white', 'red');
                 }else if(tagValue >= tagH || tagValue <= tagL){
-                    $('#'+tagIdArray[i-1]+'_Value').css('color','yellow');
+                    tmpHtml = tmpHtml.replace('white', 'yellow');
                 }
+                tagInfoHtml += tmpHtml;
 
             }
             $('#pickedDescription').html(tagInfoHtml);
+            $('#pickedDescription').css('display', 'block');
             annotations.createAnnotation({
 
                     id: "Anno_" + entity.id,
