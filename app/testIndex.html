@@ -266,6 +266,9 @@
             background-color: rgba(255, 255, 255, 0.5);
             z-index: -1;
         }
+        .alarm-tr :hover{
+            cursor: pointer;
+        }
 
     </style>
 
@@ -281,7 +284,7 @@
     </div>
 </div>
 <div id="pickedDescription" class="section-description" style="display: none;"> </div>
-<div id="alarmBar" class="alarm-bar" onclick="flyToObj('電錶箱:A-M1:742696');">
+<div id="alarmBar" class="alarm-bar" >
 <button onclick="jumpToHref()"> jump </button>
 <div class="container">
     <table>
@@ -293,10 +296,24 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-M1:742696');">
                 <td>電錶箱:A-M1</td>
                 <td>B1F</td>
                 <td>溫度過高</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-MB1:744599');">
+                <td>電錶箱:A-MB1</td>
+                <td>B1F</td>
+                <td>耗電過高</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="alarm-tr" onclick="flyToObj('受電箱:PA9:738272');">
+                <td>受電箱:PA9</td>
+                <td>B1F</td>
+                <td>箱體被開啟</td>
             </tr>
         </tbody>
     </table>
@@ -717,7 +734,9 @@
 
         isAlarm = true;
         //var alarmInterval = window.setInterval(switchAlarmType, 1000);
-        var timeoutAlarm = window.setInterval(function(){callAlarmFunc("電錶箱:A-M1:742696");}, 1000);
+        var timeoutAlarm1 = window.setInterval(function(){callAlarmFunc("電錶箱:A-M1:742696");}, 1000);
+        var timeoutAlarm2 = window.setInterval(function(){callAlarmFunc("電錶箱:A-MB1:744599");}, 1000);
+        var timeoutAlarm3 = window.setInterval(function(){callAlarmFunc("受電箱:PA9:738272");}, 1000);
 
 		});
 
