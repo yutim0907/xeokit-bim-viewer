@@ -320,7 +320,7 @@
     </table>
 </div>
 </div>
-
+<input type="button" style="background-image: '../images/alarm.png';width: 5%;height: 5%;" onclick="playAudio();">
 <audio loop="loop" id="alarmSound" autoplay="autoplay" controls="" src="../app/data/projects/WaterLock/models/design/Alarm.mp3" style="display: none;">
     <source id="mp3Source" type="audio/mp3">
 </audio>
@@ -348,10 +348,10 @@
 	
 	}
 	function playAudio(){
-        var r =confirm("Would You Like To Play Alarm Audio?");
-        if (r == true) {
+        //var r =confirm("Would You Like To Play Alarm Audio?");
+        //if (r == true) {
             document.getElementById("alarmSound").play();
-        }
+        //}
     	
 	}
 	function jumpToHref(){
