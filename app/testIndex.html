@@ -228,8 +228,11 @@
             text-align: right;
         }
 
+        .alarm-bar .container{
+            margin: 5px;
+        }
         table {
-            width: 800px;
+            width: 100%;
             border-collapse: collapse;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -237,17 +240,18 @@
         th,
         td {
             padding: 15px;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #fff;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: red;
         }
         th {
             text-align: left;   
         }
         thead th {
-            background-color: #55608f;
+            background-color: #1D6A96;
+            color: #fff;
         }
         tbody tr:hover {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.7);
         }
         tbody td {
             position: relative;
@@ -259,7 +263,7 @@
             right: 0;
             top: -9999px;
             bottom: -9999px;
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.5);
             z-index: -1;
         }
 
