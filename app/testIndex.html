@@ -646,7 +646,7 @@
     model.on("loaded", () => {
         oriColor = viewer.scene.objects["電錶箱:A-M1:742696"].colorize;
         Object.keys(viewer.scene.objects).forEach(element => {
-            if(element.indexOf('管') === 0){
+            if(element.indexOf('管') > -1){
                     viewer.scene.objects[element].colorize = [255/255, 215/255, 0];
                 }
             }
