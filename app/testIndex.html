@@ -383,7 +383,7 @@
                 //viewer.scene.objects["電錶箱:A-M1:742696"].colorize = [1,0,0];
             }else{
                 alarmTick = true;
-                viewer.scene.objects[id].colorize = [0.6980392336845398,0.6980392336845398,0.6980392336845398];
+                viewer.scene.objects[id].colorize = oriColorForAlarm;
                 //viewer.scene.objects["電錶箱:A-M1:742696"].colorize = oriColorForAlarm;
             }
         }
@@ -648,7 +648,8 @@
     });
 
     model.on("loaded", () => {
-        oriColorForAlarm = viewer.scene.objects["電錶箱:A-M1:742696"].colorize;
+        var tempColor = viewer.scene.objects["電錶箱:A-M1:742696"].colorize;
+        oriColorForAlarm = tempColor;
         Object.keys(viewer.scene.objects).forEach(element => {
             if(element.indexOf('管') > -1){
                     viewer.scene.objects[element].colorize = [255/255, 215/255, 0];
