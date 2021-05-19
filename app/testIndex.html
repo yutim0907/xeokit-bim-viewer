@@ -450,31 +450,7 @@
             }
             $('#pickedDescription').html(tagInfoHtml);
             $('#pickedDescription').css('display', 'block');
-            annotations.createAnnotation({
-
-                    id: "Anno_" + entity.id,
-
-                    entity: entity,
-
-                    worldPos: entityCenter,
-
-
-                    //eye: [56.667458498170404, 100.58910225943117, 97.40153241646453],
-                    //look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
-                    //up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
-                    
-                    occludable: false,
-                    markerShown: true,
-                    labelShown: true,
-
-                    values: {
-                        glyph: "",
-                        labelBGColor: getRandomColorByCustom(),
-                        title: entity.id,
-                        markerBGColor: "green",
-                        alarmMarkerClass: "non-alarm-marker"
-                    }
-                });
+            
     }
   </script>
 <script type="module">
@@ -608,6 +584,31 @@
 
             pickResult.entity.colorize = [8/255, 247/255, 254/255];
             createTagInfoBox();
+            annotations.createAnnotation({
+
+                    id: "Anno_" + entity.id,
+
+                    entity: entity,
+
+                    worldPos: entityCenter,
+
+
+                    //eye: [56.667458498170404, 100.58910225943117, 97.40153241646453],
+                    //look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
+                    //up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
+                    
+                    occludable: false,
+                    markerShown: true,
+                    labelShown: true,
+
+                    values: {
+                        glyph: "",
+                        labelBGColor: getRandomColorByCustom(),
+                        title: entity.id,
+                        markerBGColor: "green",
+                        alarmMarkerClass: "non-alarm-marker"
+                    }
+                });
         }
     });
 
