@@ -366,7 +366,7 @@
 	}
     var alarmTick = false;
     var isAlarm = false;
-    const oriColorForAlarm = undefined;
+    //var oriColorForAlarm = undefined;
     
     function switchAlarmType(){
         if(alarmTick){
@@ -648,8 +648,8 @@
     });
 
     model.on("loaded", () => {
-        var tempColor = viewer.scene.objects["電錶箱:A-M1:742696"].colorize;
-        oriColorForAlarm = tempColor;
+        const oriColorForAlarm = viewer.scene.objects["電錶箱:A-M1:742696"].colorize;
+        //oriColorForAlarm = tempColor;
         Object.keys(viewer.scene.objects).forEach(element => {
             if(element.indexOf('管') > -1){
                     viewer.scene.objects[element].colorize = [255/255, 215/255, 0];
