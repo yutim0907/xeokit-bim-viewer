@@ -406,6 +406,76 @@
         return color;
         // #327263, #4A18DD, #143A7D, #0A4C63, #4237BD
     }
+    function createTagInfoBox(){
+        annotations.clear();
+            var tagInfoHtml = '';
+            var tagInfoModule = '\
+            <div class="tag-info-card">\
+            <div class="title">\
+            <div class="cat">Tag_TitleCat</div>\
+            </div>\
+            <div class="body">\
+            <h2 class="chapter" id="TagId_Value" style="color: white;">Value : Tag_Value</h2>\
+            <p class="content"> <span class="left">HH : </span>  <span class="right">Tag_HH</span> </p>\
+            <p class="content"> <span class="left">H  : </span>  <span class="right">Tag_H</span> </p>\
+            <p class="content"> <span class="left">L  : </span>  <span class="right">Tag_L</span> </p>\
+            <p class="content"> <span class="left">LL : </span>  <span class="right">Tag_LL</span> </p>\
+            </div>\
+            </div>\
+            ';
+            for(var i=1; i<=6; i++){
+                var tagIdArray = ['KA_BT_A', 'KA_DA_A', 'KA_DP_TEMP', 'KA_N2_FLOW', 'KA_N2_PRESS', 'KA_RUN_HR'];
+                var tmpHtml = tagInfoModule;
+                tmpHtml = tmpHtml.replace('Tag_TitleCat', tagIdArray[i-1]);
+                tmpHtml = tmpHtml.replace('TagId', tagIdArray[i-1]);
+                var tagValue = getRandomInt(10000)/i;
+                var tagHH = getRandomInt(900)*i;
+                var tagH = getRandomInt(700)*i;
+                var tagL = getRandomInt(300)*i;
+                var tagLL = getRandomInt(150)*i;
+                tmpHtml = tmpHtml.replace('Tag_Value', tagValue.toFixed(2));
+                tmpHtml = tmpHtml.replace('Tag_HH', tagHH.toFixed(2));
+                tmpHtml = tmpHtml.replace('Tag_H', tagH.toFixed(2));
+                tmpHtml = tmpHtml.replace('Tag_L', tagL.toFixed(2));
+                tmpHtml = tmpHtml.replace('Tag_LL', tagLL.toFixed(2));
+
+                //文字變色效果
+                if(tagValue >= tagHH || tagValue <= tagLL){
+                    tmpHtml = tmpHtml.replace('white', 'red');
+                }else if(tagValue >= tagH || tagValue <= tagL){
+                    tmpHtml = tmpHtml.replace('white', 'yellow');
+                }
+                tagInfoHtml += tmpHtml;
+
+            }
+            $('#pickedDescription').html(tagInfoHtml);
+            $('#pickedDescription').css('display', 'block');
+            annotations.createAnnotation({
+
+                    id: "Anno_" + entity.id,
+
+                    entity: entity,
+
+                    worldPos: entityCenter,
+
+
+                    //eye: [56.667458498170404, 100.58910225943117, 97.40153241646453],
+                    //look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
+                    //up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
+                    
+                    occludable: false,
+                    markerShown: true,
+                    labelShown: true,
+
+                    values: {
+                        glyph: "",
+                        labelBGColor: getRandomColorByCustom(),
+                        title: entity.id,
+                        markerBGColor: "green",
+                        alarmMarkerClass: "non-alarm-marker"
+                    }
+                });
+    }
   </script>
 <script type="module">
 
@@ -537,74 +607,7 @@
             lastColorize = pickResult.entity.colorize ? pickResult.entity.colorize.slice() : null;
 
             pickResult.entity.colorize = [8/255, 247/255, 254/255];
-            annotations.clear();
-            var tagInfoHtml = '';
-            var tagInfoModule = '\
-            <div class="tag-info-card">\
-            <div class="title">\
-            <div class="cat">Tag_TitleCat</div>\
-            </div>\
-            <div class="body">\
-            <h2 class="chapter" id="TagId_Value" style="color: white;">Value : Tag_Value</h2>\
-            <p class="content"> <span class="left">HH : </span>  <span class="right">Tag_HH</span> </p>\
-            <p class="content"> <span class="left">H  : </span>  <span class="right">Tag_H</span> </p>\
-            <p class="content"> <span class="left">L  : </span>  <span class="right">Tag_L</span> </p>\
-            <p class="content"> <span class="left">LL : </span>  <span class="right">Tag_LL</span> </p>\
-            </div>\
-            </div>\
-            ';
-            for(var i=1; i<=6; i++){
-                var tagIdArray = ['KA_BT_A', 'KA_DA_A', 'KA_DP_TEMP', 'KA_N2_FLOW', 'KA_N2_PRESS', 'KA_RUN_HR'];
-                var tmpHtml = tagInfoModule;
-                tmpHtml = tmpHtml.replace('Tag_TitleCat', tagIdArray[i-1]);
-                tmpHtml = tmpHtml.replace('TagId', tagIdArray[i-1]);
-                var tagValue = getRandomInt(10000)/i;
-                var tagHH = getRandomInt(900)*i;
-                var tagH = getRandomInt(700)*i;
-                var tagL = getRandomInt(300)*i;
-                var tagLL = getRandomInt(150)*i;
-                tmpHtml = tmpHtml.replace('Tag_Value', tagValue.toFixed(2));
-                tmpHtml = tmpHtml.replace('Tag_HH', tagHH.toFixed(2));
-                tmpHtml = tmpHtml.replace('Tag_H', tagH.toFixed(2));
-                tmpHtml = tmpHtml.replace('Tag_L', tagL.toFixed(2));
-                tmpHtml = tmpHtml.replace('Tag_LL', tagLL.toFixed(2));
-
-                //文字變色效果
-                if(tagValue >= tagHH || tagValue <= tagLL){
-                    tmpHtml = tmpHtml.replace('white', 'red');
-                }else if(tagValue >= tagH || tagValue <= tagL){
-                    tmpHtml = tmpHtml.replace('white', 'yellow');
-                }
-                tagInfoHtml += tmpHtml;
-
-            }
-            $('#pickedDescription').html(tagInfoHtml);
-            $('#pickedDescription').css('display', 'block');
-            annotations.createAnnotation({
-
-                    id: "Anno_" + entity.id,
-
-                    entity: entity,
-
-                    worldPos: entityCenter,
-
-
-                    //eye: [56.667458498170404, 100.58910225943117, 97.40153241646453],
-                    //look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
-                    //up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
-                    
-                    occludable: false,
-                    markerShown: true,
-                    labelShown: true,
-
-                    values: {
-                        glyph: "",
-                        labelBGColor: getRandomColorByCustom(),
-                        title: entity.id,
-                        markerBGColor: "green",
-                        alarmMarkerClass: "non-alarm-marker"
-                    }
-                });
+            createTagInfoBox();
         }
     });
 
