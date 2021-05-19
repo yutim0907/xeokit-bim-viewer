@@ -652,9 +652,13 @@
         //oriColorForAlarm = tempColor;
         Object.keys(viewer.scene.objects).forEach(element => {
             if(element.indexOf('箱') < 0){
-                    viewer.scene.objects[element].colorize = [255/255, 255/255, 255/255];
-                    viewer.scene.objects[element].opacity = 0.3;
-                }
+                viewer.scene.objects[element].colorize = [255/255, 255/255, 255/255];
+                viewer.scene.objects[element].opacity = 0.3;
+            }
+            if(element.indexOf('電錶') > 0){
+                viewer.scene.objects[element].colorize = [255/255, 255/255, 0];
+            }
+
             }
         );
         
