@@ -535,8 +535,8 @@
     function displayProgressChart(num, minValue, maxValue) {
         $(".progress-pie-chart").attr('data-percent',num);
         var $ppc = $(".progress-pie-chart"),
-        percent = parseInt($(".progress-pie-chart").attr('data-percent')),
-        deg = (360 * percent) / (maxValue - minValue);
+        percent = parseInt($(".progress-pie-chart").attr('data-percent')) / (maxValue-minValue),
+        deg = (360 * percent) / 100;
         if (percent > 50) {
             $ppc.addClass("gt-50");
         }else{
