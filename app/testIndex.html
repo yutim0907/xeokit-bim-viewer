@@ -533,14 +533,14 @@
             $('#pickedDescription').css('display', 'block');
         }
     function displayProgressChart(num, minValue, maxValue) {
-        $(".ppc-progress-fill").css("transform", "rotate(60deg)");
-        $(".ppc-progress-fill").css('clip', 'rect(0, 100px, 200px, 0)');
         $(".progress-pie-chart").attr('data-percent',num);
         var $ppc = $(".progress-pie-chart"),
         percent = parseInt($(".progress-pie-chart").attr('data-percent')),
         deg = (360 * percent) / (maxValue - minValue);
         if (percent > 50) {
             $ppc.addClass("gt-50");
+        }else{
+            $ppc.removeClass("gt-50");
         }
         $(".ppc-progress-fill").css("transform", "rotate(" + deg + "deg)");
         $(".ppc-percents span").html(percent);
