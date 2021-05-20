@@ -272,59 +272,60 @@
         }
 
         .progress-pie-chart {
-              width: 200px;
-              height: 200px;
-              top: 5%;
-              left: 45%;
-              border-radius: 50%;
-              background-color: #E5E5E5;
-              position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 5%;
+            left: 45%;
+            border-radius: 50%;
+            background-color: #E5E5E5;
+            position: absolute;
         }
         .progress-pie-chart.gt-50 {
             background-color: #81CE97;
         }
 
         .ppc-progress {
-              content: "";
-              position: absolute;
-              border-radius: 50%;
-              left: calc(50% - 100px);
-              top: calc(50% - 100px);
-              width: 200px;
-              height: 200px;
-              clip: rect(0, 200px, 200px, 100px);
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            left: calc(50% - 100px);
+            top: calc(50% - 100px);
+            width: 200px;
+            height: 200px;
+            clip: rect(0, 200px, 200px, 100px);
         }
         .ppc-progress .ppc-progress-fill {
-              content: "";
-              position: absolute;
-              border-radius: 50%;
-              left: calc(50% - 100px);
-              top: calc(50% - 100px);
-              width: 200px;
-              height: 200px;
-              clip: rect(0, 100px, 200px, 0);
-              background: #81CE97;
-              transform: rotate(60deg);
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            left: calc(50% - 100px);
+            top: calc(50% - 100px);
+            width: 200px;
+            height: 200px;
+            clip: rect(0, 100px, 200px, 0);
+            background: #81CE97;
+            transform: rotate(60deg);
+            transition: 0.5s;
         }
         .gt-50 .ppc-progress {
             clip: rect(0, 100px, 200px, 0);
         }
         .gt-50 .ppc-progress .ppc-progress-fill {
-              clip: rect(0, 200px, 200px, 100px);
-              background: #E5E5E5;
+            clip: rect(0, 200px, 200px, 100px);
+            background: #E5E5E5;
         }
 
         .ppc-percents {
-              content: "";
-              position: absolute;
-              border-radius: 50%;
-              left: calc(50% - 173.9130434783px/2);
-              top: calc(50% - 173.9130434783px/2);
-              width: 173.9130434783px;
-              height: 173.9130434783px;
-              background: #fff;
-              text-align: center;
-              display: table;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            left: calc(50% - 173.9130434783px/2);
+            top: calc(50% - 173.9130434783px/2);
+            width: 173.9130434783px;
+            height: 173.9130434783px;
+            background: #fff;
+            text-align: center;
+            display: table;
         }
         .ppc-percents span {
             display: block;
@@ -529,7 +530,17 @@
             }
             $('#pickedDescription').html(tagInfoHtml);
             $('#pickedDescription').css('display', 'block');
-            
+        }
+    function displayProgressChart(num, minValue, maxValue) {
+        $(".progress-pie-chart").attr('data-percent',num);
+        var $ppc = $(".progress-pie-chart"),
+        percent = parseInt($ppc.data("percent")),
+        deg = (360 * percent) / (maxValue - minValue);
+        if (percent > 50) {
+        $ppc.addClass("gt-50");
+        }
+        $(".ppc-progress-fill").css("transform", "rotate(" + deg + "deg)");
+        $(".ppc-percents span").html(percent);
     }
   </script>
 <script type="module">
@@ -687,12 +698,17 @@
                         markerBGColor: "green",
                         alarmMarkerClass: "non-alarm-marker"
                     }
-                });
+            });
+            var num = getRandomInt(180);
+
+            displayProgressChart(num, 0, 180);
+            $(".progress-pie-chart").css('display','block');
         }
     });
 
     viewer.cameraControl.on("pickedNothing", () => {
         annotations.clear();
+        $(".progress-pie-chart").css('display','none');
         if (lastEntity) {
             lastEntity.colorize = lastColorize;
             lastEntity = null;
