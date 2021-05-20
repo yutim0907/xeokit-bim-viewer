@@ -270,7 +270,76 @@
             cursor: pointer;
             font-weight: 600;
         }
-        @media screen and (min-width: )
+
+        .progress-pie-chart {
+              width: 200px;
+              height: 200px;
+              top: 5%;
+              left: 40%;
+              border-radius: 50%;
+              background-color: #E5E5E5;
+              position: absolute;
+        }
+        .progress-pie-chart.gt-50 {
+            background-color: #81CE97;
+        }
+
+        .ppc-progress {
+              content: "";
+              position: absolute;
+              border-radius: 50%;
+              left: calc(50% - 100px);
+              top: calc(50% - 100px);
+              width: 200px;
+              height: 200px;
+              clip: rect(0, 200px, 200px, 100px);
+        }
+        .ppc-progress .ppc-progress-fill {
+              content: "";
+              position: absolute;
+              border-radius: 50%;
+              left: calc(50% - 100px);
+              top: calc(50% - 100px);
+              width: 200px;
+              height: 200px;
+              clip: rect(0, 100px, 200px, 0);
+              background: #81CE97;
+              transform: rotate(60deg);
+        }
+        .gt-50 .ppc-progress {
+            clip: rect(0, 100px, 200px, 0);
+        }
+        .gt-50 .ppc-progress .ppc-progress-fill {
+              clip: rect(0, 200px, 200px, 100px);
+              background: #E5E5E5;
+        }
+
+        .ppc-percents {
+              content: "";
+              position: absolute;
+              border-radius: 50%;
+              left: calc(50% - 173.9130434783px/2);
+              top: calc(50% - 173.9130434783px/2);
+              width: 173.9130434783px;
+              height: 173.9130434783px;
+              background: #fff;
+              text-align: center;
+              display: table;
+        }
+        .ppc-percents span {
+              display: block;
+              font-size: 2.6em;
+              font-weight: bold;
+              color: #81CE97;
+        }
+
+        .pcc-percents-wrapper {
+              display: table-cell;
+              vertical-align: middle;
+        }
+        .progress-pie-chart {
+          marksgin: 50px auto 0;
+        }
 
     </style>
 
@@ -284,6 +353,16 @@
         <canvas id="myCanvas"></canvas>
         <canvas id="myNavCubeCanvas"></canvas>
     </div>
+</div>
+<div class="progress-pie-chart" style="display: none;" data-percent="43">
+  <div class="ppc-progress">
+    <div class="ppc-progress-fill"></div>
+  </div>
+  <div class="ppc-percents">
+    <div class="pcc-percents-wrapper">
+      <span>%</span>
+    </div>
+  </div>
 </div>
 <div id="pickedDescription" class="section-description" style="display: none;"> </div>
 <div id="alarmBar" class="alarm-bar" >
@@ -668,7 +747,7 @@
         
 /*
         //------------------------------------------------------------------------------------------------------------------
-        // Create some Annotations
+        // Create some Annotations   spoon reject rare water annual soda high used quality prefer tone trick
         //------------------------------------------------------------------------------------------------------------------
 		for(var i=0; i< viewer.scene._numObjects; i++){
             if(viewer.scene.visibleObjectIds[i].indexOf('電錶') === 0 || viewer.scene.visibleObjectIds[i].indexOf('受電箱') === 0){
