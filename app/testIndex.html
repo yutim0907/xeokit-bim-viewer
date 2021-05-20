@@ -538,10 +538,10 @@
         percent = parseInt($ppc.data("percent")),
         deg = (360 * percent) / (maxValue - minValue);
         if (percent > 50) {
-        $ppc.addClass("gt-50");
+            $ppc.addClass("gt-50");
         }
         $(".ppc-progress-fill").css("transform", "rotate(" + deg + "deg)");
-        $(".ppc-percents span").html(percent);
+        $(".ppc-percents span").html(num);
     }
   </script>
 <script type="module">
