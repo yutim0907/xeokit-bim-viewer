@@ -87,7 +87,7 @@ function start() {
 
     }
     drawPoint(ctx, 100);
-    setPointer(ctx, 100, 79);
+    setPointer(ctx, 100);
     setText(ctx, "當前用電量");
 }
 var colorCount = 0
@@ -217,7 +217,7 @@ function drawPoint(ctx, count) {
     }
     ctx.beginPath();
 }
-function setPointer(ctx, count, num) {
+function setPointer(ctx, count) {
     ctx.save();
     ctx.translate(129 * match, 136 * match);
     for (var i = 0; i <= 10; i++) {
