@@ -86,9 +86,9 @@ function start() {
         ctx.stroke();
 
     }
-    drawPoint(ctx, 100)
-    setPointer(ctx,100)
-    setText(ctx)
+    drawPoint(ctx, 100);
+    setPointer(ctx,100);
+    setText(ctx);
 }
 var colorCount = 0
 var resetFlag = 0
