@@ -242,7 +242,7 @@ function setPointer(ctx, count) {
     //console.log(time)
     var se = ((time - 1) * 27 + 1350) / 3600;
     if (se * 2 * Math.PI >= num) {
-      timer_line = window.clearInterval(timer_line);
+      //timer_line = window.clearInterval(timer_line);
       //  設定停止條件
     }
     ctx.rotate(se * 2 * Math.PI);
@@ -287,6 +287,7 @@ function setPointer(ctx, count) {
     ctx.fill();
     ctx.restore();
     //上限，歸零條件，若不需要則拿掉
-    //if (time <=  78){
-    //}
+    if (time <= pec){
+        timer_line = window.clearInterval(timer_line);
+    }
 }
