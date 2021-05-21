@@ -11,7 +11,7 @@ var total = 100
 var canvasName;
 function test(canvasName) {
     this.canvasName = canvasName;
-    timer_line = window.setInterval("start()", 30);
+    timer_line = window.setInterval("start()", 300);
     time = 0;
 }
 function start() {
@@ -87,38 +87,38 @@ function start() {
 
     }
     drawPoint(ctx, 100);
-    setPointer(ctx,100);
-    setText(ctx);
+    setPointer(ctx, 100);
+    setText(ctx, "當前用電量");
 }
 var colorCount = 0
 var resetFlag = 0
-function setText(ctx) {
+function setText(ctx, unit) {
     //中間字體
 
     //time / 4 第一區塊需+1且從20%的部分開始，最後一階段在最後20%結束
     if (time <= total / 3.2 * 0.6) {
         if (resetFlag != 0) { resetFlag = 0; colorCount = 0 }
         ctx.fillStyle = "rgba(0,173,239,1)";
-        ctx.fillStyle = gradientColors('#FFFF00', '#FF0000', total / 3.2 * 1, colorCount + total / 3.2 * 0.4)
-        colorCount++
+        ctx.fillStyle = gradientColors('#FFFF00', '#FF0000', total / 3.2 * 1, colorCount + total / 3.2 * 0.4);
+        colorCount++;
     }
     else if (time <= total / 3.2 * 1.6 && time > total / 3.2 * 0.6) {
         if (resetFlag != 1) { resetFlag = 1; colorCount = 0 }
         ctx.fillStyle = "rgba(102,204,154,1)";
-        ctx.fillStyle = gradientColors('#FF0000', '#0000FF', total / 3.2 * 1, colorCount)
-        colorCount++
+        ctx.fillStyle = gradientColors('#FF0000', '#0000FF', total / 3.2 * 1, colorCount);
+        colorCount++;
     }
     else if (time <= total / 3.2 * 2.6 && time > total / 3.2 * 1.6) {
         if (resetFlag != 2) { resetFlag = 2; colorCount = 0 }
         ctx.fillStyle = "rgba(59,89,152,1)";
-        ctx.fillStyle = gradientColors('#0000FF', '#00FF00', total / 3.2 * 1, colorCount)
-        colorCount++
+        ctx.fillStyle = gradientColors('#0000FF', '#00FF00', total / 3.2 * 1, colorCount);
+        colorCount++;
     }
     else if (time > total / 3.2 * 2.6) {
         if (resetFlag != 3) { resetFlag = 3; colorCount = 0 }
         ctx.fillStyle = "rgba(59,89,152,1)";
-        ctx.fillStyle = gradientColors('#00FF00', '#FFFF00', total / 3.2 * 1, colorCount)
-        colorCount++
+        ctx.fillStyle = gradientColors('#00FF00', '#FFFF00', total / 3.2 * 1, colorCount);
+        colorCount++;
     }
     ctx.lineWidth = 10;
     ctx.textAlign = "center";
@@ -131,7 +131,7 @@ function setText(ctx) {
     ctx.fillStyle = "#999999";
     ctx.font = 10 * match + "pt oblique ";
     //  ctx.fillText("指数", center.x, center.y * 1.9); 
-    ctx.fillText("指数", 130 * match, 250 * match);
+    ctx.fillText(unit, 130 * match, 250 * match);
     ctx.stroke();
     ctx.beginPath();
     ctx.save();
@@ -217,7 +217,7 @@ function drawPoint(ctx, count) {
     }
     ctx.beginPath();
 }
-function setPointer(ctx, count) {
+function setPointer(ctx, count, num) {
     ctx.save();
     ctx.translate(129 * match, 136 * match);
     for (var i = 0; i <= 10; i++) {
@@ -242,7 +242,7 @@ function setPointer(ctx, count) {
     //console.log(time)
     var se = ((time - 1) * 27 + 1350) / 3600;
     if (se * 2 * Math.PI > num) {
-      //  timer_line = window.clearInterval(timer_line);
+      timer_line = window.clearInterval(timer_line);
       //  設定停止條件
     }
     ctx.rotate(se * 2 * Math.PI);
