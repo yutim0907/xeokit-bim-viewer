@@ -87,7 +87,7 @@ function start() {
 
     }
     drawPoint(ctx, 100);
-    setPointer(ctx, 100);
+    setPointer(ctx, 100, 79);
     setText(ctx, "當前用電量");
 }
 var colorCount = 0
@@ -238,7 +238,7 @@ function setPointer(ctx, count, num) {
     ctx.stroke();
     //ctx.translate(130 * match, 130 * match);
     ctx.scale(0.4, 0.4);
-    //time++;
+    time++;
     //console.log(time)
     var se = ((time - 1) * 27 + 1350) / 3600;
     if (se * 2 * Math.PI > num) {
@@ -288,6 +288,5 @@ function setPointer(ctx, count, num) {
     ctx.restore();
     //上限，歸零條件，若不需要則拿掉
     //if (time <=  78){
-       time++;
     //}
 }
