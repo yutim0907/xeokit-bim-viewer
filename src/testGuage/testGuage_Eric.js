@@ -11,7 +11,7 @@ var total = 100
 var canvasName;
 function test(canvasName) {
     this.canvasName = canvasName;
-    timer_line = window.setInterval("start()", 300);
+    timer_line = window.setInterval("start()", 100);
     time = 0;
 }
 function start() {
