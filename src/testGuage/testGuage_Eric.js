@@ -3,7 +3,7 @@
 var pet = Math.random() * 100;
 var pec = Math.round(pet);
 //var match = Math.min((window.innerWidth / 200), window.innerHeight / 20);
-var match = Math.min((230 / 260), 230 / 260);
+var match = Math.min((230 / 260), 230 / 260); //找尋螢幕最小邊
 var num = (1350 / 3600 + 27 / 3600 * pec) * 2 * Math.PI;
 var center = { "x": 130* match, "y": 130 * match };
 var radius = 115* match;
