@@ -241,7 +241,7 @@ function setPointer(ctx, count) {
     time++;
     //console.log(time)
     var se = ((time - 1) * 27 + 1350) / 3600;
-    if (se * 2 * Math.PI > num) {
+    if (se * 2 * Math.PI >= num) {
       timer_line = window.clearInterval(timer_line);
       //  設定停止條件
     }
