@@ -287,7 +287,7 @@ function setPointer(ctx, count, num) {
     ctx.fill();
     ctx.restore();
     //上限，歸零條件，若不需要則拿掉
-    if (time <=  78){
-        time++;
-    }
+    //if (time <=  78){
+    //    time++;
+    //}
 }
