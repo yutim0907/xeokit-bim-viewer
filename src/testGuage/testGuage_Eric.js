@@ -239,7 +239,7 @@ function setPointer(ctx, count) {
     //ctx.translate(130 * match, 130 * match);
     ctx.scale(0.4, 0.4);
     //time++;
-    console.log(time)
+    //console.log(time)
     var se = ((time - 1) * 27 + 1350) / 3600;
     if (se * 2 * Math.PI > num) {
       //  timer_line = window.clearInterval(timer_line);
