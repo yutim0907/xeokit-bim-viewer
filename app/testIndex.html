@@ -537,7 +537,7 @@
         var $ppc = $(".progress-pie-chart"),
         percent = parseInt($(".progress-pie-chart").attr('data-percent')) / (maxValue-minValue),
         deg = (360 * percent);
-        if (percent > 50) {
+        if (percent > 0.5) {
             $ppc.addClass("gt-50");
         }else{
             $ppc.removeClass("gt-50");
