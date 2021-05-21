@@ -287,7 +287,7 @@ function setPointer(ctx, count) {
     ctx.fill();
     ctx.restore();
     //上限，歸零條件，若不需要則拿掉
-    if (time <= pec){
+    if (time >= pec){
         timer_line = window.clearInterval(timer_line);
     }
 }
