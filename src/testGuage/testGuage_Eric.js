@@ -9,7 +9,7 @@ var center = { "x": 130* match, "y": 130 * match };
 var radius = 115* match;
 var total = 100
 var canvasName;
-function test(canvasName) {
+function updateGaugeChart(canvasName) {
     this.canvasName = canvasName;
     timer_line = window.setInterval("start()", 100);
     time = 0;
