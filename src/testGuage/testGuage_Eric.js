@@ -242,7 +242,7 @@ function setPointer(ctx, count) {
     ctx.scale(0.4, 0.4);
     //degrees++;
     //console.log(degrees)
-    //var se = ((degrees - 1) * 27 + 1350) / 3600;
+    var se = ((degrees - 1) * 27 + 1350) / 3600;
     //if (se * 2 * Math.PI >= num) {
       //animation_loop = window.clearInterval(animation_loop);
       //  設定停止條件
