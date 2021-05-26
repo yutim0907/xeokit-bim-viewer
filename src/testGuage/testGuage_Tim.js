@@ -51,9 +51,9 @@ window.onload = function (){
   function draw() {
     
     //Cancel any movement animation if a new chart is requested
-		  if(typeof animation_loop != undefined) 
+      if(typeof animation_loop != undefined) 
        clearInterval(animation_loop);
-		  
+     
     //random degree from 0 to 360
     new_degrees = Math.round(Math.random()*360);
     var difference = new_degrees - degrees;
@@ -66,7 +66,7 @@ window.onload = function (){
   function animate_to() {
 		
      //clear animation loop if degrees reaches to new_degrees
-	    if(degrees == new_degrees) 
+	   if(degrees == new_degrees) 
 			    clearInterval(animation_loop);
      if(degrees < new_degrees)
 		     	degrees++;

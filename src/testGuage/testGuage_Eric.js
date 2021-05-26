@@ -1,4 +1,4 @@
-﻿var time = 0
+﻿var time = 0;
 //百分比
 var pet = Math.random() * 100;
 var pec = Math.round(pet);
@@ -7,14 +7,16 @@ var match = Math.min((230 / 260), 230 / 260); //找尋螢幕最小邊
 var num = (1350 / 3600 + 27 / 3600 * pec) * 2 * Math.PI;
 var center = { "x": 130* match, "y": 130 * match };
 var radius = 115* match;
-var total = 100
+var total = 100;
+var degrees = 0;
+var new_degrees = 0;
 var canvasName;
+var animation_loop;
 function updateGaugeChart(canvasName) {
     this.canvasName = canvasName;
-    timer_line = window.setInterval("start()", 100);
-    time = 0;
+    animation_loop = window.setInterval("init()", 100);
 }
-function start() {
+function init() {
     var quadrants = [
         {
             "angleStart": Math.PI * -0.5,
@@ -80,7 +82,7 @@ function start() {
         }
         // Draw arc.
         ctx.beginPath();
-        ctx.arc(center.x, center.y, radius, quad.angleStart, quad.angleEnd,false);
+        ctx.arc(center.x, center.y, radius, quad.angleStart, quad.angleEnd, false);
         ctx.strokeStyle = grad;
         ctx.lineWidth = 20;
         ctx.stroke();
@@ -95,28 +97,28 @@ var resetFlag = 0
 function setText(ctx, unit) {
     //中間字體
 
-    //time / 4 第一區塊需+1且從20%的部分開始，最後一階段在最後20%結束
-    if (time <= total / 3.2 * 0.6) {
+    //degrees / 4 第一區塊需+1且從20%的部分開始，最後一階段在最後20%結束
+    if (degrees <= total / 3.2 * 0.6) {
         if (resetFlag != 0) { resetFlag = 0; colorCount = 0 }
-        ctx.fillStyle = "rgba(0,173,239,1)";
+        ctx.fillStyle = "rgba(0, 173, 239, 1)";
         ctx.fillStyle = gradientColors('#FFFF00', '#FF0000', total / 3.2 * 1, colorCount + total / 3.2 * 0.4);
         colorCount++;
     }
-    else if (time <= total / 3.2 * 1.6 && time > total / 3.2 * 0.6) {
+    else if (degrees <= total / 3.2 * 1.6 && degrees > total / 3.2 * 0.6) {
         if (resetFlag != 1) { resetFlag = 1; colorCount = 0 }
-        ctx.fillStyle = "rgba(102,204,154,1)";
+        ctx.fillStyle = "rgba(102, 204, 154, 1)";
         ctx.fillStyle = gradientColors('#FF0000', '#0000FF', total / 3.2 * 1, colorCount);
         colorCount++;
     }
-    else if (time <= total / 3.2 * 2.6 && time > total / 3.2 * 1.6) {
+    else if (degrees <= total / 3.2 * 2.6 && degrees > total / 3.2 * 1.6) {
         if (resetFlag != 2) { resetFlag = 2; colorCount = 0 }
-        ctx.fillStyle = "rgba(59,89,152,1)";
+        ctx.fillStyle = "rgba(59, 89, 152, 1)";
         ctx.fillStyle = gradientColors('#0000FF', '#00FF00', total / 3.2 * 1, colorCount);
         colorCount++;
     }
-    else if (time > total / 3.2 * 2.6) {
+    else if (degrees > total / 3.2 * 2.6) {
         if (resetFlag != 3) { resetFlag = 3; colorCount = 0 }
-        ctx.fillStyle = "rgba(59,89,152,1)";
+        ctx.fillStyle = "rgba(59, 89, 152, 1)";
         ctx.fillStyle = gradientColors('#00FF00', '#FFFF00', total / 3.2 * 1, colorCount);
         colorCount++;
     }
@@ -124,8 +126,8 @@ function setText(ctx, unit) {
     ctx.textAlign = "center";
     //ctx.fillStyle = "#3A5998"; 
     ctx.font = 40 * match + "pt oblique";
-    // ctx.fillText(time + "%", center.x, center.y * 1.7); 
-    ctx.fillText(time + "%", 130 * match, 230 * match)
+    // ctx.fillText(degrees + "%", center.x, center.y * 1.7); 
+    ctx.fillText(degrees + "%", 130 * match, 230 * match)
     //下方字體
     ctx.textAlign = "center";
     ctx.fillStyle = "#999999";
@@ -189,7 +191,7 @@ function drawPoint(ctx, count) {
             ctx.strokeStyle = gradientColors('#FFFF00', '#FF0000', count / 3.2, i + count / 3.2 * 0.4)
         }
         else if (count / 3.2 * 1.6 > i && i >= count / 3.2 * 0.6 ) {
-            ctx.strokeStyle = gradientColors('#FF0000', '#0000FF', count / 3.2, i - count / 3.2 * 0.6  )// - 0.8011061266653967 + 0.1 * Math.PI)
+            ctx.strokeStyle = gradientColors('#FF0000', '#0000FF', count / 3.2, i - count / 3.2 * 0.6)// - 0.8011061266653967 + 0.1 * Math.PI)
         }
         else if (count / 3.2 * 2.6 > i && i >= count / 3.2 * 1.6) {
             ctx.strokeStyle = gradientColors('#0000FF', '#00FF00', count / 3.2, i - count / 3.2 * 1.6)// - 2.356194490192345 + 0.1 * Math.PI)
@@ -223,9 +225,9 @@ function setPointer(ctx, count) {
     for (var i = 0; i <= 10; i++) {
         //var b = 2 * Math.PI / 360 * (-45 - 27 * i)
         var b = -(1350 / 3600 + 27.2 / 3600 * i * 10) * 2 * Math.PI + Math.PI * 2 / 4;
-        var r = 89 * match
-        var x = Math.sin(b) * r
-        var y = Math.cos(b) * r 
+        var r = 89 * match;
+        var x = Math.sin(b) * r;
+        var y = Math.cos(b) * r ;
         ctx.textAlign = "center";
         ctx.font = 10 * match + "pt oblique ";
         ctx.fillText(i*10, x, y);
@@ -238,27 +240,27 @@ function setPointer(ctx, count) {
     ctx.stroke();
     //ctx.translate(130 * match, 130 * match);
     ctx.scale(0.4, 0.4);
-    time++;
-    //console.log(time)
-    var se = ((time - 1) * 27 + 1350) / 3600;
-    if (se * 2 * Math.PI >= num) {
-      //timer_line = window.clearInterval(timer_line);
+    //degrees++;
+    //console.log(degrees)
+    //var se = ((degrees - 1) * 27 + 1350) / 3600;
+    //if (se * 2 * Math.PI >= num) {
+      //animation_loop = window.clearInterval(animation_loop);
       //  設定停止條件
-    }
+    //}
     ctx.rotate(se * 2 * Math.PI);
     //指針顏色
     var colorVal = (1350 / 3600 + 27 / 3600 * i) * 2 * Math.PI - Math.PI * 3 / 4;
-    if (count / 3.2 * 0.6 > time && time >= 0) {
-        ctx.strokeStyle = gradientColors('#FFFF00', '#FF0000', count / 3.2, time + count / 3.2 * 0.4)
+    if (count / 3.2 * 0.6 > degrees && degrees >= 0) {
+        ctx.strokeStyle = gradientColors('#FFFF00', '#FF0000', count / 3.2, degrees + count / 3.2 * 0.4)
     }
-    else if (count / 3.2 * 1.6 > time && time >= count / 3.2 * 0.6) {
-        ctx.strokeStyle = gradientColors('#FF0000', '#0000FF', count / 3.2, time - count / 3.2 * 0.6)// - 0.8011061266653967 + 0.1 * Math.PI)
+    else if (count / 3.2 * 1.6 > degrees && degrees >= count / 3.2 * 0.6) {
+        ctx.strokeStyle = gradientColors('#FF0000', '#0000FF', count / 3.2, degrees - count / 3.2 * 0.6)// - 0.8011061266653967 + 0.1 * Math.PI)
     }
-    else if (count / 3.2 * 2.6 > time && time >= count / 3.2 * 1.6) {
-        ctx.strokeStyle = gradientColors('#0000FF', '#00FF00', count / 3.2, time - count / 3.2 * 1.6)// - 2.356194490192345 + 0.1 * Math.PI)
+    else if (count / 3.2 * 2.6 > degrees && degrees >= count / 3.2 * 1.6) {
+        ctx.strokeStyle = gradientColors('#0000FF', '#00FF00', count / 3.2, degrees - count / 3.2 * 1.6)// - 2.356194490192345 + 0.1 * Math.PI)
     }
-    else if (count > time / 3.2 * 2.6) {
-        ctx.strokeStyle = gradientColors('#00FF00', '#FFFF00', count / 3.2, time - count / 3.2 * 2.6)// - 3.9584067435231383 + 0.1 * Math.PI)
+    else if (count > degrees / 3.2 * 2.6) {
+        ctx.strokeStyle = gradientColors('#00FF00', '#FFFF00', count / 3.2, degrees - count / 3.2 * 2.6)// - 3.9584067435231383 + 0.1 * Math.PI)
     }
     ctx.lineWidth = 2 * match;
     ctx.beginPath();
@@ -287,7 +289,26 @@ function setPointer(ctx, count) {
     ctx.fill();
     ctx.restore();
     //上限，歸零條件，若不需要則拿掉
-    if (time >= pec){
-        timer_line = window.clearInterval(timer_line);
-    }
+    //if (degrees >= pec){
+        //animation_loop = window.clearInterval(animation_loop);
+    //}
+}
+function startChange(num){
+    if(typeof animation_loop != undefined)
+        clearInterval(animation_loop);
+
+    new_degrees = num;
+    var dif = new_degrees - degrees; //差距多少
+
+    animation_loop = setInterval(animation_to, 1000/dif);
+}
+function animation_to(){
+    //判斷是否已到達要變更的數值
+    if(degrees == new_degrees)
+        clearInterval(animation_loop);
+    if(degrees < new_degrees)
+        degrees++;
+    else
+        degrees--;
+    init();
 }
