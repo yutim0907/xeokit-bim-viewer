@@ -53,7 +53,7 @@ window.onload = function (){
     //Cancel any movement animation if a new chart is requested
       if(typeof animation_loop != undefined) 
        clearInterval(animation_loop);
-     
+
     //random degree from 0 to 360
     new_degrees = Math.round(Math.random()*360);
     var difference = new_degrees - degrees;
@@ -73,7 +73,7 @@ window.onload = function (){
 		   else
 			    degrees--;
     
-		   init();
+	   init();
 	}
   
   draw();

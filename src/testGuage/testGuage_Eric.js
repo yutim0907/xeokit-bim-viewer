@@ -12,9 +12,10 @@ var degrees = 0;
 var new_degrees = 0;
 var canvasName;
 var animation_loop;
-function updateGaugeChart(canvasName) {
+function updateGaugeChart(canvasName, initValue) {
     this.canvasName = canvasName;
-    animation_loop = window.setInterval("init()", 100);
+    animation_loop = window.setInterval("init()", 1000);
+    startChange(initValue);
 }
 function init() {
     var quadrants = [
@@ -306,9 +307,14 @@ function animation_to(){
     //判斷是否已到達要變更的數值
     if(degrees == new_degrees)
         clearInterval(animation_loop);
-    if(degrees < new_degrees)
+    
+    if(degrees < new_degrees){
         degrees++;
+    }
     else
+    {
         degrees--;
+    }
+
     init();
 }
