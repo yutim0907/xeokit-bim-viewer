@@ -676,6 +676,8 @@
 
             lastEntity = pickResult.entity;
             lastColorize = pickResult.entity.colorize ? pickResult.entity.colorize.slice() : null;
+            startChange(0);
+            $('#ericChart').css('display','');
 
             pickResult.entity.colorize = [8/255, 247/255, 254/255];
             createTagInfoBox();
@@ -704,16 +706,21 @@
                         alarmMarkerClass: "non-alarm-marker"
                     }
             });
-            var num = getRandomInt(180);
+            
+            startChange(getRandomInt(100));
 
+            /* Tim的儀表元件
+            var num = getRandomInt(180);
             displayProgressChart(num, 0, 180);
-            $(".progress-pie-chart").css('display','block');
+            $(".progress-pie-chart").css('display','block'); 
+            */
         }
     });
 
     viewer.cameraControl.on("pickedNothing", () => {
         annotations.clear();
         $(".progress-pie-chart").css('display','none');
+        $('#ericChart').css('display','none');
         if (lastEntity) {
             lastEntity.colorize = lastColorize;
             lastEntity = null;
@@ -765,7 +772,7 @@
 
             }
         );
-        updateGaugeChart("ericChart", 50);
+        updateGaugeChart("ericChart", getRandomInt(99));
 /*
         //------------------------------------------------------------------------------------------------------------------
         // Create some Annotations   spoon reject rare water annual soda high used quality prefer tone trick
