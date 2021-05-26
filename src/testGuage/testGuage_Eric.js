@@ -311,7 +311,7 @@ function animation_to(){
     if(degrees < new_degrees){
         degrees++;
     }
-    else
+    else if (degrees > new_degrees)
     {
         degrees--;
     }
