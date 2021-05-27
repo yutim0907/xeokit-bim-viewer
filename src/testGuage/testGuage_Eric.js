@@ -241,13 +241,13 @@ function setPointer(ctx, count) {
     var eachPoint = (this.maxValue - this.minValue) / 10;
     for (var i = this.minValue; i <= this.maxValue; i += eachPoint) {
         //var b = 2 * Math.PI / 360 * (-45 - 27 * i)
-        var b = -(1350 / 3600 + 27.2 / 3600 * i * 10) * 2 * Math.PI + Math.PI * 2 / 4;
+        var b = -(1350 / 3600 + 27.2 / 3600 * (i * 10/this.maxValue)) * 2 * Math.PI + Math.PI * 2 / 4;
         var r = 89 * match;
         var x = Math.sin(b) * r;
         var y = Math.cos(b) * r ;
         ctx.textAlign = "center";
         ctx.font = 10 * match + "pt oblique ";
-        ctx.fillText(i*10, x, y);
+        ctx.fillText(i, x, y);
     }
     //ctx.arc(0*match, 0*match, 2 * match, 0, Math.PI * 2, true);
     //ctx.fill();
