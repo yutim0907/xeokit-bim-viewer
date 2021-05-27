@@ -83,7 +83,7 @@ function init() {
     ];
 
     var c = document.getElementById(this.canvasName);
-    var ctx = c.getContext("2d");
+    var ctx = c.getContext("2d");     
     ctx.clearRect(0, 0, 260 * match, 260 * match);
     // Draw arc quadrants.
     for (var i = 0; i < quadrants.length; ++i) {
@@ -311,7 +311,7 @@ function startChange(num){
     if(typeof animation_loop != undefined)
         clearInterval(animation_loop);
     newdisplayValue = num;
-    new_degrees = Math.round((num - this.minValue) / (this.minValue/this.maxValue));
+    new_degrees = Math.round((num - this.minValue) / (this.maxValue - this.minValue));
     var dif = new_degrees - degrees; //差距多少
     this.valueGap = (this.maxValue - num) / dif;
     animation_loop = setInterval(animation_to, 1000/dif);
