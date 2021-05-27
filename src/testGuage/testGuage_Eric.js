@@ -141,9 +141,9 @@ function setText(ctx) {
     ctx.lineWidth = 10;
     ctx.textAlign = "center";
     //ctx.fillStyle = "#3A5998"; 
-    ctx.font = 40 * match + "pt oblique";
+    ctx.font = 20 * match + "pt oblique";
     // ctx.fillText(degrees + "%", center.x, center.y * 1.7); 
-    ctx.fillText(Math.round(displayValue) / 100 + this.unit , 130 * match, 230 * match)
+    ctx.fillText(Math.round(displayValue * 100) / 100 + this.unit , 130 * match, 230 * match)
     //下方字體
     ctx.textAlign = "center";
     ctx.fillStyle = "#999999";
