@@ -238,7 +238,7 @@ function drawPoint(ctx, count) {
 function setPointer(ctx, count) {
     ctx.save();
     ctx.translate(129 * match, 136 * match);
-    for (var i = 0; i <= 10; i++) {
+    for (var i = this.minValue; i <= this.maxValue; i++) {
         //var b = 2 * Math.PI / 360 * (-45 - 27 * i)
         var b = -(1350 / 3600 + 27.2 / 3600 * i * 10) * 2 * Math.PI + Math.PI * 2 / 4;
         var r = 89 * match;
