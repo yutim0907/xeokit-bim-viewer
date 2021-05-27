@@ -315,7 +315,7 @@ function startChange(num){
         clearInterval(animation_loop);
     newdisplayValue = num;
     new_degrees = Math.round((num - this.minValue) / (this.maxValue - this.minValue) * 100);
-    var dif = new_degrees - degrees; //差距多少
+    var dif = Math.abs(new_degrees - degrees); //差距多少
     this.valueGap = -((displayValue - num) / dif); //實際數值每隔的差距
     animation_loop = setInterval(animation_to, 1000/dif);
 }
