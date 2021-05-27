@@ -311,7 +311,7 @@ function startChange(num){
     if(typeof animation_loop != undefined)
         clearInterval(animation_loop);
     newdisplayValue = num;
-    new_degrees = Math.round((num - this.minValue) / (this.maxValue - this.minValue));
+    new_degrees = Math.round((num - this.minValue) / (this.maxValue - this.minValue) * 100);
     var dif = new_degrees - degrees; //差距多少
     this.valueGap = (this.maxValue - num) / dif;
     animation_loop = setInterval(animation_to, 1000/dif);
