@@ -241,7 +241,7 @@ function setPointer(ctx, count) {
     var eachPoint = (this.maxValue - this.minValue) / 10;
     for (var i = this.minValue; i <= this.maxValue; i += eachPoint) {
         //var b = 2 * Math.PI / 360 * (-45 - 27 * i)
-        var b = -(1350 / 3600 + 27.2 / 3600 * (i * 10/this.maxValue)) * 2 * Math.PI + Math.PI * 2 / 4;
+        var b = -(1350 / 3600 + 27.2 / 3600 * (i * 10/this.maxValue) * 10) * 2 * Math.PI + Math.PI * 2 / 4;
         var r = 89 * match;
         var x = Math.sin(b) * r;
         var y = Math.cos(b) * r ;
