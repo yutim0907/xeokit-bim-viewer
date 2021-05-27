@@ -21,14 +21,14 @@ var new_degrees = 0;
 var canvasName;
 var animation_loop;
 var guageData;
-function updateGaugeChart(canvasNameId, unit, displayValue, minValue, maxValue) {
+function updateGaugeChart(canvasNameId, unit, initValue, minValue, maxValue) {
     this.canvasName = canvasNameId;
     this.unit = unit;
     this.minValue = minValue;
     this.maxValue = maxValue;
     animation_loop = window.setInterval("init()", 1000);
-    
-    startChange(displayValue);
+    displayValue = 0;
+    startChange(initValue);
 }
 function init() {
     var quadrants = [
