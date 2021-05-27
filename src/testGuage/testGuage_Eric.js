@@ -1,4 +1,13 @@
 ﻿var time = 0;
+//儀表元件設定值
+function guageData(unit, initValue, minValue, maxValue){
+    this.unit = unit;
+    this.initValue = initValue;
+    this.minValue = minValue;
+    this.maxValue = maxValue;
+}
+
+
 //百分比
 var pet = Math.random() * 100;
 var pec = Math.round(pet);
@@ -12,9 +21,12 @@ var degrees = 0;
 var new_degrees = 0;
 var canvasName;
 var animation_loop;
-function updateGaugeChart(canvasName, initValue) {
-    this.canvasName = canvasName;
+var guageData;
+function updateGaugeChart(canvasNameId, unit, initValue, minValue, maxValue) {
+    this.canvasName = canvasNameId;
+    this.guageData = guageData(unit, initValue, minValue, maxValue);
     animation_loop = window.setInterval("init()", 1000);
+    
     startChange(initValue);
 }
 function init() {
