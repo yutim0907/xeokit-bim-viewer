@@ -1,6 +1,7 @@
 ﻿var time = 0;
 //儀表元件設定值
 var unit; //單位文字顯示
+var title; //下方文字
 var displayValue; //實際顯示數值
 var newdisplayValue; //動畫轉換用的目標數值
 var valueGap = 0;
@@ -21,11 +22,12 @@ var new_degrees = 0;
 var canvasName;
 var animation_loop;
 var guageData;
-function updateGaugeChart(canvasNameId, unit, initValue, minValue, maxValue) {
+function updateGaugeChart(canvasNameId, title, unit, initValue, minValue, maxValue) {
     this.canvasName = canvasNameId;
     this.unit = unit;
     this.minValue = minValue;
     this.maxValue = maxValue;
+    this.title = title;
     animation_loop = window.setInterval("init()", 1000);
     displayValue = 0;
     startChange(initValue);
@@ -141,13 +143,13 @@ function setText(ctx) {
     //ctx.fillStyle = "#3A5998"; 
     ctx.font = 40 * match + "pt oblique";
     // ctx.fillText(degrees + "%", center.x, center.y * 1.7); 
-    ctx.fillText(displayValue , 130 * match, 230 * match)
+    ctx.fillText(Math.round(displayValue) / 100 + this.unit , 130 * match, 230 * match)
     //下方字體
     ctx.textAlign = "center";
     ctx.fillStyle = "#999999";
     ctx.font = 10 * match + "pt oblique ";
     //  ctx.fillText("指数", center.x, center.y * 1.9); 
-    ctx.fillText(this.unit, 130 * match, 250 * match);
+    ctx.fillText(this.title, 130 * match, 250 * match);
     ctx.stroke();
     ctx.beginPath();
     ctx.save();
@@ -313,7 +315,7 @@ function startChange(num){
     newdisplayValue = num;
     new_degrees = Math.round((num - this.minValue) / (this.maxValue - this.minValue) * 100);
     var dif = new_degrees - degrees; //差距多少
-    this.valueGap = -((displayValue - num) / dif);
+    this.valueGap = -((displayValue - num) / dif); //實際數值每隔的差距
     animation_loop = setInterval(animation_to, 1000/dif);
 }
 function animation_to(){
