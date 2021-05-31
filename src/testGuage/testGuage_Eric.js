@@ -22,17 +22,18 @@ var new_degrees = 0;
 var canvasName;
 var animation_loop;
 var guageData;
-function updateGaugeChart(canvasNameId, title, unit, initValue, minValue, maxValue) {
+function createGaugeChart(canvasNameId, title, unit, initValue, minValue, maxValue, guageData) {
+    var testData = guageData;
     this.canvasName = canvasNameId;
     this.unit = unit;
     this.minValue = minValue;
     this.maxValue = maxValue;
     this.title = title;
-    animation_loop = window.setInterval("init()", 1000);
+    animation_loop = window.setInterval("init(" + canvasNameId + ")", 1000);
     displayValue = 0;
     startChange(initValue);
 }
-function init() {
+function init(canvasNameId) {
     var quadrants = [
         {
             "angleStart": Math.PI * -0.5,
@@ -143,7 +144,7 @@ function setText(ctx) {
     //ctx.fillStyle = "#3A5998"; 
     ctx.font = 20 * match + "pt oblique";
     // ctx.fillText(degrees + "%", center.x, center.y * 1.7); 
-    ctx.fillText(Math.round(displayValue * 100) / 100 + this.unit , 130 * match, 230 * match)
+    ctx.fillText(Math.round(displayValue) + this.unit , 130 * match, 230 * match)
     //下方字體
     ctx.textAlign = "center";
     ctx.fillStyle = "#999999";
@@ -335,4 +336,13 @@ function animation_to(){
     }
 
     init();
+}
+
+
+function GuageConstructor(canvasNameId, title, unit, minValue, maxValue){
+    this.canvasNameId = canvasNameId;
+    this.title = title;
+    this.unit = unit;
+    this.minValue;
+    this.maxValue;
 }
