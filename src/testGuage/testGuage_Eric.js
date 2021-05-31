@@ -339,10 +339,10 @@ function animation_to(){
 }
 
 
-function GuageConstructor(canvasNameId, title, unit, minValue, maxValue){
+function GuageConstructor(canvasNameId, title, unit, minValue, maxValue, colorHexFrom){
     this.canvasNameId = canvasNameId;
     this.title = title;
     this.unit = unit;
-    this.minValue;
-    this.maxValue;
+    this.minValue = minValue;
+    this.maxValue = maxValue;
 }
