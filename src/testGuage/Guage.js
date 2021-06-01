@@ -316,7 +316,7 @@ function startChange(num, guageData){
         clearInterval(animation_loop);
     guageData.newdisplayValue = num;
     guageData.new_degrees = Math.round((num - guageData.minValue) / (guageData.maxValue - guageData.minValue) * 100);
-    var dif = new_degrees - degrees; //差距多少
+    var dif = guageData.new_degrees - guageData.degrees; //差距多少
     guageData.valueGap = -((guageData.displayValue - num) / dif); //實際數值每隔的差距
     animation_loop = setInterval(function(){animation_to(guageData) }, 1000/ Math.abs(dif));
 }
