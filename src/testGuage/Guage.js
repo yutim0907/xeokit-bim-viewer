@@ -31,7 +31,7 @@ function createGaugeChart(guageData, initValue) {
     //this.title = title;
     animation_loop = window.setInterval(function() {init(guageData)}, 1000);
     displayValue = 0;
-    startChange(initValue);
+    startChange(initValue, guageData);
 }
 function init(guageData) {
     var quadrants = [
