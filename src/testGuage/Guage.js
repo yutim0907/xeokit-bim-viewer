@@ -335,7 +335,7 @@ function animation_to(guageData){
         guageData.displayValue -= guageData.valueGap;
     }
 
-    init();
+    init(guageData);
 }
 
 
