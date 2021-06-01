@@ -425,7 +425,7 @@
 	var audioElement = document.getElementById("alarmSound");
 	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
 
-    var testGuage = new GuageConstructor("ericChart", "耗電量", "kWh" , 0, 1800);
+    var testGuage = new GuageConstructor("ericChart", "耗電量", "kWh" , 0, 1800, 0, '#FFFF00', '#FF0000', '#0000FF', '#00FF00');
 
 	function flyToObj(id){
     	viewer.cameraFlight.flyTo({
