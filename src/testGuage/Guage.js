@@ -29,7 +29,7 @@ function createGaugeChart(guageData, initValue) {
     //this.minValue = minValue;
     //this.maxValue  = maxValue;
     //this.title = title;
-    animation_loop = window.setInterval("init(" + guageData + ")", 1000);
+    animation_loop = window.setInterval(function() {init(guageData)}, 1000);
     displayValue = 0;
     startChange(initValue);
 }
@@ -106,8 +106,8 @@ function init(guageData) {
 
     }
     drawPoint(ctx, 100, guageData);
-    setPointer(ctx, guageData);
-    setText(ctx);
+    setPointer(ctx, 100, guageData);
+    setText(ctx, guageData);
 }
 var colorCount = 0;
 var resetFlag = 0;
@@ -115,28 +115,28 @@ function setText(ctx, guageData) {
     //中間字體
 
     //degrees / 4 第一區塊需+1且從20%的部分開始，最後一階段在最後20%結束
-    if (degrees <= total / 3.2 * 0.6) {
+    if (guageData.degrees <= total / 3.2 * 0.6) {
         if (resetFlag != 0) { resetFlag = 0; colorCount = 0 }
         ctx.fillStyle = "rgba(0, 173, 239, 1)";
-        ctx.fillStyle = gradientColors('#FFFF00', '#FF0000', total / 3.2 * 1, colorCount + total / 3.2 * 0.4);
+        ctx.fillStyle = gradientColors(guageData.colorHex_One, guageData.colorHex_Two, total / 3.2 * 1, colorCount + total / 3.2 * 0.4);
         colorCount++;
     }
-    else if (degrees <= total / 3.2 * 1.6 && degrees > total / 3.2 * 0.6) {
+    else if (guageData.degrees <= total / 3.2 * 1.6 && guageData.degrees > total / 3.2 * 0.6) {
         if (resetFlag != 1) { resetFlag = 1; colorCount = 0 }
         ctx.fillStyle = "rgba(102, 204, 154, 1)";
-        ctx.fillStyle = gradientColors('#FF0000', '#0000FF', total / 3.2 * 1, colorCount);
+        ctx.fillStyle = gradientColors(guageData.colorHex_Two, guageData.colorHex_Three, total / 3.2 * 1, colorCount);
         colorCount++;
     }
-    else if (degrees <= total / 3.2 * 2.6 && degrees > total / 3.2 * 1.6) {
+    else if (guageData.degrees <= total / 3.2 * 2.6 && guageData.degrees > total / 3.2 * 1.6) {
         if (resetFlag != 2) { resetFlag = 2; colorCount = 0 }
         ctx.fillStyle = "rgba(59, 89, 152, 1)";
-        ctx.fillStyle = gradientColors('#0000FF', '#00FF00', total / 3.2 * 1, colorCount);
+        ctx.fillStyle = gradientColors(guageData.colorHex_Three, guageData.colorHex_Four, total / 3.2 * 1, colorCount);
         colorCount++;
     }
-    else if (degrees > total / 3.2 * 2.6) {
+    else if (guageData.degrees > total / 3.2 * 2.6) {
         if (resetFlag != 3) { resetFlag = 3; colorCount = 0 }
         ctx.fillStyle = "rgba(59, 89, 152, 1)";
-        ctx.fillStyle = gradientColors('#00FF00', '#FFFF00', total / 3.2 * 1, colorCount);
+        ctx.fillStyle = gradientColors(guageData.colorHex_Four, guageData.colorHex_One, total / 3.2 * 1, colorCount);
         colorCount++;
     }
     ctx.lineWidth = 10;
@@ -144,7 +144,7 @@ function setText(ctx, guageData) {
     //ctx.fillStyle = "#3A5998"; 
     ctx.font = 20 * match + "pt oblique";
     // ctx.fillText(degrees + "%", center.x, center.y * 1.7); 
-    ctx.fillText(Math.round(displayValue) + guageData.unit , 130 * match, 230 * match)
+    ctx.fillText(Math.round(guageData.displayValue) + guageData.unit , 130 * match, 230 * match)
     //下方字體
     ctx.textAlign = "center";
     ctx.fillStyle = "#999999";
@@ -197,7 +197,7 @@ let gradientColors = function (start, end, steps, index, gamma) {
     return output;
 };
 //繪製刻度
-function drawPoint(ctx, count, guageData) {
+function drawPoint(ctx, count, guageData) { 
     var flag = false
     //繪製小點
     for (var i = 0; i <= count; i++) {
@@ -205,16 +205,16 @@ function drawPoint(ctx, count, guageData) {
         ctx.translate(130 * match, 130 * match);
         var colorVal = (1350 / 3600 + 27 / 3600 * i) * 2 * Math.PI - Math.PI * 3 / 4;
         if (count / 3.2 * 0.6 > i && i >= 0 ) {
-            ctx.strokeStyle = gradientColors('#FFFF00', '#FF0000', count / 3.2, i + count / 3.2 * 0.4)
+            ctx.strokeStyle = gradientColors(guageData.colorHex_One, guageData.colorHex_Two, count / 3.2, i + count / 3.2 * 0.4)
         }
         else if (count / 3.2 * 1.6 > i && i >= count / 3.2 * 0.6 ) {
-            ctx.strokeStyle = gradientColors('#FF0000', '#0000FF', count / 3.2, i - count / 3.2 * 0.6)// - 0.8011061266653967 + 0.1 * Math.PI)
+            ctx.strokeStyle = gradientColors(guageData.colorHex_Two, guageData.colorHex_Three, count / 3.2, i - count / 3.2 * 0.6)// - 0.8011061266653967 + 0.1 * Math.PI)
         }
         else if (count / 3.2 * 2.6 > i && i >= count / 3.2 * 1.6) {
-            ctx.strokeStyle = gradientColors('#0000FF', '#00FF00', count / 3.2, i - count / 3.2 * 1.6)// - 2.356194490192345 + 0.1 * Math.PI)
+            ctx.strokeStyle = gradientColors(guageData.colorHex_Three, guageData.colorHex_Four, count / 3.2, i - count / 3.2 * 1.6)// - 2.356194490192345 + 0.1 * Math.PI)
         }
         else if (count > i / 3.2 * 2.6) {
-            ctx.strokeStyle = gradientColors('#00FF00', '#FFFF00', count / 3.2, i - count / 3.2 * 2.6)// - 3.9584067435231383 + 0.1 * Math.PI)
+            ctx.strokeStyle = gradientColors(guageData.colorHex_Four, guageData.colorHex_One, count / 3.2, i - count / 3.2 * 2.6)// - 3.9584067435231383 + 0.1 * Math.PI)
         }
             if (i == 0 || i % 10 == 0) {
                 ctx.lineWidth = 2 * match;
@@ -236,13 +236,13 @@ function drawPoint(ctx, count, guageData) {
     }
     ctx.beginPath();
 }
-function setPointer(ctx, count) {
+function setPointer(ctx, count, guageData) {
     ctx.save();
     ctx.translate(129 * match, 136 * match);
-    var eachPoint = (this.maxValue - this.minValue) / 10;
-    for (var i = this.minValue; i <= this.maxValue; i += eachPoint) {
+    var eachPoint = (guageData.maxValue - guageData.minValue) / 10;
+    for (var i = guageData.minValue; i <= guageData.maxValue; i += eachPoint) {
         //var b = 2 * Math.PI / 360 * (-45 - 27 * i)
-        var b = -(1350 / 3600 + 27.2 / 3600 * (i * 10/this.maxValue) * 10) * 2 * Math.PI + Math.PI * 2 / 4;
+        var b = -(1350 / 3600 + 27.2 / 3600 * (i * 10/guageData.maxValue) * 10) * 2 * Math.PI + Math.PI * 2 / 4;
         var r = 89 * match;
         var x = Math.sin(b) * r;
         var y = Math.cos(b) * r ;
@@ -260,25 +260,25 @@ function setPointer(ctx, count) {
     ctx.scale(0.4, 0.4);
     //degrees++;
     //console.log(degrees)
-    var se = ((degrees - 1) * 27 + 1350) / 3600;
+    var se = ((guageData.degrees - 1) * 27 + 1350) / 3600;
     //if (se * 2 * Math.PI >= num) {
       //animation_loop = window.clearInterval(animation_loop);
       //  設定停止條件
     //}
-    ctx.rotate(se * 2 * Math.PI);
+    ctx.rotate(se * 2 * Math.PI); //guageData.colorHex_One guageData.colorHex_Two guageData.colorHex_Three guageData.colorHex_Four
     //指針顏色
     var colorVal = (1350 / 3600 + 27 / 3600 * i) * 2 * Math.PI - Math.PI * 3 / 4;
-    if (count / 3.2 * 0.6 > degrees && degrees >= 0) {
-        ctx.strokeStyle = gradientColors('#FFFF00', '#FF0000', count / 3.2, degrees + count / 3.2 * 0.4)
+    if (count / 3.2 * 0.6 > guageData.degrees && guageData.degrees >= 0) {
+        ctx.strokeStyle = gradientColors(guageData.colorHex_One, guageData.colorHex_Two, count / 3.2, degrees + count / 3.2 * 0.4)
     }
-    else if (count / 3.2 * 1.6 > degrees && degrees >= count / 3.2 * 0.6) {
-        ctx.strokeStyle = gradientColors('#FF0000', '#0000FF', count / 3.2, degrees - count / 3.2 * 0.6)// - 0.8011061266653967 + 0.1 * Math.PI)
+    else if (count / 3.2 * 1.6 > guageData.degrees && guageData.degrees >= count / 3.2 * 0.6) {
+        ctx.strokeStyle = gradientColors(guageData.colorHex_Two, guageData.colorHex_Three, count / 3.2, degrees - count / 3.2 * 0.6)// - 0.8011061266653967 + 0.1 * Math.PI)
     }
-    else if (count / 3.2 * 2.6 > degrees && degrees >= count / 3.2 * 1.6) {
-        ctx.strokeStyle = gradientColors('#0000FF', '#00FF00', count / 3.2, degrees - count / 3.2 * 1.6)// - 2.356194490192345 + 0.1 * Math.PI)
+    else if (count / 3.2 * 2.6 > guageData.degrees && guageData.degrees >= count / 3.2 * 1.6) {
+        ctx.strokeStyle = gradientColors(guageData.colorHex_Three, guageData.colorHex_Four, count / 3.2, degrees - count / 3.2 * 1.6)// - 2.356194490192345 + 0.1 * Math.PI)
     }
-    else if (count > degrees / 3.2 * 2.6) {
-        ctx.strokeStyle = gradientColors('#00FF00', '#FFFF00', count / 3.2, degrees - count / 3.2 * 2.6)// - 3.9584067435231383 + 0.1 * Math.PI)
+    else if (count > guageData.degrees / 3.2 * 2.6) {
+        ctx.strokeStyle = gradientColors(guageData.colorHex_Four, guageData.colorHex_One, count / 3.2, degrees - count / 3.2 * 2.6)// - 3.9584067435231383 + 0.1 * Math.PI)
     }
     ctx.lineWidth = 2 * match;
     ctx.beginPath();
@@ -315,24 +315,24 @@ function startChange(num, guageData){
     if(typeof animation_loop != undefined)
         clearInterval(animation_loop);
     guageData.newdisplayValue = num;
-    new_degrees = Math.round((num - guageData.minValue) / (guageData.maxValue - guageData.minValue) * 100);
+    guageData.new_degrees = Math.round((num - guageData.minValue) / (guageData.maxValue - guageData.minValue) * 100);
     var dif = new_degrees - degrees; //差距多少
-    this.valueGap = -((displayValue - num) / dif); //實際數值每隔的差距
+    guageData.valueGap = -((guageData.displayValue - num) / dif); //實際數值每隔的差距
     animation_loop = setInterval(function(){animation_to(guageData) }, 1000/ Math.abs(dif));
 }
 function animation_to(guageData){
     //判斷是否已到達要變更的數值
-    if(degrees == new_degrees)
+    if(guageData.degrees == guageData.new_degrees)
         clearInterval(animation_loop);
     
-    if(degrees < new_degrees){
-        degrees++;
-        displayValue += guageData.valueGap;
+    if(guageData.degrees < guageData.new_degrees){
+        guageData.degrees++;
+        guageData.displayValue += guageData.valueGap;
     }
-    else if (degrees > new_degrees)
+    else if (guageData.degrees > guageData.new_degrees)
     {
-        degrees--;
-        displayValue -= guageData.valueGap;
+        guageData.degrees--;
+        guageData.displayValue -= guageData.valueGap;
     }
 
     init();
@@ -352,5 +352,6 @@ function GuageConstructor(canvasNameId, title, unit, minValue, maxValue, display
     this.colorHex_Four = colorHex_Four;
     this.newdisplayValue = 0;
     this.valueGap = 0;
-    this.degrees;
+    this.degrees = 0;
+    this.new_degrees = 0;
 }

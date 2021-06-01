@@ -73,7 +73,7 @@ window.onload = function (){
 		   else
 			    degrees--;
     
-	   init();
+	 init();
 	}
   
   draw();
