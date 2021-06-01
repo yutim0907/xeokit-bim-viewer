@@ -41,7 +41,7 @@ function init(guageData) {
             "x1": center.x,
             "y1": center.y - radius,
             "x2": center.x + radius,
-            "y2": center.y,0
+            "y2": center.y,
             "colorStops": [
                 { "stop": 0, "color": "blue" },
                 { "stop": 1, "color": "green" }
