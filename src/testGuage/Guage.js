@@ -1,13 +1,4 @@
 ﻿var time = 0;
-//儀表元件設定值
-var unit; //單位文字顯示
-var title; //下方文字
-var displayValue; //實際顯示數值
-var newdisplayValue; //動畫轉換用的目標數值
-var valueGap = 0;
-var minValue; //最小值
-var maxValue; //最大值
-
 //百分比
 var pet = Math.random() * 100;
 var pec = Math.round(pet);
