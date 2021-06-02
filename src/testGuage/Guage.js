@@ -114,25 +114,25 @@ function setText(ctx, guageData) {
     //degrees / 4 第一區塊需+1且從20%的部分開始，最後一階段在最後20%結束
     if (guageData.degrees <= total / 3.2 * 0.6) {
         if (guageData.resetFlag != 0) { guageData.resetFlag = 0; guageData.colorCount = 0 }
-        ctx.fillStyle = "rgba(0, 173, 239, 1)";
+        //ctx.fillStyle = "rgba(0, 173, 239, 1)";
         ctx.fillStyle = gradientColors(guageData.colorHex_One, guageData.colorHex_Two, total / 3.2 * 1, guageData.colorCount + total / 3.2 * 0.4);
         guageData.colorCount++;
     }
     else if (guageData.degrees <= total / 3.2 * 1.6 && guageData.degrees > total / 3.2 * 0.6) {
         if (guageData.resetFlag != 1) { guageData.resetFlag = 1; guageData.colorCount = 0 }
-        ctx.fillStyle = "rgba(102, 204, 154, 1)";
+        //ctx.fillStyle = "rgba(102, 204, 154, 1)";
         ctx.fillStyle = gradientColors(guageData.colorHex_Two, guageData.colorHex_Three, total / 3.2 * 1, guageData.colorCount);
         guageData.colorCount++;
     }
     else if (guageData.degrees <= total / 3.2 * 2.6 && guageData.degrees > total / 3.2 * 1.6) {
         if (guageData.resetFlag != 2) { guageData.resetFlag = 2; guageData.colorCount = 0 }
-        ctx.fillStyle = "rgba(59, 89, 152, 1)";
+        //ctx.fillStyle = "rgba(59, 89, 152, 1)";
         ctx.fillStyle = gradientColors(guageData.colorHex_Three, guageData.colorHex_Four, total / 3.2 * 1, guageData.colorCount);
         guageData.colorCount++;
     }
     else if (guageData.degrees > total / 3.2 * 2.6) {
         if (guageData.resetFlag != 3) { guageData.resetFlag = 3; guageData.colorCount = 0 }
-        ctx.fillStyle = "rgba(59, 89, 152, 1)";
+        //ctx.fillStyle = "rgba(59, 89, 152, 1)";
         ctx.fillStyle = gradientColors(guageData.colorHex_Four, guageData.colorHex_One, total / 3.2 * 1, guageData.colorCount);
         guageData.colorCount++;
     }
@@ -266,16 +266,16 @@ function setPointer(ctx, count, guageData) {
     //指針顏色
     var colorVal = (1350 / 3600 + 27 / 3600 * i) * 2 * Math.PI - Math.PI * 3 / 4;
     if (count / 3.2 * 0.6 > guageData.degrees && guageData.degrees >= 0) {
-        ctx.strokeStyle = gradientColors(guageData.colorHex_One, guageData.colorHex_Two, count / 3.2, degrees + count / 3.2 * 0.4)
+        ctx.strokeStyle = gradientColors(guageData.colorHex_One, guageData.colorHex_Two, count / 3.2, guageData.degrees + count / 3.2 * 0.4)
     }
     else if (count / 3.2 * 1.6 > guageData.degrees && guageData.degrees >= count / 3.2 * 0.6) {
-        ctx.strokeStyle = gradientColors(guageData.colorHex_Two, guageData.colorHex_Three, count / 3.2, degrees - count / 3.2 * 0.6)// - 0.8011061266653967 + 0.1 * Math.PI)
+        ctx.strokeStyle = gradientColors(guageData.colorHex_Two, guageData.colorHex_Three, count / 3.2, guageData.degrees - count / 3.2 * 0.6)// - 0.8011061266653967 + 0.1 * Math.PI)
     }
     else if (count / 3.2 * 2.6 > guageData.degrees && guageData.degrees >= count / 3.2 * 1.6) {
-        ctx.strokeStyle = gradientColors(guageData.colorHex_Three, guageData.colorHex_Four, count / 3.2, degrees - count / 3.2 * 1.6)// - 2.356194490192345 + 0.1 * Math.PI)
+        ctx.strokeStyle = gradientColors(guageData.colorHex_Three, guageData.colorHex_Four, count / 3.2, guageData.degrees - count / 3.2 * 1.6)// - 2.356194490192345 + 0.1 * Math.PI)
     }
     else if (count > guageData.degrees / 3.2 * 2.6) {
-        ctx.strokeStyle = gradientColors(guageData.colorHex_Four, guageData.colorHex_One, count / 3.2, degrees - count / 3.2 * 2.6)// - 3.9584067435231383 + 0.1 * Math.PI)
+        ctx.strokeStyle = gradientColors(guageData.colorHex_Four, guageData.colorHex_One, count / 3.2, guageData.degrees - count / 3.2 * 2.6)// - 3.9584067435231383 + 0.1 * Math.PI)
     }
     ctx.lineWidth = 2 * match;
     ctx.beginPath();
