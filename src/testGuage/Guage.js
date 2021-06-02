@@ -20,7 +20,7 @@ var total = 100;
 var degrees = 0;
 var new_degrees = 0;
 var canvasName;
-var animation_loop;
+//var animation_loop;
 var guageData;
 function createGaugeChart(guageData, initValue) {
     var testData = guageData;
@@ -29,11 +29,11 @@ function createGaugeChart(guageData, initValue) {
     //this.minValue = minValue;
     //this.maxValue  = maxValue;
     //this.title = title;
-    animation_loop = window.setInterval(function() {init(guageData)}, 1000);
+    guageData.animation_loop = window.setInterval(function() {init(guageData)}, 1000);
     displayValue = 0;
     startChange(initValue, guageData);
 }
-function init(guageData) {
+function init(guageData) {  //guageData.colorHex_One guageData.colorHex_Two guageData.colorHex_Three guageData.colorHex_Four
     var quadrants = [
         {
             "angleStart": Math.PI * -0.5,
@@ -43,8 +43,8 @@ function init(guageData) {
             "x2": center.x + radius,
             "y2": center.y,
             "colorStops": [
-                { "stop": 0, "color": "blue" },
-                { "stop": 1, "color": "green" }
+                { "stop": 0, "color": guageData.colorHex_Three },
+                { "stop": 1, "color": guageData.colorHex_Four }
             ]
         },
         {
@@ -55,8 +55,8 @@ function init(guageData) {
             "x2": center.x,
             "y2": center.y + radius,
             "colorStops": [
-                { "stop": 0, "color": "green" },
-                { "stop": 1, "color": "yellow" }
+                { "stop": 0, "color": guageData.colorHex_Four },
+                { "stop": 1, "color": guageData.colorHex_One }
             ]
         },
         {
@@ -67,8 +67,8 @@ function init(guageData) {
             "x2": center.x - radius,
             "y2": center.y,
             "colorStops": [
-                { "stop": 0, "color": "yellow" },
-                { "stop": 1, "color": "red" }
+                { "stop": 0, "color": guageData.colorHex_One },
+                { "stop": 1, "color": guageData.colorHex_Two }
             ]
         },
         {
@@ -79,8 +79,8 @@ function init(guageData) {
             "x2": center.x,
             "y2": center.y - radius,
             "colorStops": [
-                { "stop": 0, "color": "red" },
-                { "stop": 1, "color": "blue" }
+                { "stop": 0, "color": guageData.colorHex_Two },
+                { "stop": 1, "color": guageData.colorHex_Three }
             ]
         }
     ];
@@ -265,7 +265,7 @@ function setPointer(ctx, count, guageData) {
       //animation_loop = window.clearInterval(animation_loop);
       //  設定停止條件
     //}
-    ctx.rotate(se * 2 * Math.PI); //guageData.colorHex_One guageData.colorHex_Two guageData.colorHex_Three guageData.colorHex_Four
+    ctx.rotate(se * 2 * Math.PI); 
     //指針顏色
     var colorVal = (1350 / 3600 + 27 / 3600 * i) * 2 * Math.PI - Math.PI * 3 / 4;
     if (count / 3.2 * 0.6 > guageData.degrees && guageData.degrees >= 0) {
@@ -312,18 +312,18 @@ function setPointer(ctx, count, guageData) {
     //}
 }
 function startChange(num, guageData){
-    if(typeof animation_loop != undefined)
-        clearInterval(animation_loop);
+    if(typeof guageData.animation_loop != undefined)
+        clearInterval(guageData.animation_loop);
     guageData.newdisplayValue = num;
     guageData.new_degrees = Math.round((num - guageData.minValue) / (guageData.maxValue - guageData.minValue) * 100);
     var dif = guageData.new_degrees - guageData.degrees; //差距多少
     guageData.valueGap = -((guageData.displayValue - num) / dif); //實際數值每隔的差距
-    animation_loop = setInterval(function(){animation_to(guageData) }, 1000/ Math.abs(dif));
+    guageData.animation_loop = setInterval(function(){animation_to(guageData) }, 1000/ Math.abs(dif));
 }
 function animation_to(guageData){
     //判斷是否已到達要變更的數值
     if(guageData.degrees == guageData.new_degrees)
-        clearInterval(animation_loop);
+        clearInterval(guageData.animation_loop);
     
     if(guageData.degrees < guageData.new_degrees){
         guageData.degrees++;
@@ -354,4 +354,5 @@ function GuageConstructor(canvasNameId, title, unit, minValue, maxValue, display
     this.valueGap = 0;
     this.degrees = 0;
     this.new_degrees = 0;
+    this.animation_loop;
 }
