@@ -20,7 +20,7 @@ var total = 100;
 var degrees = 0;
 var new_degrees = 0;
 var canvasName;
-var animation_loop;
+//var animation_loop;
 var guageData;
 function createGaugeChart(guageData, initValue) {
     var testData = guageData;
@@ -29,7 +29,7 @@ function createGaugeChart(guageData, initValue) {
     //this.minValue = minValue;
     //this.maxValue  = maxValue;
     //this.title = title;
-    animation_loop = window.setInterval("init(" + guageData + ")", 1000);
+    guageData.animation_loop = window.setInterval("init(" + guageData + ")", 1000);
     displayValue = 0;
     startChange(initValue);
 }
@@ -312,18 +312,18 @@ function setPointer(ctx, count) {
     //}
 }
 function startChange(num, guageData){
-    if(typeof animation_loop != undefined)
-        clearInterval(animation_loop);
+    if(typeof guageData.animation_loop != undefined)
+        clearInterval(guageData.animation_loop);
     guageData.newdisplayValue = num;
     new_degrees = Math.round((num - guageData.minValue) / (guageData.maxValue - guageData.minValue) * 100);
     var dif = new_degrees - degrees; //差距多少
     this.valueGap = -((displayValue - num) / dif); //實際數值每隔的差距
-    animation_loop = setInterval(function(){animation_to(guageData) }, 1000/ Math.abs(dif));
+    guageData.animation_loop = setInterval(function(){animation_to(guageData) }, 1000/ Math.abs(dif));
 }
 function animation_to(guageData){
     //判斷是否已到達要變更的數值
     if(degrees == new_degrees)
-        clearInterval(animation_loop);
+        clearInterval(guageData.animation_loop);
     
     if(degrees < new_degrees){
         degrees++;
@@ -353,4 +353,5 @@ function GuageConstructor(canvasNameId, title, unit, minValue, maxValue, display
     this.newdisplayValue = 0;
     this.valueGap = 0;
     this.degrees;
+    this.animation_loop;
 }
