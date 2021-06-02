@@ -33,7 +33,13 @@ function createGaugeChart(guageData, initValue) {
     displayValue = 0;
     startChange(initValue, guageData);
 }
-function init(guageData) {  //guageData.colorHex_One guageData.colorHex_Two guageData.colorHex_Three guageData.colorHex_Four
+
+function init(guageData) {  
+    //guageData.colorHex_One guageData.colorHex_Two guageData.colorHex_Three guageData.colorHex_Four
+    //#FFFF00 yellow 
+    //#FF0000 red 
+    //#0000FF blue 
+    //#00FF00 green 
     var quadrants = [
         {
             "angleStart": Math.PI * -0.5,
