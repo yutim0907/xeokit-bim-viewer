@@ -202,6 +202,10 @@ let gradientColors = function (start, end, steps, index, gamma) {
 //繪製刻度
 function drawPoint(ctx, count, guageData) {
     var flag = false
+    //#FFFF00 yellow 
+    //#FF0000 red 
+    //#0000FF blue 
+    //#00FF00 green 
     //繪製小點
     for (var i = 0; i <= count; i++) {
         ctx.save();
@@ -268,6 +272,10 @@ function setPointer(ctx, count) {
       //animation_loop = window.clearInterval(animation_loop);
       //  設定停止條件
     //}
+    //#FFFF00 yellow 
+    //#FF0000 red 
+    //#0000FF blue 
+    //#00FF00 green 
     ctx.rotate(se * 2 * Math.PI);
     //指針顏色
     var colorVal = (1350 / 3600 + 27 / 3600 * i) * 2 * Math.PI - Math.PI * 3 / 4;
