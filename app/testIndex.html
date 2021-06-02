@@ -357,8 +357,8 @@
         <canvas id="myNavCubeCanvas"></canvas>
     </div>
 </div>
-<canvas id="ericChart" width="230" height="230" style="z-index: 30000; display: block; right: 15%; position: absolute; top: 10%;"></canvas>
-<canvas id="singleGuageChart" width="230" height="230" style="z-index: 30000; display: block; right: 45%; position: absolute; top: 10%;"></canvas>
+<canvas id="ericChart" width="230" height="230" style="z-index: 30000; display: block; left: 50%; position: absolute; top: 5%;"></canvas>
+<canvas id="singleGuageChart" width="230" height="230" style="z-index: 30000; display: block; left: 35%; position: absolute; top: 5%;"></canvas>
 <div class="progress-pie-chart" style="display: none;" data-percent="43">
   <div class="ppc-progress">
     <div class="ppc-progress-fill"></div>
@@ -556,6 +556,7 @@
         $(".ppc-progress-fill").css("transform", "rotate(" + deg + "deg)");
         $(".ppc-percents span").html(num);
     }
+
   </script>
 <script type="module">
 
@@ -685,7 +686,8 @@
 
             lastEntity = pickResult.entity;
             lastColorize = pickResult.entity.colorize ? pickResult.entity.colorize.slice() : null;
-            $('#ericChart').css('display','');
+            
+            $('#singleGuageChart').css('display','');
 
             pickResult.entity.colorize = [8/255, 247/255, 254/255];
             createTagInfoBox();
@@ -728,7 +730,7 @@
     viewer.cameraControl.on("pickedNothing", () => {
         annotations.clear();
         $(".progress-pie-chart").css('display','none');
-        $('#ericChart').css('display','none');
+        $('#singleGuageChart').css('display','none');
         if (lastEntity) {
             lastEntity.colorize = lastColorize;
             lastEntity = null;
@@ -893,6 +895,8 @@
         var timeoutAlarm1 = window.setInterval(function(){callAlarmFunc("電錶箱:A-M1:742696");}, 1000);
         var timeoutAlarm2 = window.setInterval(function(){callAlarmFunc("電錶箱:A-MB1:744599");}, 1000);
         var timeoutAlarm3 = window.setInterval(function(){callAlarmFunc("受電箱:PA9:738272");}, 1000);
+
+        var timeChangeTotal = window.setInterval(function(){startChange(700 + getRandomInt(600), mainGuage)}, 30000);
 
 		});
 
