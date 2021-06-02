@@ -113,7 +113,10 @@ var colorCount = 0;
 var resetFlag = 0;
 function setText(ctx, guageData) {
     //中間字體
-
+    //#FFFF00 yellow 
+    //#FF0000 red 
+    //#0000FF blue 
+    //#00FF00 green 
     //degrees / 4 第一區塊需+1且從20%的部分開始，最後一階段在最後20%結束
     if (degrees <= total / 3.2 * 0.6) {
         if (resetFlag != 0) { resetFlag = 0; colorCount = 0 }

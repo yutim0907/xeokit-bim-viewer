@@ -115,35 +115,35 @@ function init(guageData) {
     setPointer(ctx, 100, guageData);
     setText(ctx, guageData);
 }
-var colorCount = 0;
-var resetFlag = 0;
+//var colorCount = 0;
+//var resetFlag = 0;
 function setText(ctx, guageData) {
     //中間字體
 
     //degrees / 4 第一區塊需+1且從20%的部分開始，最後一階段在最後20%結束
     if (guageData.degrees <= total / 3.2 * 0.6) {
-        if (resetFlag != 0) { resetFlag = 0; colorCount = 0 }
+        if (guageData.resetFlag != 0) { guageData.resetFlag = 0; guageData.colorCount = 0 }
         ctx.fillStyle = "rgba(0, 173, 239, 1)";
-        ctx.fillStyle = gradientColors(guageData.colorHex_One, guageData.colorHex_Two, total / 3.2 * 1, colorCount + total / 3.2 * 0.4);
-        colorCount++;
+        ctx.fillStyle = gradientColors(guageData.colorHex_One, guageData.colorHex_Two, total / 3.2 * 1, guageData.colorCount + total / 3.2 * 0.4);
+        guageData.colorCount++;
     }
     else if (guageData.degrees <= total / 3.2 * 1.6 && guageData.degrees > total / 3.2 * 0.6) {
-        if (resetFlag != 1) { resetFlag = 1; colorCount = 0 }
+        if (guageData.resetFlag != 1) { guageData.resetFlag = 1; guageData.colorCount = 0 }
         ctx.fillStyle = "rgba(102, 204, 154, 1)";
-        ctx.fillStyle = gradientColors(guageData.colorHex_Two, guageData.colorHex_Three, total / 3.2 * 1, colorCount);
-        colorCount++;
+        ctx.fillStyle = gradientColors(guageData.colorHex_Two, guageData.colorHex_Three, total / 3.2 * 1, guageData.colorCount);
+        guageData.colorCount++;
     }
     else if (guageData.degrees <= total / 3.2 * 2.6 && guageData.degrees > total / 3.2 * 1.6) {
-        if (resetFlag != 2) { resetFlag = 2; colorCount = 0 }
+        if (guageData.resetFlag != 2) { guageData.resetFlag = 2; guageData.colorCount = 0 }
         ctx.fillStyle = "rgba(59, 89, 152, 1)";
-        ctx.fillStyle = gradientColors(guageData.colorHex_Three, guageData.colorHex_Four, total / 3.2 * 1, colorCount);
-        colorCount++;
+        ctx.fillStyle = gradientColors(guageData.colorHex_Three, guageData.colorHex_Four, total / 3.2 * 1, guageData.colorCount);
+        guageData.colorCount++;
     }
     else if (guageData.degrees > total / 3.2 * 2.6) {
-        if (resetFlag != 3) { resetFlag = 3; colorCount = 0 }
+        if (guageData.resetFlag != 3) { guageData.resetFlag = 3; guageData.colorCount = 0 }
         ctx.fillStyle = "rgba(59, 89, 152, 1)";
-        ctx.fillStyle = gradientColors(guageData.colorHex_Four, guageData.colorHex_One, total / 3.2 * 1, colorCount);
-        colorCount++;
+        ctx.fillStyle = gradientColors(guageData.colorHex_Four, guageData.colorHex_One, total / 3.2 * 1, guageData.colorCount);
+        guageData.colorCount++;
     }
     ctx.lineWidth = 10;
     ctx.textAlign = "center";
@@ -361,4 +361,6 @@ function GuageConstructor(canvasNameId, title, unit, minValue, maxValue, display
     this.degrees = 0;
     this.new_degrees = 0;
     this.animation_loop;
+    this.colorCount = 0;
+    this.resetFlag = 0;
 }
