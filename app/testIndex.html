@@ -136,7 +136,6 @@
         }
         .realtimeInfoBlock .container{
             display: inline-block;
-            width: 256px;
         }
 		.alarm-bar{
     		position: absolute;
@@ -368,25 +367,30 @@
 
 <body onload="playAudio();">
 <div id="myViewer" class="xeokit-busy-modal-backdrop">
-    <div id="myContent">
+    <div id="myContent" style="background-color: #00142F;">
         <div id="myToolbar"></div>
         <canvas id="myCanvas"></canvas>
         <canvas id="myNavCubeCanvas"></canvas>
     </div>
 </div>
 <div id="realtimeInfoBlock" class="realtimeInfoBlock">
-    <div class="container" style="width: 400px; margin: 0 auto;">
-        <canvas id="pieChart1" width="400" height="400"style=""></canvas>
+    <div class="realtimePieChartBlock" style="width:100%">
+        <div class="container" style="width: 400px; margin: 0 auto;">
+            <canvas id="pieChart1" width="400" height="400"style=""></canvas>
+        </div>
+        <div class="container" style="width: 400px; margin: 0 auto;">
+            <canvas id="pieChart2" width="400" height="400"style=""></canvas>
+        </div>
     </div>
-    <div class="container" style="width: 400px; margin: 0 auto;">
-        <canvas id="pieChart2" width="400" height="400"style=""></canvas>
+    <div class="realtimeBarChartBlock" style="width:100%">
+        <div class="container" style="width: 400px; margin: 0 auto;">
+            <canvas id="barChart1" width="400" height="400" style=""></canvas>
+        </div>
+        <div class="container" style="width: 400px; margin: 0 auto;">
+            <canvas id="barChart2" width="400" height="400" style=""></canvas>
+        </div>
     </div>
-    <div class="container" style="width: 400px; margin: 0 auto;">
-        <canvas id="barChart1" width="400" height="400" style=""></canvas>
-    </div>
-    <div class="container" style="width: 400px; margin: 0 auto;">
-        <canvas id="barChart2" width="400" height="400" style=""></canvas>
-    </div>
+    
     
 </div>
 
