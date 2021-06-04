@@ -122,7 +122,22 @@
         .annotation-desc {
             font: normal 14px arial, serif;
         }
-		
+		.realtimeInfoBlock{
+            position: absolute;
+            top: 5%;
+            right: 1%;
+            width: auto;
+            z-index: 200000;
+            background-color: #D1DDDB;
+            border: 1px solid black;
+            border-radius: 5px;
+            opacity: 0.75;
+            height: auto;
+        }
+        .realtimeInfoBlock .container{
+            display: inline-block;
+            width: 256px;
+        }
 		.alarm-bar{
     		position: absolute;
     		top: 5%;
@@ -359,16 +374,16 @@
         <canvas id="myNavCubeCanvas"></canvas>
     </div>
 </div>
-<div class="container" style="width: 10%; margin: 0 auto; top: 5%; right: 5%;position: absolute; z-index: 200000;">
-    <canvas id="barChart" width="100" height="100" style="">
-        
-    </canvas>
+<div id="realtimeInfoBlock" class="realtimeInfoBlock">
+    <div class="container" style="width: 10%; margin: 0 auto;top: 5%; right: 15%;z-index: 200000;">
+        <canvas id="pieChart" width="100" height="100"style=""></canvas>
+    </div>
+    <div class="container" style="width: 10%; margin: 0 auto; top: 5%; right: 5%;z-index: 200000;">
+        <canvas id="barChart" width="100" height="100" style=""></canvas>
+    </div>
+    
 </div>
-<div class="container" style="width: 10%; margin: 0 auto;top: 5%; right: 15%;position: absolute; z-index: 200000;">
-    <canvas id="pieChart" width="100" height="100"style="">
-        
-    </canvas>
-</div>
+
 <canvas id="ericChart" width="230" height="230" style="z-index: 30000; display: block; left: 50%; position: absolute; top: 5%;"></canvas>
 <canvas id="singleGuageChart" width="230" height="230" style="z-index: 30000; display: block; left: 35%; position: absolute; top: 5%;"></canvas>
 <div class="progress-pie-chart" style="display: none;" data-percent="43">
@@ -383,43 +398,43 @@
 </div>
 <div id="pickedDescription" class="section-description" style="display: none;"> </div>
 <div id="alarmBar" class="alarm-bar" >
-<button onclick="jumpToHref()" style="display: none;"> jump </button>
-<div class="container">
-    <table>
-        <thead>
-            <tr>
-                <th>警報名稱</th>
-                <th>發生位置</th>
-                <th>警報描述</th>
-                <th>發生時間</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-M1:742696');">
-                <td>電錶箱:A-M1</td>
-                <td>B1F</td>
-                <td>溫度過高</td>
-                <td>2021/05/06 16:43:13</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-MB1:744599');">
-                <td>電錶箱:A-MB1</td>
-                <td>B1F</td>
-                <td>耗電過高</td>
-                <td>2021/05/03 20:08:37</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr class="alarm-tr" onclick="flyToObj('受電箱:PA9:738272');">
-                <td>受電箱:PA9</td>
-                <td>B1F</td>
-                <td>箱體被開啟</td>
-                <td>2021/05/01 13:59:45</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <button onclick="jumpToHref()" style="display: none;"> jump </button>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>警報名稱</th>
+                    <th>發生位置</th>
+                    <th>警報描述</th>
+                    <th>發生時間</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-M1:742696');">
+                    <td>電錶箱:A-M1</td>
+                    <td>B1F</td>
+                    <td>溫度過高</td>
+                    <td>2021/05/06 16:43:13</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-MB1:744599');">
+                    <td>電錶箱:A-MB1</td>
+                    <td>B1F</td>
+                    <td>耗電過高</td>
+                    <td>2021/05/03 20:08:37</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="alarm-tr" onclick="flyToObj('受電箱:PA9:738272');">
+                    <td>受電箱:PA9</td>
+                    <td>B1F</td>
+                    <td>箱體被開啟</td>
+                    <td>2021/05/01 13:59:45</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 

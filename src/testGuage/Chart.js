@@ -4,9 +4,9 @@ var pieCtx = document.getElementById("pieChart");
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ["發電機1", "發電機2", "發電機3", "發電機4", "發電機5", "發電機6"],
         datasets: [{
-            label: '# of Votes',
+            label: '發電量',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -39,9 +39,9 @@ var myChart = new Chart(ctx, {
 });
 var pieData = {
     labels: [
-        "Red",
-        "Blue",
-        "Yellow"
+        "其他用電",
+        "空調用電",
+        "照明用電"
     ],
     datasets: [
         {
