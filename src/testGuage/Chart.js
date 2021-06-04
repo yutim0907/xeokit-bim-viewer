@@ -1,7 +1,9 @@
-var ctx = document.getElementById("barChart");
-var pieCtx = document.getElementById("pieChart");
+var barCtx1 = document.getElementById("barChart1");
+var barCtx2 = document.getElementById("barChart2");
+var pieCtx1 = document.getElementById("pieChart1");
+var pieCtx2 = document.getElementById("pieChart2");
 
-var myChart = new Chart(ctx, {
+var myChart = new Chart(barCtx1, {
     type: 'bar',
     data: {
         labels: ["發電機1", "發電機2", "發電機3", "發電機4", "發電機5", "發電機6"],
@@ -58,7 +60,7 @@ var pieData = {
             ]
         }]
 };
-var myPieChart = new Chart(pieCtx,{
+var myPieChart = new Chart(pieCtx1,{
     type: 'pie',
     data: pieData,
     //options: options
