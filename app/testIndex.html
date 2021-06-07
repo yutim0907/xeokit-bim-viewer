@@ -731,18 +731,7 @@
     });
 
 
-    //------------------------------------------------------------------------------------------------------------------
-    // Create an IFC structure tree view
-    //------------------------------------------------------------------------------------------------------------------
-
-    const treeView = new TreeViewPlugin(viewer, {
-        containerElement: document.getElementById("treeViewContainer"),
-        autoExpandDepth: 3, // Initially expand tree three storeys deep
-        hierarchy: "storeys",
-        sortNodes: true,
-
-        sortableStoreysTypes:['IfcBuildingStorey', 'IfcBuildingElementProxy']
-    });
+    
 
 
     //------------------------------------------------------------------------------------------------------------------
@@ -757,6 +746,19 @@
         src: "../app/data/projects/WaterLock/models/design/geometry_design_name.xkt",
         metaModelSrc: "./../app/data/projects/WaterLock/models/design/metadata_六張犁A基地B1F_Design.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
         edges: true
+    });
+
+    //------------------------------------------------------------------------------------------------------------------
+    // Create an IFC structure tree view
+    //------------------------------------------------------------------------------------------------------------------
+
+    const treeView = new TreeViewPlugin(viewer, {
+        containerElement: document.getElementById("treeViewContainer"),
+        autoExpandDepth: 1, // Initially expand tree three storeys deep
+        hierarchy: "storeys",
+        sortNodes: true,
+
+        sortableStoreysTypes:['IfcBuildingStorey', 'IfcBuildingElementProxy']
     });
 
     //------------------------------------------------------------------------------------------------------------------
