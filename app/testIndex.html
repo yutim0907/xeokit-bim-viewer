@@ -608,6 +608,7 @@
 	import {math} from "../src/viewer/scene/math/math.js";
 	import {NavCubePlugin} from "../src/plugins/NavCubePlugin/NavCubePlugin.js";
     import {StoreyViewsPlugin} from "../src/plugins/StoreyViewsPlugin/StoreyViewsPlugin.js";
+    import {TreeViewPlugin} from "../src/plugins/TreeViewPlugin/TreeViewPlugin.js";
     //------------------------------------------------------------------------------------------------------------------
     // Create a Viewer and arrange the camera
     //------------------------------------------------------------------------------------------------------------------
@@ -634,6 +635,15 @@
     });
 
 
+    //------------------------------------------------------------------------------------------------------------------
+    // Create an IFC structure tree view
+    //------------------------------------------------------------------------------------------------------------------
+
+    const treeView = new TreeViewPlugin(viewer, {
+        containerElement: document.getElementById("treeViewContainer"),
+        autoExpandDepth: 3, // Initially expand tree three storeys deep
+        hierarchy: "containment"
+    });
 
 
     //------------------------------------------------------------------------------------------------------------------
@@ -953,6 +963,7 @@
     window.viewer = viewer;
     window.oldViewer = viewer;
     window.annotations = annotations;
+    window.treeView = treeView;
 
 
 
