@@ -456,6 +456,45 @@
             padding-right: 5px;
             pointer-events: all;
         }
+        /* Remove default bullets */
+        ul, #myUL {
+          list-style-type: none;
+        }
+
+        /* Remove margins and padding from the parent ul */
+        #myUL {
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Style the caret/arrow */
+        .caret {
+          cursor: pointer;
+          user-select: none; /* Prevent text selection */
+        }
+
+        /* Create the caret/arrow with a unicode, and style it */
+        .caret::before {
+          content: "\25B6";
+          color: black;
+          display: inline-block;
+          margin-right: 6px;
+        }
+
+        /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+        .caret-down::before {
+          transform: rotate(90deg);
+        }
+
+        /* Hide the nested list */
+        .nested {
+          display: none;
+        }
+
+        /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+        .active {
+          display: block;
+        }
 
     </style>
 
@@ -468,7 +507,22 @@
         <div id="myToolbar"></div>
         <canvas id="myCanvas"></canvas>
         <canvas id="myNavCubeCanvas"></canvas>
-        <div id="treeViewContainer"></div>
+        <div id="treeViewContainer">
+            <ul id="myUL">
+              <li><span class="caret">B1F</span>
+                <ul class="nested">
+                  <li onclick="flyToObj('受電箱:PA1:735863')">配電箱室</li>
+                  <li><span class="caret">電盤室</span>
+                    <ul class="nested">
+                      <li onclick="flyToObj('發電機組-700kW:發電機組-700kW:1163161')">發電機組</li>
+                      <li onclick="flyToObj('消音箱,鍍鋅鋼:消音箱-鍍鋅鋼:1143128')">消音箱</li>
+                      <li onclick="flyToObj('TBT_通用盤體_電盤_方形(外掛):電力箱_MP-B3:945924')">電盤</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
     </div>
 </div>
 <div id="realtimeInfoBlock" class="realtimeInfoBlock">
@@ -692,6 +746,16 @@
         }
         $(".ppc-progress-fill").css("transform", "rotate(" + deg + "deg)");
         $(".ppc-percents span").html(num);
+    }
+
+    var toggler = document.getElementsByClassName("caret");
+    var i;
+
+    for (i = 0; i < toggler.length; i++) {
+      toggler[i].addEventListener("click", function() {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+      });
     }
 
   </script>
