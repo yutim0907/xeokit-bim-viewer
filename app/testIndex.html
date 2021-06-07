@@ -511,12 +511,12 @@
             <ul id="myUL">
               <li><span class="caret">B1F</span>
                 <ul class="nested">
-                  <li onclick="flyToObj('受電箱:PA1:735863')">配電箱室</li>
+                  <li id="735863">配電箱室</li>
                   <li><span class="caret">電盤室</span>
                     <ul class="nested">
-                      <li onclick="flyToObj('發電機組-700kW:發電機組-700kW:1163161')">發電機組</li>
-                      <li onclick="flyToObj('消音箱,鍍鋅鋼:消音箱-鍍鋅鋼:1143128')">消音箱</li>
-                      <li onclick="flyToObj('TBT_通用盤體_電盤_方形(外掛):電力箱_MP-B3:945924')">電盤</li>
+                      <li id="1163161">發電機組</li>
+                      <li id="1143128">消音箱</li>
+                      <li id="945924">電盤</li>
                     </ul>
                   </li>
                 </ul>
@@ -1114,7 +1114,31 @@
 
         var timeChangeTotal = window.setInterval(function(){startChange(700 + getRandomInt(600), mainGuage)}, 30000);
 
+        $('#735863').click(function(e) 
+            { 
+                flyToObj('受電箱:PA1:735863');
+            }
+        );
+        $('#1163161').click(function(e) 
+            { 
+                flyToObj('發電機組-700kW:發電機組-700kW:1163161');
+            }
+        );
+        $('#1143128').click(function(e) 
+            { 
+                flyToObj('消音箱,鍍鋅鋼:消音箱-鍍鋅鋼:1143128');
+            }
+        );
+        $('#945924').click(function(e) 
+            { 
+                flyToObj('TBT_通用盤體_電盤_方形(外掛):電力箱_MP-B3:945924');
+            }
+        );
+
+
+
 		});
+
 
     	function getEntityWorldPosByObjectId(objectId){
     	if(viewer.scene.numObjects > 0){
