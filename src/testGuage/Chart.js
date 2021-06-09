@@ -127,9 +127,9 @@ var PieChart2 = new Chart(pieCtx2,{
     data: pieData2,
     //options: options
 });
-const labels = Utils.months({count: 12});
+const monLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 var lineData1 = {
-  labels: labels,
+  labels: monLabels,
   datasets: [{
     label: '月用電量',
     data: [3054, 5987, 7856, 2781, 3556, 4855, 4021, 3351, 4785, 3641, 4877, 3594],
