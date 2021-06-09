@@ -6825,7 +6825,7 @@
     {
       "id": "2qIcygzr1CL8mxfDYOycP0",
       "name": "GL",
-      "type": "IfcBuildingStorey",
+      "type": "IfcBuildingStoreys",
       "parent": "2qIcygzr1CL8mxfDXd26$8"
     },
     {
