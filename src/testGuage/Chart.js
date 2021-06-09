@@ -119,12 +119,12 @@ var pieData2 = {
 };
 var PieChart1 = new Chart(pieCtx1,{
     type: 'pie',
-    data: pieData1,
+    data: pieData1
     //options: options
 });
 var PieChart2 = new Chart(pieCtx2,{
     type: 'pie',
-    data: pieData2,
+    data: pieData2
     //options: options
 });
 const monLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
@@ -138,3 +138,7 @@ var lineData1 = {
     tension: 0.1
   }]
 };
+var lineChart1 = new Chart(lineCtx1,{
+    type: 'line',
+    data: lineData1
+})
