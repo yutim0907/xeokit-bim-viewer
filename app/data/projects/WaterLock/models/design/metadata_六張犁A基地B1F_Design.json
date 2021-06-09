@@ -27,7 +27,7 @@
     {
       "id": "2qIcygzr1CL8mxfDYOyJpk",
       "name": "B1FL",
-      "type": "IfcBuildingStoreys",
+      "type": "IfcBuildingStorey",
       "parent": "2qIcygzr1CL8mxfDXd26$8"
     },
     {
@@ -6825,7 +6825,7 @@
     {
       "id": "2qIcygzr1CL8mxfDYOycP0",
       "name": "GL",
-      "type": "IfcBuildingStoreys",
+      "type": "IfcBuildingStorey",
       "parent": "2qIcygzr1CL8mxfDXd26$8"
     },
     {
