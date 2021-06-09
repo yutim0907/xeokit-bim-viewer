@@ -131,7 +131,7 @@ const monLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Se
 var lineData1 = {
   labels: monLabels,
   datasets: [{
-    label: '月用電量',
+    label: '用電量',
     data: [3054, 5987, 7856, 2781, 3556, 4855, 4021, 3351, 4785, 3641, 4877, 3594],
     fill: false,
     borderColor: 'rgb(190, 192, 75)',
