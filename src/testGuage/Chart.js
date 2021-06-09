@@ -2,6 +2,9 @@ var barCtx1 = document.getElementById("barChart1");
 var barCtx2 = document.getElementById("barChart2");
 var pieCtx1 = document.getElementById("pieChart1");
 var pieCtx2 = document.getElementById("pieChart2");
+var lineCtx1 = document.getElementById("lineChart1");
+var lineCtx2 = document.getElementById("lineChart2");
+
 
 var barChart1 = new Chart(barCtx1, {
     type: 'bar',
@@ -124,3 +127,14 @@ var PieChart2 = new Chart(pieCtx2,{
     data: pieData2,
     //options: options
 });
+const labels = Utils.months({count: 12});
+var lineData1 = {
+  labels: labels,
+  datasets: [{
+    label: '月用電量',
+    data: [3054, 5987, 7856, 2781, 3556, 4855, 4021, 3351, 4785, 3641, 4877, 3594],
+    fill: false,
+    borderColor: 'rgb(190, 192, 75)',
+    tension: 0.1
+  }]
+};
