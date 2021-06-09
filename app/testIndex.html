@@ -815,7 +815,8 @@
         id: "myModel",
         src: "../app/data/projects/WaterLock/models/design/geometry_design_name.xkt",
         metaModelSrc: "./../app/data/projects/WaterLock/models/design/metadata_六張犁A基地B1F_Design.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
-        edges: true
+        edges: true,
+        excludeUnclassifiedObjects: false
     });
 
     //------------------------------------------------------------------------------------------------------------------
@@ -826,9 +827,9 @@
         containerElement: document.getElementById("treeViewContainer"),
         autoExpandDepth: 1, // Initially expand tree three storeys deep
         hierarchy: "storeys",
-        sortNodes: true,
+        sortNodes: true
 
-        sortableStoreysTypes:['IfcBuildingStorey', 'IfcBuildingElementProxy']
+        //sortableStoreysTypes:['IfcBuildingStorey', 'IfcBuildingElementProxy']
     });
 
     //------------------------------------------------------------------------------------------------------------------
