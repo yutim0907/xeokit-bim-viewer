@@ -342,10 +342,7 @@
         });
     }
 	function playAudio(){
-        //var r =confirm("Would You Like To Play Alarm Audio?");
-        //if (r == true) {
-            document.getElementById("alarmSound").play();
-        //}
+        document.getElementById("alarmSound").play();
 	}
     function playAudioButton(){
         document.getElementById("alarmSound").play();
@@ -398,49 +395,49 @@
     }
     function createTagInfoBox(){
         annotations.clear();
-            var tagInfoHtml = '';
-            var tagInfoModule = '\
-            <div class="tag-info-card">\
-            <div class="title">\
-            <div class="cat">Tag_TitleCat</div>\
-            </div>\
-            <div class="body">\
-            <h2 class="chapter" id="TagId_Value" style="color: white;">Value : Tag_Value</h2>\
-            <p class="content"> <span class="left">HH : </span>  <span class="right">Tag_HH</span> </p>\
-            <p class="content"> <span class="left">H  : </span>  <span class="right">Tag_H</span> </p>\
-            <p class="content"> <span class="left">L  : </span>  <span class="right">Tag_L</span> </p>\
-            <p class="content"> <span class="left">LL : </span>  <span class="right">Tag_LL</span> </p>\
-            </div>\
-            </div>\
-            ';
-            for(var i=1; i<=6; i++){
-                var tagIdArray = ['KA_BT_A', 'KA_DA_A', 'KA_DP_TEMP', 'KA_N2_FLOW', 'KA_N2_PRESS', 'KA_RUN_HR'];
-                var tmpHtml = tagInfoModule;
-                tmpHtml = tmpHtml.replace('Tag_TitleCat', tagIdArray[i-1]);
-                tmpHtml = tmpHtml.replace('TagId', tagIdArray[i-1]);
-                var tagValue = getRandomInt(10000)/i;
-                var tagHH = getRandomInt(900)*i;
-                var tagH = getRandomInt(700)*i;
-                var tagL = getRandomInt(300)*i;
-                var tagLL = getRandomInt(150)*i;
-                tmpHtml = tmpHtml.replace('Tag_Value', tagValue.toFixed(2));
-                tmpHtml = tmpHtml.replace('Tag_HH', tagHH.toFixed(2));
-                tmpHtml = tmpHtml.replace('Tag_H', tagH.toFixed(2));
-                tmpHtml = tmpHtml.replace('Tag_L', tagL.toFixed(2));
-                tmpHtml = tmpHtml.replace('Tag_LL', tagLL.toFixed(2));
+        var tagInfoHtml = '';
+        var tagInfoModule = '\
+        <div class="tag-info-card">\
+        <div class="title">\
+        <div class="cat">Tag_TitleCat</div>\
+        </div>\
+        <div class="body">\
+        <h2 class="chapter" id="TagId_Value" style="color: white;">Value : Tag_Value</h2>\
+        <p class="content"> <span class="left">HH : </span>  <span class="right">Tag_HH</span> </p>\
+        <p class="content"> <span class="left">H  : </span>  <span class="right">Tag_H</span> </p>\
+        <p class="content"> <span class="left">L  : </span>  <span class="right">Tag_L</span> </p>\
+        <p class="content"> <span class="left">LL : </span>  <span class="right">Tag_LL</span> </p>\
+        </div>\
+        </div>\
+        ';
+        for(var i=1; i<=6; i++){
+            var tagIdArray = ['KA_BT_A', 'KA_DA_A', 'KA_DP_TEMP', 'KA_N2_FLOW', 'KA_N2_PRESS', 'KA_RUN_HR'];
+            var tmpHtml = tagInfoModule;
+            tmpHtml = tmpHtml.replace('Tag_TitleCat', tagIdArray[i-1]);
+            tmpHtml = tmpHtml.replace('TagId', tagIdArray[i-1]);
+            var tagValue = getRandomInt(10000)/i;
+            var tagHH = getRandomInt(900)*i;
+            var tagH = getRandomInt(700)*i;
+            var tagL = getRandomInt(300)*i;
+            var tagLL = getRandomInt(150)*i;
+            tmpHtml = tmpHtml.replace('Tag_Value', tagValue.toFixed(2));
+            tmpHtml = tmpHtml.replace('Tag_HH', tagHH.toFixed(2));
+            tmpHtml = tmpHtml.replace('Tag_H', tagH.toFixed(2));
+            tmpHtml = tmpHtml.replace('Tag_L', tagL.toFixed(2));
+            tmpHtml = tmpHtml.replace('Tag_LL', tagLL.toFixed(2));
 
-                //文字變色效果
-                if(tagValue >= tagHH || tagValue <= tagLL){
-                    tmpHtml = tmpHtml.replace('white', 'red');
-                }else if(tagValue >= tagH || tagValue <= tagL){
-                    tmpHtml = tmpHtml.replace('white', 'yellow');
-                }
-                tagInfoHtml += tmpHtml;
-
+            //文字變色效果
+            if(tagValue >= tagHH || tagValue <= tagLL){
+                tmpHtml = tmpHtml.replace('white', 'red');
+            }else if(tagValue >= tagH || tagValue <= tagL){
+                tmpHtml = tmpHtml.replace('white', 'yellow');
             }
-            $('#pickedDescription').html(tagInfoHtml);
-            $('#pickedDescription').css('display', 'block');
+            tagInfoHtml += tmpHtml;
+
         }
+        $('#pickedDescription').html(tagInfoHtml);
+        $('#pickedDescription').css('display', 'block');
+    }
     function displayProgressChart(num, minValue, maxValue) { //已無使用，用來產生純css的progress bar
         $(".progress-pie-chart").attr('data-percent',num);
         var $ppc = $(".progress-pie-chart"),
@@ -487,9 +484,9 @@
         transparent: true
     });
 
-    viewer.camera.eye = [-13.91599279272339, 22.247624182573897, 86.53140440904272];
-    viewer.camera.look = [-41.967179601284855, -15.154679230493077, 11.37168548821765];
-    viewer.camera.up = [-0.1477518803318803, 0.9063365716581099, -0.39588306446906435];
+    viewer.camera.eye = [-13.91599279272339, 22.247624182573897, 86.53140440904272];
+    viewer.camera.look = [-41.967179601284855, -15.154679230493077, 11.37168548821765];
+    viewer.camera.up = [-0.1477518803318803, 0.9063365716581099, -0.39588306446906435];
 	
 	new NavCubePlugin(viewer, {
         canvasId: "myNavCubeCanvas",
