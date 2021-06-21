@@ -180,7 +180,15 @@ var PieChart1 = new Chart(pieCtx1,{
         tooltips: {
             callbacks: {
             label: function(tooltipItem, data) {
-              return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
+                    var dataset = data.datasets[tooltipItem.datasetIndex];
+                    var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+                    var total = meta.total;
+                    var currentValue = dataset.data[tooltipItem.index];
+                    var percentage = parseFloat((currentValue/total*100).toFixed(1));
+                    return currentValue + ' (' + percentage + '%)';
+            },
+            title: function(tooltipItem, data) {
+                return data.labels[tooltipItem[0].index];
             }
           }
         }
@@ -203,8 +211,17 @@ var PieChart2 = new Chart(pieCtx2,{
         },
         tooltips: {
             callbacks: {
-            label: function(tooltipItem, data) {
-              return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
+                label: function(tooltipItem, data) {
+                    var dataset = data.datasets[tooltipItem.datasetIndex];
+                    var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+                    var total = meta.total;
+                    var currentValue = dataset.data[tooltipItem.index];
+                    var percentage = parseFloat((currentValue/total*100).toFixed(1));
+                    return currentValue + ' (' + percentage + '%)';
+                },
+                title: function(tooltipItem, data) {
+                    return data.labels[tooltipItem[0].index];
+                }
             }
           }
         }
