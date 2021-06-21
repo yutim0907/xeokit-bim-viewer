@@ -54,7 +54,7 @@ var barChart1 = new Chart(barCtx1, {
         responsive: true,
         plugins: {
             legend: {
-                position: 'top',
+                position: 'bottom',
             },
             title: {
                 display: true,
@@ -110,7 +110,7 @@ var barChart2 = new Chart(barCtx2, {
         responsive: true,
         plugins: {
             legend: {
-                position: 'top',
+                position: 'bottom',
             },
             title: {
                 display: true,
@@ -128,7 +128,7 @@ var pieData1 = {
     ],
     datasets: [
         {
-            data: [30, 50, 10],
+            data: ['30%', '50%', '10%'],
             backgroundColor: [
                 "#FF6384",
                 "#36A2EB",
@@ -150,7 +150,7 @@ var pieData2 = {
     ],
     datasets: [
         {
-            data: [27, 44, 100-27-44],
+            data: ['27%', '44%', '29%'],
             backgroundColor: [
                 "#FF6384",
                 "#36A2EB",
@@ -170,7 +170,7 @@ var PieChart1 = new Chart(pieCtx1,{
     responsive: true,
     plugins: {
       legend: {
-        position: 'top',
+        position: 'bottom',
       },
       title: {
         display: true,
@@ -186,7 +186,7 @@ var PieChart2 = new Chart(pieCtx2,{
     responsive: true,
     plugins: {
       legend: {
-        position: 'top',
+        position: 'bottom',
       },
       title: {
         display: true,
@@ -225,11 +225,11 @@ var lineChart1 = new Chart(lineCtx1,{
     responsive: true,
     plugins: {
       legend: {
-        position: 'top',
+        position: 'bottom',
       },
       title: {
         display: true,
-        text: '用電量月總覽'
+        text: '用電量年總覽'
       }
     }
   }
