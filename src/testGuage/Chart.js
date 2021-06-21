@@ -191,15 +191,16 @@ var PieChart2 = new Chart(pieCtx2,{
     type: 'pie',
     data: pieData2,
     options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'bottom',
-      },
-      title: {
-        display: true,
-        text: '用電量占比(月)'
-      },
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+          },
+          title: {
+            display: true,
+            text: '用電量占比(月)'
+          }
+        },
         tooltips: {
             callbacks: {
             label: function(tooltipItem, data) {
@@ -208,7 +209,6 @@ var PieChart2 = new Chart(pieCtx2,{
           }
         }
     }
-  }
 });
 const monLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 var lineData1 = {
