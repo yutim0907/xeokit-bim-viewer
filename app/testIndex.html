@@ -438,6 +438,54 @@
         $('#pickedDescription').html(tagInfoHtml);
         $('#pickedDescription').css('display', 'block');
     }
+    //for 用電總覽表格
+    function createEnergyUsedInfoBox(){
+        annotations.clear();
+        var tagInfoHtml = '';
+        var tagInfoModule = '\
+        <div class="tag-info-card">\
+        <div class="title">\
+        <div class="cat">Tag_TitleCat</div>\
+        </div>\
+        <div class="body">\
+        <h2 class="chapter" id="TagId_Value" style="color: white;">Value : Tag_Value</h2>\
+        </div>\
+        </div>\
+        ';
+        for(var i=1; i<=6; i++){
+            var tagIdArray = ['今日用電', '本周用電', '本月用電', '昨日用電', '上週用電', '上月用電'];
+            var tmpHtml = tagInfoModule;
+            tmpHtml = tmpHtml.replace('Tag_TitleCat', tagIdArray[i-1]);
+            tmpHtml = tmpHtml.replace('TagId', tagIdArray[i-1]);
+            var tagValue = undefined;
+            switch(i){
+                case 1: 
+                case 4:
+                    tagValue = getRandomInt(2000)/10;
+                    tmpHtml = tmpHtml.replace('white', 'red');
+                    break;
+                case 2:
+                case 5:
+                    tagValue = getRandomInt(14000)/10;
+                    tmpHtml = tmpHtml.replace('white', 'green');
+                    break;
+                case 3:
+                case 6:
+                    tagValue = getRandomInt(60000)/10;
+                    tmpHtml = tmpHtml.replace('white', 'yellow');
+                    break;
+
+            }
+            tmpHtml = tmpHtml.replace('Tag_Value', tagValue.toFixed(2));
+
+            //文字變色效果
+            tagInfoHtml += tmpHtml;
+
+        }
+        $('#pickedDescription').html(tagInfoHtml);
+        $('#pickedDescription').css('display', 'block');
+    }
+    //for 用電總覽表格
     function displayProgressChart(num, minValue, maxValue) { //已無使用，用來產生純css的progress bar
         $(".progress-pie-chart").attr('data-percent',num);
         var $ppc = $(".progress-pie-chart"),
