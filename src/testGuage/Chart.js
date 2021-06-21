@@ -128,7 +128,7 @@ var pieData1 = {
     ],
     datasets: [
         {
-            data: ['30%', '50%', '10%'],
+            data: [30, 50, 10],
             backgroundColor: [
                 "#FF6384",
                 "#36A2EB",
@@ -150,7 +150,7 @@ var pieData2 = {
     ],
     datasets: [
         {
-            data: ['27%', '44%', '29%'],
+            data: [27, 44, 29],
             backgroundColor: [
                 "#FF6384",
                 "#36A2EB",
@@ -175,7 +175,18 @@ var PieChart1 = new Chart(pieCtx1,{
       title: {
         display: true,
         text: '用電量占比(日)'
-      }
+      },
+      datalabels: {
+            formatter: (value, ctx) => {
+                let sum = 0;
+                let dataArr = ctx.chart.data.datasets[0].data;
+                dataArr.map(data => {
+                    sum += data;
+                });
+                let percentage = (value*100 / sum).toFixed(2)+"%";
+                return percentage;
+            }
+        }
     }
   }
 });
@@ -191,7 +202,18 @@ var PieChart2 = new Chart(pieCtx2,{
       title: {
         display: true,
         text: '用電量占比(月)'
-      }
+      },
+      datalabels: {
+            formatter: (value, ctx) => {
+                let sum = 0;
+                let dataArr = ctx.chart.data.datasets[0].data;
+                dataArr.map(data => {
+                    sum += data;
+                });
+                let percentage = (value*100 / sum).toFixed(2)+"%";
+                return percentage;
+            }
+        }
     }
   }
 });
