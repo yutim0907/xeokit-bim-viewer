@@ -223,7 +223,6 @@ var PieChart2 = new Chart(pieCtx2,{
                     return data.labels[tooltipItem[0].index];
                 }
             }
-          }
         }
     }
 });
