@@ -9,25 +9,23 @@ var lineCtx2 = document.getElementById("lineChart2");
 var barChart1 = new Chart(barCtx1, {
     type: 'bar',
     data: {
-        labels: ["發電機1", "發電機2", "發電機3", "發電機4", "發電機5", "發電機6"],
+        labels: [
+        "其他用電",
+        "空調用電",
+        "照明用電"
+    ],
         datasets: [{
-            label: '發電量',
-            data: [12, 19, 3, 5, 2, 3],
+            label: '日用電量',
+            data: [188, 357, 53],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 206, 86, 0.2)'
             ],
             borderColor: [
                 'rgba(255,99,132,1)',
                 'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(255, 206, 86, 1)'
             ],
             borderWidth: 1
         }]
@@ -47,7 +45,7 @@ var barChart1 = new Chart(barCtx1, {
             },
             title: {
                 display: true,
-                text: '發電機發電量'
+                text: '用電量(周)'
             }
         }
     }
@@ -55,25 +53,23 @@ var barChart1 = new Chart(barCtx1, {
 var barChart2 = new Chart(barCtx2, {
     type: 'bar',
     data: {
-        labels: ["B2電表", "B1電表", "1F電表", "2F電表", "3F電表", "4F電表"],
+        labels: [
+        "其他用電",
+        "空調用電",
+        "照明用電"
+    ],
         datasets: [{
-            label: '耗電量',
-            data: [784, 912, 1520, 754, 2253, 3078],
+            label: '月用電量',
+            data: [5721, 11476, 1572],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 206, 86, 0.2)'
             ],
             borderColor: [
                 'rgba(255,99,132,1)',
                 'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(255, 206, 86, 1)'
             ],
             borderWidth: 1
         }]
@@ -93,7 +89,7 @@ var barChart2 = new Chart(barCtx2, {
             },
             title: {
                 display: true,
-                text: '樓層耗電量'
+                text: '用電量(月)'
             }
         }
   
@@ -179,19 +175,19 @@ var lineData1 = {
   labels: monLabels,
   datasets: [{
     label: '其他用電量',
-    data: [454, 189, 178, 278, 355, 485, 402, 557, 785, 364, 487, 257],
+    data: [4548, 3897, 4178, 3278, 4355, 4485, 4402, 3557, 4785, 4364, 3487, 3257],
     fill: false,
     borderColor: '#FF6384',
     tension: 0.1
   },{
     label: '空調用電量',
-    data: [354, 587, 2856, 1781, 3556, 1753, 4855, 5724, 4785, 3641, 2877, 594],
+    data: [11354, 10587, 8856, 12781, 13556, 16753, 24855, 25724, 14785, 13641, 12877, 11594],
     fill: false,
     borderColor: '#36A2EB',
     tension: 0.1
   },{
     label: '空調用電量',
-    data: [154, 187, 156, 181, 156, 255, 221, 151, 285, 241, 377, 141],
+    data: [1544, 1873, 1568, 1817, 1564, 2552, 2212, 1514, 2855, 2416, 3776, 1411],
     fill: false,
     borderColor: '#FFCE56',
     tension: 0.1
