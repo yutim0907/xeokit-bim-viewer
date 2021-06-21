@@ -89,6 +89,9 @@
             opacity: 0.75;
             height: auto;
         }
+        .realtimeInfoBlock:hover{
+            opacity: 1;
+        }
         .realtimeInfoBlock .container{
             display: inline-block;
         }
