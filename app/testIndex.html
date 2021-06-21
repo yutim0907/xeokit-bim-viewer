@@ -700,6 +700,7 @@
 
     viewer.cameraControl.on("pickedNothing", () => {
         annotations.clear();
+        createEnergyUsedInfoBox();
         $(".progress-pie-chart").css('display','none');
         $('#singleGuageChart').css('display','none');
         if (lastEntity) {
@@ -889,6 +890,7 @@
                 flyToObj('TBT_通用盤體_電盤_方形(外掛):電力箱_MP-B3:945924');
             }
         );
+        createEnergyUsedInfoBox();
 
 
 
@@ -896,12 +898,12 @@
 
 
     	function getEntityWorldPosByObjectId(objectId){
-    	if(viewer.scene.numObjects > 0){
-    		var entity = viewer.scene.objects[objectId];
-    		var aabb = entity.aabb;
-    		var entityCenter = math.getAABB3Center(aabb);
-    		return entityCenter;
-    		}
+            if(viewer.scene.numObjects > 0){
+                var entity = viewer.scene.objects[objectId];
+                var aabb = entity.aabb;
+                var entityCenter = math.getAABB3Center(aabb);
+                return entityCenter;
+    	   }
     	}
     
     window.viewer = viewer;
