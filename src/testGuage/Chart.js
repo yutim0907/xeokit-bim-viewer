@@ -185,7 +185,8 @@ var PieChart1 = new Chart(pieCtx1,{
                 });
                 let percentage = (value*100 / sum).toFixed(2)+"%";
                 return percentage;
-            }
+            },
+            color: '#fff',
         }
     }
   }
@@ -212,7 +213,8 @@ var PieChart2 = new Chart(pieCtx2,{
                 });
                 let percentage = (value*100 / sum).toFixed(2)+"%";
                 return percentage;
-            }
+            },
+            color: '#fff',
         }
     }
   }
