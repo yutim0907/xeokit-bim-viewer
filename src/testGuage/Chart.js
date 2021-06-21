@@ -9,22 +9,35 @@ var lineCtx2 = document.getElementById("lineChart2");
 var barChart1 = new Chart(barCtx1, {
     type: 'bar',
     data: {
-        labels: [
-        "其他用電",
-        "空調用電",
-        "照明用電"
-    ],
-        datasets: [{
-            label: '日用電量',
-            data: [188, 357, 53],
+        labels: ['6/19', '6/20', '6/21'],
+        datasets: [
+        {
+            label: '其他用電',
+            data: [188, 212, 153],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)'
+            ],
+            borderWidth: 1
+        },{
+            label: '空調用電',
+            data: [394, 357, 579],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)'
+            ],
+            borderColor: [
+                'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 1
+        },{
+            label: '照明用電',
+            data: [72, 85, 63],
+            backgroundColor: [
                 'rgba(255, 206, 86, 0.2)'
             ],
             borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)'
             ],
             borderWidth: 1
@@ -45,7 +58,7 @@ var barChart1 = new Chart(barCtx1, {
             },
             title: {
                 display: true,
-                text: '用電量(周)'
+                text: '用電量(近3日)'
             }
         }
     }
@@ -53,22 +66,34 @@ var barChart1 = new Chart(barCtx1, {
 var barChart2 = new Chart(barCtx2, {
     type: 'bar',
     data: {
-        labels: [
-        "其他用電",
-        "空調用電",
-        "照明用電"
-    ],
+        labels: ['Apr', 'May', 'June'],
         datasets: [{
-            label: '月用電量',
-            data: [5721, 11476, 1572],
+            label: '其他用電',
+            data: [5541, 6360, 153*31],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)'
+            ],
+            borderWidth: 1
+        },{
+            label: '空調用電',
+            data: [394*32.7, 357*31.4, 579*30.71],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)'
+            ],
+            borderColor: [
+                'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 1
+        },{
+            label: '照明用電',
+            data: [72*30.7, 85*30.14, 63*31.87],
+            backgroundColor: [
                 'rgba(255, 206, 86, 0.2)'
             ],
             borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)'
             ],
             borderWidth: 1
@@ -89,7 +114,7 @@ var barChart2 = new Chart(barCtx2, {
             },
             title: {
                 display: true,
-                text: '用電量(月)'
+                text: '用電量(近3月)'
             }
         }
   
