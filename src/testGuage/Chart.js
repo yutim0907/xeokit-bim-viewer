@@ -39,6 +39,16 @@ var barChart1 = new Chart(barCtx1, {
                     beginAtZero:true
                 }
             }]
+        },
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: '發電機發電量'
+            }
         }
     }
 });
@@ -75,7 +85,18 @@ var barChart2 = new Chart(barCtx2, {
                     beginAtZero:true
                 }
             }]
+        },
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: '樓層耗電量'
+            }
         }
+  
     }
 });
 var pieData1 = {
@@ -97,48 +118,98 @@ var pieData1 = {
                 "#36A2EB",
                 "#FFCE56"
             ]
-        }]
+        }
+    ]
 };
 var pieData2 = {
     labels: [
-        "地下用電",
-        "地上用電"
+        "其他用電",
+        "空調用電",
+        "照明用電"
     ],
     datasets: [
         {
-            data: [33, 67],
+            data: [27, 44, 100-27-44],
             backgroundColor: [
                 "#FF6384",
-                "#36A2EB"
+                "#36A2EB",
+                "#FFCE56"
             ],
             hoverBackgroundColor: [
                 "#FF6384",
-                "#36A2EB"
+                "#36A2EB",
+                "#FFCE56"
             ]
         }]
 };
 var PieChart1 = new Chart(pieCtx1,{
     type: 'pie',
-    data: pieData1
-    //options: options
+    data: pieData1,
+    options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '用電量占比(日)'
+      }
+    }
+  }
 });
 var PieChart2 = new Chart(pieCtx2,{
     type: 'pie',
-    data: pieData2
-    //options: options
+    data: pieData2,
+    options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '用電量占比(月)'
+      }
+    }
+  }
 });
 const monLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 var lineData1 = {
   labels: monLabels,
   datasets: [{
-    label: '用電量',
-    data: [3054, 5987, 7856, 2781, 3556, 4855, 4021, 3351, 4785, 3641, 4877, 3594],
+    label: '其他用電量',
+    data: [454, 189, 178, 278, 355, 485, 402, 557, 785, 364, 487, 257],
     fill: false,
-    borderColor: 'rgb(190, 192, 75)',
+    borderColor: '#FF6384',
+    tension: 0.1
+  },{
+    label: '空調用電量',
+    data: [354, 587, 2856, 1781, 3556, 1753, 4855, 5724, 4785, 3641, 2877, 594],
+    fill: false,
+    borderColor: '#36A2EB',
+    tension: 0.1
+  },{
+    label: '空調用電量',
+    data: [154, 187, 156, 181, 156, 255, 221, 151, 285, 241, 377, 141],
+    fill: false,
+    borderColor: '#FFCE56',
     tension: 0.1
   }]
 };
 var lineChart1 = new Chart(lineCtx1,{
     type: 'line',
-    data: lineData1
+    data: lineData1,
+    options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '用電量月總覽'
+      }
+    }
+  }
 })
