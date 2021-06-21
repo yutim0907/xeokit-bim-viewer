@@ -167,29 +167,25 @@ var PieChart1 = new Chart(pieCtx1,{
     type: 'pie',
     data: pieData1,
     options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'bottom',
-      },
-      title: {
-        display: true,
-        text: '用電量占比(日)'
-      },
-      datalabels: {
-            formatter: (value, ctx) => {
-                let sum = 0;
-                let dataArr = ctx.chart.data.datasets[0].data;
-                dataArr.map(data => {
-                    sum += data;
-                });
-                let percentage = (value*100 / sum).toFixed(2)+"%";
-                return percentage;
-            },
-            color: '#fff',
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+          },
+          title: {
+            display: true,
+            text: '用電量占比(日)'
+          }
+        },
+        tooltips: {
+            callbacks: {
+            label: function(tooltipItem, data) {
+              return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
+            }
+          }
         }
+
     }
-  }
 });
 var PieChart2 = new Chart(pieCtx2,{
     type: 'pie',
@@ -204,17 +200,12 @@ var PieChart2 = new Chart(pieCtx2,{
         display: true,
         text: '用電量占比(月)'
       },
-      datalabels: {
-            formatter: (value, ctx) => {
-                let sum = 0;
-                let dataArr = ctx.chart.data.datasets[0].data;
-                dataArr.map(data => {
-                    sum += data;
-                });
-                let percentage = (value*100 / sum).toFixed(2)+"%";
-                return percentage;
-            },
-            color: '#fff',
+        tooltips: {
+            callbacks: {
+            label: function(tooltipItem, data) {
+              return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
+            }
+          }
         }
     }
   }
