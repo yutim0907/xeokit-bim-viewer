@@ -128,7 +128,7 @@ var pieData1 = {
     ],
     datasets: [
         {
-            data: [30, 50, 10],
+            data: [34, 50, 16],
             backgroundColor: [
                 "#FF6384",
                 "#36A2EB",
