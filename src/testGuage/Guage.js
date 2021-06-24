@@ -138,7 +138,7 @@ function setText(ctx, guageData) {
     }
     ctx.lineWidth = 10;
     ctx.textAlign = "center";
-    //ctx.fillStyle = "#3A5998"; 
+    ctx.fillStyle = "#999999"; 
     ctx.font = 20 * match + "pt oblique";
     // ctx.fillText(degrees + "%", center.x, center.y * 1.7); 
     ctx.fillText(Math.round(guageData.displayValue) + guageData.unit , 130 * match, 230 * match)
