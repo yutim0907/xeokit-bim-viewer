@@ -206,65 +206,66 @@
 
 
 <body onload="playAudio();">
-    <div style="width:25%;display: inline-block;">
-    <div id="pickedDescription" class="section-description" style="display: none;"> </div>
-    <div id="treeViewContainer">
-            <ul id="myUL">
-              <li><span class="caret">B1F</span>
-                <ul class="nested">
-                  <li><span id="735863">配電箱室</span></li>
-                  <li><span class="caret">電盤室</span>
+    <div style="width:24%;display: inline-block;">
+        <div id="alarmBar" class="alarm-bar" >
+            <button onclick="jumpToHref()" style="display: none;"> jump </button>
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>警報名稱</th>
+                            <th>發生位置</th>
+                            <th>警報描述</th>
+                            <th>發生時間</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-M1:742696');">
+                            <td>電錶箱:A-M1</td>
+                            <td>B1F</td>
+                            <td>溫度過高</td>
+                            <td>2021/05/06 16:43:13</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-MB1:744599');">
+                            <td>電錶箱:A-MB1</td>
+                            <td>B1F</td>
+                            <td>耗電過高</td>
+                            <td>2021/05/03 20:08:37</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="alarm-tr" onclick="flyToObj('受電箱:PA9:738272');">
+                            <td>受電箱:PA9</td>
+                            <td>B1F</td>
+                            <td>箱體被開啟</td>
+                            <td>2021/05/01 13:59:45</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="pickedDescription" class="section-description" style="display: none;"> </div>
+        <div id="treeViewContainer">
+                <ul id="myUL">
+                  <li><span class="caret">B1F</span>
                     <ul class="nested">
-                      <li><span id="1163161">發電機組</span></li>
-                      <li><span id="1143128">消音箱</span></li>
-                      <li><span id="945924">電盤</span></li>
+                      <li><span id="735863">配電箱室</span></li>
+                      <li><span class="caret">電盤室</span>
+                        <ul class="nested">
+                          <li><span id="1163161">發電機組</span></li>
+                          <li><span id="1143128">消音箱</span></li>
+                          <li><span id="945924">電盤</span></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
                 </ul>
-              </li>
-            </ul>
-        </div>
-    <div id="alarmBar" class="alarm-bar" >
-        <button onclick="jumpToHref()" style="display: none;"> jump </button>
-        <div class="container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>警報名稱</th>
-                        <th>發生位置</th>
-                        <th>警報描述</th>
-                        <th>發生時間</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-M1:742696');">
-                        <td>電錶箱:A-M1</td>
-                        <td>B1F</td>
-                        <td>溫度過高</td>
-                        <td>2021/05/06 16:43:13</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-MB1:744599');">
-                        <td>電錶箱:A-MB1</td>
-                        <td>B1F</td>
-                        <td>耗電過高</td>
-                        <td>2021/05/03 20:08:37</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr class="alarm-tr" onclick="flyToObj('受電箱:PA9:738272');">
-                        <td>受電箱:PA9</td>
-                        <td>B1F</td>
-                        <td>箱體被開啟</td>
-                        <td>2021/05/01 13:59:45</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            </div>
+        
     </div>
-    </div>
-<div id="myViewer" class="xeokit-busy-modal-backdrop" style="display: inline-block;">
+<div id="myViewer" class="xeokit-busy-modal-backdrop" style="display: inline-block;width: 49%;">
     <div id="bimViewerContent" style="background-color: #00142F;">
         <div id="myToolbar"></div>
         <canvas id="myCanvas"></canvas>
@@ -272,7 +273,7 @@
         
     </div>
 </div>
-<div id="realtimeInfoBlock" class="realtimeInfoBlock" style="display:inline-block;">
+<div id="realtimeInfoBlock" class="realtimeInfoBlock" style="display:inline-block;width: 24%;">
     <div class="realtimePieChartBlock" style="width:100%">
         <div class="container" style="width: 250px; margin: 0 25px;">
             <canvas id="pieChart1" width="300" height="300" style=""></canvas>

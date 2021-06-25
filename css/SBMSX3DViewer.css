@@ -111,10 +111,10 @@
         .alarm-marker{
             animation: fade 600ms infinite;
         }.section-description{
-            position: absolute;
+            /*position: absolute;*/
             bottom: 5%;
             left: 1%;
-            width: 500px;
+            width: 100%;
             height: auto;
             z-index: 110000;
             color: black;
