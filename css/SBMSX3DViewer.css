@@ -78,7 +78,7 @@
             font: normal 14px arial, serif;
         }
         .realtimeInfoBlock{
-            position: absolute;
+            /*position: absolute;*/
             top: 1%;
             right: 1%;
             width: auto;
@@ -96,7 +96,7 @@
             display: inline-block;
         }
         .alarm-bar{
-            position: absolute;
+            /*position: absolute;*/
             top: 5%;
             left: 1%;
             width: auto;
