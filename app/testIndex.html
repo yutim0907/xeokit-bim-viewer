@@ -205,7 +205,7 @@
 </head>
 
 
-<body onload="playAudio();">
+<body onload="playAudio();" style="display:flex;">
     <div style="width:24%;display: inline-block;">
         <div id="alarmBar" class="alarm-bar" >
             <button onclick="jumpToHref()" style="display: none;"> jump </button>
@@ -246,24 +246,25 @@
                 </table>
             </div>
         </div>
-        <div id="pickedDescription" class="section-description" style="display: none;"> </div>
+        
         <div id="treeViewContainer">
-                <ul id="myUL">
-                  <li><span class="caret">B1F</span>
+            <ul id="myUL">
+              <li><span class="caret">B1F</span>
+                <ul class="nested">
+                  <li><span id="735863">配電箱室</span></li>
+                  <li><span class="caret">電盤室</span>
                     <ul class="nested">
-                      <li><span id="735863">配電箱室</span></li>
-                      <li><span class="caret">電盤室</span>
-                        <ul class="nested">
-                          <li><span id="1163161">發電機組</span></li>
-                          <li><span id="1143128">消音箱</span></li>
-                          <li><span id="945924">電盤</span></li>
-                        </ul>
-                      </li>
+                      <li><span id="1163161">發電機組</span></li>
+                      <li><span id="1143128">消音箱</span></li>
+                      <li><span id="945924">電盤</span></li>
                     </ul>
                   </li>
                 </ul>
-            </div>
-        
+              </li>
+            </ul>
+        </div>
+        <div id="pickedDescription" class="section-description" style="display: none;"> 
+        </div>
     </div>
 <div id="myViewer" class="xeokit-busy-modal-backdrop" style="display: inline-block;width: 49%;">
     <div id="bimViewerContent" style="background-color: #00142F;">
@@ -441,7 +442,7 @@
 
         }
         $('#pickedDescription').html(tagInfoHtml);
-        $('#pickedDescription').css('display', 'block');
+        $('#pickedDescription').css('display', 'inline-block');
     }
     //for 用電總覽表格
     function createEnergyUsedInfoBox(){
@@ -488,7 +489,7 @@
 
         }
         $('#pickedDescription').html(tagInfoHtml);
-        $('#pickedDescription').css('display', 'block');
+        $('#pickedDescription').css('display', 'inline-block');
     }
     //for 用電總覽表格
     function displayProgressChart(num, minValue, maxValue) { //已無使用，用來產生純css的progress bar
