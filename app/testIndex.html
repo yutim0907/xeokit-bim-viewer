@@ -38,10 +38,17 @@
             }
         }
         body > div {
-            margin: 0% 0.3%;
+            margin: 0%;
         }
         .panel-left > div{
             margin: 1% 0%;
+            width: 25%;
+            position: absolute;
+            z-index: 200000;
+            left: 0.5%;
+            background-color: rgba(255, 255, 255, 1);
+            height: 100%;
+        }       
         }
         #bimViewerContent {
             width: 100%;
@@ -68,11 +75,10 @@
         #treeViewContainer {
             border-radius: 5px;
             pointer-events: all;
-            height: 200px;
-            overflow-y: scroll;
+            height: auto;
+            overflow-y: auto;
             overflow-x: hidden;
-            /*position: absolute;*/
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 1);
             color: black;
             top: 300px;
             z-index: 200000;
@@ -86,6 +92,7 @@
             -moz-user-select: none;
             -webkit-user-select: none;
             width: 100%;
+            padding: 0px;
         }
 
         #treeViewContainer ul {
@@ -209,7 +216,7 @@
 
 
 <body onload="playAudio();" style="display:flex;">
-    <div class="panel-left" style="width:24%;display: inline-block;">
+    <div class="panel-left" style="width:24%;">
         <div id="alarmBar" class="alarm-bar" >
             <button onclick="jumpToHref()" style="display: none;"> jump </button>
             <div class="container">
@@ -269,7 +276,7 @@
         <div id="pickedDescription" class="section-description" style="display: none;"> 
         </div>
     </div>
-<div id="myViewer" class="xeokit-busy-modal-backdrop" style="display: inline-block;width: 49%;">
+<div id="myViewer" class="xeokit-busy-modal-backdrop" style="">
     <div id="bimViewerContent" style="background-color: #00142F;">
         <div id="myToolbar"></div>
         <canvas id="myCanvas"></canvas>

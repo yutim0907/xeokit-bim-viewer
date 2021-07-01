@@ -112,9 +112,7 @@
             animation: fade 600ms infinite;
         }.section-description{
             /*position: absolute;*/
-            bottom: 5%;
-            left: 1%;
-            width: 100%;
+            width: auto;
             height: auto;
             z-index: 110000;
             color: black;
@@ -211,7 +209,7 @@
         td {
             padding: 15px;
             background-color: rgba(255, 255, 255, 0.5);
-            color: red;
+            color: #e3242b;
         }
         th {
             text-align: left;   
@@ -238,6 +236,6 @@
         }
         .alarm-tr :hover{
             cursor: pointer;
-            font-weight: 600;
+            color: red;
         }
 
