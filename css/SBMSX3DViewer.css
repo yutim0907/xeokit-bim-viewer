@@ -79,6 +79,8 @@
         }
         .realtimeInfoBlock{
             /*position: absolute;*/
+            display:inline-block;
+            width: auto;
             top: 1%;
             right: 1%;
             width: auto;
