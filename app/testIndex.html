@@ -26,6 +26,19 @@
     <script src="../src/testGuage/Guage.js"></script>
     
 <style>
+        /* 寬度1750以下預設右方圖表縮進去 */
+        @media screen and (max-width: 1750px){
+            #realtimeInfoBlock{
+                display: none;
+            }
+        }
+        /* 寬度1024以下預設左方警報表格剩一行縮進去 */
+        @media screen and (max-width: 1024px){
+
+
+        }
+
+        
         @keyframes fade {
             from {
                 opacity: 1.0;
@@ -100,6 +113,7 @@
             -webkit-user-select: none;
             width: 100%;
             padding: 0px;
+            flex: 1;
         }
 
         #treeViewContainer ul {
