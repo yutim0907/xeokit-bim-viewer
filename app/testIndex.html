@@ -31,11 +31,14 @@
             #realtimeInfoBlock{
                 display: none;
             }
+            .guageChartRight{
+            right: 65%;
+
+        }
         }
         /* 寬度1024以下預設左方警報表格剩一行縮進去 */
         @media screen and (max-width: 1024px){
-
-
+            
         }
 
         
@@ -52,6 +55,14 @@
         }
         body > div {
             margin: 0%;
+        }
+        .guageChartLeft{
+            left: 35%;
+
+        }
+        .guageChartRight{
+            right: 50%;
+
         }
         .panel-left > div{
             margin: 5% 0%;
@@ -330,8 +341,8 @@
     </div>
 </div>
 
-<canvas id="ericChart" width="230" height="230" style="z-index: 30000; display: block; left: 50%; position: absolute; top: 5%;"></canvas>
-<canvas id="singleGuageChart" width="230" height="230" style="z-index: 30000; display: block; left: 35%; position: absolute; top: 5%;"></canvas>
+<canvas id="ericChart" class="guageChartLeft" width="230" height="230" style="z-index: 30000; display: block; position: absolute; top: 5%;"></canvas>
+<canvas id="singleGuageChart" class="guageChartRight" width="230" height="230" style="z-index: 30000; display: block; position: absolute; top: 5%;"></canvas>
 <div class="progress-pie-chart" style="display: none;" data-percent="43">
   <div class="ppc-progress">
     <div class="ppc-progress-fill"></div>
