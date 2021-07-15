@@ -33,6 +33,11 @@
                 display: flex;
                 left: 0.5%;
             }
+            .panel-left > div{
+                margin: 5% 0%;
+                align-self: stretch;
+                margin-bottom: auto;
+            }    
         }
         /* 寬度1750以下預設右方圖表縮進去 */
         @media screen and (max-width: 1750px){
@@ -44,11 +49,16 @@
                 left: auto;
             }
             .panel-left{
-                width: 99%;
+                width: 100%;
                 height: auto;
                 display: block;
                 left: 0%;
             }
+            .panel-left > div{
+                margin: 0% 0%;
+                align-self: stretch;
+                margin-bottom: auto;
+            }    
             .alarm-bar{
                 overflow: auto;
                 width: 100%;
@@ -94,11 +104,7 @@
             left: 50%;
 
         }
-        .panel-left > div{
-            margin: 5% 0%;
-            align-self: stretch;
-            margin-bottom: auto;
-        }       
+           
         .panel-left{
             position: absolute;
             z-index: 200000;
