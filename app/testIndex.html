@@ -35,6 +35,28 @@
                 right: 15%;
                 left: auto;
             }
+            .panel-left{
+                width: 99%;
+                height: auto;
+                display: block;
+            }
+            .alarm-bar{
+                overflow: auto;
+                width: 100%;
+                margin-top: 0px;
+            }
+            .top-alarm-tbody{
+                display: table-row-group;
+            }
+            .alarm-tbody{
+                display: none;
+            }
+            #treeViewContainer{
+                display: none;
+            }
+            #pickedDescription{
+                display: none;
+            }
         }
         /* 寬度1024以下預設左方警報表格剩一行縮進去 */
         @media screen and (max-width: 1024px){
@@ -260,7 +282,7 @@
                             <th>發生時間</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="top-alarm-tbody">
                         <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-M1:742696');">
                             <td>電錶箱:A-M1</td>
                             <td>B1F</td>
@@ -268,7 +290,15 @@
                             <td>2021/05/06 16:43:13</td>
                         </tr>
                     </tbody>
-                    <tbody>
+                    <tbody class="alarm-tbody">
+                        <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-M1:742696');">
+                            <td>電錶箱:A-M1</td>
+                            <td>B1F</td>
+                            <td>溫度過高</td>
+                            <td>2021/05/06 16:43:13</td>
+                        </tr>
+                    </tbody>
+                    <tbody class="alarm-tbody">
                         <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-MB1:744599');">
                             <td>電錶箱:A-MB1</td>
                             <td>B1F</td>
@@ -276,7 +306,7 @@
                             <td>2021/05/03 20:08:37</td>
                         </tr>
                     </tbody>
-                    <tbody>
+                    <tbody class="alarm-tbody">
                         <tr class="alarm-tr" onclick="flyToObj('受電箱:PA9:738272');">
                             <td>受電箱:PA9</td>
                             <td>B1F</td>
