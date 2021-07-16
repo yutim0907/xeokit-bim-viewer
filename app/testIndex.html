@@ -38,6 +38,16 @@
                 align-self: stretch;
                 margin-bottom: auto;
             }    
+            .guageChartLeft{
+                left: 35%;
+                top: 5%;
+
+            }
+            .guageChartRight{
+                left: 50%;
+                top: 5%;
+
+            }
         }
         /* 寬度1750以下預設右方圖表縮進去 */
         @media screen and (max-width: 1750px){
@@ -75,6 +85,10 @@
             }
             #pickedDescription{
                 display: none;
+                position: fixed;
+                left: 1%;
+                bottom: 1%;
+                width: 50%;
             }
         }
         /* 寬度1024以下預設左方警報表格剩一行縮進去 */
@@ -96,14 +110,7 @@
         body > div {
             margin: 0%;
         }
-        .guageChartLeft{
-            left: 35%;
 
-        }
-        .guageChartRight{
-            left: 50%;
-
-        }
            
         .panel-left{
             position: absolute;
@@ -381,8 +388,8 @@
     </div>
 </div>
 
-<canvas id="ericChart" class="guageChartLeft" width="230" height="230" style="z-index: 30000; display: block; position: absolute; top: 5%;"></canvas>
-<canvas id="singleGuageChart" class="guageChartRight" width="230" height="230" style="z-index: 30000; display: block; position: absolute; top: 5%;"></canvas>
+<canvas id="ericChart" class="guageChartLeft" width="230" height="230" style="z-index: 30000; display: block; position: absolute;"></canvas>
+<canvas id="singleGuageChart" class="guageChartRight" width="230" height="230" style="z-index: 30000; display: block; position: absolute;"></canvas>
 <div class="progress-pie-chart" style="display: none;" data-percent="43">
   <div class="ppc-progress">
     <div class="ppc-progress-fill"></div>
