@@ -37,6 +37,7 @@
                 margin: 5% 0%;
                 align-self: stretch;
                 margin-bottom: auto;
+                border: 1px solid black;
             }    
             .guageChartLeft{
                 left: 35%;
@@ -73,6 +74,7 @@
                 margin: 0% 0%;
                 align-self: stretch;
                 margin-bottom: auto;
+                border: 1px solid black;
             }    
             .alarm-bar{
                 overflow: auto;
@@ -120,7 +122,7 @@
         .panel-left{
             position: absolute;
             z-index: 200000;
-            background-color: rgba(255, 255, 255, 1);
+            background-color: #E5E5E5;
             flex-direction: column;
             align-content: space-between;
             flex-wrap: wrap;
@@ -170,6 +172,7 @@
             width: 100%;
             padding: 0px;
             flex: 1;
+            border: 1px solid black;
         }
 
         #treeViewContainer ul {
@@ -426,7 +429,7 @@
 	var audioElement = document.getElementById("alarmSound");
 	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
 
-    var mainGuage = new GuageConstructor("ericChart", "總耗電量", "kWh" , 0, 1800, 0, '#FFFF00', '#FF0000', '#0000FF', '#00FF00');
+    var mainGuage = new GuageConstructor("ericChart", "總耗電量", "kWh" , 0, 1800, 0, '#00FF00', '#00FF00', '#FFFF00', '#FF0000');
     //#FFFF00 yellow 
     //#FF0000 red 
     //#0000FF blue 

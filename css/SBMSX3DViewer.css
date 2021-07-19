@@ -88,7 +88,7 @@
             background-color: #D1DDDB;
             border: 1px solid black;
             border-radius: 5px;
-            opacity: 0.75;
+            opacity: 1;
             height: auto;
         }
         .realtimeInfoBlock:hover{
@@ -113,7 +113,8 @@
         }
         .alarm-marker{
             animation: fade 600ms infinite;
-        }.section-description{
+        }
+        .section-description{
             /*position: absolute;*/
             width: auto;
             height: auto;
