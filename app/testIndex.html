@@ -853,14 +853,14 @@
     });
 
     model.on("loaded", () => {
-        oriColorForAlarm = Object.assign({}, viewer.scene.objects["電錶箱:A-M1:742696"].colorize);
+        oriColorForAlarm = Object.assign({}, viewer.scene.objects["插座_RP:110V 雙聯_緊急電源_RP:10722143"].colorize);
         //oriColorForAlarm = tempColor;
         Object.keys(viewer.scene.objects).forEach(element => {
-            if(element.indexOf('箱') < 0){
+            if(element.indexOf('插座') < 0){
                 viewer.scene.objects[element].colorize = [255/255, 255/255, 255/255];
                 viewer.scene.objects[element].opacity = 1;
             }
-            if(element.indexOf('電錶') > -1){
+            if(element.indexOf('燈') > -1){
                 viewer.scene.objects[element].colorize = [255/255, 255/255, 0];
             }
 
@@ -976,6 +976,7 @@
 
         isAlarm = true;
         //var alarmInterval = window.setInterval(switchAlarmType, 1000);
+        /*
         var timeoutAlarm1 = window.setInterval(function(){callAlarmFunc("電錶箱:A-M1:742696");}, 1000);
         var timeoutAlarm2 = window.setInterval(function(){callAlarmFunc("電錶箱:A-MB1:744599");}, 1000);
         var timeoutAlarm3 = window.setInterval(function(){callAlarmFunc("受電箱:PA9:738272");}, 1000);
@@ -1002,6 +1003,8 @@
                 flyToObj('TBT_通用盤體_電盤_方形(外掛):電力箱_MP-B3:945924');
             }
         );
+        */
+        var timeChangeTotal = window.setInterval(function(){startChange(700 + getRandomInt(600), mainGuage)}, 30000);
         createEnergyUsedInfoBox();
 
 
