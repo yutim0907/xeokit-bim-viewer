@@ -676,7 +676,8 @@
         src: "../app/data/projects/WaterLock/models/design/geometry_test_big_model.xkt", //中和安邦模型
         metaModelSrc: "./../app/data/projects/WaterLock/models/design/metadata_test_big_model_Design.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
         edges: true,
-        excludeUnclassifiedObjects: false
+        excludeUnclassifiedObjects: false,
+        globalizeObjectIds:true
     });
 
     //------------------------------------------------------------------------------------------------------------------
@@ -871,7 +872,6 @@
             metaCount++;
              }   
             );
-        }
         console.log('meta objects count = ' + metaCount);
         createGaugeChart(objectGuage, 0);
         createGaugeChart(mainGuage, getRandomInt(1800));
