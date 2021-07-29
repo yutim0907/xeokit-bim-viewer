@@ -844,7 +844,6 @@
                 hit.entity.opacity = 0.6;
             }
         } else {
-
             if (lastHoverEntity) {
                 lastHoverEntity.opacity = lastOpacity;
                 lastHoverEntity = null;
@@ -862,6 +861,7 @@
             }
             if(element.indexOf('燈') > -1){
                 viewer.scene.objects[element].colorize = [255/255, 255/255, 0];
+                viewer.scene.objects[element].opacity = 1;
             }
 
             }
