@@ -866,6 +866,13 @@
 
             }
         );
+        var metaCount = 0;
+        Object.keys(viewer.metaScene.metaObjects).forEach(element => {
+            metaCount++;
+             }   
+            );
+        }
+        console.log('meta objects count = ' + metaCount);
         createGaugeChart(objectGuage, 0);
         createGaugeChart(mainGuage, getRandomInt(1800));
 /*
