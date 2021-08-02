@@ -853,7 +853,7 @@
     });
 
     model.on("loaded", () => {
-        oriColorForAlarm = Object.assign({}, viewer.scene.objects["插座_RP:110V_單聯(頂板插座)_RP:10165758:1"].colorize);
+        oriColorForAlarm = Object.assign({}, viewer.scene.objects[100929].colorize);
         //oriColorForAlarm = tempColor;
         Object.keys(viewer.scene.objects).forEach(element => {
             if(element.indexOf('插座') < 0){
