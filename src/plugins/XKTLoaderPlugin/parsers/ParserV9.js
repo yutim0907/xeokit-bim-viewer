@@ -1,6 +1,6 @@
 /*
 
- Parser for .XKT Format V7
+ Parser for .XKT Format V9
 
  */
 
@@ -18,45 +18,43 @@ function extract(elements) {
 
     return {
 
-        // Vertex attributes
+        // Metadata
 
-        positions: elements[0],
-        normals: elements[1],
-        colors: elements[2],
+        metadata: elements[0],
 
-        // Indices
-
-        indices: elements[3],
-        edgeIndices: elements[4],
+        positions: elements[1],
+        normals: elements[2],
+        colors: elements[3],
+        indices: elements[4],
+        edgeIndices: elements[5],
 
         // Transform matrices
 
-        matrices: elements[5],
-
-        reusedGeometriesDecodeMatrix: elements[6],
+        matrices: elements[6],
+        reusedGeometriesDecodeMatrix: elements[7],
 
         // Geometries
 
-        eachGeometryPrimitiveType: elements[7],
-        eachGeometryPositionsPortion: elements[8],
-        eachGeometryNormalsPortion: elements[9],
-        eachGeometryColorsPortion: elements[10],
-        eachGeometryIndicesPortion: elements[11],
-        eachGeometryEdgeIndicesPortion: elements[12],
+        eachGeometryPrimitiveType: elements[8],
+        eachGeometryPositionsPortion: elements[9],
+        eachGeometryNormalsPortion: elements[10],
+        eachGeometryColorsPortion: elements[11],
+        eachGeometryIndicesPortion: elements[12],
+        eachGeometryEdgeIndicesPortion: elements[13],
 
         // Meshes are grouped in runs that are shared by the same entities
 
-        eachMeshGeometriesPortion: elements[13],
-        eachMeshMatricesPortion: elements[14],
-        eachMeshMaterial: elements[15],
+        eachMeshGeometriesPortion: elements[14],
+        eachMeshMatricesPortion: elements[15],
+        eachMeshMaterial: elements[16],
 
         // Entity elements in the following arrays are grouped in runs that are shared by the same tiles
 
-        eachEntityId: elements[16],
-        eachEntityMeshesPortion: elements[17],
+        eachEntityId: elements[17],
+        eachEntityMeshesPortion: elements[18],
 
-        eachTileAABB: elements[18],
-        eachTileEntitiesPortion: elements[19]
+        eachTileAABB: elements[19],
+        eachTileEntitiesPortion: elements[20]
     };
 }
 
@@ -67,15 +65,16 @@ function inflate(deflatedData) {
     }
 
     return {
+
+        metadata: JSON.parse(pako.inflate(deflatedData.metadata, {to: 'string'})),
+
         positions: new Uint16Array(inflate(deflatedData.positions)),
         normals: new Int8Array(inflate(deflatedData.normals)),
         colors: new Uint8Array(inflate(deflatedData.colors)),
-
         indices: new Uint32Array(inflate(deflatedData.indices)),
         edgeIndices: new Uint32Array(inflate(deflatedData.edgeIndices)),
 
         matrices: new Float32Array(inflate(deflatedData.matrices)),
-
         reusedGeometriesDecodeMatrix: new Float32Array(inflate(deflatedData.reusedGeometriesDecodeMatrix)),
 
         eachGeometryPrimitiveType: new Uint8Array(inflate(deflatedData.eachGeometryPrimitiveType)),
@@ -89,7 +88,7 @@ function inflate(deflatedData) {
         eachMeshMatricesPortion: new Uint32Array(inflate(deflatedData.eachMeshMatricesPortion)),
         eachMeshMaterial: new Uint8Array(inflate(deflatedData.eachMeshMaterial)),
 
-        eachEntityId: pako.inflate(deflatedData.eachEntityId, {to: 'string'}),
+        eachEntityId: JSON.parse(pako.inflate(deflatedData.eachEntityId, {to: 'string'})),
         eachEntityMeshesPortion: new Uint32Array(inflate(deflatedData.eachEntityMeshesPortion)),
 
         eachTileAABB: new Float64Array(inflate(deflatedData.eachTileAABB)),
@@ -107,28 +106,17 @@ const decompressColor = (function () {
     };
 })();
 
-function convertColorsRGBToRGBA(colorsRGB) {
-    const colorsRGBA = [];
-    for (let i = 0, len = colorsRGB.length; i < len; i+=3) {
-        colorsRGBA.push(colorsRGB[i]);
-        colorsRGBA.push(colorsRGB[i+1]);
-        colorsRGBA.push(colorsRGB[i+2]);
-        colorsRGBA.push(1.0);
-    }
-    return colorsRGBA;
-}
-
 function load(viewer, options, inflatedData, performanceModel) {
+
+    const metadata = inflatedData.metadata;
 
     const positions = inflatedData.positions;
     const normals = inflatedData.normals;
     const colors = inflatedData.colors;
-
     const indices = inflatedData.indices;
     const edgeIndices = inflatedData.edgeIndices;
 
     const matrices = inflatedData.matrices;
-
     const reusedGeometriesDecodeMatrix = inflatedData.reusedGeometriesDecodeMatrix;
 
     const eachGeometryPrimitiveType = inflatedData.eachGeometryPrimitiveType;
@@ -142,7 +130,7 @@ function load(viewer, options, inflatedData, performanceModel) {
     const eachMeshMatricesPortion = inflatedData.eachMeshMatricesPortion;
     const eachMeshMaterial = inflatedData.eachMeshMaterial;
 
-    const eachEntityId = JSON.parse(inflatedData.eachEntityId);
+    const eachEntityId = inflatedData.eachEntityId;
     const eachEntityMeshesPortion = inflatedData.eachEntityMeshesPortion;
 
     const eachTileAABB = inflatedData.eachTileAABB;
@@ -150,10 +138,27 @@ function load(viewer, options, inflatedData, performanceModel) {
 
     const numGeometries = eachGeometryPositionsPortion.length;
     const numMeshes = eachMeshGeometriesPortion.length;
-    const numEntities = eachEntityId.length;
+    const numEntities = eachEntityMeshesPortion.length;
     const numTiles = eachTileEntitiesPortion.length;
 
     let nextMeshId = 0;
+
+    // Create metamodel, unless already loaded from external JSON file by XKTLoaderPlugin
+
+    const metaModelId = performanceModel.id;
+
+    if (!viewer.metaScene.metaModels[metaModelId]) {
+
+        viewer.metaScene.createMetaModel(metaModelId, metadata, {
+            includeTypes: options.includeTypes,
+            excludeTypes: options.excludeTypes,
+            globalizeObjectIds: options.globalizeObjectIds
+        });
+
+        performanceModel.once("destroyed", () => {
+            viewer.metaScene.destroyMetaModel(metaModelId);
+        });
+    }
 
     // Count instances of each geometry
 
@@ -202,7 +207,9 @@ function load(viewer, options, inflatedData, performanceModel) {
 
         for (let tileEntityIndex = firstTileEntityIndex; tileEntityIndex < lastTileEntityIndex; tileEntityIndex++) {
 
-            const xktEntityId = eachEntityId[tileEntityIndex];
+            const xktEntityIndex = eachEntityMeshesPortion[tileEntityIndex];
+            const xktEntityId = eachEntityId[xktEntityIndex];
+
             const entityId = options.globalizeObjectIds ? math.globalizeObjectId(performanceModel.id, xktEntityId) : xktEntityId;
 
             const lastTileEntityIndex = (numEntities - 1);
@@ -295,6 +302,7 @@ function load(viewer, options, inflatedData, performanceModel) {
                         let geometryColors;
                         let geometryIndices;
                         let geometryEdgeIndices;
+                        let geometryValid = false;
 
                         switch (primitiveType) {
                             case 0:
@@ -303,6 +311,7 @@ function load(viewer, options, inflatedData, performanceModel) {
                                 geometryNormals = normals.subarray(eachGeometryNormalsPortion [geometryIndex], atLastGeometry ? normals.length : eachGeometryNormalsPortion [geometryIndex + 1]);
                                 geometryIndices = indices.subarray(eachGeometryIndicesPortion [geometryIndex], atLastGeometry ? indices.length : eachGeometryIndicesPortion [geometryIndex + 1]);
                                 geometryEdgeIndices = edgeIndices.subarray(eachGeometryEdgeIndicesPortion [geometryIndex], atLastGeometry ? edgeIndices.length : eachGeometryEdgeIndicesPortion [geometryIndex + 1]);
+                                geometryValid = (geometryPositions.length > 0 && geometryIndices.length > 0);
                                 break;
                             case 1:
                                 primitiveName = "surface";
@@ -310,47 +319,56 @@ function load(viewer, options, inflatedData, performanceModel) {
                                 geometryNormals = normals.subarray(eachGeometryNormalsPortion [geometryIndex], atLastGeometry ? normals.length : eachGeometryNormalsPortion [geometryIndex + 1]);
                                 geometryIndices = indices.subarray(eachGeometryIndicesPortion [geometryIndex], atLastGeometry ? indices.length : eachGeometryIndicesPortion [geometryIndex + 1]);
                                 geometryEdgeIndices = edgeIndices.subarray(eachGeometryEdgeIndicesPortion [geometryIndex], atLastGeometry ? edgeIndices.length : eachGeometryEdgeIndicesPortion [geometryIndex + 1]);
+                                geometryValid = (geometryPositions.length > 0 && geometryIndices.length > 0);
                                 break;
                             case 2:
                                 primitiveName = "points";
                                 geometryPositions = positions.subarray(eachGeometryPositionsPortion [geometryIndex], atLastGeometry ? positions.length : eachGeometryPositionsPortion [geometryIndex + 1]);
-                                geometryColors = convertColorsRGBToRGBA(colors.subarray(eachGeometryColorsPortion [geometryIndex], atLastGeometry ? colors.length : eachGeometryColorsPortion [geometryIndex + 1]));
+                                geometryColors = colors.subarray(eachGeometryColorsPortion [geometryIndex], atLastGeometry ? colors.length : eachGeometryColorsPortion [geometryIndex + 1]);
+                                geometryValid = (geometryPositions.length > 0);
                                 break;
                             case 3:
                                 primitiveName = "lines";
                                 geometryPositions = positions.subarray(eachGeometryPositionsPortion [geometryIndex], atLastGeometry ? positions.length : eachGeometryPositionsPortion [geometryIndex + 1]);
                                 geometryIndices = indices.subarray(eachGeometryIndicesPortion [geometryIndex], atLastGeometry ? indices.length : eachGeometryIndicesPortion [geometryIndex + 1]);
+                                geometryValid = (geometryPositions.length > 0 && geometryIndices.length > 0);
                                 break;
                             default:
                                 continue;
                         }
 
-                        performanceModel.createGeometry({
-                            id: geometryId,
-                            rtcCenter: tileCenter,
-                            primitive: primitiveName,
-                            positions: geometryPositions,
-                            normals: geometryNormals,
-                            colors: geometryColors,
-                            indices: geometryIndices,
-                            edgeIndices: geometryEdgeIndices,
-                            positionsDecodeMatrix: reusedGeometriesDecodeMatrix
-                        });
+                        if (geometryValid) {
 
-                        geometryCreated[geometryId] = true;
+                            performanceModel.createGeometry({
+                                id: geometryId,
+                                rtcCenter: tileCenter,
+                                primitive: primitiveName,
+                                positions: geometryPositions,
+                                normals: geometryNormals,
+                                colorsCompressed: geometryColors,
+                                indices: geometryIndices,
+                                edgeIndices: geometryEdgeIndices,
+                                positionsDecodeMatrix: reusedGeometriesDecodeMatrix
+                            });
+
+                            geometryCreated[geometryId] = true;
+                        }
                     }
 
-                    performanceModel.createMesh(utils.apply(meshDefaults, {
-                        id: meshId,
-                        geometryId: geometryId,
-                        matrix: meshMatrix,
-                        color: meshColor,
-                        metallic: meshMetallic,
-                        roughness: meshRoughness,
-                        opacity: meshOpacity
-                    }));
+                    if (geometryCreated[geometryId]) {
 
-                    meshIds.push(meshId);
+                        performanceModel.createMesh(utils.apply(meshDefaults, {
+                            id: meshId,
+                            geometryId: geometryId,
+                            matrix: meshMatrix,
+                            color: meshColor,
+                            metallic: meshMetallic,
+                            roughness: meshRoughness,
+                            opacity: meshOpacity
+                        }));
+
+                        meshIds.push(meshId);
+                    }
 
                 } else {
 
@@ -362,6 +380,7 @@ function load(viewer, options, inflatedData, performanceModel) {
                     let geometryColors;
                     let geometryIndices;
                     let geometryEdgeIndices;
+                    let geometryValid = false;
 
                     switch (primitiveType) {
                         case 0:
@@ -370,6 +389,7 @@ function load(viewer, options, inflatedData, performanceModel) {
                             geometryNormals = normals.subarray(eachGeometryNormalsPortion [geometryIndex], atLastGeometry ? normals.length : eachGeometryNormalsPortion [geometryIndex + 1]);
                             geometryIndices = indices.subarray(eachGeometryIndicesPortion [geometryIndex], atLastGeometry ? indices.length : eachGeometryIndicesPortion [geometryIndex + 1]);
                             geometryEdgeIndices = edgeIndices.subarray(eachGeometryEdgeIndicesPortion [geometryIndex], atLastGeometry ? edgeIndices.length : eachGeometryEdgeIndicesPortion [geometryIndex + 1]);
+                            geometryValid = (geometryPositions.length > 0 && geometryIndices.length > 0);
                             break;
                         case 1:
                             primitiveName = "surface";
@@ -377,38 +397,44 @@ function load(viewer, options, inflatedData, performanceModel) {
                             geometryNormals = normals.subarray(eachGeometryNormalsPortion [geometryIndex], atLastGeometry ? normals.length : eachGeometryNormalsPortion [geometryIndex + 1]);
                             geometryIndices = indices.subarray(eachGeometryIndicesPortion [geometryIndex], atLastGeometry ? indices.length : eachGeometryIndicesPortion [geometryIndex + 1]);
                             geometryEdgeIndices = edgeIndices.subarray(eachGeometryEdgeIndicesPortion [geometryIndex], atLastGeometry ? edgeIndices.length : eachGeometryEdgeIndicesPortion [geometryIndex + 1]);
+                            geometryValid = (geometryPositions.length > 0 && geometryIndices.length > 0);
                             break;
                         case 2:
                             primitiveName = "points";
                             geometryPositions = positions.subarray(eachGeometryPositionsPortion [geometryIndex], atLastGeometry ? positions.length : eachGeometryPositionsPortion [geometryIndex + 1]);
-                            geometryColors = convertColorsRGBToRGBA(colors.subarray(eachGeometryColorsPortion [geometryIndex], atLastGeometry ? colors.length : eachGeometryColorsPortion [geometryIndex + 1]));
+                            geometryColors = colors.subarray(eachGeometryColorsPortion [geometryIndex], atLastGeometry ? colors.length : eachGeometryColorsPortion [geometryIndex + 1]);
+                            geometryValid = (geometryPositions.length > 0);
                             break;
                         case 3:
                             primitiveName = "lines";
                             geometryPositions = positions.subarray(eachGeometryPositionsPortion [geometryIndex], atLastGeometry ? positions.length : eachGeometryPositionsPortion [geometryIndex + 1]);
                             geometryIndices = indices.subarray(eachGeometryIndicesPortion [geometryIndex], atLastGeometry ? indices.length : eachGeometryIndicesPortion [geometryIndex + 1]);
+                            geometryValid = (geometryPositions.length > 0 && geometryIndices.length > 0);
                             break;
                         default:
                             continue;
                     }
 
-                    performanceModel.createMesh(utils.apply(meshDefaults, {
-                        id: meshId,
-                        rtcCenter: tileCenter,
-                        primitive: primitiveName,
-                        positions: geometryPositions,
-                        normals: geometryNormals,
-                        colors: geometryColors,
-                        indices: geometryIndices,
-                        edgeIndices: geometryEdgeIndices,
-                        positionsDecodeMatrix: tileDecodeMatrix,
-                        color: meshColor,
-                        metallic: meshMetallic,
-                        roughness: meshRoughness,
-                        opacity: meshOpacity
-                    }));
+                    if (geometryValid) {
 
-                    meshIds.push(meshId);
+                        performanceModel.createMesh(utils.apply(meshDefaults, {
+                            id: meshId,
+                            rtcCenter: tileCenter,
+                            primitive: primitiveName,
+                            positions: geometryPositions,
+                            normals: geometryNormals,
+                            colorsCompressed: geometryColors,
+                            indices: geometryIndices,
+                            edgeIndices: geometryEdgeIndices,
+                            positionsDecodeMatrix: tileDecodeMatrix,
+                            color: meshColor,
+                            metallic: meshMetallic,
+                            roughness: meshRoughness,
+                            opacity: meshOpacity
+                        }));
+
+                        meshIds.push(meshId);
+                    }
                 }
             }
 
@@ -425,8 +451,8 @@ function load(viewer, options, inflatedData, performanceModel) {
 }
 
 /** @private */
-const ParserV7 = {
-    version: 7,
+const ParserV9 = {
+    version: 9,
     parse: function (viewer, options, elements, performanceModel) {
         const deflatedData = extract(elements);
         const inflatedData = inflate(deflatedData);
@@ -434,4 +460,4 @@ const ParserV7 = {
     }
 };
 
-export {ParserV7};
+export {ParserV9};
