@@ -982,8 +982,8 @@
 		//var testGetWorldPos = getEntityWorldPosByObjectId("電錶箱:A-M2:744436");
 
         isAlarm = true;
-        //var alarmInterval = window.setInterval(switchAlarmType, 1000);
-        /*
+        var alarmInterval = window.setInterval(switchAlarmType, 1000);
+        
         var timeoutAlarm1 = window.setInterval(function(){callAlarmFunc("電錶箱:A-M1:742696");}, 1000);
         var timeoutAlarm2 = window.setInterval(function(){callAlarmFunc("電錶箱:A-MB1:744599");}, 1000);
         var timeoutAlarm3 = window.setInterval(function(){callAlarmFunc("受電箱:PA9:738272");}, 1000);
@@ -1010,9 +1010,10 @@
                 flyToObj('TBT_通用盤體_電盤_方形(外掛):電力箱_MP-B3:945924');
             }
         );
-        */
+        
         var timeChangeTotal = window.setInterval(function(){startChange(700 + getRandomInt(600), mainGuage)}, 30000);
         createEnergyUsedInfoBox();
+        /*
         setTimeout(() => {
 
             storeyViewsPlugin.showStoreyObjects("3ifT$Moun0fArr$OcBcK7_", {
@@ -1020,6 +1021,7 @@
             });
 
         }, 1000);
+        */
 
 
 
