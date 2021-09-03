@@ -1,0 +1,2536 @@
+{
+  "id": "0001",
+  "projectId": "2mITlFF8n9jwmXJCuIrQ9q",
+  "author": "",
+  "createdAt": "2021-09-03T13:52:33",
+  "schema": "IFC4",
+  "creatingApplication": "20190510_1515(x64) - Exporter 18.3.3.18 - 對照 UI 18.3.3.18",
+  "metaObjects": [
+    {
+      "id": "2mITlFF8n9jwmXJCuIrQ9q",
+      "name": "0001",
+      "type": "IfcProject",
+      "parent": null
+    },
+    {
+      "id": "2mITlFF8n9jwmXJCuIrQ9s",
+      "name": "Default",
+      "type": "IfcSite",
+      "parent": "2mITlFF8n9jwmXJCuIrQ9q"
+    },
+    {
+      "id": "2mITlFF8n9jwmXJCuIrQ9r",
+      "name": "",
+      "type": "IfcBuilding",
+      "parent": "2mITlFF8n9jwmXJCuIrQ9s"
+    },
+    {
+      "id": "2mITlFF8n9jwmXJCxjAbop",
+      "name": "1FL",
+      "type": "IfcBuildingStorey",
+      "parent": "2mITlFF8n9jwmXJCuIrQ9r"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tGo",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324277",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tGm",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324279",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tG_",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324281",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tGy",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324283",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tGw",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324285",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tGu",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324287",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tH6",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324289",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tH4",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324291",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tH2",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324293",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tH0",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324295",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHE",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324297",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHC",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324299",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbop"
+    },
+    {
+      "id": "2mITlFF8n9jwmXJCxjAbyo",
+      "name": "2FL",
+      "type": "IfcBuildingStorey",
+      "parent": "2mITlFF8n9jwmXJCuIrQ9r"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHM",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324305",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHK",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324307",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHI",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324309",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHG",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324311",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHU",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324313",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHS",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324315",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHQ",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324317",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHO",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324319",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHc",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324321",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHa",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324323",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHY",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324325",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tHW",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:324327",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "11gUcvF$r1HxdxaBDXCCIY",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:357967",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "11gUcvF$r1HxdxaBDXCCIy",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:357969",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "11gUcvF$r1HxdxaBDXCCI_",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:357971",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjAbyo"
+    },
+    {
+      "id": "2mITlFF8n9jwmXJCxjBhtP",
+      "name": "3FL",
+      "type": "IfcBuildingStorey",
+      "parent": "2mITlFF8n9jwmXJCuIrQ9r"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6s$l",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:321896",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6ssV",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322328",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6ssW",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322343",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6stb",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322402",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6stZ",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322404",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6stX",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322406",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6stu",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322431",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sq6",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322433",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sq4",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322435",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sqT",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322458",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sqR",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322460",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sqP",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:322462",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sh2",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:322629",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sld",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:322912",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6siF",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:322952",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sj7",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323008",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sjc",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:323041",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sYF",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323080",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sZN",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323152",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sZq",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323187",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sWS",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323227",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sX3",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323268",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sXP",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323294",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sdV",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323416",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sa5",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323458",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sae",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:323503",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6sbT",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:323546",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tQ1",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323590",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tQc",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:323617",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIx",
+      "name": "樓板:通用 200mm:324156",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2krEY5IQr4yRKLskyAuOTD",
+      "name": "樓板:通用 200mm:324156:2",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "08Z9wDPV90DfhEqWjPlve6",
+      "name": "樓板:通用 200mm:324156:3",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3n6vYv4Eb1dhXExo$xF6KL",
+      "name": "樓板:通用 200mm:324156:4",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tNv",
+      "name": "樓板:通用 200mm:324478",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tKs",
+      "name": "樓板:通用 200mm:324529",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "0I9HeEjV16wRH4jAroYNzZ",
+      "name": "樓板:通用 200mm:324529:2",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tA7",
+      "name": "樓板:通用 190mm:324608",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4C$6",
+      "name": "基本牆:通用 - 300mm:325042",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4Cnq",
+      "name": "基本牆:通用 - 300mm:325120",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4CnW",
+      "name": "基本牆:通用 - 300mm:325140",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4CnG",
+      "name": "基本牆:通用 - 300mm:325156",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4Cn3",
+      "name": "基本牆:通用 - 300mm:325175",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4Cn9",
+      "name": "基本牆:通用 - 300mm:325181",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4Cq9",
+      "name": "基本牆:通用 - 200mm:325501",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4C9p",
+      "name": "基本牆:通用 - 200mm:325639",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4C8X",
+      "name": "基本牆:通用 - 200mm:325717",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4CAR",
+      "name": "基本牆:通用 - 100mm:325871",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4CDP",
+      "name": "基本牆:通用 - 100mm:325933",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4C0L",
+      "name": "基本牆:通用 - 50mm:326241",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4C2J",
+      "name": "基本牆:通用 - 100mm:326375",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4C5j",
+      "name": "基本牆:通用 - 120mm:326425",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1dV2yy2IP99Ai0LDXR4C5f",
+      "name": "基本牆:通用 - 120mm:326429",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqjR",
+      "name": "基本牆:通用 - 100mm:327210",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqiD",
+      "name": "基本牆:通用 - 200mm:327292",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqln",
+      "name": "基本牆:通用 - 200mm:327296",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqlt",
+      "name": "基本牆:通用 - 200mm:327302",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eql9",
+      "name": "基本牆:通用 - 200mm:327352",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqfi",
+      "name": "基本牆:通用 - 200mm:327453",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqfG",
+      "name": "基本牆:通用 - 200mm:327457",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqex",
+      "name": "基本牆:通用 - 150mm:327498",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqe$",
+      "name": "基本牆:通用 - 150mm:327502",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqeZ",
+      "name": "基本牆:通用 - 150mm:327506",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqed",
+      "name": "基本牆:通用 - 150mm:327510",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqhE",
+      "name": "基本牆:通用 - 150mm:327615",
+      "type": "IfcWall",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqgo",
+      "name": "基本牆:通用 - 150mm:327619",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eqgs",
+      "name": "基本牆:通用 - 150mm:327623",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehLs",
+      "name": "基本牆:通用 - 150mm:327687",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehLy",
+      "name": "基本牆:通用 - 150mm:327693",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehLW",
+      "name": "基本牆:通用 - 300mm:327697",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehL0",
+      "name": "基本牆:通用 - 300mm:327729",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehL4",
+      "name": "基本牆:通用 - 300mm:327733",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehKV",
+      "name": "基本牆:通用 - 500mm:327790",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehN9",
+      "name": "基本牆:通用 - 400mm:327864",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehH$",
+      "name": "基本牆:通用 - 400mm:327950",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehHb",
+      "name": "基本牆:通用 - 100mm:327956",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehHf",
+      "name": "基本牆:通用 - 100mm:327960",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehHj",
+      "name": "基本牆:通用 - 100mm:327964",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehHH",
+      "name": "基本牆:通用 - 100mm:327968",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehHN",
+      "name": "基本牆:通用 - 100mm:327974",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehHR",
+      "name": "基本牆:通用 - 100mm:327978",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehGV",
+      "name": "基本牆:通用 - 50mm:328046",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehIW",
+      "name": "基本牆:通用 - 50mm:328145",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehTU",
+      "name": "基本牆:通用 - 50mm:328239",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehVL",
+      "name": "基本牆:通用 - 100mm:328356",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehVP",
+      "name": "基本牆:通用 - 100mm:328360",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehOa",
+      "name": "基本牆:通用 - 120mm:328533",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehOg",
+      "name": "基本牆:通用 - 120mm:328539",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehQ0",
+      "name": "基本牆:通用 - 200mm:328689",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eh6j",
+      "name": "樓板:通用 200mm:328924",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eh0m",
+      "name": "基本牆:通用 - 100mm:329025",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51eh08",
+      "name": "樓板:通用 200mm:329081",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "1hU3wbFoDBkRwdEJ51ehDi",
+      "name": "基本牆:通用 - 100mm:329245",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "0Rj2Dg9Y9AiQa2Nig2UrKu",
+      "name": "M_門-通道-雙-嵌平:M_門-通道-雙-190:332337",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "0Rj2Dg9Y9AiQa2Nig2UrEt",
+      "name": "M_門-通道-雙-嵌平:M_門-通道-雙-190:332990",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "0izQK3CTn1Yfsyt5KHeJW6",
+      "name": "M_門-通道-雙-嵌平:M_門-通道-雙-240:333148",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "0izQK3CTn1Yfsyt5KHeJY7",
+      "name": "M_門-通道-雙-嵌平:M_門-通道-雙-190:333277",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFOKnS",
+      "name": "組合樓梯:樓梯:334933",
+      "type": "IfcStair",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFOKpd",
+      "name": "組合樓梯:樓梯:334933 Run 1",
+      "type": "IfcStairFlight",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFOKr8",
+      "name": "組合樓梯:樓梯:334933 Run 2",
+      "type": "IfcStairFlight",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFOKrA",
+      "name": "組合樓梯:樓梯:334933 Landing 1",
+      "type": "IfcSlab",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONP6",
+      "name": "組合樓梯:樓梯:334933 Stringer 1",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONPP",
+      "name": "組合樓梯:樓梯:334933 Stringer 2",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONPO",
+      "name": "組合樓梯:樓梯:334933 Stringer 3",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONPR",
+      "name": "組合樓梯:樓梯:334933 Stringer 4",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONPQ",
+      "name": "組合樓梯:樓梯:334933 Stringer 5",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONPT",
+      "name": "組合樓梯:樓梯:334933 Stringer 6",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONPS",
+      "name": "組合樓梯:樓梯:334933 Stringer 7",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONPV",
+      "name": "組合樓梯:樓梯:334933 Stringer 8",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONPU",
+      "name": "組合樓梯:樓梯:334933 Stringer 9",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFOKrI",
+      "name": "支柱扶手:1100mm:335195",
+      "type": "IfcRailing",
+      "parent": "2FgE8gE6r7SROThNwFOKnS"
+    },
+    {
+      "id": "1MiSs15hP3zx7OhVwev7NP",
+      "name": "M_門-通道-單-一_Lite:M_門-通道-單-一_Lite:341461",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "00OB65Gpn2oQOqNRg$$ANl",
+      "name": "M_門-通道-單-一_Lite:M_門-通道-單-一_Lite:342210",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYebp",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:345126",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYeW7",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:345426",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYeWY",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:345463",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYeYY",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:345591",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYeTQ",
+      "name": "M_有裝飾外框的外推窗:0610 x 1220mm:346639",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYePo",
+      "name": "M_有裝飾外框的外推窗:0610 x 1220mm:346919",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYeOh",
+      "name": "M_有裝飾外框的外推窗:0610 x 1220mm:347006",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYe8w",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:348015",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYftA",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:348319",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYfn6",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:348435",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYf$V",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:348810",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYf_7",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:348882",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYfx5",
+      "name": "M_固定:2500 x 2000mm:349072",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYfaU",
+      "name": "M_固定:2000 x 1500mm:349259",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2hEBdoz499dQ0Yc$GkYgYv",
+      "name": "M_門-外部-雙層:M_門-外部-雙層:353772",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atX2",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357209",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atXm",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357227",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atXd",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357244",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atYM",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357261",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atY5",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357278",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atYq",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357295",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "11gUcvF$r1HxdxaBDXCCHK",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:358073",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "11gUcvF$r1HxdxaBDXCCG3",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:358126",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "11gUcvF$r1HxdxaBDXCCGH",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:358140",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "11gUcvF$r1HxdxaBDXCCNG",
+      "name": "基本牆:通用 - 150mm:358205",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "11gUcvF$r1HxdxaBDXCCMd",
+      "name": "基本牆:通用 - 150mm:358218",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "11gUcvF$r1HxdxaBDXCCMs",
+      "name": "基本牆:通用 - 150mm:358235",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "3UnZ1pVJvEPQK$9YPRJiAM",
+      "name": "複合天花板:600 x 600mm 網格:359588",
+      "type": "IfcCovering",
+      "parent": "2mITlFF8n9jwmXJCxjBhtP"
+    },
+    {
+      "id": "2mITlFF8n9jwmXJCxjBhtv",
+      "name": "4FL",
+      "type": "IfcBuildingStorey",
+      "parent": "2mITlFF8n9jwmXJCuIrQ9r"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVP",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323934",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVd",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323936",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVb",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323938",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVZ",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323940",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVX",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323942",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVl",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323944",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVj",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323946",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVh",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323948",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVf",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323950",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVt",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323952",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVr",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323954",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVp",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323956",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tTp",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:324084",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tTn",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324086",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tT$",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324088",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tTz",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324090",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tTx",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:324092",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tTv",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324094",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tI7",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324096",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tI5",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324098",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tI3",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324100",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tI1",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324102",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIF",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324104",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tID",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324106",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIB",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324108",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tI9",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:324110",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIN",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:324112",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIL",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324114",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIJ",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324116",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "0Rj2Dg9Y9AiQa2Nig2Uq0B",
+      "name": "樓板:通用 200mm:329474",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "0Rj2Dg9Y9AiQa2Nig2Uq04",
+      "name": "樓板:通用 200mm:329485",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "0Rj2Dg9Y9AiQa2Nig2Uq0T",
+      "name": "樓板:通用 200mm:329492",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFOKsv",
+      "name": "樓板:通用 200mm:335280",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "01YCJgkav3oOH5oh$XoA_H",
+      "name": "樓板:通用 200mm:335280:2",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONfI",
+      "name": "組合樓梯:樓梯:338523",
+      "type": "IfcStair",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONfL",
+      "name": "組合樓梯:樓梯:338523 Run 1",
+      "type": "IfcStairFlight",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONfN",
+      "name": "組合樓梯:樓梯:338523 Run 2",
+      "type": "IfcStairFlight",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONff",
+      "name": "組合樓梯:樓梯:338523 Landing 1",
+      "type": "IfcSlab",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONg8",
+      "name": "組合樓梯:樓梯:338523 Stringer 1",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONgB",
+      "name": "組合樓梯:樓梯:338523 Stringer 2",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONgA",
+      "name": "組合樓梯:樓梯:338523 Stringer 3",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONgD",
+      "name": "組合樓梯:樓梯:338523 Stringer 4",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONgC",
+      "name": "組合樓梯:樓梯:338523 Stringer 5",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONgF",
+      "name": "組合樓梯:樓梯:338523 Stringer 6",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONgE",
+      "name": "組合樓梯:樓梯:338523 Stringer 7",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONg1",
+      "name": "組合樓梯:樓梯:338523 Stringer 8",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONg0",
+      "name": "組合樓梯:樓梯:338523 Stringer 9",
+      "type": "IfcMember",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFONfh",
+      "name": "支柱扶手:1100mm:338530",
+      "type": "IfcRailing",
+      "parent": "2FgE8gE6r7SROThNwFONfI"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAe",
+      "name": "基本牆:通用 - 300mm:355688",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAf",
+      "name": "基本牆:通用 - 300mm:355689",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAg",
+      "name": "基本牆:通用 - 300mm:355690",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAh",
+      "name": "基本牆:通用 - 300mm:355691",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAi",
+      "name": "基本牆:通用 - 300mm:355692",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAj",
+      "name": "基本牆:通用 - 300mm:355693",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAk",
+      "name": "基本牆:通用 - 200mm:355694",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAl",
+      "name": "基本牆:通用 - 200mm:355695",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAm",
+      "name": "基本牆:通用 - 200mm:355696",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAn",
+      "name": "基本牆:通用 - 100mm:355697",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAo",
+      "name": "基本牆:通用 - 100mm:355698",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAp",
+      "name": "基本牆:通用 - 50mm:355699",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAq",
+      "name": "基本牆:通用 - 100mm:355700",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAr",
+      "name": "基本牆:通用 - 120mm:355701",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9CAs",
+      "name": "基本牆:通用 - 120mm:355702",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C90",
+      "name": "基本牆:通用 - 100mm:355712",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C91",
+      "name": "基本牆:通用 - 200mm:355713",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C92",
+      "name": "基本牆:通用 - 200mm:355714",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C93",
+      "name": "基本牆:通用 - 200mm:355715",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C94",
+      "name": "基本牆:通用 - 200mm:355716",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C95",
+      "name": "基本牆:通用 - 200mm:355717",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C96",
+      "name": "基本牆:通用 - 200mm:355718",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C97",
+      "name": "基本牆:通用 - 150mm:355719",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C98",
+      "name": "基本牆:通用 - 150mm:355720",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C99",
+      "name": "基本牆:通用 - 150mm:355721",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9A",
+      "name": "基本牆:通用 - 150mm:355722",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9B",
+      "name": "基本牆:通用 - 150mm:355723",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9C",
+      "name": "基本牆:通用 - 150mm:355724",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9D",
+      "name": "基本牆:通用 - 150mm:355725",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9E",
+      "name": "基本牆:通用 - 150mm:355726",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9F",
+      "name": "基本牆:通用 - 150mm:355727",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9G",
+      "name": "基本牆:通用 - 300mm:355728",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9H",
+      "name": "基本牆:通用 - 300mm:355729",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9I",
+      "name": "基本牆:通用 - 300mm:355730",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9J",
+      "name": "基本牆:通用 - 500mm:355731",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9K",
+      "name": "基本牆:通用 - 400mm:355732",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9L",
+      "name": "基本牆:通用 - 400mm:355733",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9M",
+      "name": "基本牆:通用 - 100mm:355734",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9N",
+      "name": "基本牆:通用 - 100mm:355735",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9O",
+      "name": "基本牆:通用 - 100mm:355736",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9P",
+      "name": "基本牆:通用 - 100mm:355737",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9Q",
+      "name": "基本牆:通用 - 100mm:355738",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9R",
+      "name": "基本牆:通用 - 100mm:355739",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9S",
+      "name": "基本牆:通用 - 50mm:355740",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9T",
+      "name": "基本牆:通用 - 50mm:355741",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9U",
+      "name": "基本牆:通用 - 50mm:355742",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9V",
+      "name": "基本牆:通用 - 100mm:355743",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9W",
+      "name": "基本牆:通用 - 100mm:355744",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9Y",
+      "name": "基本牆:通用 - 120mm:355746",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9Z",
+      "name": "基本牆:通用 - 200mm:355747",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9a",
+      "name": "基本牆:通用 - 100mm:355748",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9b",
+      "name": "基本牆:通用 - 100mm:355749",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9d",
+      "name": "M_門-通道-雙-嵌平:M_門-通道-雙-190:355751",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9e",
+      "name": "M_門-通道-雙-嵌平:M_門-通道-雙-240:355752",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2uCitm7x96cQTolIDc96nd",
+      "name": "M_門-通道-單-一_Lite:M_門-通道-單-一_Lite:355754",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9h",
+      "name": "M_門-通道-單-一_Lite:M_門-通道-單-一_Lite:355755",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9i",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:355756",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9j",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:355757",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9k",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:355758",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9l",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:355759",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9n",
+      "name": "M_有裝飾外框的外推窗:0610 x 1220mm:355761",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9o",
+      "name": "M_有裝飾外框的外推窗:0610 x 1220mm:355762",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9p",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:355763",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9q",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:355764",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9r",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:355765",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9s",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:355766",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9t",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:355767",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9u",
+      "name": "M_固定:2500 x 2000mm:355768",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9v",
+      "name": "M_固定:2000 x 1500mm:355769",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C9w",
+      "name": "M_門-外部-雙層:M_門-外部-雙層:355770",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZz",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357350",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZp",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357352",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZn",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357354",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZt",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357356",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZr",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357358",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZh",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357360",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atuj",
+      "name": "複合天花板:600 x 600mm 網格:357686",
+      "type": "IfcCovering",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "20YY3Q511Bl8_Rn3dCoKXg",
+      "name": "樓板:通用 200mm:359948",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "0ToJJ52uL0eeCgO7uNDilq",
+      "name": "樓板:通用 200mm:359948:2",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "24EQpwbYD9gvBi6u50BVWv",
+      "name": "樓板:通用 200mm:359948:3",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "18LAdALZ1Cp9dgnudKlAJ5",
+      "name": "樓板:通用 200mm:359948:4",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhtv"
+    },
+    {
+      "id": "2mITlFF8n9jwmXJCxjBhqr",
+      "name": "5FL",
+      "type": "IfcBuildingStorey",
+      "parent": "2mITlFF8n9jwmXJCuIrQ9r"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVz",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323962",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVx",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323964",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tVv",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323966",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tS7",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323968",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tS5",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323970",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tS3",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323972",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tS1",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323974",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tSF",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323976",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tSD",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323978",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tSB",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323980",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tS9",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323982",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tSN",
+      "name": "M_混凝土-正方形-柱:1000 x 1000mm:323984",
+      "type": "IfcColumn",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIG",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:324119",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIU",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324121",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIS",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324123",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIQ",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324125",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIO",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:324127",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIc",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324129",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIa",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324131",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIY",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324133",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIW",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324135",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIk",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324137",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIi",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324139",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIg",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324141",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIe",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324143",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIs",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:324145",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIq",
+      "name": "M_混凝土-矩形樑:800 x 1000mm:324147",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIo",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324149",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3mGj4hBVnAqhrdNRpU6tIm",
+      "name": "M_混凝土-矩形樑:1000 x 1000mm:324151",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "0Rj2Dg9Y9AiQa2Nig2Uq0z",
+      "name": "樓板:通用 200mm:329524",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "0Rj2Dg9Y9AiQa2Nig2Uq0s",
+      "name": "樓板:通用 200mm:329535",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "0Rj2Dg9Y9AiQa2Nig2Uq1F",
+      "name": "樓板:通用 200mm:329542",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2FgE8gE6r7SROThNwFOKuO",
+      "name": "樓板:通用 200mm:335377",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3rEpEHDBj7uR68V498VZnr",
+      "name": "樓板:通用 200mm:335377:2",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8l",
+      "name": "基本牆:通用 - 300mm:355823",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8m",
+      "name": "基本牆:通用 - 300mm:355824",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8n",
+      "name": "基本牆:通用 - 300mm:355825",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8o",
+      "name": "基本牆:通用 - 300mm:355826",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8p",
+      "name": "基本牆:通用 - 300mm:355827",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8q",
+      "name": "基本牆:通用 - 300mm:355828",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8r",
+      "name": "基本牆:通用 - 200mm:355829",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8s",
+      "name": "基本牆:通用 - 200mm:355830",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8t",
+      "name": "基本牆:通用 - 200mm:355831",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8u",
+      "name": "基本牆:通用 - 100mm:355832",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8v",
+      "name": "基本牆:通用 - 100mm:355833",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8w",
+      "name": "基本牆:通用 - 50mm:355834",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8x",
+      "name": "基本牆:通用 - 100mm:355835",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8y",
+      "name": "基本牆:通用 - 120mm:355836",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C8z",
+      "name": "基本牆:通用 - 120mm:355837",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C77",
+      "name": "基本牆:通用 - 100mm:355847",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C78",
+      "name": "基本牆:通用 - 200mm:355848",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C79",
+      "name": "基本牆:通用 - 200mm:355849",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7A",
+      "name": "基本牆:通用 - 200mm:355850",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7B",
+      "name": "基本牆:通用 - 200mm:355851",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7C",
+      "name": "基本牆:通用 - 200mm:355852",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7D",
+      "name": "基本牆:通用 - 200mm:355853",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7E",
+      "name": "基本牆:通用 - 150mm:355854",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7F",
+      "name": "基本牆:通用 - 150mm:355855",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7G",
+      "name": "基本牆:通用 - 150mm:355856",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7H",
+      "name": "基本牆:通用 - 150mm:355857",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7I",
+      "name": "基本牆:通用 - 150mm:355858",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7J",
+      "name": "基本牆:通用 - 150mm:355859",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7K",
+      "name": "基本牆:通用 - 150mm:355860",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7L",
+      "name": "基本牆:通用 - 150mm:355861",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7M",
+      "name": "基本牆:通用 - 150mm:355862",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7N",
+      "name": "基本牆:通用 - 300mm:355863",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7O",
+      "name": "基本牆:通用 - 300mm:355864",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7P",
+      "name": "基本牆:通用 - 300mm:355865",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7Q",
+      "name": "基本牆:通用 - 500mm:355866",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7R",
+      "name": "基本牆:通用 - 400mm:355867",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7S",
+      "name": "基本牆:通用 - 400mm:355868",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7T",
+      "name": "基本牆:通用 - 100mm:355869",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7U",
+      "name": "基本牆:通用 - 100mm:355870",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7V",
+      "name": "基本牆:通用 - 100mm:355871",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7W",
+      "name": "基本牆:通用 - 100mm:355872",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7X",
+      "name": "基本牆:通用 - 100mm:355873",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7Y",
+      "name": "基本牆:通用 - 100mm:355874",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7Z",
+      "name": "基本牆:通用 - 50mm:355875",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7a",
+      "name": "基本牆:通用 - 50mm:355876",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7b",
+      "name": "基本牆:通用 - 50mm:355877",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7c",
+      "name": "基本牆:通用 - 100mm:355878",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7d",
+      "name": "基本牆:通用 - 100mm:355879",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7e",
+      "name": "基本牆:通用 - 120mm:355880",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7f",
+      "name": "基本牆:通用 - 120mm:355881",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7g",
+      "name": "基本牆:通用 - 200mm:355882",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7h",
+      "name": "基本牆:通用 - 100mm:355883",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7i",
+      "name": "基本牆:通用 - 100mm:355884",
+      "type": "IfcWallStandardCase",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7j",
+      "name": "M_門-通道-雙-嵌平:M_門-通道-雙-190:355885",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7k",
+      "name": "M_門-通道-雙-嵌平:M_門-通道-雙-190:355886",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7l",
+      "name": "M_門-通道-雙-嵌平:M_門-通道-雙-240:355887",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "0zBmwD_Ub9TB94tamDP0x0",
+      "name": "M_門-通道-單-一_Lite:M_門-通道-單-一_Lite:355889",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7o",
+      "name": "M_門-通道-單-一_Lite:M_門-通道-單-一_Lite:355890",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7p",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:355891",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7q",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:355892",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7r",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:355893",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7s",
+      "name": "M_門-內部-單-嵌平_嵌板-木製:管道間:355894",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7u",
+      "name": "M_有裝飾外框的外推窗:0610 x 1220mm:355896",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7v",
+      "name": "M_有裝飾外框的外推窗:0610 x 1220mm:355897",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7w",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:355898",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7x",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:355899",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7y",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:355900",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7z",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:355901",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7_",
+      "name": "M_有裝飾外框的滑軌:1830 x 1220mm:355902",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C7$",
+      "name": "M_固定:2500 x 2000mm:355903",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C60",
+      "name": "M_固定:2000 x 1500mm:355904",
+      "type": "IfcWindow",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ak8KZXOP4XgRmB_sI9C61",
+      "name": "M_門-外部-雙層:M_門-外部-雙層:355905",
+      "type": "IfcDoor",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZl",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357364",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZj",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357366",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZZ",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357368",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZX",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357370",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZd",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357372",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atZb",
+      "name": "M_混凝土-矩形樑:600 x 800mm:357374",
+      "type": "IfcBeam",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3TrcNXv2n8JPmhwUW1atvB",
+      "name": "複合天花板:600 x 600mm 網格:357712",
+      "type": "IfcCovering",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "20YY3Q511Bl8_Rn3dCoKXJ",
+      "name": "樓板:通用 200mm:359989",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2ceLsu50b0l9$K6JEvHhGW",
+      "name": "樓板:通用 200mm:359989:2",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "3WHLOFOWD2mhfUK5II8b8f",
+      "name": "樓板:通用 200mm:359989:3",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    },
+    {
+      "id": "2UODFD0YL0RQQOOD2u1hJr",
+      "name": "樓板:通用 200mm:359989:4",
+      "type": "IfcSlab",
+      "parent": "2mITlFF8n9jwmXJCxjBhqr"
+    }
+  ]
+}

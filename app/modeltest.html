@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>3D BIM視覺化監控平台</title>
+
+    <!-- BIMViewer styles -->
+    <link rel="stylesheet" href="./lib/fontawesome-free-5.11.2-web/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/BIMViewer.css" type="text/css"/>
+
+    <!-- App style -->
+    <link rel="stylesheet" href="./css/style.css"/>
+
+    <!-- App tooltips style -->
+    <link rel="stylesheet" href="./lib/backdrop.css"/>
+
+    <!-- add sbmsx 3d viewer style -->
+    <link rel="stylesheet" type="text/css" href="../css/SBMSX3DViewer.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../src/testGuage/Guage.js"></script>
+    
+<style>
+        @media screen and (min-width: 1750px){
+            .panel-left{
+                width: 25%;
+                height: 100%;
+                display: flex;
+                left: 0.5%;
+            }
+            .panel-left > div{
+                margin: 5% 0%;
+                align-self: stretch;
+                margin-bottom: auto;
+                border: 1px solid black;
+            }    
+            .guageChartLeft{
+                left: 35%;
+                top: 5%;
+
+            }
+            .guageChartRight{
+                left: 50%;
+                top: 5%;
+
+            }
+        }
+        /* 寬度1750以下預設右方圖表縮進去 */
+        @media screen and (max-width: 1750px){
+            #realtimeInfoBlock{
+                display: none;
+            }
+            .guageChartLeft{
+                left: 1%;
+                top: 15%;
+            }
+            .guageChartRight{
+                right: 1%;
+                left: auto;
+                top: 15%;
+            }
+            .panel-left{
+                width: 100%;
+                height: auto;
+                display: block;
+                left: 0%;
+            }
+            .panel-left > div{
+                margin: 0% 0%;
+                align-self: stretch;
+                margin-bottom: auto;
+                border: 1px solid black;
+            }    
+            .alarm-bar{
+                overflow: auto;
+                width: 100%;
+                margin-top: 0px;
+                height: 105px;
+            }
+            .top-alarm-tbody{
+                display: table-row-group;
+            }
+            .alarm-tbody{
+                display: table-row-group;
+            }
+            #treeViewContainer{
+                display: none;
+            }
+            #pickedDescription{
+                display: none;
+                position: fixed;
+                left: 1%;
+                bottom: 1%;
+                width: 50%;
+            }
+        }
+        /* 寬度1024以下預設左方警報表格剩一行縮進去 */
+        @media screen and (max-width: 1024px){
+        }
+
+        
+        @keyframes fade {
+            from {
+                opacity: 1.0;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            to {
+                opacity: 1.0;
+            }
+        }
+        body > div {
+            margin: 0%;
+        }
+
+           
+        .panel-left{
+            position: absolute;
+            z-index: 200000;
+            background-color: #E5E5E5;
+            flex-direction: column;
+            align-content: space-between;
+            flex-wrap: wrap;
+        }
+        #bimViewerContent {
+            width: 100%;
+            height: 100%;
+            background: #f2f2f2;
+        }
+        #myCanvas{
+            /*background-color: #00142F;*/
+            background-color: #E5E5E5;
+            opacity: 0.9;
+            margin-right: 5px;
+        }
+        
+        #myNavCubeCanvas {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            z-index: 200000;
+        }
+        
+        /* ----------------------------------------------------------------------------------------------------------*/
+        /* TreeViewPlugin */
+        /* ----------------------------------------------------------------------------------------------------------*/
+
+        #treeViewContainer {
+            border-radius: 5px;
+            pointer-events: all;
+            height: auto;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background-color: rgba(255, 255, 255, 1);
+            color: black;
+            top: 300px;
+            z-index: 200000;
+            float: left;
+            left: 1%;
+            padding-left: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            width: 100%;
+            padding: 0px;
+            flex: 1;
+            border: 1px solid black;
+        }
+
+        #treeViewContainer ul {
+            list-style: none;
+            padding-left: 1.75em;
+            pointer-events: none;
+        }
+
+        #treeViewContainer ul li {
+            position: relative;
+            width: auto;
+            pointer-events: none;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            vertical-align: middle;
+        }
+
+        #treeViewContainer ul li a {
+            background-color: #eee;
+            border-radius: 50%;
+            color: #000;
+            display: inline-block;
+            height: 1.5em;
+            left: -1.5em;
+            position: absolute;
+            text-align: center;
+            text-decoration: none;
+            width: 1.5em;
+            pointer-events: all;
+        }
+
+        #treeViewContainer ul li a.plus {
+            background-color: #ded;
+            pointer-events: all;
+        }
+
+        #treeViewContainer ul li a.minus {
+            background-color: #eee;
+            pointer-events: all;
+        }
+
+        #treeViewContainer ul li a:active {
+            top: 1px;
+            pointer-events: all;
+        }
+
+        #treeViewContainer ul li span:hover {
+            color: white;
+            cursor: pointer;
+            background: black;
+            padding-left: 2px;
+            pointer-events: all;
+        }
+
+        #treeViewContainer ul li span {
+            display: inline-block;
+            width: calc(100% - 50px);
+            padding-left: 2px;
+            pointer-events: all;
+            height: 23px;
+        }
+
+        #treeViewContainer .highlighted-node { /* Appearance of node highlighted with TreeViewPlugin#showNode() */
+            border: black solid 1px;
+            background: yellow;
+            color: black;
+            padding-left: 1px;
+            padding-right: 5px;
+            pointer-events: all;
+        }
+        /* Remove default bullets */
+        ul, #myUL {
+          list-style-type: none;
+        }
+
+        /* Remove margins and padding from the parent ul */
+        #myUL {
+          margin: 0;
+          padding: 0;
+        }
+        #myUL .li: hover{
+            color: white;
+            cursor: pointer;
+            background: black;
+            padding-left: 2px;
+            pointer-events: all;
+        }
+
+        /* Style the caret/arrow */
+        .caret {
+          cursor: pointer;
+          user-select: none; /* Prevent text selection */
+        }
+
+        /* Create the caret/arrow with a unicode, and style it */
+        .caret::before {
+          content: "\25B6";
+          color: black;
+          display: inline-block;
+          margin-right: 6px;
+        }
+
+        /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+        .caret-down::before {
+          transform: rotate(90deg);
+        }
+
+        /* Hide the nested list */
+        .nested {
+          display: none;
+        }
+
+        /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+        .active {
+          display: block;
+        }
+
+    </style>
+
+</head>
+
+
+<body onload="playAudio();" style="display:flex;">
+    <div class="panel-left" style="">
+        <div id="alarmBar" class="alarm-bar" >
+            <button onclick="jumpToHref()" style="display: none;"> jump </button>
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>警報名稱</th>
+                            <th>發生位置</th>
+                            <th>警報描述</th>
+                            <th>發生時間</th>
+                        </tr>
+                    </thead>
+                    <tbody class="top-alarm-tbody">
+                        <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-M1:742696');">
+                            <td>電錶箱:A-M1</td>
+                            <td>B1F</td>
+                            <td>溫度過高</td>
+                            <td>2021/05/06 16:43:13</td>
+                        </tr>
+                    </tbody>
+                    <tbody class="alarm-tbody">
+                        <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-M1:742696');">
+                            <td>電錶箱:A-M1</td>
+                            <td>B1F</td>
+                            <td>溫度過高</td>
+                            <td>2021/05/06 16:43:13</td>
+                        </tr>
+                    </tbody>
+                    <tbody class="alarm-tbody">
+                        <tr class="alarm-tr" onclick="flyToObj('電錶箱:A-MB1:744599');">
+                            <td>電錶箱:A-MB1</td>
+                            <td>B1F</td>
+                            <td>耗電過高</td>
+                            <td>2021/05/03 20:08:37</td>
+                        </tr>
+                    </tbody>
+                    <tbody class="alarm-tbody">
+                        <tr class="alarm-tr" onclick="flyToObj('受電箱:PA9:738272');">
+                            <td>受電箱:PA9</td>
+                            <td>B1F</td>
+                            <td>箱體被開啟</td>
+                            <td>2021/05/01 13:59:45</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id="treeViewContainer">
+            <ul id="myUL">
+              <li><span class="caret">B1F</span>
+                <ul class="nested">
+                  <li><span id="735863">配電箱室</span></li>
+                  <li><span class="caret">電盤室</span>
+                    <ul class="nested">
+                      <li><span id="1163161">發電機組</span></li>
+                      <li><span id="1143128">消音箱</span></li>
+                      <li><span id="945924">電盤</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+        <div id="pickedDescription" class="section-description" style="display: none;"> 
+        </div>
+    </div>
+<div id="myViewer" class="xeokit-busy-modal-backdrop" style="">
+    <div id="bimViewerContent" style="background-color: #00142F;">
+        <div id="myToolbar"></div>
+        <canvas id="myCanvas"></canvas>
+        <canvas id="myNavCubeCanvas"></canvas>
+        
+    </div>
+</div>
+<div id="realtimeInfoBlock" class="realtimeInfoBlock" style="">
+
+    <div class="realtimePieChartBlock" style="width:100%">
+        <div class="container" style="margin: 0 2%;width: 45%;">
+            <canvas id="pieChart1" width="300" height="300" style=""></canvas>
+        </div>
+        <div class="container" style="margin: 0 2%;width: 45%;">
+            <canvas id="pieChart2" width="300" height="300" style=""></canvas>
+        </div>
+    </div>
+    <div class="realtimeBarChartBlock" style="width:100%">
+        <div class="container" style="margin: 0 2%;width: 45%;">
+            <canvas id="barChart1" width="300" height="300" style=""></canvas>
+        </div>
+        <div class="container" style="margin: 0 2%;width: 45%;">
+            <canvas id="barChart2" width="300" height="300" style=""></canvas>
+        </div>
+    </div>
+    <div class="realtimeLineChartBlock" style="width:95%margin: 0 2%;">
+        <div class="container" style="width: 600px; margin: 0 auto;">
+            <canvas id="lineChart1" width="600" height="300" style=""></canvas>
+        </div>
+    </div>
+</div>
+
+<canvas id="ericChart" class="guageChartLeft" width="230" height="230" style="z-index: 30000; display: block; position: absolute;"></canvas>
+<canvas id="singleGuageChart" class="guageChartRight" width="230" height="230" style="z-index: 30000; display: none; position: absolute;"></canvas>
+<div class="progress-pie-chart" style="display: none;" data-percent="43">
+  <div class="ppc-progress">
+    <div class="ppc-progress-fill"></div>
+  </div>
+  <div class="ppc-percents">
+    <div class="pcc-percents-wrapper">
+      <span>%</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+<input type="button" id="alarmButton" style="background-image: url(../images/alarm.png);width: 25px;height: 25px;position: absolute;left: 1%;top: 1%;z-index: 10000000;background-color: #fff;opacity: 0.5;background-repeat: no-repeat;background-size: contain;" onclick="playAudioButton();"/>
+<input type="button" id="alarmOffButton" style="background-image: url(../images/alarm_off.png);width: 25px;height: 25px;position: absolute;left: 3%;top: 1%;z-index: 10000000;background-color: #fff;opacity: 0.5;background-repeat: no-repeat;background-size: contain;display: none;" onclick="stopAudioButton();"/>
+<audio loop="loop" id="alarmSound" autoplay="autoplay" controls="" src="../app/data/projects/WaterLock/models/design/Alarm.mp3" style="display: none;">
+    <source id="mp3Source" type="audio/mp3">
+</audio>
+</body>
+
+
+
+<!-- App tooltips libraries-->
+<script src="./lib/popper.js"></script>
+<script src="./lib/tippy.js"></script>
+<script type="text/javascript">
+	// Show loading animation.
+	var audioElement = document.getElementById("alarmSound");
+	$('#mp3Source').attr('src', '../app/data/projects/WaterLock/models/design/Alarm.mp3');
+
+    var mainGuage = new GuageConstructor("ericChart", "總耗電量", "kWh" , 0, 1800, 0, '#FF0000', '#00FF00', '#FFFF00', '#FF0000');
+    //#FFFF00 yellow 
+    //#FF0000 red 
+    //#0000FF blue 
+    //#00FF00 green 
+    var objectGuage = new GuageConstructor("singleGuageChart", "剩餘電量", "kWh" , 0, 1800, 0, '#00FF00', '#FF0000', '#FFFF00', '#00FF00');
+
+	function flyToObj(id){
+    	viewer.cameraFlight.flyTo({
+           eye: [18.19818216787675, 50.62481820997672, 84.90265774075178],
+           look: [-34.04913595507719, -1.6224999129772186, 32.655339617797836],
+           up: [-1, 1, -1],
+           duration: 1.5
+        },() => {
+             viewer.cameraFlight.flyTo(viewer.scene.objects[id]);
+        });
+    }
+	function playAudio(){
+        document.getElementById("alarmSound").play();
+	}
+    function playAudioButton(){
+        document.getElementById("alarmSound").play();
+        $('#alarmButton').css('display', 'none');
+        $('#alarmOffButton').css('display', '');
+    }
+    function stopAudioButton(){
+        document.getElementById("alarmSound").pause();
+        $('#alarmButton').css('display', '');
+        $('#alarmOffButton').css('display', 'none');
+    }
+	function jumpToHref(){
+        window.location.href = "https://yutim0907.github.io/app/testIndex.html?projectId=WaterLock";
+	}
+    var alarmTick = false;
+    var isAlarm = false;
+    var oriColorForAlarm = undefined;
+    
+    function switchAlarmType(){
+        if(alarmTick){
+                alarmTick = false;
+            }else{
+                alarmTick = true;
+            }
+    }
+    function callAlarmFunc(id){
+        if(isAlarm){
+            if(alarmTick){
+                alarmTick = false;
+                viewer.scene.objects[id].colorize = [1,0,0];
+                //viewer.scene.objects["電錶箱:A-M1:742696"].colorize = [1,0,0];
+            }else{
+                alarmTick = true;
+                viewer.scene.objects[id].colorize = oriColorForAlarm;
+                //viewer.scene.objects["電錶箱:A-M1:742696"].colorize = oriColorForAlarm;
+            }
+        }
+    }
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+    function getRandomColorByCustom(){
+        var colorArray = ['#1D6A96'];
+        //var colorArray = ['#327263', '#4A18DD', '#143A7D', '#0A4C63', '#4237BD', '#1104D0', '#3B3A73', '#742063', '#1F1762', '#311418'];
+        var num = Math.floor(Math.random() * colorArray.length);
+        return colorArray[num];
+    }
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+        // #327263, #4A18DD, #143A7D, #0A4C63, #4237BD
+    }
+    function createTagInfoBox(){
+        annotations.clear();
+        var tagInfoHtml = '';
+        var tagInfoModule = '\
+        <div class="tag-info-card">\
+        <div class="title">\
+        <div class="cat">Tag_TitleCat</div>\
+        </div>\
+        <div class="body">\
+        <h2 class="chapter" id="TagId_Value" style="color: white;">Value : Tag_Value</h2>\
+        <p class="content"> <span class="left">HH : </span>  <span class="right">Tag_HH</span> </p>\
+        <p class="content"> <span class="left">H  : </span>  <span class="right">Tag_H</span> </p>\
+        <p class="content"> <span class="left">L  : </span>  <span class="right">Tag_L</span> </p>\
+        <p class="content"> <span class="left">LL : </span>  <span class="right">Tag_LL</span> </p>\
+        </div>\
+        </div>\
+        ';
+        for(var i=1; i<=6; i++){
+            var tagIdArray = ['KA_BT_A', 'KA_DA_A', 'KA_DP_TEMP', 'KA_N2_FLOW', 'KA_N2_PRESS', 'KA_RUN_HR'];
+            var tmpHtml = tagInfoModule;
+            tmpHtml = tmpHtml.replace('Tag_TitleCat', tagIdArray[i-1]);
+            tmpHtml = tmpHtml.replace('TagId', tagIdArray[i-1]);
+            var tagValue = getRandomInt(10000)/i;
+            var tagHH = getRandomInt(900)*i;
+            var tagH = getRandomInt(700)*i;
+            var tagL = getRandomInt(300)*i;
+            var tagLL = getRandomInt(150)*i;
+            tmpHtml = tmpHtml.replace('Tag_Value', tagValue.toFixed(2));
+            tmpHtml = tmpHtml.replace('Tag_HH', tagHH.toFixed(2));
+            tmpHtml = tmpHtml.replace('Tag_H', tagH.toFixed(2));
+            tmpHtml = tmpHtml.replace('Tag_L', tagL.toFixed(2));
+            tmpHtml = tmpHtml.replace('Tag_LL', tagLL.toFixed(2));
+
+            //文字變色效果
+            if(tagValue >= tagHH || tagValue <= tagLL){
+                tmpHtml = tmpHtml.replace('white', 'red');
+            }else if(tagValue >= tagH || tagValue <= tagL){
+                tmpHtml = tmpHtml.replace('white', 'yellow');
+            }
+            tagInfoHtml += tmpHtml;
+
+        }
+        $('#pickedDescription').html(tagInfoHtml);
+        $('#pickedDescription').css('display', 'inline-block');
+    }
+    //for 用電總覽表格
+    function createEnergyUsedInfoBox(){
+        annotations.clear();
+        var tagInfoHtml = '';
+        var tagInfoModule = '\
+        <div class="tag-info-card">\
+        <div class="title">\
+        <div class="cat" style="font-size:15px;">Tag_TitleCat</div>\
+        </div>\
+        <div class="body">\
+        <h2 class="chapter" id="TagId_Value" style="color: white;font-size:20px">Tag_Value</h2>\
+        </div>\
+        </div>\
+        ';
+        for(var i=1; i<=6; i++){
+            var tagIdArray = ['今日用電', '本周用電', '本月用電', '昨日用電', '上週用電', '上月用電'];
+            var tmpHtml = tagInfoModule;
+            tmpHtml = tmpHtml.replace('Tag_TitleCat', tagIdArray[i-1]);
+            tmpHtml = tmpHtml.replace('TagId', tagIdArray[i-1]);
+            var tagValue = undefined;
+            switch(i){
+                case 1: 
+                case 4:
+                    tagValue = getRandomInt(2000)/10;
+                    tmpHtml = tmpHtml.replace('white', 'lightpink');
+                    break;
+                case 2:
+                case 5:
+                    tagValue = getRandomInt(14000)/10;
+                    tmpHtml = tmpHtml.replace('white', 'greenyellow');
+                    break;
+                case 3:
+                case 6:
+                    tagValue = getRandomInt(60000)/10;
+                    tmpHtml = tmpHtml.replace('white', 'yellow');
+                    break;
+
+            }
+            tmpHtml = tmpHtml.replace('Tag_Value', tagValue.toFixed(2));
+
+            //文字變色效果
+            tagInfoHtml += tmpHtml;
+
+        }
+        $('#pickedDescription').html(tagInfoHtml);
+        $('#pickedDescription').css('display', 'inline-block');
+    }
+    //for 用電總覽表格
+    function displayProgressChart(num, minValue, maxValue) { //已無使用，用來產生純css的progress bar
+        $(".progress-pie-chart").attr('data-percent',num);
+        var $ppc = $(".progress-pie-chart"),
+        percent = parseInt($(".progress-pie-chart").attr('data-percent')) / (maxValue-minValue),
+        deg = (360 * percent);
+        if (percent > 0.5) {
+            $ppc.addClass("gt-50");
+        }else{
+            $ppc.removeClass("gt-50");
+        }
+        $(".ppc-progress-fill").css("transform", "rotate(" + deg + "deg)");
+        $(".ppc-percents span").html(num);
+    }
+
+    //menu tree
+
+    var toggler = document.getElementsByClassName("caret");
+    var i;
+
+    for (i = 0; i < toggler.length; i++) {
+      toggler[i].addEventListener("click", function() {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+      });
+    }
+
+  </script>
+<script type="module">
+
+    // Set up application
+	import {Viewer} from "../src/viewer/Viewer.js";
+    import {XKTLoaderPlugin} from "../src/plugins/XKTLoaderPlugin/XKTLoaderPlugin.js";
+    import {AnnotationsPlugin} from "../src/plugins/AnnotationsPlugin/AnnotationsPlugin.js";
+	import {math} from "../src/viewer/scene/math/math.js";
+	import {NavCubePlugin} from "../src/plugins/NavCubePlugin/NavCubePlugin.js";
+    import {StoreyViewsPlugin} from "../src/plugins/StoreyViewsPlugin/StoreyViewsPlugin.js";
+    import {TreeViewPlugin} from "../src/plugins/TreeViewPlugin/TreeViewPlugin.js";
+    //------------------------------------------------------------------------------------------------------------------
+    // Create a Viewer and arrange the camera
+    //------------------------------------------------------------------------------------------------------------------
+
+    const viewer = new Viewer({
+        canvasId: "myCanvas",
+        transparent: true
+    });
+
+    viewer.camera.eye = [-13.91599279272339, 22.247624182573897, 86.53140440904272];
+    viewer.camera.look = [-41.967179601284855, -15.154679230493077, 11.37168548821765];
+    viewer.camera.up = [-0.1477518803318803, 0.9063365716581099, -0.39588306446906435];
+	
+	new NavCubePlugin(viewer, {
+        canvasId: "myNavCubeCanvas",
+        color: "lightblue",
+        visible: true,           // Initially visible (default)
+        size: 150,               // NavCube size in pixels (default is 200)
+        alignment: "topRight",   // Align NavCube to top-left of Viewer canvas
+        topMargin: 170,          // 170 pixels margin from top of Viewer canvas
+        cameraFly: true,       // Fly camera to each selected axis/diagonal
+        cameraFitFOV: 45,        // How much field-of-view the scene takes once camera has fitted it to view
+        cameraFlyDuration: 0.5 // How long (in seconds) camera takes to fly to each new axis/diagonal
+    });
+
+
+    
+
+
+    //------------------------------------------------------------------------------------------------------------------
+    // Load a model
+    //------------------------------------------------------------------------------------------------------------------
+
+    const xktLoader = new XKTLoaderPlugin(viewer);
+
+
+    const model = xktLoader.load({
+        id: "myModel",
+        src: "../app/data/projects/WaterLock/models/design/AS_ARC_V1_2018.xkt", //中和安邦模型
+        metaModelSrc: "./../app/data/projects/WaterLock/models/design/metaModel_AS_ARC_V1_2018.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
+        edges: true
+        //excludeUnclassifiedObjects: false
+        //globalizeObjectIds:true
+    });
+
+    //------------------------------------------------------------------------------------------------------------------
+    // Create an IFC structure tree view
+    //------------------------------------------------------------------------------------------------------------------
+/*
+    const treeView = new TreeViewPlugin(viewer, {
+        containerElement: document.getElementById("treeViewContainer"),
+        autoExpandDepth: 1, // Initially expand tree three storeys deep
+        hierarchy: "storeys",
+        sortNodes: true
+
+        //sortableStoreysTypes:['IfcBuildingStorey', 'IfcBuildingElementProxy']
+    });
+*/
+    //------------------------------------------------------------------------------------------------------------------
+    // Create an AnnotationsPlugin, with which we'll create annotations
+    //------------------------------------------------------------------------------------------------------------------
+
+    const annotations = new AnnotationsPlugin(viewer, {
+
+        markerHTML: "<div class='annotation-marker {{alarmMarkerClass}}' style='background-color: {{markerBGColor}};'></div>",
+        labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};border-color: {{borderColor}};box-shadow:5px 5px 15px 1px {{labelBGColor}};'>\
+            <div class='annotation-title'>{{title}}</div>\
+            {{tagInfoHtml}}\
+            </div>",
+
+        values: {
+            markerBGColor: "red",
+            borderColor: "#D1DDDB",
+            labelBGColor: "#632A7E",
+            glyph: "X",
+            title: "Untitled",
+            tagInfoHtml: "",
+			alarmMarkerClass: "non-alarm-marker"
+        }
+    });
+    // Add a StoreyViewsPlugin
+    const storeyViewsPlugin = new StoreyViewsPlugin(viewer);
+
+    //const storey = storeyViewsPlugin.storeys["3ifT$Moun0fArr$OcBcK7p"]; // ID of the IfcBuildingStorey
+
+    //const modelId  = storey.modelId;  // "myModel"
+    //const storeyId = storey.storeyId; // "2qIcygzr1CL8mxfDYOyJpk"
+    //const aabb     = storey.aabb;     // Axis-aligned 3D World-space boundary of the IfcBuildingStorey
+
+    
+	
+	
+    var prevAnnotationClicked = null;
+
+    annotations.on("markerClicked", (annotation) => {
+        //if (prevAnnotationClicked) {
+        //    prevAnnotationClicked.setLabelShown(false);
+        //}
+        //annotation.setLabelShown(true);
+        //viewer.cameraFlight.flyTo(annotation);
+        //prevAnnotationClicked = annotation;
+        flyToObj(annotation.entity.id);
+    });
+    annotations.on("markerMouseEnter", (annotation) => {
+        annotation.setLabelShown(true);
+    });
+
+    annotations.on("markerMouseLeave", (annotation) => {
+        annotation.setLabelShown(false);
+    });
+	
+    var lastEntity = null;
+    var lastColorize = null;
+
+    viewer.cameraControl.on("picked", (pickResult) => {
+        const entity = pickResult.entity;
+        const aabb = entity.aabb;
+        const entityCenter = math.getAABB3Center(aabb);
+
+        const metaObject = viewer.metaScene.metaObjects[entity.id];
+
+        if (!pickResult.entity) {
+            return;
+        }
+
+        //$('#pickedDescription').html('您點選的為 : ' + pickResult.entity.id);
+
+        if (!lastEntity || pickResult.entity.id !== lastEntity.id) {
+
+            if (lastEntity) {
+                lastEntity.colorize = lastColorize;
+            }
+
+            lastEntity = pickResult.entity;
+            lastColorize = pickResult.entity.colorize ? pickResult.entity.colorize.slice() : null;
+            
+            $('#singleGuageChart').css('display','');
+
+            pickResult.entity.colorize = [8/255, 247/255, 254/255];
+            createTagInfoBox();
+            annotations.createAnnotation({
+
+                    id: "Anno_" + entity.id,
+
+                    entity: entity,
+
+                    worldPos: entityCenter,
+
+
+                    //eye: [56.667458498170404, 100.58910225943117, 97.40153241646453],
+                    //look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
+                    //up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
+                    
+                    occludable: false,
+                    markerShown: true,
+                    labelShown: true,
+
+                    values: {
+                        glyph: "",
+                        labelBGColor: getRandomColorByCustom(),
+                        title: entity.id,
+                        markerBGColor: "green",
+                        alarmMarkerClass: "non-alarm-marker"
+                    }
+            });
+            
+            startChange(getRandomInt(1800), objectGuage);
+
+            /* Tim的儀表元件
+            var num = getRandomInt(180);
+            displayProgressChart(num, 0, 180);
+            $(".progress-pie-chart").css('display','block'); 
+            */
+        }
+    });
+
+    viewer.cameraControl.on("pickedNothing", () => {
+        annotations.clear();
+        createEnergyUsedInfoBox();
+        $(".progress-pie-chart").css('display','none');
+        $('#singleGuageChart').css('display','none');
+        if (lastEntity) {
+            lastEntity.colorize = lastColorize;
+            lastEntity = null;
+        }
+    });
+	
+    var lastHoverEntity = null;
+    var lastOpacity = null;
+
+    viewer.scene.input.on("mousemove", function (coords) {
+
+        var hit = viewer.scene.pick({
+            canvasPos: coords
+        });
+
+        if (hit) {
+
+            if (!lastHoverEntity || hit.entity.id !== lastHoverEntity.id) {
+
+                if (lastHoverEntity) {
+                    lastHoverEntity.opacity = lastOpacity;
+                }
+
+                lastHoverEntity = hit.entity;
+                lastOpacity = hit.entity.opacity;
+
+                hit.entity.opacity = 0.6;
+            }
+        } else {
+            if (lastHoverEntity) {
+                lastHoverEntity.opacity = lastOpacity;
+                lastHoverEntity = null;
+            }
+        }
+    });
+
+    model.on("loaded", () => {
+        //oriColorForAlarm = Object.assign({}, viewer.scene.objects["電錶箱:A-M1:742696"].colorize);
+        //oriColorForAlarm = tempColor;
+        Object.keys(viewer.scene.objects).forEach(element => {
+            if(element.indexOf('箱') < 0){
+                viewer.scene.objects[element].colorize = [255/255, 255/255, 255/255];
+                viewer.scene.objects[element].opacity = 1;
+            }
+            if(element.indexOf('電錶') > -1){
+                viewer.scene.objects[element].colorize = [255/255, 255/255, 0];
+                viewer.scene.objects[element].opacity = 1;
+            }
+
+            }
+        );
+        var metaCount = 0;
+        Object.keys(viewer.metaScene.metaObjects).forEach(element => {
+            metaCount++;
+             }   
+            );
+        console.log('meta objects count = ' + metaCount);
+        createGaugeChart(objectGuage, 0);
+        createGaugeChart(mainGuage, getRandomInt(1800));
+/*
+        //------------------------------------------------------------------------------------------------------------------
+        // Create some Annotations   spoon reject rare water annual soda high used quality prefer tone trick
+        //------------------------------------------------------------------------------------------------------------------
+		for(var i=0; i< viewer.scene._numObjects; i++){
+            if(viewer.scene.visibleObjectIds[i].indexOf('電錶') === 0 || viewer.scene.visibleObjectIds[i].indexOf('受電箱') === 0){
+                var objectName = viewer.scene.visibleObjectIds[i];
+                var entity = viewer.scene.objects[objectName];
+                var aabb = entity.aabb;
+                var entityCenter = math.getAABB3Center(aabb);
+                //do something
+                annotations.createAnnotation({
+
+                    id: "Anno_" + objectName,
+
+                    entity: entity,
+
+                    worldPos: entityCenter,
+
+
+                    eye: [56.667458498170404, 100.58910225943117, 97.40153241646453],
+                    look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
+                    up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
+                    
+                    occludable: true,
+                    markerShown: true,
+                    labelShown: false,
+
+                    values: {
+                        glyph: "",
+                        title: objectName,
+                        description: objectName,
+                        markerBGColor: "green",
+                        alarmMarkerClass: "non-alarm-marker"
+                    }
+                });
+            }
+        }
+
+*/
+		//const entity1 = viewer.scene.objects["電錶箱:A-M1:742696"];
+		//const aabb1 = entity1.aabb;
+		//const entity1Center = math.getAABB3Center(aabb1);
+		
+	   //const entity2 = viewer.scene.objects["電錶箱:A-M2:744436"];
+		//const aabb2 = entity2.aabb;
+		//const entity2Center = math.getAABB3Center(aabb2);
+
+        /*
+        annotations.createAnnotation({
+
+            id: "744436",
+
+            entity: viewer.scene.objects["電錶箱:A-M1:742696"],
+
+            worldPos: entity1Center,
+
+
+            eye: [56.667458498170404, 100.58910225943117, 97.40153241646453],
+            look: [55.85881464760279, 91.36010069467739, 86.85887621134985],
+            up:  [-0.05028999060521914, 0.7533853925477513, -0.6556533894830393],
+			
+            occludable: false,
+            markerShown: true,
+            labelShown: false,
+
+            values: {
+                glyph: "",
+                title: "電錶箱:A-M1",
+                description: "電錶箱:A-M1",
+                markerBGColor: "red",
+				alarmMarkerClass: "alarm-marker"
+            }
+        });
+		
+		annotations.createAnnotation({
+
+            id: "Tag01",
+
+            entity: viewer.scene.objects["電錶箱:A-M2:744436"],
+
+            worldPos: entity2Center,
+
+
+            eye: [59.15625335551127, 100.67655645689116, 31.904384957338436],
+            look: [58.51164099993461, 94.4493317010133, 24.87251256698793],
+            up:  [-0.06037922135105747, 0.750016135769919, -0.6586578365993976],
+			
+            occludable: false,
+            markerShown: true,
+            labelShown: false,
+
+            values: {
+                glyph: "",
+                title: "電錶箱:A-M2",
+                description: "電錶箱:A-M2",
+                markerBGColor: "green",
+				alarmMarkerClass: "non-alarm-marker"
+            }
+        });
+		
+		*/
+
+
+		//var testGetWorldPos = getEntityWorldPosByObjectId("電錶箱:A-M2:744436");
+
+        isAlarm = true;
+        var alarmInterval = window.setInterval(switchAlarmType, 1000);
+        
+        //var timeoutAlarm1 = window.setInterval(function(){callAlarmFunc("電錶箱:A-M1:742696");}, 1000);
+        //var timeoutAlarm2 = window.setInterval(function(){callAlarmFunc("電錶箱:A-MB1:744599");}, 1000);
+        //var timeoutAlarm3 = window.setInterval(function(){callAlarmFunc("受電箱:PA9:738272");}, 1000);
+
+        var timeChangeTotal = window.setInterval(function(){startChange(700 + getRandomInt(600), mainGuage)}, 30000);
+
+        $('#735863').click(function(e) 
+            { 
+                flyToObj('受電箱:PA1:735863');
+            }
+        );
+        $('#1163161').click(function(e) 
+            { 
+                flyToObj('發電機組-700kW:發電機組-700kW:1163161');
+            }
+        );
+        $('#1143128').click(function(e) 
+            { 
+                flyToObj('消音箱,鍍鋅鋼:消音箱-鍍鋅鋼:1143128');
+            }
+        );
+        $('#945924').click(function(e) 
+            { 
+                flyToObj('TBT_通用盤體_電盤_方形(外掛):電力箱_MP-B3:945924');
+            }
+        );
+        
+        var timeChangeTotal = window.setInterval(function(){startChange(700 + getRandomInt(600), mainGuage)}, 30000);
+        createEnergyUsedInfoBox();
+        /*
+        setTimeout(() => {
+
+            storeyViewsPlugin.showStoreyObjects("3ifT$Moun0fArr$OcBcK7_", {
+                useObjectStates: false
+            });
+
+        }, 1000);
+        */
+
+
+
+		});
+
+
+    	function getEntityWorldPosByObjectId(objectId){
+            if(viewer.scene.numObjects > 0){
+                var entity = viewer.scene.objects[objectId];
+                var aabb = entity.aabb;
+                var entityCenter = math.getAABB3Center(aabb);
+                return entityCenter;
+    	   }
+    	}
+    
+    window.viewer = viewer;
+    window.oldViewer = viewer;
+    window.annotations = annotations;
+    //window.treeView = treeView;
+
+
+
+
+
+</script>
+<script src="../src/testGuage/Chart.js"></script>
+</html>
