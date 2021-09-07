@@ -670,13 +670,12 @@
     //------------------------------------------------------------------------------------------------------------------
 
     const xktLoader = new XKTLoaderPlugin(viewer);
+``
 
-
-    const model = xktLoader.load({
-        id: "myModel",
+    const mep_model = xktLoader.load({
+        id: "as_mep_v1_2018",
         src: "../app/data/projects/WaterLock/models/design/AS_MEP_V1_2018.xkt", //中和安邦模型
         metaModelSrc: "./../app/data/projects/WaterLock/models/design/metaModel_AS_MEP_V1_2018.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
-        excludeTypes: ["IfcSpace"],
         edges: true
         //excludeUnclassifiedObjects: false
         //globalizeObjectIds:true
@@ -855,6 +854,13 @@
     });
 
     model.on("loaded", () => {
+        console.log('first model loaded, loading next model');
+        const arc_model = xktLoader.load({
+            id: "as_mep_v1_2018",
+            src: "../app/data/projects/WaterLock/models/design/AS_ARC_V1_2018.xkt", //arc model
+            metaModelSrc: "./../app/data/projects/WaterLock/models/design/metaModel_AS_ARC_V1_2018.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
+            edges: true
+        });
         //oriColorForAlarm = Object.assign({}, viewer.scene.objects["電錶箱:A-M1:742696"].colorize);
         //oriColorForAlarm = tempColor;
         Object.keys(viewer.scene.objects).forEach(element => {
