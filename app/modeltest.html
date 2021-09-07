@@ -347,20 +347,7 @@
         </div>
         
         <div id="treeViewContainer">
-            <ul id="myUL">
-              <li><span class="caret">B1F</span>
-                <ul class="nested">
-                  <li><span id="735863">配電箱室</span></li>
-                  <li><span class="caret">電盤室</span>
-                    <ul class="nested">
-                      <li><span id="1163161">發電機組</span></li>
-                      <li><span id="1143128">消音箱</span></li>
-                      <li><span id="945924">電盤</span></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            
         </div>
         <div id="pickedDescription" class="section-description" style="display: none;"> 
         </div>
@@ -684,16 +671,14 @@
     //------------------------------------------------------------------------------------------------------------------
     // Create an IFC structure tree view
     //------------------------------------------------------------------------------------------------------------------
-/*
+
     const treeView = new TreeViewPlugin(viewer, {
         containerElement: document.getElementById("treeViewContainer"),
-        autoExpandDepth: 1, // Initially expand tree three storeys deep
-        hierarchy: "storeys",
-        sortNodes: true
-
-        //sortableStoreysTypes:['IfcBuildingStorey', 'IfcBuildingElementProxy']
+        autoExpandDepth: 2, // Initially expand tree three storeys deep
+        //hierarchy: "storeys",
+        //sortNodes: true
     });
-*/
+
     //------------------------------------------------------------------------------------------------------------------
     // Create an AnnotationsPlugin, with which we'll create annotations
     //------------------------------------------------------------------------------------------------------------------
