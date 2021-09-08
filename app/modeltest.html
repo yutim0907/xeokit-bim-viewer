@@ -675,7 +675,7 @@
 
     const treeView = new TreeViewPlugin(viewer, {
         containerElement: document.getElementById("treeViewContainer"),
-        autoAddModels: true,
+        autoAddModels: false,
         autoExpandDepth: 0, // Initially expand tree three storeys deep
         //hierarchy: "storeys",
         //sortNodes: true
@@ -841,6 +841,7 @@
     });
 
     mep_model.on("loaded", () => {
+        treeView.addModel(mep_model.id);
         console.log('first model loaded, loading next model');
         const arc_model = xktLoader.load({
             id: "as_arc_v1_2018",
@@ -849,6 +850,7 @@
             edges: true
         });
         arc_model.on("loaded", () => {
+            treeView.addModel(arc_model.id);
             var numEntities = 0;
             for (var id in viewer.scene.models) {
                 const model = viewer.scene.models[id];
