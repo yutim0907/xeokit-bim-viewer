@@ -311,7 +311,7 @@
                         </tr>
                     </thead>
                     <tbody class="top-alarm-tbody">
-                        <tr class="alarm-tr" onclick="flyToObj('9e054bb7-9987-4561-a4b3-83043041dbfd');">
+                        <tr class="alarm-tr" onclick="flyToObj('1Guy5QZ0z9kAjxmxLSROFp');">
                             <td>伺服器機櫃警報</td>
                             <td>2F</td>
                             <td>溫度過高</td>
@@ -335,10 +335,10 @@
                         </tr>
                     </tbody>
                     <tbody class="alarm-tbody">
-                        <tr class="alarm-tr" onclick="flyToObj('b5763e07-9e4f-4856-9795-a3ba3c2212f2');">
-                            <td>3樓西側窗戶</td>
-                            <td>3F</td>
-                            <td>窗戶被開啟</td>
+                        <tr class="alarm-tr" onclick="flyToObj('1eueiWvM535hDmeCvFxdyg');">
+                            <td>1樓管路</td>
+                            <td>1F</td>
+                            <td>管路異常</td>
                             <td>2021/09/01 13:59:45</td>
                         </tr>
                     </tbody>
@@ -1004,10 +1004,10 @@
         isAlarm = true;
         var alarmInterval = window.setInterval(switchAlarmType, 1000);
         
-        var timeoutAlarm1 = window.setInterval(function(){callAlarmFunc("b5763e07-9e4f-4856-9795-a3ba3c2212f2");}, 1000);
+        var timeoutAlarm1 = window.setInterval(function(){callAlarmFunc('1Guy5QZ0z9kAjxmxLSROFp');}, 1000);
         var timeoutAlarm2 = window.setInterval(function(){callAlarmFunc("0nhokMPMf3$9BnUBxRiThj");}, 1000);
         var timeoutAlarm3 = window.setInterval(function(){callAlarmFunc("0nhokMPMf3$9BnUBxRiTkZ");}, 1000);
-        var timeoutAlarm4 = window.setInterval(function(){callAlarmFunc("9e054bb7-9987-4561-a4b3-83043041dbfd");}, 1000)
+        var timeoutAlarm4 = window.setInterval(function(){callAlarmFunc("1eueiWvM535hDmeCvFxdyg");}, 1000)
 
         var timeChangeTotal = window.setInterval(function(){startChange(700 + getRandomInt(600), mainGuage)}, 30000);
 
