@@ -25,8 +25,7 @@ import {OBJSceneGraphLoader} from "./OBJSceneGraphLoader.js";
  * [[Run this example](http://xeokit.github.io/xeokit-sdk/examples/#loading_OBJ_SportsCar)]
  *
  * ````javascript
- * import {Viewer} from "../src/viewer/Viewer.js";
- * import {OBJLoaderPlugin} from "../src/plugins/OBJLoaderPlugin/OBJLoaderPlugin.js";
+ * import {Viewer, OBJLoaderPlugin} from "xeokit-sdk.es.js";
  *
  * // Create a xeokit Viewer and arrange the camera
  * const viewer = new Viewer({
@@ -87,7 +86,7 @@ class OBJLoaderPlugin extends Plugin {
      * @param {*} params  Loading parameters.
      * @param {String} params.id ID to assign to the model's root {@link Entity}, unique among all components in the Viewer's {@link Scene}.
      * @param {String} params.src Path to an OBJ file.
-     * @param {String} [params.metaModelSrc] Path to an optional metadata file (see: [Model Metadata](https://github.com/xeolabs/xeokit.io/wiki/Model-Metadata)).
+     * @param {String} [params.metaModelSrc] Path to an optional metadata file.
      * @param {Number[]} [params.position=[0,0,0]] The model World-space 3D position.
      * @param {Number[]} [params.scale=[1,1,1]] The model's World-space scale.
      * @param {Number[]} [params.rotation=[0,0,0]] The model's World-space rotation, as Euler angles given in degrees, for each of the X, Y and Z axis.

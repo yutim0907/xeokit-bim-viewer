@@ -35,9 +35,7 @@ import {CubeTextureCanvas} from "./CubeTextureCanvas.js";
  * use the NavCube to look at the model along each axis or diagonal.
  *
  * ````JavaScript
- * import {Viewer} from "../src/viewer/Viewer.js";
- * import {XKTLoaderPlugin} from "../src/plugins/XKTLoaderPlugin/XKTLoaderPlugin.js";
- * import {NavCubePlugin} from "../src/plugins/NavCubePlugin/NavCubePlugin.js";
+ * import {Viewer, XKTLoaderPlugin, NavCubePlugin} from "xeokit-sdk.es.js";
  *
  * const viewer = new Viewer({
  *     canvasId: "myCanvas"
@@ -66,8 +64,7 @@ import {CubeTextureCanvas} from "./CubeTextureCanvas.js";
  *
  * const model = xktLoader.load({
  *     id: "myModel",
- *     src: "./models/xkt/duplex/duplex.xkt",
- *     metaModelSrc: "./metaModels/duplex/metaModel.json", // Sets visual states of object in model
+ *     src: "./models/xkt/Duplex.ifc.xkt",
  *     edges: true
  * });
  * ````
@@ -133,6 +130,9 @@ class NavCubePlugin extends Plugin {
         this._navCubeCamera.ortho.scale = 7.0;
         this._navCubeCamera.ortho.near = 0.1;
         this._navCubeCamera.ortho.far = 2000;
+
+        navCubeScene.edgeMaterial.edgeColor = [0.2, 0.2, 0.2];
+        navCubeScene.edgeMaterial.edgeAlpha = 0.6;
 
         this._zUp = Boolean(viewer.camera.zUp);
 
@@ -483,6 +483,11 @@ class NavCubePlugin extends Plugin {
             })();
         }
 
+        this._onUpdated = viewer.localeService.on("updated", () => {
+            this._cubeTextureCanvas.clear();
+            this._repaint();
+        });
+
         this.setVisible(cfg.visible);
         this.setCameraFitFOV(cfg.cameraFitFOV);
         this.setCameraFly(cfg.cameraFly);
@@ -654,6 +659,7 @@ class NavCubePlugin extends Plugin {
 
         if (this._navCubeCanvas) {
 
+            this.viewer.localeService.off(this._onUpdated);
             this.viewer.camera.off(this._onCameraMatrix);
             this.viewer.camera.off(this._onCameraWorldAxis);
             this.viewer.camera.perspective.off(this._onCameraFOV);

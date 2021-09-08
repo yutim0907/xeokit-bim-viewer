@@ -35,9 +35,7 @@ import {Plugin} from "../../viewer/Plugin.js";
  * [[Run this example](https://xeokit.github.io/xeokit-sdk/examples/#BIMOffline_XKT_Schependomlaan)]
  *
  * ````javascript
- * import {Viewer} from "../src/viewer/Viewer.js";
- * import {XKTLoaderPlugin} from "../src/plugins/XKTLoaderPlugin/XKTLoaderPlugin.js";
- * import {TreeViewPlugin} from "../src/plugins/TreeViewPlugin/TreeViewPlugin.js";
+ * import {Viewer, XKTLoaderPlugin, TreeViewPlugin} from "xeokit-sdk.es.js";
  *
  * const viewer = new Viewer({
  *      canvasId: "myCanvas",
@@ -56,8 +54,7 @@ import {Plugin} from "../../viewer/Plugin.js";
  *
  * const model = xktLoader.load({
  *     id: "myModel",
- *     src: "./models/xkt/schependomlaan/schependomlaan.xkt",
- *     metaModelSrc: "./metaModels/schependomlaan/metaModel.json",
+ *     src: "./models/xkt/Schependomlaan.xkt",
  *     edges: true
  * });
  * ````
@@ -79,8 +76,7 @@ import {Plugin} from "../../viewer/Plugin.js";
  *
  * const model = xktLoader.load({
  *     id: "myModel",
- *     src: "./models/xkt/schependomlaan/schependomlaan.xkt",
- *     metaModelSrc: "./metaModels/schependomlaan/metaModel.json",
+ *     src: "./models/xkt/Schependomlaan.xkt",
  *     edges: true
  * });
  *
@@ -380,7 +376,7 @@ class TreeViewPlugin extends Plugin {
         this._pruneEmptyNodes = (cfg.pruneEmptyNodes !== false);
 
         if (this._autoAddModels) {
-            const modelIds = Object.keys(this.viewer.scene.models);
+            const modelIds = Object.keys(this.viewer.metaScene.metaModels);
             for (let i = 0, len = modelIds.length; i < len; i++) {
                 const modelId = modelIds[i];
                 this.addModel(modelId);
