@@ -649,9 +649,9 @@
      })
     });
 
-    viewer.camera.eye = [-13.91599279272339, 22.247624182573897, 86.53140440904272];
-    viewer.camera.look = [-41.967179601284855, -15.154679230493077, 11.37168548821765];
-    viewer.camera.up = [-0.1477518803318803, 0.9063365716581099, -0.39588306446906435];
+    viewer.camera.eye = [52.79741819205568, 34.410623649887874, -66.89562184052424];
+    viewer.camera.look = [28.763228406732917, 17.862176900185947, -23.475423454650226];
+    viewer.camera.up = [-0.15319208210485508, 0.9486504842383653, 0.2767570138852749];
 	
 	new NavCubePlugin(viewer, {
         canvasId: "myNavCubeCanvas",
@@ -1004,13 +1004,14 @@
         isAlarm = true;
         var alarmInterval = window.setInterval(switchAlarmType, 1000);
         
-        //var timeoutAlarm1 = window.setInterval(function(){callAlarmFunc("電錶箱:A-M1:742696");}, 1000);
-        //var timeoutAlarm2 = window.setInterval(function(){callAlarmFunc("電錶箱:A-MB1:744599");}, 1000);
-        //var timeoutAlarm3 = window.setInterval(function(){callAlarmFunc("受電箱:PA9:738272");}, 1000);
+        var timeoutAlarm1 = window.setInterval(function(){callAlarmFunc("b5763e07-9e4f-4856-9795-a3ba3c2212f2");}, 1000);
+        var timeoutAlarm2 = window.setInterval(function(){callAlarmFunc("0nhokMPMf3$9BnUBxRiThj");}, 1000);
+        var timeoutAlarm3 = window.setInterval(function(){callAlarmFunc("0nhokMPMf3$9BnUBxRiTkZ");}, 1000);
+        var timeoutAlarm4 = window.setInterval(function(){callAlarmFunc("9e054bb7-9987-4561-a4b3-83043041dbfd");}, 1000)
 
         var timeChangeTotal = window.setInterval(function(){startChange(700 + getRandomInt(600), mainGuage)}, 30000);
 
-        $('#735863').click(function(e) 
+/*      $('#735863').click(function(e) 
             { 
                 flyToObj('受電箱:PA1:735863');
             }
@@ -1029,8 +1030,8 @@
             { 
                 flyToObj('TBT_通用盤體_電盤_方形(外掛):電力箱_MP-B3:945924');
             }
-        );
-        
+        );        
+        */  
         var timeChangeTotal = window.setInterval(function(){startChange(700 + getRandomInt(600), mainGuage)}, 30000);
         createEnergyUsedInfoBox();
         /*
