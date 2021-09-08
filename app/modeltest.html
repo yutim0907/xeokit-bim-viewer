@@ -669,17 +669,7 @@
         //globalizeObjectIds:true
     });
 
-    //------------------------------------------------------------------------------------------------------------------
-    // Create an IFC structure tree view
-    //------------------------------------------------------------------------------------------------------------------
-
-    const treeView = new TreeViewPlugin(viewer, {
-        containerElement: document.getElementById("treeViewContainer"),
-        autoExpandDepth: 0, // Initially expand tree three storeys deep
-        //hierarchy: "storeys",
-        //sortNodes: true
-    });
-
+    
     //------------------------------------------------------------------------------------------------------------------
     // Create an AnnotationsPlugin, with which we'll create annotations
     //------------------------------------------------------------------------------------------------------------------
@@ -1041,6 +1031,17 @@
     window.viewer = viewer;
     window.oldViewer = viewer;
     window.annotations = annotations;
+    //------------------------------------------------------------------------------------------------------------------
+    // Create an IFC structure tree view
+    //------------------------------------------------------------------------------------------------------------------
+
+    const treeView = new TreeViewPlugin(viewer, {
+        containerElement: document.getElementById("treeViewContainer"),
+        autoExpandDepth: 0, // Initially expand tree three storeys deep
+        //hierarchy: "storeys",
+        //sortNodes: true
+    });
+
     //window.treeView = treeView;
 
 
