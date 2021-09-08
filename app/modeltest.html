@@ -879,7 +879,7 @@
             });
             console.log('meta objects count = ' + metaCount);
         })
-        //oriColorForAlarm = Object.assign({}, viewer.scene.objects["電錶箱:A-M1:742696"].colorize);
+        oriColorForAlarm = [255/255, 255/255, 255/255];
         //oriColorForAlarm = tempColor;
         Object.keys(viewer.scene.objects).forEach(element => {
             if(element.indexOf('箱') < 0){
