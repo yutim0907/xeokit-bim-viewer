@@ -70,17 +70,19 @@ class TrianglesInstancingColorQualityRenderer {
             const renderFlags = model.renderFlags;
             for (let sectionPlaneIndex = 0; sectionPlaneIndex < numSectionPlanes; sectionPlaneIndex++) {
                 const sectionPlaneUniforms = this._uSectionPlanes[sectionPlaneIndex];
-                const active = renderFlags.sectionPlanesActivePerLayer[baseIndex + sectionPlaneIndex];
-                gl.uniform1i(sectionPlaneUniforms.active, active ? 1 : 0);
-                if (active) {
-                    const sectionPlane = sectionPlanes[sectionPlaneIndex];
-                    if (rtcCenter) {
-                        const rtcSectionPlanePos = getPlaneRTCPos(sectionPlane.dist, sectionPlane.dir, rtcCenter, tempVec3a);
-                        gl.uniform3fv(sectionPlaneUniforms.pos, rtcSectionPlanePos);
-                    } else {
-                        gl.uniform3fv(sectionPlaneUniforms.pos, sectionPlane.pos);
+                if (sectionPlaneUniforms) {
+                    const active = renderFlags.sectionPlanesActivePerLayer[baseIndex + sectionPlaneIndex];
+                    gl.uniform1i(sectionPlaneUniforms.active, active ? 1 : 0);
+                    if (active) {
+                        const sectionPlane = sectionPlanes[sectionPlaneIndex];
+                        if (rtcCenter) {
+                            const rtcSectionPlanePos = getPlaneRTCPos(sectionPlane.dist, sectionPlane.dir, rtcCenter, tempVec3a);
+                            gl.uniform3fv(sectionPlaneUniforms.pos, rtcSectionPlanePos);
+                        } else {
+                            gl.uniform3fv(sectionPlaneUniforms.pos, sectionPlane.pos);
+                        }
+                        gl.uniform3fv(sectionPlaneUniforms.dir, sectionPlane.dir);
                     }
-                    gl.uniform3fv(sectionPlaneUniforms.dir, sectionPlane.dir);
                 }
             }
         }
@@ -266,8 +268,7 @@ class TrianglesInstancingColorQualityRenderer {
         gl.uniformMatrix4fv(this._uProjMatrix, false, project.matrix);
 
         if (this._uLightAmbient) {
-            const ambientColor = scene._lightsState.getAmbientColor();
-            gl.uniform4f(this._uLightAmbient, ambientColor[0], ambientColor[1], ambientColor[2], 1.0);
+            gl.uniform4fv(this._uLightAmbient, scene._lightsState.getAmbientColorAndIntensity());
         }
 
         for (let i = 0, len = lights.length; i < len; i++) {
@@ -426,7 +427,7 @@ class TrianglesInstancingColorQualityRenderer {
 
         src.push("vec4 modelNormal = vec4(octDecode(normal.xy), 0.0); ");
         src.push("vec4 worldNormal = worldNormalMatrix * vec4(dot(modelNormal, modelNormalMatrixCol0), dot(modelNormal, modelNormalMatrixCol1), dot(modelNormal, modelNormalMatrixCol2), 0.0);");
-        src.push("vec3 viewNormal = normalize(vec4(viewNormalMatrix * worldNormal).xyz);");
+        src.push("vec3 viewNormal = vec4(viewNormalMatrix * worldNormal).xyz;");
 
         src.push("vec4 clipPos = projMatrix * viewPosition;");
         if (scene.logarithmicDepthBufferEnabled) {
@@ -698,7 +699,7 @@ class TrianglesInstancingColorQualityRenderer {
             }
 
             if (lightsState.reflectionMaps.length > 0) {
-                src.push("   vec3 reflectVec             = reflect(-geometry.viewEyeDir, geometry.viewNormal);");
+                src.push("   vec3 reflectVec             = reflect(geometry.viewEyeDir, geometry.viewNormal);");
                 src.push("   reflectVec                  = inverseTransformDirection(reflectVec, viewMatrix);");
                 src.push("   float blinnExpFromRoughness = GGXRoughnessToBlinnExponent(material.specularRoughness);");
                 src.push("   vec3 radiance               = getLightProbeIndirectRadiance(reflectVec, blinnExpFromRoughness, 8);");
@@ -767,7 +768,7 @@ class TrianglesInstancingColorQualityRenderer {
         src.push("material.specularColor     = mix(vec3(dielectricSpecular), diffuseColor, metallic);");
 
         src.push("geometry.position      = vViewPosition.xyz;");
-        src.push("geometry.viewNormal    = -vViewNormal;");
+        src.push("geometry.viewNormal    = -normalize(vViewNormal);");
         src.push("geometry.viewEyeDir    = normalize(vViewPosition.xyz);");
         if (lightsState.lightMaps.length > 0) {
             src.push("geometry.worldNormal   = normalize(vWorldNormal);");

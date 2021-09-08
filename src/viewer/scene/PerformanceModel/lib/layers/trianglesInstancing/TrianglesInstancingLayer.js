@@ -18,6 +18,13 @@ const tempVec4b = math.vec4([0, 0, 0, 1]);
 const tempVec4c = math.vec4([0, 0, 0, 1]);
 const tempVec3fa = new Float32Array(3);
 
+const tempVec3a = math.vec3();
+const tempVec3b = math.vec3();
+const tempVec3c = math.vec3();
+const tempVec3d = math.vec3();
+const tempVec3e = math.vec3();
+const tempVec3f = math.vec3();
+
 /**
  * @private
  */
@@ -41,7 +48,7 @@ class TrianglesInstancingLayer {
          * State sorting key.
          * @type {string}
          */
-        this.sortId = "TrianglesInstancingLayer" + cfg.solid ? "-solid" : "-surface";
+        this.sortId = "TrianglesInstancingLayer" + (cfg.solid ? "-solid" : "-surface") + (cfg.normals ? "-normals" : "-autoNormals");
 
         /**
          * Index of this InstancingLayer in PerformanceModel#_layerList
@@ -61,34 +68,43 @@ class TrianglesInstancingLayer {
         };
 
         const preCompressed = (!!cfg.positionsDecodeMatrix);
+        const pickSurfacePrecisionEnabled = this.model.scene.pickSurfacePrecisionEnabled;
         const gl = this.model.scene.canvas.gl;
 
         if (cfg.positions) {
 
             if (preCompressed) {
 
-                let normalized = false;
+                const normalized = false;
                 stateCfg.positionsBuf = new ArrayBuf(gl, gl.ARRAY_BUFFER, cfg.positions, cfg.positions.length, 3, gl.STATIC_DRAW, normalized);
                 stateCfg.positionsDecodeMatrix.set(cfg.positionsDecodeMatrix);
 
-                let localAABB = math.collapseAABB3();
+                const localAABB = math.collapseAABB3();
                 math.expandAABB3Points3(localAABB, cfg.positions);
                 geometryCompressionUtils.decompressAABB(localAABB, stateCfg.positionsDecodeMatrix);
                 math.AABB3ToOBB3(localAABB, stateCfg.obb);
 
+                if (pickSurfacePrecisionEnabled) {
+                    stateCfg.quantizedPositions = cfg.positions;
+                }
+
             } else {
 
-                let lenPositions = cfg.positions.length;
-                let localAABB = math.collapseAABB3();
+                const lenPositions = cfg.positions.length;
+                const localAABB = math.collapseAABB3();
                 math.expandAABB3Points3(localAABB, cfg.positions);
                 math.AABB3ToOBB3(localAABB, stateCfg.obb);
                 const quantizedPositions = quantizePositions(cfg.positions, localAABB, stateCfg.positionsDecodeMatrix);
                 let normalized = false;
                 stateCfg.positionsBuf = new ArrayBuf(gl, gl.ARRAY_BUFFER, quantizedPositions, lenPositions, 3, gl.STATIC_DRAW, normalized);
+
+                if (pickSurfacePrecisionEnabled) {
+                    stateCfg.quantizedPositions = quantizedPositions;
+                }
             }
         }
 
-        if (cfg.normals) {
+        if (cfg.normals && cfg.normals.length > 0) {
 
             if (preCompressed) {
 
@@ -105,6 +121,10 @@ class TrianglesInstancingLayer {
 
         if (cfg.indices) {
             stateCfg.indicesBuf = new ArrayBuf(gl, gl.ELEMENT_ARRAY_BUFFER, bigIndicesSupported ? new Uint32Array(cfg.indices) : new Uint16Array(cfg.indices), cfg.indices.length, 1, gl.STATIC_DRAW);
+
+            if (pickSurfacePrecisionEnabled) {
+                stateCfg.indices = cfg.indices;
+            }
         }
 
         let edgeIndices = cfg.edgeIndices;
@@ -112,7 +132,6 @@ class TrianglesInstancingLayer {
             edgeIndices = buildEdgeIndices(cfg.positions, cfg.indices, null, cfg.edgeThreshold || 10);
         }
         stateCfg.edgeIndicesBuf = new ArrayBuf(gl, gl.ELEMENT_ARRAY_BUFFER, bigIndicesSupported ? new Uint32Array(edgeIndices) : new Uint16Array(edgeIndices), edgeIndices.length, 1, gl.STATIC_DRAW);
-
 
         this._state = new RenderState(stateCfg);
 
@@ -237,7 +256,9 @@ class TrianglesInstancingLayer {
         this._modelMatrixCol2.push(meshMatrix[10]);
         this._modelMatrixCol2.push(meshMatrix[14]);
 
-        // Note: order of inverse and transpose doesn't matter
+        if (this._state.normalsBuf) {
+
+            // Note: order of inverse and transpose doesn't matter
 
         let transposedMat = math.transposeMat4(meshMatrix, math.mat4()); // TODO: Use cached matrix
         let normalMatrix = math.inverseMat4(transposedMat);
@@ -252,10 +273,11 @@ class TrianglesInstancingLayer {
         this._modelNormalMatrixCol1.push(normalMatrix[9]);
         this._modelNormalMatrixCol1.push(normalMatrix[13]);
 
-        this._modelNormalMatrixCol2.push(normalMatrix[2]);
-        this._modelNormalMatrixCol2.push(normalMatrix[6]);
-        this._modelNormalMatrixCol2.push(normalMatrix[10]);
-        this._modelNormalMatrixCol2.push(normalMatrix[14]);
+            this._modelNormalMatrixCol2.push(normalMatrix[2]);
+            this._modelNormalMatrixCol2.push(normalMatrix[6]);
+            this._modelNormalMatrixCol2.push(normalMatrix[10]);
+            this._modelNormalMatrixCol2.push(normalMatrix[14]);
+        }
 
         // Per-vertex pick colors
 
@@ -297,7 +319,15 @@ class TrianglesInstancingLayer {
         this._state.numInstances++;
 
         const portionId = this._portions.length;
-        this._portions.push({});
+
+        const portion = {};
+
+        if (this.model.scene.pickSurfacePrecisionEnabled) {
+            portion.matrix = meshMatrix.slice();
+            portion.inverseMatrix = null; // Lazy-computed in precisionRayPickSurface
+        }
+
+        this._portions.push(portion);
 
         this._numPortions++;
         this.model.numPortions++;
@@ -323,7 +353,7 @@ class TrianglesInstancingLayer {
             this._state.metallicRoughnessBuf = new ArrayBuf(gl, gl.ARRAY_BUFFER, metallicRoughness, this._metallicRoughness.length, 2, gl.STATIC_DRAW, normalized);
         }
         if (flagsLength > 0) {
-            // Because we only build flags arrays here, 
+            // Because we only build flags arrays here,
             // get their length from the colors array
             let notNormalized = false;
             let normalized = true;
@@ -348,12 +378,14 @@ class TrianglesInstancingLayer {
             this._modelMatrixCol1 = [];
             this._modelMatrixCol2 = [];
 
-            this._state.modelNormalMatrixCol0Buf = new ArrayBuf(gl, gl.ARRAY_BUFFER, new Float32Array(this._modelNormalMatrixCol0), this._modelNormalMatrixCol0.length, 4, gl.STATIC_DRAW, normalized);
-            this._state.modelNormalMatrixCol1Buf = new ArrayBuf(gl, gl.ARRAY_BUFFER, new Float32Array(this._modelNormalMatrixCol1), this._modelNormalMatrixCol1.length, 4, gl.STATIC_DRAW, normalized);
-            this._state.modelNormalMatrixCol2Buf = new ArrayBuf(gl, gl.ARRAY_BUFFER, new Float32Array(this._modelNormalMatrixCol2), this._modelNormalMatrixCol2.length, 4, gl.STATIC_DRAW, normalized);
-            this._modelNormalMatrixCol0 = [];
-            this._modelNormalMatrixCol1 = [];
-            this._modelNormalMatrixCol2 = [];
+            if (this._state.normalsBuf) {
+                this._state.modelNormalMatrixCol0Buf = new ArrayBuf(gl, gl.ARRAY_BUFFER, new Float32Array(this._modelNormalMatrixCol0), this._modelNormalMatrixCol0.length, 4, gl.STATIC_DRAW, normalized);
+                this._state.modelNormalMatrixCol1Buf = new ArrayBuf(gl, gl.ARRAY_BUFFER, new Float32Array(this._modelNormalMatrixCol1), this._modelNormalMatrixCol1.length, 4, gl.STATIC_DRAW, normalized);
+                this._state.modelNormalMatrixCol2Buf = new ArrayBuf(gl, gl.ARRAY_BUFFER, new Float32Array(this._modelNormalMatrixCol2), this._modelNormalMatrixCol2.length, 4, gl.STATIC_DRAW, normalized);
+                this._modelNormalMatrixCol0 = [];
+                this._modelNormalMatrixCol1 = [];
+                this._modelNormalMatrixCol2 = [];
+            }
         }
         if (this._pickColors.length > 0) {
             const normalized = false;
@@ -533,7 +565,9 @@ class TrianglesInstancingLayer {
         tempUint8Vec4[1] = color[1];
         tempUint8Vec4[2] = color[2];
         tempUint8Vec4[3] = color[3];
-        this._state.colorsBuf.setData(tempUint8Vec4, portionId * 4, 4);
+        if (this._state.colorsBuf) {
+            this._state.colorsBuf.setData(tempUint8Vec4, portionId * 4, 4);
+        }
     }
 
     setTransparent(portionId, flags, transparent) {
@@ -649,7 +683,9 @@ class TrianglesInstancingLayer {
         tempUint8Vec4[2] = f2; // z - edges
         tempUint8Vec4[3] = f3; // w - pick
 
-        this._state.flagsBuf.setData(tempUint8Vec4, portionId * 4, 4);
+        if (this._state.flagsBuf) {
+            this._state.flagsBuf.setData(tempUint8Vec4, portionId * 4, 4);
+        }
     }
 
     _setFlags2(portionId, flags) {
@@ -661,7 +697,9 @@ class TrianglesInstancingLayer {
         const clippable = !!(flags & ENTITY_FLAGS.CLIPPABLE) ? 255 : 0;
         tempUint8Vec4[0] = clippable;
 
-        this._state.flags2Buf.setData(tempUint8Vec4, portionId * 4, 4);
+        if (this._state.flags2Buf) {
+            this._state.flags2Buf.setData(tempUint8Vec4, portionId * 4, 4);
+        }
     }
 
     setOffset(portionId, offset) {
@@ -675,7 +713,9 @@ class TrianglesInstancingLayer {
         tempVec3fa[0] = offset[0];
         tempVec3fa[1] = offset[1];
         tempVec3fa[2] = offset[2];
-        this._state.offsetsBuf.setData(tempVec3fa, portionId * 3, 3);
+        if (this._state.offsetsBuf) {
+            this._state.offsetsBuf.setData(tempVec3fa, portionId * 3, 3);
+        }
     }
 
     // ---------------------- COLOR RENDERING -----------------------------------
@@ -686,23 +726,35 @@ class TrianglesInstancingLayer {
         }
         this._updateBackfaceCull(renderFlags, frameCtx);
         if (frameCtx.withSAO && this.model.saoEnabled) {
-            if (frameCtx.pbrEnabled && this.model.pbrEnabled) {
+            if (frameCtx.pbrEnabled && this.model.pbrEnabled && this._state.normalsBuf) {
                 if (this._instancingRenderers.colorQualityRendererWithSAO) {
                     this._instancingRenderers.colorQualityRendererWithSAO.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_OPAQUE);
                 }
             } else {
-                if (this._instancingRenderers.colorRendererWithSAO) {
-                    this._instancingRenderers.colorRendererWithSAO.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_OPAQUE);
+                if (this._state.normalsBuf) {
+                    if (this._instancingRenderers.colorRendererWithSAO) {
+                        this._instancingRenderers.colorRendererWithSAO.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_OPAQUE);
+                    }
+                } else {
+                    if (this._instancingRenderers.flatColorRendererWithSAO) {
+                        this._instancingRenderers.flatColorRendererWithSAO.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_OPAQUE);
+                    }
                 }
             }
         } else {
-            if (frameCtx.pbrEnabled && this.model.pbrEnabled) {
+            if (frameCtx.pbrEnabled && this.model.pbrEnabled && this._state.normalsBuf) {
                 if (this._instancingRenderers.colorQualityRenderer) {
                     this._instancingRenderers.colorQualityRenderer.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_OPAQUE);
                 }
             } else {
-                if (this._instancingRenderers.colorRenderer) {
-                    this._instancingRenderers.colorRenderer.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_OPAQUE);
+                if (this._state.normalsBuf) {
+                    if (this._instancingRenderers.colorRenderer) {
+                        this._instancingRenderers.colorRenderer.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_OPAQUE);
+                    }
+                } else {
+                    if (this._instancingRenderers.flatColorRenderer) {
+                        this._instancingRenderers.flatColorRenderer.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_OPAQUE);
+                    }
                 }
             }
         }
@@ -726,13 +778,19 @@ class TrianglesInstancingLayer {
             return;
         }
         this._updateBackfaceCull(renderFlags, frameCtx);
-        if (frameCtx.pbrEnabled && this.model.pbrEnabled) {
+        if (frameCtx.pbrEnabled && this.model.pbrEnabled && this._state.normalsBuf) {
             if (this._instancingRenderers.colorQualityRenderer) {
                 this._instancingRenderers.colorQualityRenderer.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_TRANSPARENT);
             }
         } else {
-            if (this._instancingRenderers.colorRenderer) {
-                this._instancingRenderers.colorRenderer.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_TRANSPARENT);
+            if (this._state.normalsBuf) {
+                if (this._instancingRenderers.colorRenderer) {
+                    this._instancingRenderers.colorRenderer.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_TRANSPARENT);
+                }
+            } else {
+                if (this._instancingRenderers.flatColorRenderer) {
+                    this._instancingRenderers.flatColorRenderer.drawLayer(frameCtx, this, RENDER_PASSES.COLOR_TRANSPARENT);
+                }
             }
         }
     }
@@ -895,6 +953,91 @@ class TrianglesInstancingLayer {
         }
     }
 
+    //-----------------------------------------------------------------------------------------
+
+    precisionRayPickSurface(portionId, worldRayOrigin, worldRayDir, worldSurfacePos) {
+
+        if (!this.model.scene.pickSurfacePrecisionEnabled) {
+            return false;
+        }
+
+        const state = this._state;
+        const portion = this._portions[portionId];
+
+        if (!portion) {
+            this.model.error("portion not found: " + portionId);
+            return false;
+        }
+
+        if (!portion.inverseMatrix) {
+            portion.inverseMatrix = math.inverseMat4(portion.matrix, math.mat4());
+        }
+
+        const quantizedPositions = state.quantizedPositions;
+        const indices = state.indices;
+        const rtcCenter = state.rtcCenter;
+        const offset = portion.offset;
+
+        const rtcRayOrigin = tempVec3a;
+        const rtcRayDir = tempVec3b;
+
+        rtcRayOrigin.set(rtcCenter ? math.subVec3(worldRayOrigin, rtcCenter, tempVec3c) : worldRayOrigin);  // World -> RTC
+        rtcRayDir.set(worldRayDir);
+
+        if (offset) {
+            math.subVec3(rtcRayOrigin, offset);
+        }
+
+        math.transformRay(this.model.worldNormalMatrix, rtcRayOrigin, rtcRayDir, rtcRayOrigin, rtcRayDir);
+
+        math.transformRay(portion.inverseMatrix, rtcRayOrigin, rtcRayDir, rtcRayOrigin, rtcRayDir);
+
+        const a = tempVec3d;
+        const b = tempVec3e;
+        const c = tempVec3f;
+
+        for (let i = 0, len = indices.length; i < len; i += 3) {
+
+            const ia = indices[i + 0] * 3;
+            const ib = indices[i + 1] * 3;
+            const ic = indices[i + 2] * 3;
+
+            a[0] = quantizedPositions[ia];
+            a[1] = quantizedPositions[ia + 1];
+            a[2] = quantizedPositions[ia + 2];
+
+            b[0] = quantizedPositions[ib];
+            b[1] = quantizedPositions[ib + 1];
+            b[2] = quantizedPositions[ib + 2];
+
+            c[0] = quantizedPositions[ic];
+            c[1] = quantizedPositions[ic + 1];
+            c[2] = quantizedPositions[ic + 2];
+
+            math.decompressPosition(a, state.positionsDecodeMatrix);
+            math.decompressPosition(b, state.positionsDecodeMatrix);
+            math.decompressPosition(c, state.positionsDecodeMatrix);
+
+            if (math.rayTriangleIntersect(rtcRayOrigin, rtcRayDir, a, b, c, worldSurfacePos)) {
+
+                math.transformPoint3(portion.matrix, worldSurfacePos, worldSurfacePos);
+
+                math.transformPoint3(this.model.worldMatrix, worldSurfacePos, worldSurfacePos);
+
+                if (offset) {
+                    math.addVec3(worldSurfacePos, offset);
+                }
+
+                if (rtcCenter) {
+                    math.addVec3(worldSurfacePos, rtcCenter);
+                }
+
+                return true;
+            }
+        }
+
+        return false;
+    }
 
     destroy() {
         const state = this._state;

@@ -40,8 +40,7 @@ import {WEBGL_INFO} from "../webglInfo.js";
  * clipping planes. Finally, we'll use {@link XKTLoaderPlugin} to load the OTC Conference Center model.
  *
  * ````javascript
- * import {Viewer} from "../src/viewer/Viewer.js";
- * import {XKTLoaderPlugin} from "../src/plugins/XKTLoaderPlugin/XKTLoaderPlugin.js";
+ * import {Viewer, XKTLoaderPlugin} from "xeokit-sdk.es.js";
  *
  * const viewer = new Viewer({
  *     canvasId: "myCanvas",
@@ -80,8 +79,7 @@ import {WEBGL_INFO} from "../webglInfo.js";
  *
  * const model = xktLoader.load({
  *     id: "myModel",
- *     src: "./models/xkt/OTCConferenceCenter/OTCConferenceCenter.xkt",
- *     metaModelSrc: "./metaModels/OTCConferenceCenter/metaModel.json",
+ *     src: "./models/xkt/OTCConferenceCenter.xkt"
  *     edges: true
  * });
  * ````
@@ -114,8 +112,7 @@ import {WEBGL_INFO} from "../webglInfo.js";
  * ````javascript
  * const structure = xktLoader.load({
  *      id: "structure",
- *      src: "./models/xkt/WestRiverSideHospital/structure.xkt",
- *      metaModelSrc: "./metaModels/WestRiverSideHospital/structure.json",
+ *      src: "./models/xkt/WestRiverSideHospital/structure.xkt"
  *      edges: true,
  *      saoEnabled: true
  *  });
@@ -125,7 +122,6 @@ import {WEBGL_INFO} from "../webglInfo.js";
  *      const electrical = xktLoader.load({
  *          id: "electrical",
  *          src: "./models/xkt/WestRiverSideHospital/electrical.xkt",
- *          metaModelSrc: "./metaModels/WestRiverSideHospital/electrical.json",
  *          edges: true
  *      });
  *
@@ -134,9 +130,7 @@ import {WEBGL_INFO} from "../webglInfo.js";
  *          const plumbing = xktLoader.load({
  *              id: "plumbing",
  *              src: "./models/xkt/WestRiverSideHospital/plumbing.xkt",
- *              metaModelSrc: "./metaModels/WestRiverSideHospital/plumbing.json",
- *                  edges: true
- *              });
+ *              edges: true
  *          });
  *      });
  * });
@@ -182,7 +176,11 @@ class SAO extends Component {
 
         super(owner, cfg);
 
-        this._supported = WEBGL_INFO.SUPPORTED_EXTENSIONS["OES_standard_derivatives"]; // For computing normals in SAO fragment shader
+        const ua = navigator.userAgent.match(/(opera|chrome|safari|firefox|msie|mobile)\/?\s*(\.?\d+(\.\d+)*)/i);
+        const isSafari = (ua && ua[1].toLowerCase() === "safari");
+
+        this._supported = (!isSafari) &&
+            WEBGL_INFO.SUPPORTED_EXTENSIONS["OES_standard_derivatives"]; // For computing normals in SAO fragment shader
 
         this.enabled = cfg.enabled;
         this.kernelRadius = cfg.kernelRadius;
@@ -231,7 +229,7 @@ class SAO extends Component {
      * Even when enabled, SAO will only apply if supported.
      *
      * Default value is ````false````.
-     * 
+     *
      * @type {Boolean}
      */
     get enabled() {
@@ -291,7 +289,7 @@ class SAO extends Component {
      * Gets the maximum area that SAO takes into account when checking for possible occlusion for each fragment.
      *
      * Default value is ````100.0````.
-     * 
+     *
      * @type {Number}
      */
     get kernelRadius() {
@@ -320,7 +318,7 @@ class SAO extends Component {
      * Gets the degree of darkening (ambient obscurance) produced by the SAO effect.
      *
      * Default value is ````0.15````.
-     * 
+     *
      * @type {Number}
      */
     get intensity() {

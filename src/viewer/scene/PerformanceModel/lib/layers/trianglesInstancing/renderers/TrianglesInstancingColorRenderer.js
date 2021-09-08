@@ -64,17 +64,19 @@ class TrianglesInstancingColorRenderer {
             const renderFlags = model.renderFlags;
             for (let sectionPlaneIndex = 0; sectionPlaneIndex < numSectionPlanes; sectionPlaneIndex++) {
                 const sectionPlaneUniforms = this._uSectionPlanes[sectionPlaneIndex];
-                const active = renderFlags.sectionPlanesActivePerLayer[baseIndex + sectionPlaneIndex];
-                gl.uniform1i(sectionPlaneUniforms.active, active ? 1 : 0);
-                if (active) {
-                    const sectionPlane = sectionPlanes[sectionPlaneIndex];
-                    if (rtcCenter) {
-                        const rtcSectionPlanePos = getPlaneRTCPos(sectionPlane.dist, sectionPlane.dir, rtcCenter, tempVec3a);
-                        gl.uniform3fv(sectionPlaneUniforms.pos, rtcSectionPlanePos);
-                    } else {
-                        gl.uniform3fv(sectionPlaneUniforms.pos, sectionPlane.pos);
+                if (sectionPlaneUniforms) {
+                    const active = renderFlags.sectionPlanesActivePerLayer[baseIndex + sectionPlaneIndex];
+                    gl.uniform1i(sectionPlaneUniforms.active, active ? 1 : 0);
+                    if (active) {
+                        const sectionPlane = sectionPlanes[sectionPlaneIndex];
+                        if (rtcCenter) {
+                            const rtcSectionPlanePos = getPlaneRTCPos(sectionPlane.dist, sectionPlane.dir, rtcCenter, tempVec3a);
+                            gl.uniform3fv(sectionPlaneUniforms.pos, rtcSectionPlanePos);
+                        } else {
+                            gl.uniform3fv(sectionPlaneUniforms.pos, sectionPlane.pos);
+                        }
+                        gl.uniform3fv(sectionPlaneUniforms.dir, sectionPlane.dir);
                     }
-                    gl.uniform3fv(sectionPlaneUniforms.dir, sectionPlane.dir);
                 }
             }
         }
@@ -244,8 +246,7 @@ class TrianglesInstancingColorRenderer {
         gl.uniformMatrix4fv(this._uProjMatrix, false, project.matrix);
 
         if (this._uLightAmbient) {
-            const ambientColor = scene._lightsState.getAmbientColor();
-            gl.uniform4f(this._uLightAmbient, ambientColor[0], ambientColor[1], ambientColor[2], 1.0);
+            gl.uniform4fv(this._uLightAmbient, scene._lightsState.getAmbientColorAndIntensity());
         }
 
         for (let i = 0, len = lights.length; i < len; i++) {

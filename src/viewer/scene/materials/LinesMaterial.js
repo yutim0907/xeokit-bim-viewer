@@ -27,8 +27,7 @@ const PRESETS = {
  * [[Run this example](http://xeokit.github.io/xeokit-sdk/examples/#materials_LinesMaterial)]
  *
  * ````javascript
- * import {Viewer} from "../src/viewer/Viewer.js";
- * import {XKTLoaderPlugin} from "../src/plugins/XKTLoaderPlugin/XKTLoaderPlugin.js";
+ * import {Viewer, XKTLoaderPlugin} from "xeokit-sdk.es.js";
  *
  * const viewer = new Viewer({
  *     canvasId: "myCanvas",
@@ -45,8 +44,7 @@ const PRESETS = {
  *
  * const model = xktLoader.load({
  *      id: "myModel",
- *      src: "./models/xkt/duplex/duplex.xkt",
- *      metaModelSrc: "./metaModels/duplex/metaModel.json"
+ *      src: "./models/xkt/Duplex.ifc.xkt"
  * });
  * ````
  */

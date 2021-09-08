@@ -58,17 +58,19 @@ class TrianglesBatchingDepthRenderer {
             const renderFlags = model.renderFlags;
             for (let sectionPlaneIndex = 0; sectionPlaneIndex < numSectionPlanes; sectionPlaneIndex++) {
                 const sectionPlaneUniforms = this._uSectionPlanes[sectionPlaneIndex];
-                const active = renderFlags.sectionPlanesActivePerLayer[baseIndex + sectionPlaneIndex];
-                gl.uniform1i(sectionPlaneUniforms.active, active ? 1 : 0);
-                if (active) {
-                    const sectionPlane = sectionPlanes[sectionPlaneIndex];
-                    if (rtcCenter) {
-                        const rtcSectionPlanePos = getPlaneRTCPos(sectionPlane.dist, sectionPlane.dir, rtcCenter, tempVec3a);
-                        gl.uniform3fv(sectionPlaneUniforms.pos, rtcSectionPlanePos);
-                    } else {
-                        gl.uniform3fv(sectionPlaneUniforms.pos, sectionPlane.pos);
+                if (sectionPlaneUniforms) {
+                    const active = renderFlags.sectionPlanesActivePerLayer[baseIndex + sectionPlaneIndex];
+                    gl.uniform1i(sectionPlaneUniforms.active, active ? 1 : 0);
+                    if (active) {
+                        const sectionPlane = sectionPlanes[sectionPlaneIndex];
+                        if (rtcCenter) {
+                            const rtcSectionPlanePos = getPlaneRTCPos(sectionPlane.dist, sectionPlane.dir, rtcCenter, tempVec3a);
+                            gl.uniform3fv(sectionPlaneUniforms.pos, rtcSectionPlanePos);
+                        } else {
+                            gl.uniform3fv(sectionPlaneUniforms.pos, sectionPlane.pos);
+                        }
+                        gl.uniform3fv(sectionPlaneUniforms.dir, sectionPlane.dir);
                     }
-                    gl.uniform3fv(sectionPlaneUniforms.dir, sectionPlane.dir);
                 }
             }
         }
@@ -183,6 +185,7 @@ class TrianglesBatchingDepthRenderer {
             src.push("varying vec4 vWorldPosition;");
             src.push("varying vec4 vFlags2;");
         }
+        src.push("varying vec2 vHighPrecisionZW;");
         src.push("void main(void) {");
 
         // flags.x = NOT_RENDERED | COLOR_OPAQUE | COLOR_TRANSPARENT
@@ -210,6 +213,7 @@ class TrianglesBatchingDepthRenderer {
             }
         }
         src.push("gl_Position = clipPos;");
+        src.push("vHighPrecisionZW = gl_Position.zw;");
         src.push("  }");
         src.push("}");
         return src;
@@ -224,13 +228,8 @@ class TrianglesBatchingDepthRenderer {
         if (scene.logarithmicDepthBufferEnabled && WEBGL_INFO.SUPPORTED_EXTENSIONS["EXT_frag_depth"]) {
             src.push("#extension GL_EXT_frag_depth : enable");
         }
-        src.push("#ifdef GL_FRAGMENT_PRECISION_HIGH");
         src.push("precision highp float;");
         src.push("precision highp int;");
-        src.push("#else");
-        src.push("precision mediump float;");
-        src.push("precision mediump int;");
-        src.push("#endif");
         if (scene.logarithmicDepthBufferEnabled && WEBGL_INFO.SUPPORTED_EXTENSIONS["EXT_frag_depth"]) {
             src.push("uniform float logDepthBufFC;");
             src.push("varying float vFragDepth;");
@@ -248,12 +247,14 @@ class TrianglesBatchingDepthRenderer {
         src.push("const float   unpackDownscale = 255. / 256.;");
         src.push("const vec3    packFactors = vec3( 256. * 256. * 256., 256. * 256.,  256. );");
         src.push("const vec4    unpackFactors = unpackDownscale / vec4( packFactors, 1. );");
-        src.push("const float   shiftRight8 = 1. / 256.;");
+        src.push("const float   shiftRight8 = 1.0 / 256.;");
+
         src.push("vec4 packDepthToRGBA( const in float v ) {");
         src.push("    vec4 r = vec4( fract( v * packFactors ), v );");
         src.push("    r.yzw -= r.xyz * shiftRight8;");
         src.push("    return r * packUpScale;");
         src.push("}");
+        src.push("varying vec2 vHighPrecisionZW;");
         src.push("void main(void) {");
         if (clipping) {
             src.push("  bool clippable = (float(vFlags2.x) > 0.0);");
@@ -270,7 +271,12 @@ class TrianglesBatchingDepthRenderer {
         if (scene.logarithmicDepthBufferEnabled && WEBGL_INFO.SUPPORTED_EXTENSIONS["EXT_frag_depth"]) {
             src.push("gl_FragDepthEXT = log2( vFragDepth ) * logDepthBufFC * 0.5;");
         }
-        src.push("    gl_FragColor = packDepthToRGBA(gl_FragCoord.z); "); // Must be linear depth
+        src.push("float fragCoordZ = 0.5 * vHighPrecisionZW[0] / vHighPrecisionZW[1] + 0.5;");
+        if (WEBGL_INFO.SUPPORTED_EXTENSIONS["WEBGL_depth_texture"]) {
+            src.push("    gl_FragColor = vec4(vec3(1.0 - fragCoordZ), 1.0); ");
+        } else {
+            src.push("    gl_FragColor = packDepthToRGBA(fragCoordZ); "); // Must be linear depth
+        }
         src.push("}");
         return src;
     }
