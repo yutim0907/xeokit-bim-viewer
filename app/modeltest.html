@@ -847,6 +847,19 @@
             metaModelSrc: "./../app/data/projects/WaterLock/models/design/metaModel_AS_ARC_V1_2018.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
             edges: true
         });
+        arc_model.on("loaded", () => {
+            var numEntities = 0;
+            for (var id in viewer.scene.models) {
+                const model = viewer.scene.models[id];
+                numEntities += model.numEntities;
+            }
+            console.log('all loaded');
+            var metaCount = 0;
+            Object.keys(viewer.metaScene.metaObjects).forEach(element => {
+                metaCount++;
+            });
+            console.log('meta objects count = ' + metaCount);
+        })
         //oriColorForAlarm = Object.assign({}, viewer.scene.objects["電錶箱:A-M1:742696"].colorize);
         //oriColorForAlarm = tempColor;
         Object.keys(viewer.scene.objects).forEach(element => {
@@ -861,12 +874,6 @@
 
             }
         );
-        var metaCount = 0;
-        Object.keys(viewer.metaScene.metaObjects).forEach(element => {
-            metaCount++;
-             }   
-            );
-        console.log('meta objects count = ' + metaCount);
         createGaugeChart(objectGuage, 0);
         createGaugeChart(mainGuage, getRandomInt(1800));
 /*
