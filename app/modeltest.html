@@ -630,7 +630,22 @@
     const viewer = new Viewer({
         canvasId: "myCanvas",
         transparent: true,
-        saoEnabled: true
+        saoEnabled: true,
+        localeService: new LocaleService({
+         messages: {
+             "en": { // English
+                 "NavCube": {
+                     "front": "Front",
+                     "back": "Back",
+                     "top": "Top",
+                     "bottom": "Bottom",
+                     "left": "Left",
+                     "right": "Right"
+                 }
+             }
+         },
+         locale: "en"
+     })
     });
 
     viewer.camera.eye = [-13.91599279272339, 22.247624182573897, 86.53140440904272];
