@@ -859,12 +859,20 @@
 
     mep_model.on("loaded", () => {
         treeView.addModel(mep_model.id);
-        console.log('first model loaded, loading next model');
+        const arcModel_ObjectDefaults = {
+             IfcWall: {
+                 visible: false
+             },
+             IfcWallStandardCase: {
+                 opacity: 0.3
+             }
+        };
         const arc_model = xktLoader.load({
             id: "as_arc_v1_2018",
             src: "../app/data/projects/WaterLock/models/design/AS_ARC_V1_2018.xkt", //arc model
             metaModelSrc: "./../app/data/projects/WaterLock/models/design/metaModel_AS_ARC_V1_2018.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
-            edges: true
+            edges: true,
+            objectDefaults: arcModel_ObjectDefaults
         });
         arc_model.on("loaded", () => {
             treeView.addModel(arc_model.id);
