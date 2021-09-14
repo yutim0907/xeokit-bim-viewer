@@ -878,7 +878,8 @@
             src: "../app/data/projects/WaterLock/models/design/AS_ARC_V1_2018.xkt", //arc model
             metaModelSrc: "./../app/data/projects/WaterLock/models/design/metaModel_AS_ARC_V1_2018.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
             edges: true,
-            objectDefaults: arcModel_ObjectDefaults
+            objectDefaults: arcModel_ObjectDefaults,
+            pickable: false
         });
         arc_model.on("loaded", () => {
             treeView.addModel(arc_model.id);
