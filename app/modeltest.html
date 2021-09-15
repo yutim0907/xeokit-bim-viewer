@@ -320,14 +320,14 @@
                     </tbody>
                     <tbody class="alarm-tbody">
                         <tr class="alarm-tr" onclick="flyToObj('2SHAIfMcH7yQ33CjxdwG4x');">
-                            <td>管路警報</td>
+                            <td>伺服器機櫃警報</td>
                             <td>2F</td>
-                            <td>溫度過高</td>
+                            <td>連線中斷</td>
                             <td>2021/09/07 14:23:30</td>
                         </tr>
                     </tbody>
                     <tbody class="alarm-tbody">
-                        <tr class="alarm-tr" onclick="flyToObj('2SHAIfMcH7yQ33CjxdwG71');">
+                        <tr class="alarm-tr" onclick="flyToObj('1eueiWvM535hDmeCvFxesV');">
                             <td>空調警報</td>
                             <td>B1F</td>
                             <td>空調溫度過高</td>
@@ -335,7 +335,7 @@
                         </tr>
                     </tbody>
                     <tbody class="alarm-tbody">
-                        <tr class="alarm-tr" onclick="flyToObj('2SHAIfMcH7yQ33CjxdwG72');">
+                        <tr class="alarm-tr" onclick="flyToObj('1PAtrfaar7cBymoq1mum_z');">
                             <td>1樓管路</td>
                             <td>1F</td>
                             <td>管路異常</td>
@@ -1033,9 +1033,9 @@
         var alarmInterval = window.setInterval(switchAlarmType, 1000);
         
         var timeoutAlarm1 = window.setInterval(function(){callAlarmFunc('0nhokMPMf3$9BnUBxRiThh');}, 1000);
-        var timeoutAlarm2 = window.setInterval(function(){callAlarmFunc("2SHAIfMcH7yQ33CjxdwG71");}, 1000);
+        var timeoutAlarm2 = window.setInterval(function(){callAlarmFunc("1eueiWvM535hDmeCvFxesV");}, 1000);
         var timeoutAlarm3 = window.setInterval(function(){callAlarmFunc("2SHAIfMcH7yQ33CjxdwG4x");}, 1000);
-        var timeoutAlarm4 = window.setInterval(function(){callAlarmFunc("2SHAIfMcH7yQ33CjxdwG72");}, 1000)
+        var timeoutAlarm4 = window.setInterval(function(){callAlarmFunc("1PAtrfaar7cBymoq1mum_z");}, 1000)
 
         var timeChangeTotal = window.setInterval(function(){startChange(700 + getRandomInt(600), mainGuage)}, 30000);
 
