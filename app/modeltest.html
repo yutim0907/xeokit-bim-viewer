@@ -676,6 +676,15 @@
     const xktLoader = new XKTLoaderPlugin(viewer);
 ``
 
+    const mepModel_ObjectDefaults = {
+             機櫃: {
+                 visible: false
+             },
+             DEFAULT: {
+                 opacity: 0.5,
+                 pickable: false
+             }
+        };
     const mep_model = xktLoader.load({
         id: "as_mep_v1_2018",
         src: "../app/data/projects/WaterLock/models/design/AS_MEP_V1_2018.xkt", //中和安邦模型
