@@ -33,145 +33,145 @@
     {
       "id": "0_C4HgGNf8BRDsQNZAaVbu",
       "name": "電力列頭櫃:電力列頭櫃:1315111",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVbp",
       "name": "電力列頭櫃:電力列頭櫃:1315116",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVdQ",
       "name": "網路機櫃:網路機櫃:1315205",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVd5",
       "name": "網路機櫃:網路機櫃:1315226",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVdz",
       "name": "伺服器機櫃:伺服器機櫃:1315234",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVdu",
       "name": "伺服器機櫃:伺服器機櫃:1315239",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVdp",
       "name": "伺服器機櫃:伺服器機櫃:1315244",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVdk",
       "name": "伺服器機櫃:伺服器機櫃:1315249",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVcH",
       "name": "伺服器機櫃:伺服器機櫃:1315278",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVcb",
       "name": "伺服器機櫃:伺服器機櫃:1315322",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVfA",
       "name": "伺服器機櫃:伺服器機櫃:1315349",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVeW",
       "name": "伺服器機櫃:伺服器機櫃:1315455",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVhO",
       "name": "伺服器機櫃:伺服器機櫃:1315463",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVhE",
       "name": "伺服器機櫃:伺服器機櫃:1315473",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVh6",
       "name": "伺服器機櫃:伺服器機櫃:1315481",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVv2",
       "name": "伺服器機櫃:伺服器機櫃:1316381",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVxR",
       "name": "伺服器機櫃:伺服器機櫃:1316484",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVxQ",
       "name": "伺服器機櫃:伺服器機櫃:1316485",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVx4",
       "name": "空調:空調:1316507",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVx3",
       "name": "空調:空調:1316508",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVx2",
       "name": "空調:空調:1316509",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVzK",
       "name": "空調:空調:1316619",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVyA",
       "name": "空調:空調:1316693",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0_C4HgGNf8BRDsQNZAaVy0",
       "name": "空調:空調:1316703",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
@@ -501,145 +501,145 @@
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4_",
       "name": "電力列頭櫃:電力列頭櫃:1339152",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4$",
       "name": "電力列頭櫃:電力列頭櫃:1339153",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4y",
       "name": "網路機櫃:網路機櫃:1339154",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4z",
       "name": "網路機櫃:網路機櫃:1339155",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4w",
       "name": "伺服器機櫃:伺服器機櫃:1339156",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4x",
       "name": "伺服器機櫃:伺服器機櫃:1339157",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4u",
       "name": "伺服器機櫃:伺服器機櫃:1339158",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4v",
       "name": "伺服器機櫃:伺服器機櫃:1339159",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4s",
       "name": "伺服器機櫃:伺服器機櫃:1339160",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4t",
       "name": "伺服器機櫃:伺服器機櫃:1339161",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4q",
       "name": "伺服器機櫃:伺服器機櫃:1339162",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4r",
       "name": "伺服器機櫃:伺服器機櫃:1339163",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4o",
       "name": "伺服器機櫃:伺服器機櫃:1339164",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4p",
       "name": "伺服器機櫃:伺服器機櫃:1339165",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4m",
       "name": "伺服器機櫃:伺服器機櫃:1339166",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4n",
       "name": "伺服器機櫃:伺服器機櫃:1339167",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4E",
       "name": "伺服器機櫃:伺服器機櫃:1339168",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4F",
       "name": "伺服器機櫃:伺服器機櫃:1339169",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4C",
       "name": "空調:空調:1339170",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4D",
       "name": "空調:空調:1339171",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4A",
       "name": "空調:空調:1339172",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG4B",
       "name": "空調:空調:1339173",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG48",
       "name": "空調:空調:1339174",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG49",
       "name": "空調:空調:1339175",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
@@ -969,145 +969,145 @@
     {
       "id": "2SHAIfMcH7yQ33CjxdwG5G",
       "name": "電力列頭櫃:電力列頭櫃:1339262",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG5H",
       "name": "電力列頭櫃:電力列頭櫃:1339263",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6k",
       "name": "網路機櫃:網路機櫃:1339264",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6l",
       "name": "網路機櫃:網路機櫃:1339265",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6i",
       "name": "伺服器機櫃:伺服器機櫃:1339266",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6j",
       "name": "伺服器機櫃:伺服器機櫃:1339267",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6g",
       "name": "伺服器機櫃:伺服器機櫃:1339268",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6h",
       "name": "伺服器機櫃:伺服器機櫃:1339269",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6e",
       "name": "伺服器機櫃:伺服器機櫃:1339270",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6f",
       "name": "伺服器機櫃:伺服器機櫃:1339271",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6c",
       "name": "伺服器機櫃:伺服器機櫃:1339272",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6d",
       "name": "伺服器機櫃:伺服器機櫃:1339273",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6a",
       "name": "伺服器機櫃:伺服器機櫃:1339274",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6b",
       "name": "伺服器機櫃:伺服器機櫃:1339275",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6Y",
       "name": "伺服器機櫃:伺服器機櫃:1339276",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6Z",
       "name": "伺服器機櫃:伺服器機櫃:1339277",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6W",
       "name": "伺服器機櫃:伺服器機櫃:1339278",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6X",
       "name": "伺服器機櫃:伺服器機櫃:1339279",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6_",
       "name": "空調:空調:1339280",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6$",
       "name": "空調:空調:1339281",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6y",
       "name": "空調:空調:1339282",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6z",
       "name": "空調:空調:1339283",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6w",
       "name": "空調:空調:1339284",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG6x",
       "name": "空調:空調:1339285",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
@@ -1437,145 +1437,145 @@
     {
       "id": "2SHAIfMcH7yQ33CjxdwG74",
       "name": "電力列頭櫃:電力列頭櫃:1339370",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG75",
       "name": "電力列頭櫃:電力列頭櫃:1339371",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG72",
       "name": "網路機櫃:網路機櫃:1339372",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG73",
       "name": "網路機櫃:網路機櫃:1339373",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG70",
       "name": "伺服器機櫃:伺服器機櫃:1339374",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG71",
       "name": "伺服器機櫃:伺服器機櫃:1339375",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7U",
       "name": "伺服器機櫃:伺服器機櫃:1339376",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7V",
       "name": "伺服器機櫃:伺服器機櫃:1339377",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7S",
       "name": "伺服器機櫃:伺服器機櫃:1339378",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7T",
       "name": "伺服器機櫃:伺服器機櫃:1339379",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7Q",
       "name": "伺服器機櫃:伺服器機櫃:1339380",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7R",
       "name": "伺服器機櫃:伺服器機櫃:1339381",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7O",
       "name": "伺服器機櫃:伺服器機櫃:1339382",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7P",
       "name": "伺服器機櫃:伺服器機櫃:1339383",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7M",
       "name": "伺服器機櫃:伺服器機櫃:1339384",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7N",
       "name": "伺服器機櫃:伺服器機櫃:1339385",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7K",
       "name": "伺服器機櫃:伺服器機櫃:1339386",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7L",
       "name": "伺服器機櫃:伺服器機櫃:1339387",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7I",
       "name": "空調:空調:1339388",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7J",
       "name": "空調:空調:1339389",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7G",
       "name": "空調:空調:1339390",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwG7H",
       "name": "空調:空調:1339391",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwHuk",
       "name": "空調:空調:1339392",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "2SHAIfMcH7yQ33CjxdwHul",
       "name": "空調:空調:1339393",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
@@ -1941,13 +1941,13 @@
     {
       "id": "0nhokMPMf3$9BnUBxRiThh",
       "name": "電力列頭櫃:電力列頭櫃:1383550",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0nhokMPMf3$9BnUBxRiThg",
       "name": "電力列頭櫃:電力列頭櫃:1383551",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
@@ -1959,13 +1959,13 @@
     {
       "id": "0nhokMPMf3$9BnUBxRiTeP",
       "name": "伺服器機櫃:伺服器機櫃:1383564",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
       "id": "0nhokMPMf3$9BnUBxRiTeO",
       "name": "伺服器機櫃:伺服器機櫃:1383565",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQs"
     },
     {
@@ -3153,145 +3153,145 @@
     {
       "id": "1eueiWvM535hDmeCvFxerj",
       "name": "電力列頭櫃:電力列頭櫃:1342837",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxerk",
       "name": "電力列頭櫃:電力列頭櫃:1342838",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxerl",
       "name": "網路機櫃:網路機櫃:1342839",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxerW",
       "name": "網路機櫃:網路機櫃:1342840",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxerX",
       "name": "伺服器機櫃:伺服器機櫃:1342841",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxerY",
       "name": "伺服器機櫃:伺服器機櫃:1342842",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxerZ",
       "name": "伺服器機櫃:伺服器機櫃:1342843",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxera",
       "name": "伺服器機櫃:伺服器機櫃:1342844",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxerb",
       "name": "伺服器機櫃:伺服器機櫃:1342845",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxerc",
       "name": "伺服器機櫃:伺服器機櫃:1342846",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxerd",
       "name": "伺服器機櫃:伺服器機櫃:1342847",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesO",
       "name": "伺服器機櫃:伺服器機櫃:1342848",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesP",
       "name": "伺服器機櫃:伺服器機櫃:1342849",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesQ",
       "name": "伺服器機櫃:伺服器機櫃:1342850",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesR",
       "name": "伺服器機櫃:伺服器機櫃:1342851",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesS",
       "name": "伺服器機櫃:伺服器機櫃:1342852",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesT",
       "name": "伺服器機櫃:伺服器機櫃:1342853",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesU",
       "name": "伺服器機櫃:伺服器機櫃:1342854",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesV",
       "name": "空調:空調:1342855",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesG",
       "name": "空調:空調:1342856",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesH",
       "name": "空調:空調:1342857",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesI",
       "name": "空調:空調:1342858",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesJ",
       "name": "空調:空調:1342859",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxesK",
       "name": "空調:空調:1342860",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
@@ -3621,145 +3621,145 @@
     {
       "id": "1eueiWvM535hDmeCvFxdyB",
       "name": "電力列頭櫃:電力列頭櫃:1347347",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyC",
       "name": "電力列頭櫃:電力列頭櫃:1347348",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyD",
       "name": "網路機櫃:網路機櫃:1347349",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyE",
       "name": "網路機櫃:網路機櫃:1347350",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyF",
       "name": "伺服器機櫃:伺服器機櫃:1347351",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdy0",
       "name": "伺服器機櫃:伺服器機櫃:1347352",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdy1",
       "name": "伺服器機櫃:伺服器機櫃:1347353",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdy2",
       "name": "伺服器機櫃:伺服器機櫃:1347354",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdy3",
       "name": "伺服器機櫃:伺服器機櫃:1347355",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdy4",
       "name": "伺服器機櫃:伺服器機櫃:1347356",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdy5",
       "name": "伺服器機櫃:伺服器機櫃:1347357",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdy6",
       "name": "伺服器機櫃:伺服器機櫃:1347358",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdy7",
       "name": "伺服器機櫃:伺服器機櫃:1347359",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyu",
       "name": "伺服器機櫃:伺服器機櫃:1347360",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyv",
       "name": "伺服器機櫃:伺服器機櫃:1347361",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyw",
       "name": "伺服器機櫃:伺服器機櫃:1347362",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyx",
       "name": "伺服器機櫃:伺服器機櫃:1347363",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyy",
       "name": "伺服器機櫃:伺服器機櫃:1347364",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyz",
       "name": "空調:空調:1347365",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdy_",
       "name": "空調:空調:1347366",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdy$",
       "name": "空調:空調:1347367",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdym",
       "name": "空調:空調:1347368",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyn",
       "name": "空調:空調:1347369",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdyo",
       "name": "空調:空調:1347370",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
@@ -4089,145 +4089,145 @@
     {
       "id": "1eueiWvM535hDmeCvFxdzb",
       "name": "電力列頭櫃:電力列頭櫃:1347453",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdzc",
       "name": "電力列頭櫃:電力列頭櫃:1347454",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxdzd",
       "name": "網路機櫃:網路機櫃:1347455",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_O",
       "name": "網路機櫃:網路機櫃:1347456",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_P",
       "name": "伺服器機櫃:伺服器機櫃:1347457",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_Q",
       "name": "伺服器機櫃:伺服器機櫃:1347458",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_R",
       "name": "伺服器機櫃:伺服器機櫃:1347459",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_S",
       "name": "伺服器機櫃:伺服器機櫃:1347460",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_T",
       "name": "伺服器機櫃:伺服器機櫃:1347461",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_U",
       "name": "伺服器機櫃:伺服器機櫃:1347462",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_V",
       "name": "伺服器機櫃:伺服器機櫃:1347463",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_G",
       "name": "伺服器機櫃:伺服器機櫃:1347464",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_H",
       "name": "伺服器機櫃:伺服器機櫃:1347465",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_I",
       "name": "伺服器機櫃:伺服器機櫃:1347466",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_J",
       "name": "伺服器機櫃:伺服器機櫃:1347467",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_K",
       "name": "伺服器機櫃:伺服器機櫃:1347468",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_L",
       "name": "伺服器機櫃:伺服器機櫃:1347469",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_M",
       "name": "伺服器機櫃:伺服器機櫃:1347470",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_N",
       "name": "空調:空調:1347471",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_8",
       "name": "空調:空調:1347472",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_9",
       "name": "空調:空調:1347473",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_A",
       "name": "空調:空調:1347474",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_B",
       "name": "空調:空調:1347475",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd_C",
       "name": "空調:空調:1347476",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
@@ -4557,145 +4557,145 @@
     {
       "id": "1eueiWvM535hDmeCvFxd$$",
       "name": "電力列頭櫃:電力列頭櫃:1347559",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$m",
       "name": "電力列頭櫃:電力列頭櫃:1347560",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$n",
       "name": "網路機櫃:網路機櫃:1347561",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$o",
       "name": "網路機櫃:網路機櫃:1347562",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$p",
       "name": "伺服器機櫃:伺服器機櫃:1347563",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$q",
       "name": "伺服器機櫃:伺服器機櫃:1347564",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$r",
       "name": "伺服器機櫃:伺服器機櫃:1347565",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$s",
       "name": "伺服器機櫃:伺服器機櫃:1347566",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$t",
       "name": "伺服器機櫃:伺服器機櫃:1347567",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$e",
       "name": "伺服器機櫃:伺服器機櫃:1347568",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$f",
       "name": "伺服器機櫃:伺服器機櫃:1347569",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$g",
       "name": "伺服器機櫃:伺服器機櫃:1347570",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$h",
       "name": "伺服器機櫃:伺服器機櫃:1347571",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$i",
       "name": "伺服器機櫃:伺服器機櫃:1347572",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$j",
       "name": "伺服器機櫃:伺服器機櫃:1347573",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$k",
       "name": "伺服器機櫃:伺服器機櫃:1347574",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$l",
       "name": "伺服器機櫃:伺服器機櫃:1347575",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$W",
       "name": "伺服器機櫃:伺服器機櫃:1347576",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$X",
       "name": "空調:空調:1347577",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$Y",
       "name": "空調:空調:1347578",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$Z",
       "name": "空調:空調:1347579",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$a",
       "name": "空調:空調:1347580",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$b",
       "name": "空調:空調:1347581",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxd$c",
       "name": "空調:空調:1347582",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
@@ -5067,25 +5067,25 @@
     {
       "id": "1eueiWvM535hDmeCvFxZ84",
       "name": "電力列頭櫃:電力列頭櫃:1360412",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxZBb",
       "name": "電力列頭櫃:電力列頭櫃:1360637",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxZDd",
       "name": "伺服器機櫃:伺服器機櫃:1360767",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1eueiWvM535hDmeCvFxZFE",
       "name": "伺服器機櫃:伺服器機櫃:1360854",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
@@ -5901,61 +5901,61 @@
     {
       "id": "1Guy5QZ0z9kAjxmxLSR7c7",
       "name": "電力列頭櫃:電力列頭櫃:1375206",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSR7c6",
       "name": "電力列頭櫃:電力列頭櫃:1375207",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSR7c9",
       "name": "網路機櫃:網路機櫃:1375208",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSR7c8",
       "name": "網路機櫃:網路機櫃:1375209",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSR7cB",
       "name": "空調:空調:1375210",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSR7cA",
       "name": "空調:空調:1375211",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSR7cD",
       "name": "空調:空調:1375212",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSR7cC",
       "name": "空調:空調:1375213",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSR7cF",
       "name": "空調:空調:1375214",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSR7cE",
       "name": "空調:空調:1375215",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
@@ -6429,61 +6429,61 @@
     {
       "id": "1Guy5QZ0z9kAjxmxLSROCX",
       "name": "電力列頭櫃:電力列頭櫃:1376576",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSROCW",
       "name": "電力列頭櫃:電力列頭櫃:1376577",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSROCZ",
       "name": "網路機櫃:網路機櫃:1376578",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSROCY",
       "name": "網路機櫃:網路機櫃:1376579",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSROCb",
       "name": "空調:空調:1376580",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSROCa",
       "name": "空調:空調:1376581",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSROCd",
       "name": "空調:空調:1376582",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSROCc",
       "name": "空調:空調:1376583",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSROCf",
       "name": "空調:空調:1376584",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
       "id": "1Guy5QZ0z9kAjxmxLSROCe",
       "name": "空調:空調:1376585",
-      "type": "機櫃",
+      "type": "IfcBuildingElementProxy",
       "parent": "2IGkADCITC08cHLezIKOQt"
     },
     {
