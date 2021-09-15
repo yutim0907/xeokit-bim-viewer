@@ -678,7 +678,7 @@
 
     const mepModel_ObjectDefaults = {
              IfcBuildingElementProxy: {
-                 visible: false
+                 colorize : [192/255,192/255,192/255]
              },
              DEFAULT: {
                  opacity: 0.5,
@@ -689,7 +689,8 @@
         id: "as_mep_v1_2018",
         src: "../app/data/projects/WaterLock/models/design/AS_MEP_V1_2018.xkt", //中和安邦模型
         metaModelSrc: "./../app/data/projects/WaterLock/models/design/metaModel_AS_MEP_V1_2018.json", // Creates a MetaObject instances in scene.metaScene.metaObjects
-        edges: true
+        edges: true,
+        objectDefaults: mepModel_ObjectDefaults,
         //includeTypes: ["機櫃", "Ifc玻璃斜窗"]
         //excludeUnclassifiedObjects: false
         //globalizeObjectIds:true
