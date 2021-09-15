@@ -464,6 +464,7 @@
     }
     function callAlarmFunc(id){
         viewer.scene.objects[id].pickable = true;
+        viewer.scene.objects[id].opacity = 1;
         if(isAlarm){
             if(alarmTick){
                 alarmTick = false;
