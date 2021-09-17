@@ -45,5 +45,9 @@
   },
   "dependencies": {
     "@xeokit/xeokit-sdk": "1.8.0-alpha.1"
-  }
+  },
+  "resolveSourceMapLocations": [
+    "${workspaceFolder}/**",
+    "!**/node_modules/**"
+]
 }

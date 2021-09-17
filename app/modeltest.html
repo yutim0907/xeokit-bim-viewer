@@ -254,7 +254,7 @@
           margin: 0;
           padding: 0;
         }
-        #myUL .li: hover{
+        #myUL .li :hover{
             color: white;
             cursor: pointer;
             background: black;
@@ -297,7 +297,7 @@
 
 
 <body onload="playAudio();" style="display:flex;">
-    <div class="panel-left" style="">
+    <div class="panel-left">
         <div id="alarmBar" class="alarm-bar" >
             <button onclick="jumpToHref()" style="display: none;"> jump </button>
             <div class="container">
@@ -352,7 +352,7 @@
         <div id="pickedDescription" class="section-description" style="display: none;"> 
         </div>
     </div>
-<div id="myViewer" class="xeokit-busy-modal-backdrop" style="">
+<div id="myViewer" class="xeokit-busy-modal-backdrop" >
     <div id="bimViewerContent" style="background-color: #00142F;">
         <div id="myToolbar"></div>
         <canvas id="myCanvas"></canvas>
@@ -360,27 +360,27 @@
         
     </div>
 </div>
-<div id="realtimeInfoBlock" class="realtimeInfoBlock" style="">
+<div id="realtimeInfoBlock" class="realtimeInfoBlock" >
 
     <div class="realtimePieChartBlock" style="width:100%">
         <div class="container" style="margin: 0 2%;width: 45%;">
-            <canvas id="pieChart1" width="300" height="300" style=""></canvas>
+            <canvas id="pieChart1" width="300" height="300" ></canvas>
         </div>
         <div class="container" style="margin: 0 2%;width: 45%;">
-            <canvas id="pieChart2" width="300" height="300" style=""></canvas>
+            <canvas id="pieChart2" width="300" height="300" ></canvas>
         </div>
     </div>
     <div class="realtimeBarChartBlock" style="width:100%">
         <div class="container" style="margin: 0 2%;width: 45%;">
-            <canvas id="barChart1" width="300" height="300" style=""></canvas>
+            <canvas id="barChart1" width="300" height="300" ></canvas>
         </div>
         <div class="container" style="margin: 0 2%;width: 45%;">
-            <canvas id="barChart2" width="300" height="300" style=""></canvas>
+            <canvas id="barChart2" width="300" height="300" ></canvas>
         </div>
     </div>
-    <div class="realtimeLineChartBlock" style="width:95%margin: 0 2%;">
+    <div class="realtimeLineChartBlock" style="width:95%;margin: 0 2%;">
         <div class="container" style="width: 600px; margin: 0 auto;">
-            <canvas id="lineChart1" width="600" height="300" style=""></canvas>
+            <canvas id="lineChart1" width="600" height="300" ></canvas>
         </div>
     </div>
 </div>
