@@ -718,7 +718,7 @@
 
         markerHTML: "<div class='annotation-marker {{alarmMarkerClass}}' style='background-color: {{markerBGColor}};'></div>",
         labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};border-color: {{borderColor}};box-shadow:5px 5px 15px 1px {{labelBGColor}};'>\
-            <div class='annotation-title'>{{title}}</div>\
+            <div class='annotation-title' style='white-space: pre-line;'>{{title}}</div>\
             {{tagInfoHtml}}\
             </div>",
 
@@ -812,7 +812,10 @@
                     values: {
                         glyph: "",
                         labelBGColor: getRandomColorByCustom(),
-                        title: viewer.metaScene.metaObjects[entity.id].name,
+                        title: '名稱: ' + viewer.metaScene.metaObjects[entity.id].name + 
+                        '\n 設備維護: 已達維護時程' + 
+                        '\n 運作效能: 98%' + 
+                        '\n 設備編號: C82221',
                         markerBGColor: "green",
                         alarmMarkerClass: "non-alarm-marker"
                     }
